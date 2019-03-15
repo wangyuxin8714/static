@@ -1,0 +1,53 @@
+<stage name="MontesRevenge" 
+	friendlyName="Monte's Revenge"
+	stageWidth="800" 
+	type="timedBonus"
+	stageHeight="600"
+	time="0:45" >
+
+	<environment bgLayout="resources/backdrops/SunkenTreasure/bgLayout.xml" 
+				 fgLayout="resources/backdrops/SunkenTreasure/fgLayout.xml"
+				 mgLayout="resources/backdrops/SunkenTreasure/mgLayout.xml" />
+
+	<playerFish config="config/Fish/JDPlayer.xml" >
+		<size size="9.5" targetScore="0" scale="0.6" />
+		<size size="14.5" targetScore="9999" scale="0.6" />
+	</playerFish>
+
+<!-- Fish -->
+
+	<enemyFish name="Puffer B Small" template="config/fish/PufferBSmall.xml" poolSize="10" mode="onlyUneaten" >
+		<spawnInfo playerSize="0"	maxCount="10"	respawnFreq="(0.5,1.0)" />
+	</enemyFish>
+
+<!-- Hazards -->
+		
+	<enemyFish name="Oysters" template="config/fish/oyster.xml" poolSize="6" displayMenuImage="false" mode="onlyUneaten" >
+		<staticSpawn pos="60,506" doRespawn="false" />
+		<staticSpawn pos="200,545" doRespawn="false" />
+		<staticSpawn pos="345,530" doRespawn="false" />
+		<staticSpawn pos="485,543" doRespawn="false" />
+		<staticSpawn pos="620,530" doRespawn="false" />
+		<staticSpawn pos="750,545" doRespawn="false" />
+		<spawnInfo playerSize="0"	maxCount="0"	respawnFreq="(.5,1.5)" />		
+	</enemyFish>
+
+	<enemyFish name="Jellies" template="config/fish/BasicJellyFish.xml" poolSize="2" displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(2.0,6.0)" />
+	</enemyFish>
+
+<!-- Powerups -->
+
+	<enemyFish name="Speed Bubbles" template="config/fish/BonusBubbleSpeed.xml" poolSize="1"  displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(4.0,8.0)" />
+	</enemyFish>
+
+	<enemyFish name="Stun Bubbles" template="config/fish/BonusBubbleStun.xml" poolSize="1"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(4.0,8.0)" />
+	</enemyFish>
+
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track2.wav" />
+		
+</stage>

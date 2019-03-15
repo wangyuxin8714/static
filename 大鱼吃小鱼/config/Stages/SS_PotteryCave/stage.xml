@@ -1,0 +1,49 @@
+<stage name="SS Pottery Cave" 
+	friendlyName="Pottery Cave Screen Saver"
+	stageWidth="640" 
+	stageHeight="480"
+	type="menu"
+	>
+
+	<environment bgLayout="resources/backdrops/SS_PotteryCave/bgLayout.xml" 
+				 fgLayout="resources/backdrops/SS_PotteryCave/fgLayout.xml"
+				 mgLayout="resources/backdrops/SS_PotteryCave/mgLayout.xml"/>
+				 
+	<toolTip file="config/toolTips/menuTip.xml" type="levelStart" delay="0.1" />
+
+	<playerFish config="config/Fish/LionPlayer.xml" >
+		<size size="5.5" targetScore="0" scale="0.4" />
+		<size size="6.5" targetScore="270" scale="0.6" />
+		<size size="8.5" targetScore="1000" scale="1.0" />
+		<size size="9.5" targetScore="1600" scale="1.0" />
+	</playerFish>
+
+	<enemyFish name="AngelASmallSchool" template="config/fish/angelASmallSchool.xml" poolSize="6">
+		<spawnInfo playerSize="0"	maxCount="6"	respawnFreq="(0.5,1.8)" />
+	</enemyFish>
+
+	<enemyFish name="AngelBSmall" template="config/fish/angelBSmall.xml" poolSize="3">
+		<spawnInfo playerSize="0"	maxCount="3"	respawnFreq="(0.3,0.8)" />
+	</enemyFish>
+
+	<enemyFish name="LionAMedium" template="config/fish/LionAMedium.xml" poolSize="2">
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(1.0,2.5)" />
+	</enemyFish>
+
+	<enemyFish name="Parrot A Large" template="config/fish/ParrotALarge.xml" poolSize="2" >
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(3.0,8.0)" />
+	</enemyFish> 
+
+	<enemyFish name="Barracuda" template="config/fish/Barracuda.xml" poolSize="1" displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(10.0,20.0)" />
+	</enemyFish>
+
+	<enemyFish name="Puffer" template="config/fish/PufferAMedium.xml" poolSize="1" displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(2.0,10.0)" />
+	</enemyFish>
+	
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track3.wav" />
+		
+</stage>

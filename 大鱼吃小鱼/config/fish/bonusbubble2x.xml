@@ -1,0 +1,15 @@
+<fish name="2x Bonus"	class="BonusBubble2X"
+						foodValue="0"
+						maxSpeedX="(8,10)" 
+						maxSpeedY="(60,80)" 
+						sightDist="0" 
+						accelRate="200"
+						dragRate="46" 
+						scale="1.0"
+						size="0.1"
+						spawnType="offstageBottom"
+						animPath="resources/bonus/2xBubble" >
+	
+	<sound class="eaten" name="eatenSound" pitch="1.0" />
+	<menuImage offImage="resources/bonus/2xBubble1.jpg" onImage="resources/bonus/2xBubble1.jpg" />
+</fish>

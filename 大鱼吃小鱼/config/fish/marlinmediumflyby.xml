@@ -1,0 +1,29 @@
+<fish name="Marlin Medium Flyby"
+	class="FlyByFish"
+	foodValue="40"
+	maxSpeedX="(250,300)" 
+	maxSpeedY="(90,110)" 
+	sightDist="300" 
+	sightAngle="40"
+	accelRate="270" 
+	dragRate="40" 
+	scale="0.55"
+	size="15"
+	spawnType="offStageLR"
+	hotSpot="25,-8,95,30"
+	collision="71,65,170,117"
+	animPath="resources/Marlin/" 
+	wanderStateChangeFreq="(2.0,4.0)"
+	chaseStateChangeFreq="(0.5,1.0)"
+	chaseMoveChangeFreq="(0.85,2.4)"	
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="0.5" />
+	<menuImage onImage="resources/Marlin/hudImage.png" />
+
+	<react class="PlayerFish" reaction="chase" reactFreq="1.0" />
+	<react class="Mine" reaction="avoid" reactFreq="0.5" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+	<react class="Shark" reaction="run" reactFreq="0.9" />
+
+</fish>

@@ -1,0 +1,26 @@
+<particleSystem autoStop="-1.0" >
+
+	<particleStream sequence="random" emitRate="40.0" offsetType="independant" parent="shieldGlowP" >
+		<velocity startX="(0,0)" startY="(0,0)" />
+		<acceleration rate="(0,0)" />
+		<extForce force="0,0" />
+		<position startX="(-0,0)" startY="(-0,0)" />
+		<scale startScale="(1,1)" endScale="(0.4,0.4)" constant="true" />
+		<particleLife lifeTime="(0.4,0.4)" />
+		<opacity startOp="1.0" endOp="0.0" />
+		<resource type="image" path="resources/FX/general/sparkle" />
+	</particleStream> 
+	
+	<particleStream sequence="random" emitRate="3.0" offset="0,0" startDelay="0" offsetType="independant" >
+		<velocity startX="(-150,150)" startY="(-150,150)" />
+		<acceleration rate="(-60,-60)" />
+		<extForce force="0,130" />
+		<position startX="(-10,10)" startY="(-10,10)" />
+		<scale startScale="(0.8,1.0)" endScale="(0.0,0.4)" constant="false" />
+		<particleLife lifeTime="(0.75,1.0)" />
+		<opacity startOp="0.9" endOp="1.0" />
+		<resource type="image" path="resources/FX/general/sparkle" />
+	</particleStream>
+
+
+</particleSystem>

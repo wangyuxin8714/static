@@ -1,0 +1,28 @@
+<fish name="PufferBSmall"
+		class="PufferFish"
+		foodValue="80"
+		sightCheckFreq="0.1"
+		maxSpeedX="(80,110)" 
+		maxSpeedY="(50,60)" 
+		sightDist="250" 
+		sightAngle="50"
+		accelRate="180" 
+		dragRate="5" 
+		scale="0.25"
+		size="9"
+		spawnType="offStageLR"
+		hotSpot="-5,-20,43,41"
+		collision="12,26,135,106"
+		animPath="resources/PufferFish/"
+		wanderStageChangeFreq="(1.5,3.0)"
+		hsvOffset="-37,0,0"
+		 >
+	
+	<sound class="eaten" name="eatenSound" pitch="1.5" />
+	<menuImage onImage="resources/PufferFish/hudImage.png" />
+
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="SoldierFish" reaction="special" reactFreq="0.8" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+	
+</fish>

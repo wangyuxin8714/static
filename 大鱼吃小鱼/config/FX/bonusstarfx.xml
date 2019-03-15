@@ -1,0 +1,25 @@
+<particleSystem autoStop="-1.0" >
+
+<particleStream sequence="random" emitRate="8.0" offset="0,0" startDelay="0" offsetType="independent" parent="PlayGroup">
+	<velocity startX="(-20,20)" startY="(-50,50)" />
+	<acceleration rate="(-60,-60)" />
+	<extForce force="0,140" />
+	<position startX="(-8,8)" startY="(15,20)" />
+	<scale startScale="(0.6,1.0)" endScale="(0.0,0.4)" constant="false" />
+	<particleLife lifeTime="(1.1,2.0)" />
+	<opacity startOp="0.7" endOp="1.0" />
+	<resource type="image" path="resources/FX/general/sparkle" />
+</particleStream>
+
+
+<particleStream sequence="random" emitRate="8.0" offset="0,0" startDelay="0" offsetType="groupRelative" >
+	<velocity startX="0" startY="0" />
+	<extForce force="0,0" />
+	<position startX="(-15,15)" startY="(-15,15)" />
+	<scale startScale="(0.2,0.3)" endScale="(1.0,1.0)" constant="false" />
+	<particleLife lifeTime="(0.45,0.85)" />
+	<opacity startOp="1.0" endOp="0.2" />
+	<resource type="image" path="resources/FX/general/sparkleb" />
+</particleStream>
+
+</particleSystem>

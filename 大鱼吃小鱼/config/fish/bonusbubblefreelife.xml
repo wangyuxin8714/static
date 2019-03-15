@@ -1,0 +1,16 @@
+<fish name="Life Bonus" class="BonusBubbleFreeLife"
+						foodValue="2"
+						maxSpeedX="(8,10)" 
+						maxSpeedY="(60,80)" 
+						sightDist="0" 
+						accelRate="200"
+						dragRate="46" 
+						scale="1.0"
+						size="0.1"
+						spawnType="offstageBottom"
+						animPath="resources/bonus/fishBubble" >
+	
+	<menuImage offImage="resources/bonus/fishBubble1.jpg" onImage="resources/bonus/fishBubble1.jpg" />
+
+	<sound class="eaten" name="eatenSound" pitch="1.0" />
+</fish>

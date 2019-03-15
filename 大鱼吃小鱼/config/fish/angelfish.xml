@@ -1,0 +1,24 @@
+<fish name="Angel Fish"	class="AngelFish"
+						foodValue="60"
+						maxSpeedX="(60,90)" 
+						maxSpeedY="(50,60)" 
+						sightDist="80" 
+						accelRate="180" 
+						dragRate="40" 
+						scale="1.5"
+						size="2.15"
+						spawnType="offStageLR"
+						animPath="resources/angelFish/" >
+	
+	<sound class="eaten" name="eatenSound" pitch="0.6" />
+	<menuImage offImage="resources/angelFish/hudImageOff.png" onImage="resources/angelFish/hudImageOn.png" />
+	
+	
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="1.0" />
+	<react class="PlayerFish" reaction="chase" reactFreq="0.2" />
+	<react class="SoldierFish" reaction="chase" reactFreq="0.6" />
+	<react class="BrineShrimp" reaction="chase" reactFreq="0.5" />
+	<react class="ChaserFish" reaction="avoid" reactFreq="0.6" />
+	<react class="PufferFish" reaction="avoid" reactFreq="0.8" />	
+</fish>

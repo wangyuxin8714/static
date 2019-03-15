@@ -1,0 +1,77 @@
+<stage name="WhatAngle" 
+	friendlyName="What's the Angle?"
+	stageWidth="800" 
+	stageHeight="600"
+	time="1:15" > 
+
+	<environment bgLayout="resources/backdrops/DeepSea/bgLayout.xml" 
+				 fgLayout="resources/backdrops/DeepSea/fgLayout.xml"
+				 mgLayout="resources/backdrops/DeepSea/mgLayout.xml" />
+				 
+	<playerFish config="config/Fish/AnglerPlayer.xml" >
+		<size size="6.5" targetScore="0" scale="0.4" />
+		<size size="8.5" targetScore="575" scale=".65" />
+		<size size="12.5" targetScore="1850" scale="1.00" />
+		<size size="13.5" targetScore="2600" scale="1.00" />
+	</playerFish>
+
+<!-- Fish -->
+	
+	<enemyFish name="SurgeonBSmall" template="config/fish/surgeonBSmall.xml" poolSize="20">
+		<spawnInfo playerSize="0"	maxCount="20"	respawnFreq="(0.3,0.5)" />
+		<spawnInfo playerSize="8.5" maxCount="8"	respawnFreq="(0.3,0.5)" />
+		<spawnInfo playerSize="12.5" maxCount="8"	respawnFreq="(0.3,0.5)" />
+	</enemyFish>
+	
+	<enemyFish name="Parrot Fish A Medium" template="config/fish/ParrotAMedium.xml" poolSize="8" >
+		<spawnInfo playerSize="0"	maxCount="3"	respawnFreq="(2.0,4.5)" />
+		<spawnInfo playerSize="8.5" maxCount="3"	respawnFreq="(1.0,2.0)" />
+		<spawnInfo playerSize="12.5" maxCount="4"	respawnFreq="(2.0,5.0)" />
+	</enemyFish>
+
+	<enemyFish name="JohnDoryLarge" template="config/fish/JohnDoryLarge.xml" poolSize="2" >
+		<spawnInfo playerSize="0"	maxCount="0"	respawnFreq="(1.0,4.0)" />
+		<spawnInfo playerSize="8.5" maxCount="2"	respawnFreq="(2.0,4.0)" />
+		<spawnInfo playerSize="12.5" maxCount="2"	respawnFreq="(1.0,2.0)" />
+	</enemyFish> 
+
+	<enemyFish name="Barracuda" template="config/fish/Barracuda.xml" poolSize="1" displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="12.5"	maxCount="1"	respawnFreq="(10.0,20.0)" />
+	</enemyFish>
+
+<!-- Hazards -->
+
+	<enemyFish name="Oysters" template="config/fish/oyster.xml" poolSize="2" displayMenuImage="false" mode="uncounted" >
+		<staticSpawn pos="100,525" doRespawn="true" />
+		<spawnInfo playerSize="0"	maxCount="0"	respawnFreq="(.5,1.5)" />		
+	</enemyFish>
+
+	<enemyFish name="Jellies" template="config/fish/BasicJellyFish.xml" poolSize="3"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="3"	respawnFreq="(3.0,8.0)" />
+	</enemyFish>
+
+	<enemyFish name="Poison Minnow" template="config/fish/PoisonMinnow.xml" poolSize="5" displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="0"	respawnFreq="(0.5,4.0)" />
+		<spawnInfo playerSize="8.5" maxCount="1"	respawnFreq="(3.0,10.0)" />
+		<spawnInfo playerSize="12.5" maxCount="2"	respawnFreq="(3.0,7.0)" />
+	</enemyFish>
+
+<!-- Powerups -->
+
+	<enemyFish name="Bubbles" template="config/fish/BonusBubbleStar.xml" poolSize="2"  displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(1.0,7.0)" />
+		<spawnInfo playerSize="8.5" maxCount="2"	respawnFreq="(3.0,8.0)" />
+		<spawnInfo playerSize="12.5" maxCount="2"	respawnFreq="(3.0,8.0)" />
+	</enemyFish>
+	
+	<enemyFish name="Fury Bubbles" template="config/fish/BonusBubbleFeedingFury.xml" poolSize="1"  displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(7.0,10.0)" />
+		<spawnInfo playerSize="8.5" maxCount="1"	respawnFreq="(10.0,18.0)" />
+		<spawnInfo playerSize="12.5" maxCount="1"	respawnFreq="(10.0,20.0)" />
+	</enemyFish>
+
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track3.wav" />
+		
+</stage>

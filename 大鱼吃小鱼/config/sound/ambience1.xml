@@ -1,0 +1,23 @@
+<musicSystem category="0" >
+	<musicLayer name="MainLoop" sequence="loop" delay="(0.0,0.0)" fadeInTime="0.5" fadeOutTime="0.3" >
+		<clip path="resources/sounds/waterLoop1.wav" />
+	</musicLayer>
+	
+	<musicLayer name="WaterAmb" sequence="random-not-last" initialDelay="(2.0,4.0)" delay="(2.0,4.0)" fadeInTime="0.1" fadeOutTime="0.1" >
+		<clip path="resources/sounds/waterAmb1.wav" />
+		<clip path="resources/sounds/waterAmb2.wav" />
+	</musicLayer>
+
+	<musicLayer name="Waves" sequence="random-not-last" initialDelay="(3.0,6.0)" delay="(3.0,6.0)" fadeInTime="0.1" fadeOutTime="0.1" >
+		<clip path="resources/sounds/wave1.wav" />
+		<clip path="resources/sounds/wave2.wav" />
+	</musicLayer>
+
+
+	<musicLayer name="Bubbles" sequence="random-not-last" initialDelay="(2.0,7.0)" delay="(2.0,7.0)" fadeInTime="0.1" fadeOutTime="0.1" >
+		<clip path="resources/sounds/bubbles1.wav" />
+		<clip path="resources/sounds/bubbles2.wav" />
+	</musicLayer>
+
+
+</musicSystem>

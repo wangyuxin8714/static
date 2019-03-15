@@ -1,0 +1,35 @@
+<fish name="Tuna Medium School"
+	class="SoldierFish"
+	foodValue="30"
+	maxSpeedX="(100,140)" 
+	maxSpeedY="(70,90)" 
+	sightDist="175" 
+	sightAngle="40"
+	accelRate="250" 
+	dragRate="40" 
+	scale="0.45"
+	size="15"
+	hotSpot="-18,-18,24,18"
+	spawnType="offStageLR"
+	animPath="resources/Tuna/" 
+	wanderMoveChangeFreq="(5.0,8.0)"
+	wanderStateChangeFreq="(5.0,10.0)"
+	chaseMoveChangeFreq="(0.2,1.5)"
+	chaseStateChangeFreq="(3.0,7.0)"
+	runMoveChangeFreq="(1.0,5.0)"
+	runStateChangeFreq="(3.0,6.0)"
+	sightCheckFreq="0.06"
+	schoolSize="4"
+	schoolDist="40"
+	schoolNeighborDist="150"	
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="1.0" />
+	<menuImage onImage="resources/Tuna/hudImage.png" />
+
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="PlayerFish"  reaction="run" reactFreq="1.0" />
+	<react class="BrineShrimp" reaction="chase" reactFreq="0.5" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+
+</fish>

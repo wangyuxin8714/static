@@ -1,0 +1,55 @@
+<stageManifest>
+	<gameInfo  version="RN-Gold 1.0" />
+
+	<fishChange  name="Andy" />
+	<stage name="Small Fish Small Pond"		path="SmallFishSmallPond" mapPos="119,272" />
+	<stage name="Feeding Frenzy!"			path="FeedingFrenzy" mapPos="115,302" />
+	<stage name="Bubble Bubble"			path="BubbleBubble" mapPos="125,330"/>
+	<stage name="Hidden Treasures"			path="HiddenTreasure" mapPos="142,358"/>
+	<stage name="School's Out!"			path="SchoolsOut" mapPos="171,371"/>
+	<stage name="Barracuda Alert"			path="RushHour" mapPos="197,358" />
+	<stage name="Crazy Jellies!"			path="CrazyJellies" mapPos="214,328" />
+	<stage name="Jelly Jam"				path="JellyJam" mapPos="238,309"/>
+
+	<fishChange  name="Leon" />
+	<stage name="Hear Me Roar!"			path="HearMeRoar" mapPos="318,305"/>
+	<stage name="Gas Bag"				path="GasBag" mapPos="350,312" />
+	<stage name="Fish Soup"				path="FishSoup" mapPos="359,339" />
+	<stage name="A Need for Speed"			path="NeedForSpeed" mapPos="358,366"/>
+	<stage name="Fish in a Barrel!"			path="FishInBarrel" mapPos="338,390"/>
+	<stage name="Boom!"				path="Boom" mapPos="351,415"/>
+	<stage name="Don't Eat the Green Fish!" 	path="DontEatTheGreenFish" mapPos="380,418"/>
+	<stage name="Watch What You Eat!"		path="WatchWhatYouEat" mapPos="402,402"/>
+
+	<fishChange  name="Eddie" />
+	<stage name="What's the Angle?"			path="YoSpike" mapPos="478,396"/>
+	<stage name="Tricky Treasure"			path="TrickyTreasure" mapPos="505,407"/>
+	<stage name="Six Degrees"			path="SixDegrees" mapPos="538,406"/>
+	<stage name="A Shell Game"			path="ShellGame" mapPos="562,390"/>
+	<stage name="Deep Water Dreams"			path="Barracuda" mapPos="582,370"/>
+	<stage name="Surgeon Crossing"			path="TunaCrossing" mapPos="592,344"/>	
+	<stage name="Melting Pot"			path="MeltingPot" mapPos="584,317"/>	
+	<stage name="Playing Chicken"			path="PlayingChicken" mapPos="570,294"/>
+
+	<fishChange  name="JD" />
+	<stage name="Hey Slick!"			path="SuckItUp" mapPos="504,246" />
+	<stage name="More Mutant Madness"		path="MoreMutantMadness" mapPos="476,253"/>
+	<stage name="Stun, Stun, Stun... Boom!" 	path="SuckSuckSuckBoom" mapPos="448,262"/>
+	<stage name="Puffer Palooza"			path="EatingOnRun" mapPos="422,253" />
+	<stage name="Tuna Sashimi"			path="TunaSashimi" mapPos="413,229" />
+	<stage name="Swim And Cover"			path="DuckAndCover" mapPos="432,211" />
+	<stage name="Marlin Madness"			path="MarlinMadness" mapPos="456,207" />
+	<stage name="Sucker's Bet"			path="SuckersBet" mapPos="478,190" />
+
+	<fishChange name="Orville" />
+	<stage name="Killer Instinct"			path="KillerInstinct" mapPos="511,137" />
+	<stage name="Midway Crossing"			path="MidwayCrossing" mapPos="497,114" />
+	<stage name="Love Canal"			path="LoveCanal" mapPos="498,90" />
+	<stage name="Barracuda Buffet"			path="BarracudaBuffet" mapPos="518,78" />
+	<stage name="Merry Go Round"			path="MerryGoRound" mapPos="542,83" />
+	<stage name="Shark Reef"			path="SharkReef" mapPos="567,82" />
+	<stage name="Minefield"				path="Minefield" mapPos="586,65" />
+	<stage name="Shark King"			path="SharkKing" mapPos="584,35" />
+	
+	<fishChange name="END" />
+</stageManifest>

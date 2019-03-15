@@ -1,0 +1,15 @@
+<screen name="Sucker's Bet">
+	<include name="baseLyout" file="config\Stages\wyw\ssb_32.xml" />
+
+	<textSub name="title" string="" />
+								  
+	<textSub name="tagline" string="" />
+		
+	<textSub name="para1"  string="" />
+
+	<textSub name="para2"  string=""/>
+
+	<textSub name="objectiveText" string="" />
+	<textSub name="timeObjectiveText" string="" />
+
+</screen>

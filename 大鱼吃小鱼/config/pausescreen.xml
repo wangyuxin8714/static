@@ -1,0 +1,19 @@
+<screen name="PauseScreen">
+	<group name="popUp" x="92" y="50">
+		<image name="background" file="resources\menus\popupBG.jpg"  />
+		<text name="optionsTitle" string=" " font="resources/menus/menuFont.xml" xAlign="center" yAlign="top" size="18" x="227" y="3" />
+
+
+		<group name="buttons" x="156" y="76">
+			<imageButton upImg="resources/menus/genericButtonNormal.png" overImg="resources/menus/genericButtonHigh.png" x="0" y="0" action="pauseResume"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+			<text string="A" font="resources/hud/buttonfontresume.xml" xAlign="center" x="68" y="15" />
+
+		<imageButton upImg="resources/menus/genericButtonNormal.png" overImg="resources/menus/genericButtonHigh.png" x="0" y="100" action="pauseOptions"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+		<text string="A" font="resources/hud/buttonFontOptions.xml" xAlign="center" x="68" y="115" />
+
+		<imageButton upImg="resources/menus/genericButtonNormal.png" overImg="resources/menus/genericButtonHigh.png" x="0" y="200" action="pauseQuit"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+		<text string="A" font="resources/hud/buttonFontEndGame.xml" xAlign="center" x="68" y="215" />
+		</group>
+
+	</group>
+</screen>

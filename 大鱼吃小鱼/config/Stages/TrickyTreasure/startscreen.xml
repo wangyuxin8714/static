@@ -1,0 +1,16 @@
+<screen name="Crazy Jelly Start">
+	<include name="baseLyout" file="config\Stages\wyw\ssb_18.xml" />
+
+	<textSub name="title" string="" />
+								  
+	<textSub name="tagline" string="" />
+		
+	<textSub name="para1"  string="" />
+
+	<textSub name="para2"  string=""/>
+
+	<image name="pearlButton" file="resources\Oyster\blackPearl.jpg" x="494" y="285" pivot="center" opacity="0.8" scaleX="1.0" scaleY="1.0" />
+
+	<textSub name="objectiveText" string="" />
+	<textSub name="timeObjectiveText" string="" />
+</screen>

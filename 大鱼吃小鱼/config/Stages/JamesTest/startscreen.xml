@@ -1,0 +1,24 @@
+<screen name="Six Degrees Load">
+
+	<include name="baseLyout" file="config\Stages\stageStartBase.xml" />
+
+	<textSub name="title" string="" />
+								  
+	<textSub name="tagline" string="Who's Obtuse?" />
+		
+	<textSub name="para1"  string="The ocean seems to be getting more crowded these days.\n
+								A good reef is becoming harder to find.\n
+								" />
+
+	<textSub name="para2"  string="\nJellyfish are your friends?\n
+								      Jellyfish can pack a mean sting, but they can\n
+								      sometimes be useful too. If a jellyfish stuns another\n
+								      fish, that fish not only can't move but it can't
+								      bite either!\n
+									" />
+
+
+	<textSub name="objectiveText" string="" />
+	<textSub name="timeObjectiveText" string="" />
+
+</screen>

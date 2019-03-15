@@ -1,0 +1,5 @@
+<screen name="Stage 1 BG">
+	<group x="-20" y="-100">
+		<image name="background" file="resources/backdrops/LostCity/bgImg.jpg" scaleX="1" scaleY="1" />
+	</group>
+</screen>

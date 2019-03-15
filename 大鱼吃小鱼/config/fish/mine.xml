@@ -1,0 +1,17 @@
+<fish name="Mine"	class="Mine"
+						foodValue="0"
+						maxSpeedX="(8,10)" 
+						maxSpeedY="(60,80)" 
+						sightDist="0" 
+						accelRate="300" 
+						dragRate="200" 
+						scale="1.0"
+						size="999"
+						spawnType="offstageTop"
+						animPath="resources/Mine/"
+						collision="-30,-30,30,30"
+						hotSpot="-22,-22,22,22"
+>
+	
+	<menuImage offImage="resources/mine/mine0.jpg" onImage="resources/mine/mine0.jpg" />
+</fish>

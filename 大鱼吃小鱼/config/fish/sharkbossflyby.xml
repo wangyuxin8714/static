@@ -1,0 +1,28 @@
+<fish name="SharkBossFlyby"	
+	class="Barracuda"
+	foodValue="1000"
+	maxSpeedX="440" 
+	maxSpeedY="50" 
+	sightDist="500" 
+	sightAngle="60"
+	accelRate="500"
+	dragRate="40" 
+	scale="1.4"
+	size="20"
+	tailSpot="-68,-37,-35,37"
+	hotSpot="-10,-25,57,30"
+	collision="3,25,200,81"
+	spawnType="offstageLR"
+	chaseStateChangeFreq="(2.0,5.0)"
+	chaseMoveChangeFreq="(1.0,2.0)"
+	animPath="resources/shark/" 
+	hsvOffset="+30,-0.2,+0.2"
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="0.5" />
+	<menuImage onImage="resources/Shark/hudImage.png" />
+
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+
+</fish>

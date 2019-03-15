@@ -1,0 +1,25 @@
+<fish name="Barracuda"	class="Barracuda"
+						foodValue="100"
+						maxSpeedX="410" 
+						maxSpeedY="10" 
+						sightDist="500" 
+						sightAngle="50"
+						accelRate="500" 
+						dragRate="40" 
+						scale="1.35"
+						size="100"
+						tailSpot="-68,-37,-35,37"
+						hotSpot="-10,-25,57,30"
+						collision="3,25,200,81"
+						spawnType="offstageLR"
+						chaseStateChangeFreq="(1.0,2.5)"
+						chaseMoveChangeFreq="(1.0,1.8)"
+						animPath="resources/barracuda/" >
+	
+	<sound class="eaten" name="eatenSound" pitch="0.6" />
+	<menuImage onImage="resources/barracuda/hudImage.png" />
+	
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="1.0" />
+
+</fish>

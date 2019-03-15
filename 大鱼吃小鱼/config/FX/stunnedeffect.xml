@@ -1,0 +1,12 @@
+<particleSystem >
+	<particleStream sequence="random" emitRate="10.0" offset="0,0" parent="PlayGroup" offsetType="groupRelative" >
+		<resource type="image" path="resources/FX/starParticle" />
+		<velocity startX="(-10,10)" startY="(-5,-8)" />
+		<acceleration rate="(0,0)" />
+		<extForce force="0,0" />
+		<position startX="(-30,30)" startY="(-10,10)" />
+		<scale startScale="(0.6,0.9)" endScale="(0.5,0.8)" constant="true"/>
+		<particleLife lifeTime="(0.2,0.5)" />
+		<opacity startOp="1" endOp="0.01" />
+	</particleStream>
+</particleSystem>

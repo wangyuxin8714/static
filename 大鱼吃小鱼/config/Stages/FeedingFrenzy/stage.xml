@@ -1,0 +1,27 @@
+<stage name="Stage 2"
+	friendlyName="Bonus Stage - Feeding Frenzy" 
+	type="timedBonus"
+	stageWidth="800" 
+	stageHeight="600"
+	time="0:45" >
+
+	<environment bgLayout="resources/backdrops/SunkenTreasure/bgLayout.xml" 
+				 fgLayout="resources/backdrops/SunkenTreasure/fgLayout.xml"
+				 mgLayout="resources/backdrops/SunkenTreasure/mgLayout.xml" />
+				 	
+	<playerFish config="config/Fish/AngelPlayer.xml" >
+		<size size="1.5" targetScore="0" scale="0.67" />
+		<size size="2.5" targetScore="999999" scale="1.0" />
+	</playerFish>
+	
+<!-- Fish -->
+
+	<enemyFish name="Minnow Small" template="config/fish/MinnowSmall.xml" poolSize="38" mode="onlyUneaten" >
+		<spawnInfo playerSize="0"	maxCount="38"	respawnFreq="(.15,0.3)" />
+	</enemyFish>
+
+	<music	introSound="stageIntro" 
+			outroSound="stageOutro" 
+			gameMusic="resources/music/track2.wav" />	
+
+</stage>

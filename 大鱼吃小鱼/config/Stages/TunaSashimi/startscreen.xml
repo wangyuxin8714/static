@@ -1,0 +1,19 @@
+<screen name="Stage 1 Load">
+
+	<include name="baseLyout" file="config\Stages\wyw\ssb_29.xml" />
+
+	<textSub name="title" string="" />
+								  
+	<textSub name="tagline" string=""/>		
+	<textSub name="para1"  string="" />
+
+	<textSub name="para2"  string="" />
+
+	
+	<image x="428" y="195" scaleX="-0.5" scaleY="0.5" file="resources/tuna/swim/swim_cycle.1.jpg" />
+
+
+	<textSub name="objectiveText" string="" />
+	<textSub name="timeObjectiveText" string="" />
+
+</screen>

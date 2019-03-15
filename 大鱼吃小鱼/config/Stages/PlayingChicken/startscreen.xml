@@ -1,0 +1,20 @@
+<screen name="Stage 1 Load">
+
+	<include name="baseLyout" file="config\Stages\wyw\ssb_24.xml" />
+
+	<textSub name="title" string="" />
+								  
+	<textSub name="tagline" string="" />
+		
+	<textSub name="para1"  string="" />
+
+
+	<image file="resources/surgeonFish/hudImage.png" x="200" y="270" scaleX="-1" />
+	<image file="resources/barracuda/eat/eat_cycle.3.jpg" x="252" y="230" scaleX="0.8" scaleY="0.8" />
+
+	<textSub name="para2"  string="" />
+
+	<textSub name="objectiveText" string=" " />
+	<textSub name="timeObjectiveText" string=" " />
+
+</screen>

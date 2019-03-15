@@ -1,0 +1,19 @@
+<screen name="Stage 1 FG">
+	<group x="-20" y="-470">
+		<particleSystem x="400" y="300" file="config/fx/ambientBubbles.xml" />
+		<image name="plant1" x="20" y="880" scaleX="-1" file="resources/backdrops/BigRidge/plant1.jpg" />
+
+		<image name="plant2" x="10" y="850" file="resources/backdrops/BigRidge/plant2.jpg" />
+		<image name="plant2" x="260" y="870" file="resources/backdrops/BigRidge/plant2.jpg" />
+
+		<image name="plant1" x="1390" y="850" file="resources/backdrops/BigRidge/plant1.jpg" />
+		<image name="plant2" x="1290" y="880" file="resources/backdrops/BigRidge/plant2.jpg" />
+
+		<image name="plant2" x="1490" y="880" file="resources/backdrops/BigRidge/plant2.jpg" />
+	</group>
+
+	<image name="logo" opacity="0.6" file="resources\menus\logo.png" pivot="center" x="320" y="50" />
+	<text opacity="0.6" font="resources\menus\infoText14.xml" x="320" y="90" xAlign="center"
+			string="Frenzy Fanatic!" />
+
+</screen>

@@ -1,0 +1,36 @@
+<fish name="Golden Minnow" 
+	class="GoldenMinnow"
+	foodValue="300"
+	maxSpeedX="400"
+	minSpeedX="400"
+	minSpeedY="50"
+	maxSpeedY="50" 
+	sightDist="200" 
+	sightAngle="90"
+	accelRate="800" 
+	dragRate="70" 
+	scale="0.4"
+	size="0.2"
+	spawnType="offStageLR"
+	animPath="resources/BrineShrimp/" 
+	wanderMoveChangeFreq="8.0"
+	wanderStateChangeFreq="8.0"
+	chaseMoveChangeFreq="(0.2,0.5)"
+	chaseStateChangeFreq="(2.0,5.0)"
+	runMoveChangeFreq="8.0"
+	runStateChangeFreq="8.0"
+	sightCheckFreq="0.1"
+	>
+
+	<sound class="eaten" name="eatenSound" pitch="1.5" />
+	<menuImage onImage="resources/BrineShrimp/hudImage.png" />
+
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="Barracuda" reaction="run" reactionFreq="1.0" />
+	<react class="BasicJellyFish" reaction="run" reactFreq="1.0" />
+	<react class="PlayerFish" reaction="avoid" reactFreq="1.0" />
+	<react class="SoldierFish" reaction="run" reactFreq="1.0" />
+	<react class="AngelFish" reaction="run" reactFreq="1.0" />	
+	<react class="ChaserFish" reaction="run" reactFreq="1.0" />
+	<react class="PufferFish" reaction="run" reactFreq="1.0" />
+</fish>

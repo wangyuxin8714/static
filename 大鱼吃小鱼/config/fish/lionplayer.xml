@@ -1,0 +1,14 @@
+<playerFish 
+	name="Leon" 
+	maxSpeedX="400" 
+	maxSpeedY="400" 
+	accelRate="400" 
+	fluidDrag="0.0002" 
+	drag="5"
+	animPath="resources/Lion/"
+	class="JohnDoryPlayer"
+	hotSpot="0,-3,44,40"
+	collision="5,58,147,140"
+	hsvOffset="-30,0,0"	
+	unsafeEatFrames="(3,3)"
+/>

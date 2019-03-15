@@ -1,0 +1,55 @@
+<splats>
+	<splat name="playerEat" lifeTime="1.0" >
+		<velocity startX="1" startY ="1" />
+		<destination pos="545,10" />
+		<scale startScale="0.9" endScale="0.5" />
+		<resource type="text" font="resources/hud/frenzyFontWhite.xml"/>
+	</splat>
+
+	<splat name="playerEatNegative" lifeTime="1.0" >
+		<velocity startX="1" startY ="1" />
+		<destination pos="570,6" />
+		<scale startScale="0.9" endScale="0.5" />
+		<resource type="text" font="resources/hud/frenzyFontRed.xml"/>
+	</splat>
+	
+	<splat name="levelUpBurst" lifeTime="0.4" >
+		<velocity startX="0.1" startY ="-100" />
+		<extForce force="0,0" />
+		<scale startScale="0.5" endScale="1.5" />
+		<opacity startOp="1.0" endOp="0.0001" />
+		<resource type="image" path="resources/fx/starBurst.png" />
+	</splat>
+
+	<splat name="levelUp" lifeTime="1.0" >
+		<velocity startX="0.1" startY ="-200" />
+		<extForce force="0,0" />
+		<scale startScale="0.5" endScale="1.5" />
+		<opacity startOp="1.0" endOp="0.0" />
+		<resource type="text" font="resources/hud/frenzyFontGreen.xml" text="Level Up!" />
+	</splat>
+
+	<splat name="bonusSplat" lifeTime="1.3" >
+		<velocity startX="1" startY ="-100" />
+		<extForce force="0,-80" />
+		<scale startScale="1.0" endScale="1.0" />
+		<resource type="text" font="resources/hud/frenzyFontGreen.xml"/>
+	</splat>
+
+	<splat name="frenzySplat" lifeTime="0.8" >
+		<velocity startX="0.1" startY ="-100" />
+		<extForce force="0,0" />
+		<scale startScale="0.5" endScale="1.5" />
+		<opacity startOp="1.0" endOp="0.0" />
+		<resource type="text" font="resources/hud/frenzyFontGreen.xml" text="FEEDING FRENZY!" />
+	</splat>
+
+	<splat name="doubleFrenzySplat" lifeTime="0.8" >
+		<velocity startX="0.1" startY ="-100" />
+		<extForce force="0,0" />
+		<scale startScale="0.5" endScale="1.5" />
+		<opacity startOp="1.0" endOp="0.0" />
+		<resource type="text" font="resources/hud/frenzyFontRed.xml" text="DOUBLE FRENZY!" />
+	</splat>
+
+</splats>

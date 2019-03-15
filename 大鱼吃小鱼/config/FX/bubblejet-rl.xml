@@ -1,0 +1,15 @@
+<particleSystem autoStop="-1.0" >
+
+	<particleStream sequence="sequence" emitRate="70" offset="0,0" offsetType="groupRelative">
+		<resource type="image" path="resources/FX/bubbleParticle" />
+		<velocity startX="(-310,-350)" startY="(-3,3)" />
+		<acceleration rate="0" />
+		<extForce force="0,0" />
+		<position startX="(0,10)" startY="(-10,10)" />
+		<scale startScale="(0.3,0.3)" endScale="(0.4,0.7)" constantScale="false" />
+		<particleLife lifeTime="(1.5,2.3)" />
+		<opacity startOp="0.5" endOp="0.5" />
+		<jitter axis="Y" amplitude="(0.3,0.5)" period="(1.5,2.5)" rate="(1.5,2.5)" />
+	</particleStream>
+
+</particleSystem>

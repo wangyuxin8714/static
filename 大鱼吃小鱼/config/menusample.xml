@@ -1,0 +1,25 @@
+<screen name="Main Menu">
+	<!--<image name="background" file="resources\clownfish\fishSwimLR.4.png" opacity=".75" x="100" y="50" />
+	<text  name="title_text" string="Fish Food" font="resources/HUD/tempus_sans_itc_14.png" xAlign="center" yAlign="top" size="18" x="320" y="100"/>-->
+	<group name="imgButtonGroup" x="320" y="240" opacity="0.5">
+		<imageButton name="test_button" upImg="resources\HUD\buttonTestNormal.png" overImg="resources\HUD\buttonTestHi.png"
+			activeImg="resources\HUD\buttonTestActive.png" x="10" y="10" action="doButtonClick" />
+	</group>
+	<!-- 
+	<group id="button_group" x="320" y="20" xAlign="center" yAlign="top">
+		
+		<textButton name="new_game_btn" string="New Game" font="fishFont" xAlign="center" x="320" y="0" action="doNewGame" />
+		
+		<imageButton name="quit_btn" x="320" y="30" action="doQuit"
+			normalImg="resources/quitBtn.png" 
+			overImg="resource/quitBtnOver.png" 
+			activeImg="resource/quitBtnActive.png" />	
+	
+	</group>
+
+	<animdata id="button_slide" target="button_group" curveType="linear" autoPlay="true">
+		<key time="0" x="320" y="-300" />
+		<key time="1.5" x="320" y="0" />
+	</animData> 
+	-->
+</screen>

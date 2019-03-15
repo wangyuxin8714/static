@@ -1,0 +1,23 @@
+<stageManifest>
+	<gameInfo  version="Configuration Testing" />
+
+	<fishChange  name="Andy" />
+	<stage name="Sunken Treasure"		path="SS_SunkenTreasure" mapPos="0,272" />
+
+	<fishChange  name="Andy" />
+	<stage name="Starfish Reef"		path="SS_StarFish" mapPos="500,272" />
+
+	<fishChange  name="Leon" />
+	<stage name="Underwater Cave"				path="SS_PotteryCave" mapPos="1500,305"/>
+
+	<fishChange  name="Eddie" />
+	<stage name="Deep Sea"			path="SS_DeepSea" mapPos="3000,396"/>
+
+	<fishChange  name="JD" />
+	<stage name="Lost City"				path="SS_LostCity" mapPos="4000,246" />
+
+	<fishChange name="Orville" />
+	<stage name="Shark Reef"			path="SS_BigRidge" mapPos="10000,137" />
+	
+	<fishChange name="END" />
+</stageManifest>

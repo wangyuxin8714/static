@@ -1,0 +1,28 @@
+<screen name="StageComplete">
+	<include name="baseLyout" file="config\Stages\stageCompleteBase.xml" />
+</screen>
+<!--<screen name="Stage 1 Complete">
+	<image name="background" file="resources\menus\mainBg.jpg"  />
+	<image name="logo" file="resources\menus\logo.png" x="135" />
+	<text name="congrats" string="STAGE COMPLETE" font="resources\menus\menuFont.xml" xAlign="center" x="320" y="115"/>
+	<text name="text" string="Terrific job!\nThose were some tasty treats!\n" font="resources/HUD/textFont.xml" xAlign="center" yAlign="top" size="18" x="320" y="160" />
+
+
+	<group name="timeBonusGroup" y="250">
+		<text string="Time Bonus" font="resources/menus/menuFont.xml" x="320" xAlign="center" y="0" />
+		<text name="TimeLeftHeader" string="Time Remaining:" font="resources/hud/textFont.xml" xAlign="right" x="350" y="35"/>
+		<text name="TimeLeftText" string="0:00" font="resources/hud/textFont.xml" xAlign="left" x="360" y="35"/>
+		<text name="TimeBonusHeader" string="Time Bonus:" font="resources/hud/textFont.xml" xAlign="right" x="350" y="60"/>
+		<text name="TimeBonusText" string="00000" font="resources/hud/textFont.xml" xAlign="left" x="360" y="60" />
+	</group>
+
+	<group name="noTimeBonusGroup" y="250">
+		<text string="End of Alpha - come back for more fish\nmore environments and more fun!" font="resources/hud/textFont.xml" xAlign="center" x="320" y="50" />
+	</group>
+
+	<group name="continueBtnGroup" x="224" y="350">
+		<imageButton name="continueBtn" upImg="resources\menus\genericButtonNormal.png" overImg="resources\menus\genericButtonHigh.png" x="25" y="15" action="nextStage"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+		<text name="continueBtnText" string="Continue" font="resources/HUD/buttonFont.xml" xAlign="center" yAlign="top" size="18" x="96" y="30" />
+	</group>
+
+</screen>

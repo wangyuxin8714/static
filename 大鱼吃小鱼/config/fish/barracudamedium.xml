@@ -1,0 +1,35 @@
+<fish name="BarracudaMedium" 
+	class="FlyByFish"
+	foodValue="30"
+	maxSpeedX="(70,135)"
+	minSpeedX="(30,30)"
+	minSpeedY="(0,0)"
+	maxSpeedY="(50,60)" 
+	sightDist="120" 
+	sightAngle="45"
+	accelRate="400" 
+	dragRate="70" 
+	scale="0.48"
+	size="10"
+	spawnType="offStageLR"
+	animPath="resources/Barracuda/" 
+	wanderMoveChangeFreq="(2.0,7.0)"
+	wanderStateChangeFreq="(5.0,10.0)"
+	chaseMoveChangeFreq="(1.0, 2.0)"
+	chaseStateChangeFreq="(2.0,5.0)"
+	runMoveChangeFreq="(1.0,5.0)"
+	runStateChangeFreq="(2.0,4.0)"
+	sightCheckFreq="0.2"
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="1.5" />
+	<menuImage onImage="resources/barracuda/hudImage.png" />
+
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+	<react class="PlayerFish" reaction="run" reactFreq=".20" />
+	<react class="SoldierFish" reaction="avoid" reactFreq="0.4" />
+	<react class="AngelFish" reaction="avoid" reactFreq="1.0" />	
+	<react class="ChaserFish" reaction="avoid" reactFreq="0.6" />
+	<react class="Shark" reaction="run" reactFreq="0.8" />
+</fish>

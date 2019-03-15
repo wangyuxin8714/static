@@ -1,0 +1,55 @@
+<screen name="Stage 1 Load">
+
+	<include name="baseLyout" file="config\Stages\wyw\ssb_23.xml" />
+
+	<textSub name="title" string="" />
+								  
+	<textSub name="tagline" string=""/>
+
+	<textSub name="para1"  string="" />
+
+	<textSub name="para2"  string="" />
+
+	<image name="extraButton"  file="resources\bonus\shieldBubble1.png" x="92" y="267" />
+	<image name="extraButton"  file="resources\bonus\shieldBubble1.png" x="510" y="267" />
+
+	<textSub name="objectiveText" string=" " />
+	<textSub name="timeObjectiveText" string=" " />
+
+</screen>
+
+
+<!--<screen name="Barracuda">
+	<image name="background" file="resources\menus\mainBg.jpg"  />
+	<image name="logo" file="resources\menus\logo.png" x="135" />
+
+	<text name="text" 
+			xAlign="center" yAlign="top" size="18" x="320" y="100" 
+			string="Stage 8: Barracuda Alert\n\n
+	
+			Barracuda are deadly predators.  Watch out for\n
+			the early warning signs and stay out of their way!\n\n" 
+			
+			font="resources/HUD/textFont.xml" 
+	/>
+
+	<group name="noTimeObjective" y="205">
+		<text name="objectiveText" 
+		font="resources/hud/textFont.xml" xAlign="center" x="320" y="20"
+		string="Hint - Feeling Lucky? Bite the Barracuda's \n
+				tail to score extra points. But watch out! He\n
+				might not appreciate it." 
+		/>
+	</group>
+
+	<group name="timeObjective" y="265">
+		<text name="timeObjectiveLimitHeader" font="resources/hud/textFont.xml" string="Time Limit:" xAlign="right" x="330" y="30"/>
+		<text name="timeObjectiveLimit" font="resources/hud/textFont.xml" string="0:00" xAlign="left" x="340" y="30"/>
+	</group>
+
+	<group name="continueBtnGroup" x="224" y="320">
+		<imageButton name="continueBtn" upImg="resources\menus\genericButtonNormal.png" overImg="resources\menus\genericButtonHigh.png" x="25" y="15" action="stageStart"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+		<text name="continueBtnText" string="Continue" font="resources/HUD/buttonFont.xml" xAlign="center" yAlign="top" size="18" x="96" y="30" />
+	</group>
+
+</screen>-->

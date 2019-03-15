@@ -1,0 +1,43 @@
+<stage name="JellyJam"
+	friendlyName="Jelly Jam" 
+	type="timedBonus"
+	stageWidth="800" 
+	stageHeight="600"
+	time="1:10" >
+
+	<environment bgLayout="resources/backdrops/SunkenTreasure/bgLayout.xml" 
+				 fgLayout="resources/backdrops/SunkenTreasure/fgLayout.xml"
+				 mgLayout="resources/backdrops/SunkenTreasure/mgLayout.xml" />
+
+	<playerFish config="config/Fish/AngelPlayer.xml" >
+		<size size="0.5" targetScore="0" scale="0.67" />
+		<size size="2.5" targetScore="999999" scale="1.0" />
+	</playerFish>
+
+<!-- Fish -->
+
+<!-- Hazards -->
+	
+	<enemyFish name="Jellies" template="config/fish/BasicJellyFish.xml" poolSize="6" displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="6"	respawnFreq="(.2,4.5)" />
+	</enemyFish>
+
+<!-- Powerups -->
+
+	<enemyFish name="2x" template="config/fish/BonusBubble2X.xml" poolSize="1" displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(5.0,15.0)" />
+	</enemyFish>
+
+	<enemyFish name="Bonus" template="config/fish/BonusBubbleStar.xml" poolSize="40" displayMenuImage="false" mode="onlyUneaten">
+		<spawnInfo playerSize="0"	maxCount="10"	respawnFreq="(.5,1.5)" />
+	</enemyFish>
+
+	<enemyFish name="Life Bubbles" template="config/fish/BonusBubbleFreeLife.xml" poolSize="1"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(35.0,35.0)" />
+	</enemyFish>
+
+	<music	introSound="stageIntro" 
+			outroSound="stageOutro" 
+			gameMusic="resources/music/track2.wav" />	
+
+</stage>

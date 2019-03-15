@@ -1,0 +1,7 @@
+<screen name="Stage 1 MG">
+	<particleSystem x="400" y="300" file="config/fx/ambientBubbles.xml" />
+	<image name="stalag2mg" scaleX="-1" scaleY="1" file="resources/backdrops/PotteryCave/fgStalag2.jpg" x="475" y="-20" />
+	<image name="stalag1mg" scaleX="1" scaleY="1" file="resources/backdrops/PotteryCave/fgStalag1.jpg" x="30" y="-10" />
+	<image name="mgRocks" scaleX="1" scaleY="1" file="resources/backdrops/PotteryCave/mgRock1.jpg" y="495" x="529" />
+	<image name="mgRocks2" scaleX="1" scaleY="1" file="resources/backdrops/PotteryCave/mgRock2.jpg" y="500" x="10" />
+</screen>

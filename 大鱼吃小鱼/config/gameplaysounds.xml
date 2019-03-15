@@ -1,0 +1,42 @@
+<sounds>
+	<sound name="playerSpawn"	file="resources/sounds/playerSpawn.wav"		count="1" />
+
+	<sound name="bite1"			file="resources/sounds/bite1.wav"			vol="0.7"	pitch="1.0" count="2" />
+	<sound name="bite2"			file="resources/sounds/bite2.wav"			vol="0.8"	pitch="1.0" count="2" />
+	<sound name="bite3"			file="resources/sounds/bite3.wav"			vol="0.9"	pitch="1.0" count="2" />
+	<sound name="bite4"			file="resources/sounds/bite4.wav"			vol="0.9"	pitch="1.0" count="2" />
+	<sound name="starPickup"	file="resources/sounds/starPickup.wav"		pitch="1.0" count="4" />
+	<sound name="eatenSound"	file="resources/sounds/eatGulp.wav"			pitch="1.0" count="5" />
+	<sound name="oysterPearl"	file="resources/sounds/oysterPearl.wav"		vol="1.0"	pitch="1.0" count="2" />
+	<sound name="mineExplode"	file="resources/sounds/mineExplode.wav"		vol="1.0"	pitch="1.0" count="3"/>
+	<sound name="playerGrow"	file="resources/sounds/playerGrow.wav"		vol="1.0"	pitch="1.0" count="1" />
+	<sound name="pufferBounce"  file="resources/sounds/pufferBounce.wav" count="3" />
+	<sound name="dangerSound"	file="resources/sounds/barracudaWarn.wav"	vol="1.0" count="2" />
+	<sound name="schoolBonus"	file="resources/sounds/schoolBonus.wav"		vol="0.8" count="1" />
+
+	<sound name="stageClear"	file="resources/sounds/stageClear.wav"		vol="1.0" count="1" />
+	<sound name="oysterBite"	file="resources/sounds/oysterBite.wav"		vol="0.9"	pitch="1.0" count="2" />
+	<sound name="playerDash"	file="resources/sounds/playerDash.wav"		vol="1.0"	pitch="1.0" count="1" />
+	<sound name="playerStunned" file="resources/sounds/playerStunned.wav"	count="1" />
+	<sound name="playerDie"		file="resources/sounds/playerDie.wav"		count="1"		vol="1.0" />
+	<sound name="frenzyVox"		file="resources/sounds/feedingFrenzy.wav"	vol="0.95" pitch="1.0" count="1" />
+	<sound name="doubleFrenzyVox" file="resources/sounds/doubleFrenzy.wav"	vol="0.95" pitch="1.0" count="1" />
+	<sound name="frenzyChime"	file="resources/sounds/feedingFrenzyChime.wav" vol="0.6" count="1" />
+	<sound name="stunBubble"	file="resources/sounds/stunBubble.wav"		vol="1.0"	count="1" />
+	<sound name="mermaid"		file="resources/sounds/mermaid.wav"			vol="1.0"	count="1" />
+	<sound name="gameOver"		file="resources/sounds/GameOver.wav"		vol="1.0"	count="1" />
+	<sound name="timerWarning"	file="resources/sounds/mouseDown.wav"		vol="1.0"	count="1" />
+
+	<sound name="extraLife"		file="resources/sounds/freeLife.wav"			count="1" />
+	<sound name="playerPoisoned" file="resources/sounds/playerPoison.wav"		count="1" />
+	<sound name="playerLostShield" file="resources/sounds/playerStunned.wav"	count="1" />
+
+	<sound name="playerSpeedUp" file="resources/sounds/speedStart.wav"	count="1" />
+	<sound name="playerSpeedDown" file="resources/sounds/speedEnd.wav"	count="1" />
+
+	<sound name="furyStart" file="resources/sounds/furyStart.wav"	count="1" />
+	<sound name="furyEnd"	file="resources/sounds/furyEnd.wav"		count="1" />
+
+	<sound name="mouseOver"	file="resources/sounds/mouseOver.wav"		count="3" />
+
+</sounds>

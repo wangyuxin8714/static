@@ -1,0 +1,54 @@
+<stage name="Minefield" 
+	friendlyName="Minefield"
+	stageWidth="1280" 
+	stageHeight="960"
+	type="timedBonus"
+	time="1:30" >
+
+	<environment bgLayout="resources/backdrops/BigRidge/bgLayout.xml" 
+				 fgLayout="resources/backdrops/BigRidge/fgLayout.xml"
+				 mgLayout="resources/backdrops/BigRidge/mgLayout.xml" />
+				 
+	<playerFish config="config/Fish/OrcaPlayer.xml" >
+		<size size="16.5" targetScore="0" scale="0.76" />
+		<size size="21.5" targetScore="9999" scale="1.2" />
+	</playerFish>
+
+<!-- Fish -->
+
+
+<!-- Hazards -->
+	
+	<enemyFish name="Mine" template="config/fish/Mine.xml" poolSize="15" displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="10"	respawnFreq="(1.0, 15.0)" />
+	</enemyFish>
+
+	<enemyFish name="Poison MinnowMini" template="config/fish/PoisonMinnowMini.xml" poolSize="6" displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="6"	respawnFreq="(0.5,1.0)" />
+
+	</enemyFish>
+
+<!-- Powerups -->
+
+	<enemyFish name="Life Bubbles" template="config/fish/BonusBubbleFreeLife.xml" poolSize="1"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(5.0,10.0)" />
+	</enemyFish>
+
+	<enemyFish name="Bonus" template="config/fish/BonusBubbleStar.xml" poolSize="40" displayMenuImage="false" mode="onlyUneaten">
+		<spawnInfo playerSize="0"	maxCount="10"	respawnFreq="(0.5,1.0)" />
+	</enemyFish>
+
+	<enemyFish name="Stun Bubbles" template="config/fish/BonusBubbleStun.xml" poolSize="1"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(7.5,15.0)" />
+	</enemyFish>
+
+	<enemyFish name="2x" template="config/fish/BonusBubble2X.xml" poolSize="1" displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(5.0,15.0)" />
+	</enemyFish>
+
+
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track2.wav" />	
+		
+</stage>

@@ -1,0 +1,65 @@
+<screen name="Game Over">
+
+	<!--<image name="background" file="resources\menus\mainBg.jpg" scaleX="1" scaleY="1" />-->
+	<text name="modeText" string="Normal Mode" font="resources/hud/textFont.xml" xAlign="center" yAlign="top" x="320" y="90" />
+
+	<group name="scoreGroup" x="10" y="35" >
+
+		<text name="scoreRank0" string="1." font="resources/hud/textFont.xml" xAlign="right" yAlign="top" x="190" y="80" />
+		<text name="scoreRank1" string="2." font="resources/hud/textFont.xml" xAlign="right" yAlign="top" x="190" y="105" />
+		<text name="scoreRank2" string="3." font="resources/hud/textFont.xml" xAlign="right" yAlign="top" x="190" y="130" />
+		<text name="scoreRank3" string="4." font="resources/hud/textFont.xml" xAlign="right" yAlign="top" x="190" y="155" />
+		<text name="scoreRank4" string="5." font="resources/hud/textFont.xml" xAlign="right" yAlign="top" x="190" y="180" />
+		<text name="scoreRank5" string="6." font="resources/hud/textFont.xml" xAlign="right" yAlign="top" x="190" y="205" />
+		<text name="scoreRank6" string="7." font="resources/hud/textFont.xml" xAlign="right" yAlign="top" x="190" y="230" />
+		<text name="scoreRank7" string="8." font="resources/hud/textFont.xml" xAlign="right" yAlign="top" x="190" y="255" />
+		<text name="scoreRank8" string="9." font="resources/hud/textFont.xml" xAlign="right" yAlign="top" x="190" y="280" />
+		<text name="scoreRank9" string="10." font="resources/hud/textFont.xml" xAlign="right" yAlign="top" x="190" y="305" />
+
+		<text name="scoreName0" string="highscore001 . . . . . " font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="195" y="80" />
+		<text name="scoreName1" string="highscore002 . . . . . " font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="195" y="105" />
+		<text name="scoreName2" string="highscore003 . . . . . " font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="195" y="130" />
+		<text name="scoreName3" string="highscore004 . . . . . " font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="195" y="155" />
+		<text name="scoreName4" string="highscore005 . . . . . " font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="195" y="180" />
+		<text name="scoreName5" string="highscore006 . . . . . " font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="195" y="205" />
+		<text name="scoreName6" string="highscore007 . . . . . " font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="195" y="230" />
+		<text name="scoreName7" string="highscore008 . . . . . " font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="195" y="255" />
+		<text name="scoreName8" string="highscore009 . . . . . " font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="195" y="280" />
+		<text name="scoreName9" string="score010 . . . . . . . " font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="195" y="305" />
+
+		<text name="score0" string="10,000" font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="360" y="80" />
+		<text name="score1" string="10,000" font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="360" y="105" />
+		<text name="score2" string="10,000" font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="360" y="130" />
+		<text name="score3" string="10,000" font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="360" y="155" />
+		<text name="score4" string="10,000" font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="360" y="180" />
+		<text name="score5" string="10,000" font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="360" y="205" />
+		<text name="score6" string="10,000" font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="360" y="230" />
+		<text name="score7" string="10,000" font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="360" y="255" />
+		<text name="score8" string="10,000" font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="360" y="280" />
+		<text name="score9" string="10,000" font="resources/hud/textFont.xml" xAlign="left" yAlign="top" x="360" y="305" />
+	</group>
+	
+	<group name="foodBankGrp" x="320" y="376" >
+		<text name="foodBankHeader" font="resources/hud/textFont.xml" xAlign="right" yAlign="top" x="13" y="0" string="Food Bank Total:"/>
+		<text name="foodBankTotal" font="resources/hud/textFont.xml" xAlign="left" x="17" y="0" string="10,000" />
+		<text name="foodBankRank" font="resources/hud/textFont.xml" xAlign="center" x="0" y="20" string="Newbie Nibbler" />
+	</group>
+	
+	<group name="doneBtnGroup" x="224" y="408">
+		<imageButton name="doneBtn" upImg="resources\menus\smallGenericButtonNormal.png" overImg="resources\menus\smallGenericButtonHigh.png" x="50" y="24" action="highScoreDone"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+		<text name="doneBtnText" string="A" font="resources/HUD/buttonFontDone.xml" xAlign="center" yAlign="top" size="18" x="96" y="30" />
+	</group>
+
+
+	<group name="nextBtnGroup" x="450" y="388">
+		<imageButton name="nextPageBtn" upImg="resources\menus\smallGenericButtonNNext.png" overImg="resources\menus\smallGenericButtonHNext.png" x="0" y="0" action="highScoreNextPage"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+		<text name="nextPageBtnText" string="" font="resources/HUD/buttonFont.xml" xAlign="center" yAlign="top" size="18" x="48" y="6" />
+	</group>
+	
+
+	<group name="prevBtnGroup" x="70" y="388">
+		<imageButton name="prevPageBtn" upImg="resources\menus\smallGenericButtonNPrev.png" overImg="resources\menus\smallGenericButtonHPrev.png" x="0" y="0" action="highScorePrevPage"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+		<text name="prevPageBtnText" string="" font="resources/HUD/buttonFont.xml" xAlign="center" yAlign="top" size="18" x="48" y="6" />
+	</group>
+
+</screen>

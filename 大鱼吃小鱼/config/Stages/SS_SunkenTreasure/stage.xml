@@ -1,0 +1,48 @@
+<stage name="SS Sunken Treasure" 
+	friendlyName="Sunken Treasure Screen Saver"
+	stageWidth="640" 
+	stageHeight="480"
+	type="menu"
+	>
+
+	<environment bgLayout="resources/backdrops/SS_SunkenTreasure/bgLayout.xml" 
+				 fgLayout="resources/backdrops/SS_SunkenTreasure/fgLayout.xml"
+				 mgLayout="resources/backdrops/SS_SunkenTreasure/mgLayout.xml"/>
+				 
+	<toolTip file="config/toolTips/menuTip.xml" type="levelStart" delay="0.1" />
+
+	<playerFish config="config/Fish/AngelPlayer.xml" >
+		<size size="1.5" targetScore="0" scale="0.4" />
+		<size size="3.5" targetScore="23000" scale="0.67" />
+		<size size="5.5" targetScore="70000" scale="1.0" />
+		<size size="6.5" targetScore="11000" scale="1.0" />
+	</playerFish>
+	
+
+	<enemyFish name="Angels" template="config/fish/MenuAngel.xml" poolSize="1" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(1.0,3.0)" />
+	</enemyFish>
+	
+	<enemyFish name="Minnow Small" template="config/fish/minnowSmall.xml" poolSize="3">
+		<spawnInfo playerSize="0"	maxCount="3"	respawnFreq="(0.1,3.0)" />
+	</enemyFish>
+
+	<enemyFish name="Surgeon A Medium" template="config/fish/SurgeonAMedium.xml" poolSize="3" >
+		<spawnInfo playerSize="0"	maxCount="3"	respawnFreq="(1.0,10.0)" />
+		<spawnInfo playerSize="3.5" maxCount="3"	respawnFreq="(1.0,2.5)" />
+		<spawnInfo playerSize="4.5" maxCount="3"	respawnFreq="(1.0,2.0)" />
+	</enemyFish>
+
+	<enemyFish name="Lion A Large" template="config/fish/LionALarge.xml" poolSize="2" >
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(5.0,15.0)" />
+	</enemyFish> 
+
+	<enemyFish name="Shark" template="config/fish/SharkFlyby.xml" poolSize="1" displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0" maxCount="1" respawnFreq="(35.0,250.0)" />
+	</enemyFish>
+	
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track3.wav" />
+		
+</stage>

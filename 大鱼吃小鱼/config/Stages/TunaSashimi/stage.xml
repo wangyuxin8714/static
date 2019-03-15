@@ -1,0 +1,92 @@
+<stage name="TunaSashimi" 
+	friendlyName="Tuna Sashimi"
+	stageWidth="800" 
+	stageHeight="600"
+	time="1:30" >
+
+	<environment bgLayout="resources/backdrops/LostCity/bgLayout.xml" 
+				 fgLayout="resources/backdrops/LostCity/fgLayout.xml"
+				 mgLayout="resources/backdrops/LostCity/mgLayout.xml" />
+				 
+	<playerFish config="config/Fish/JDPlayer.xml" >
+		<size size="9.5" targetScore="0" scale="0.40" />
+		<size size="14.5" targetScore="550" scale="0.635" />
+		<size size="17.5" targetScore="1350" scale="1.0" />
+		<size size="18.5" targetScore="2200" scale="1.0" />
+	</playerFish>
+
+<!-- Fish -->
+	
+	<enemyFish name="Surgeon B Mini School" template="config/fish/SurgeonBMiniSchool.xml" poolSize="12" displayMenuImage="true">
+		<spawnInfo playerSize="0"	maxCount="12"	respawnFreq="(0.5,2.0)" />
+		<spawnInfo playerSize="14.5" maxCount="8"	respawnFreq="(1.0,5.0)" />
+		<spawnInfo playerSize="17.5" maxCount="4"	respawnFreq="(1.0,5.0)" />
+	</enemyFish> 
+
+	<enemyFish name="Puffer B Small" template="config/fish/PufferBSmall.xml" poolSize="25" >
+		<spawnInfo playerSize="0"	maxCount="4"	respawnFreq="(4.0,6.0)" />
+	</enemyFish>
+
+	<enemyFish name="Surgeon C2 Medium" template="config/fish/SurgeonC2Medium.xml" poolSize="6" >
+		<spawnInfo playerSize="0"	maxCount="3"	respawnFreq="(1.0,2.0)" />
+		<spawnInfo playerSize="14.5" maxCount="6"	respawnFreq="(0.3,0.8)" />
+		<spawnInfo playerSize="17.5" maxCount="4"	respawnFreq="(1.0,2.0)" />
+	</enemyFish> 
+
+	<enemyFish name="Tuna Large Flyby" template="config/fish/TunaLargeFlyby.xml" poolSize="8" displayMenuImage="false">
+		<spawnInfo playerSize="0"	maxCount="3"	respawnFreq="(2.0,3.0)" />
+		<spawnInfo playerSize="14.5" maxCount="4"	respawnFreq="(1.0,2.0)" />
+		<spawnInfo playerSize="17.5" maxCount="3"	respawnFreq="(1.0,2.0)" />
+	</enemyFish>
+
+	<enemyFish name="Tuna Large" template="config/fish/TunaLarge.xml" poolSize="2" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(3.0,7.0)" />
+		<spawnInfo playerSize="14.5" maxCount="2"	respawnFreq="(3.0,5.0)" />
+		<spawnInfo playerSize="17.5" maxCount="2"	respawnFreq="(2.0,4.0)" />
+	</enemyFish>
+
+	<enemyFish name="Shark" template="config/fish/SharkFlyby.xml" poolSize="1" displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0" maxCount="1" respawnFreq="(25.0,30.0)" />
+		<spawnInfo playerSize="14.5" maxCount="1" respawnFreq="(15.0,20.0)" />
+		<spawnInfo playerSize="17.5" maxCount="1" respawnFreq="(5.0,10.0)" />
+	</enemyFish>
+
+<!-- Hazards -->
+
+	<enemyFish name="Poison MinnowMini" template="config/fish/PoisonMinnowMini.xml" poolSize="5" displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(0.5,4.0)" />
+		<spawnInfo playerSize="14.5" maxCount="2"	respawnFreq="(5.0,10.0)" />
+		<spawnInfo playerSize="17.5" maxCount="3"	respawnFreq="(5.0,7.0)" />
+	</enemyFish>
+
+<!-- Powerups -->
+
+	<enemyFish name="Bubbles" template="config/fish/BonusBubbleStar.xml" poolSize="2"  displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(1.0,7.0)" />
+	</enemyFish> 
+	
+	<enemyFish name="Speed Bubbles" template="config/fish/BonusBubbleSpeed.xml" poolSize="2" mode="uncounted" displayMenuImage="false">
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(2.0,9.0)" />
+	</enemyFish>
+
+	<enemyFish name="Life Bubbles" template="config/fish/BonusBubbleFreeLife.xml" poolSize="1" mode="onlyUneaten" displayMenuImage="false">
+		<spawnInfo playerSize="0" maxCount="1"	respawnFreq="(30.0,45.0)" />
+	</enemyFish>
+	
+	<enemyFish name="Stun Bubbles" template="config/fish/BonusBubbleStun.xml" poolSize="1"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(5.0,20.0)" />
+	</enemyFish>
+
+	<enemyFish name="Shield Bubbles" template="config/fish/BonusBubbleShield.xml" poolSize="1"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(20.0,40.0)" />
+	</enemyFish>
+
+	<enemyFish name="GoldenMinnowMini" template="config/fish/GoldenMinnowMini.xml" poolSize="1" displayMenuImage="false" mode="onlyUneaten" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(15,40)" />
+	</enemyFish>
+
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track4.wav" />
+		
+</stage>

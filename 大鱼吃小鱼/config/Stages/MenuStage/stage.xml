@@ -1,0 +1,30 @@
+<stage name="Stage 1" 
+	friendlyName="Stage 1: Small Fish, Small Pond" 
+	nextLevelAt="500" 
+	stageWidth="640" 
+	stageHeight="480"
+	type="menu"
+	time="3:00" >
+
+	<environment bgLayout="config/Stages/MenuStage/bgLayout.xml"
+				mgLayout="config/Stages/MenuStage/mgLayout.xml"
+				fgLayout="config/Stages/MenuStage/fgLayout.xml" />
+
+	<playerFish config="config/Fish/AngelPlayer.xml" >
+		<size size="1.5" targetScore="0" scale="0.4" />
+		<size size="1.5" targetScore="0" scale="0.4" />
+	</playerFish>
+	
+	<enemyFish name="Minnows" template="config/fish/FearlessMinnow.xml" poolSize="3" >
+		<spawnInfo playerSize="0"	maxCount="3"	respawnFreq="(0.1,0.2)" />
+	</enemyFish>
+
+	<enemyFish name="Angels" template="config/fish/MenuAngel.xml" poolSize="1" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(0.5,2.0)" />
+	</enemyFish>
+
+	<enemyFish name="Shark" template="config/fish/SharkFlyby.xml" poolSize="1">
+		<spawnInfo playerSize="0" maxCount="1" respawnFreq="(10.0,30.0)" />
+	</enemyFish>
+		
+</stage>

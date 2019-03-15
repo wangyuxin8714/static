@@ -1,0 +1,24 @@
+<fish name="OrcaHazard"	class="Barracuda"
+	foodValue="100"
+	maxSpeedX="(300,360)" 
+	maxSpeedY="(100,100)"
+	sightDist="500" 
+	sightAngle="50"
+	accelRate="680" 
+	dragRate="40" 
+	scale="1.5"
+	size="100"
+	tailSpot="-68,-37,-35,37"
+	hotSpot="-10,-25,57,30"
+	collision="3,25,200,81"
+	spawnType="offstageLR"
+	chaseStateChangeFreq="(2.0,3.0)"
+	chaseMoveChangeFreq="(1.0,1.8)"
+	animPath="resources/orca/" >
+	
+	<sound class="eaten" name="eatenSound" pitch="0.6" />
+	<menuImage onImage="resources/orca/hudImage.png" />
+	
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+
+</fish>

@@ -1,0 +1,73 @@
+<stage name="CrazyJellies" 
+	stageWidth="800" 
+	stageHeight="600"
+	time="1:10" >
+
+	<environment bgLayout="resources/backdrops/StarFish/bgLayout.xml" 
+				 fgLayout="resources/backdrops/StarFish/fgLayout.xml"
+				 mgLayout="resources/backdrops/StarFish/mgLayout.xml" />
+	
+	<playerFish config="config/Fish/AngelPlayer.xml" >
+		<size size="1.5" targetScore="0" scale="0.4" />
+		<size size="4.5" targetScore="250" scale="0.67" />
+		<size size="6.5" targetScore="800" scale="1.0" />
+		<size size="7.5" targetScore="1200" scale="1.0" />
+	</playerFish>
+
+<!-- Fish -->
+
+	<enemyFish name="MinnowSmall" template="config/fish/minnowSmall.xml" poolSize="12">
+		<spawnInfo playerSize="0"	maxCount="10"	respawnFreq="0.3" />
+		<spawnInfo playerSize="4.5" maxCount="7"	respawnFreq="(0.5,2.5)" />
+		<spawnInfo playerSize="6.5" maxCount="4"	respawnFreq="(0.5,2.5)" />
+	</enemyFish>
+
+	<enemyFish name="Minnow School" template="config/fish/MinnowSchoolMini.xml" displayMenuImage="false" poolSize="6">
+		<spawnInfo playerSize="0"	maxCount="6"	respawnFreq="(0.3,1.0)" />
+		<spawnInfo playerSize="4.5"	maxCount="6"	respawnFreq="(3.0,6.0)" />
+		<spawnInfo playerSize="6.5"	maxCount="6"	respawnFreq="(3.0,5.0)" />
+	</enemyFish>
+
+	<enemyFish name="Surgeon A Medium" template="config/fish/SurgeonAMedium.xml" poolSize="8" >
+		<spawnInfo playerSize="0"	maxCount="3"	respawnFreq="(2.0,5.0)" />
+		<spawnInfo playerSize="4.5" maxCount="6"	respawnFreq="(1.0,2.5)" />
+		<spawnInfo playerSize="6.5" maxCount="8"	respawnFreq="(2.0,5.0)" />
+	</enemyFish>
+
+	<enemyFish name="Lion A Large Chaser" template="config/fish/LionALargeChaser.xml" poolSize="2" >
+		<spawnInfo playerSize="0"	maxCount="0"	respawnFreq="(3.0,8.0)" />
+		<spawnInfo playerSize="4.5" maxCount="1"	respawnFreq="(1.0,3.0)" />
+		<spawnInfo playerSize="6.5" maxCount="2"	respawnFreq="(1.0,3.0)" />
+	</enemyFish> 
+
+<!-- Hazards -->
+
+	<enemyFish name="Jellies" template="config/fish/BasicJellyFish.xml" poolSize="6"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="4"	respawnFreq="(1.0,3.5)" />
+		<spawnInfo playerSize="4.5" maxCount="5"	respawnFreq="(1.0,7.0)" />
+		<spawnInfo playerSize="6.5" maxCount="6"	respawnFreq="(1.0,7.0)" />
+	</enemyFish>
+
+	<enemyFish name="Oysters" template="config/fish/oyster.xml" poolSize="2" displayMenuImage="false" mode="uncounted" >
+		<staticSpawn pos="80,530" doRespawn="true" />
+		<spawnInfo playerSize="0"	maxCount="0"	respawnFreq="(.5,1.5)" />		
+	</enemyFish>
+
+<!-- Powerups -->
+
+	<enemyFish name="Bubbles" template="config/fish/BonusBubbleStar.xml" poolSize="3"  displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(5.0,15.0)" />
+		<spawnInfo playerSize="4.5" maxCount="2"	respawnFreq="(5.0,15.0)" />
+		<spawnInfo playerSize="6.5" maxCount="3"	respawnFreq="(5.0,15.0)" />
+	</enemyFish>
+
+	<enemyFish name="GoldenMinnow" template="config/fish/GoldenMinnow.xml" poolSize="1" displayMenuImage="false" mode="onlyUneaten" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(10,20)" />
+	</enemyFish>
+
+
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track4.wav" />
+		
+</stage>

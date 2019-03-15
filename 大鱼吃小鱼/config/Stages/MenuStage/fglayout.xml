@@ -1,0 +1,8 @@
+<screen name="Menu FG">
+	<image name="coral1" file="resources\backdrops\SunkenTreasure\mg_plant2.jpg" scaleX="-1.0" x="-73" y="400" />	
+	<image name="coral2" file="resources\backdrops\SunkenTreasure\mg_plant2.jpg" scaleX="-1.0" x="93" y="430" />
+
+	<image name="coral3" file="resources\backdrops\SunkenTreasure\mg_plant2.jpg" scaleX="1.0" x="477" y="400" />
+	<image name="coral3" file="resources\backdrops\SunkenTreasure\mg_plant2.jpg" scaleX="1.0" x="267" y="440" />
+	<particleSystem x="320" y="240" file="config/fx/ambientBubbles.xml" />
+</screen>

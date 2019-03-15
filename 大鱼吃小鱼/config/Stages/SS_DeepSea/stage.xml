@@ -1,0 +1,46 @@
+<stage name="SS Deep Sea" 
+	friendlyName="Deep Sea Screen Saver"
+	stageWidth="640" 
+	stageHeight="480"
+	type="menu"
+	>
+
+	<environment bgLayout="resources/backdrops/SS_DeepSea/bgLayout.xml" 
+				 fgLayout="resources/backdrops/SS_DeepSea/fgLayout.xml"
+				 mgLayout="resources/backdrops/SS_DeepSea/mgLayout.xml"/>
+				 
+	<toolTip file="config/toolTips/menuTip.xml" type="levelStart" delay="0.1" />
+
+	<playerFish config="config/Fish/AnglerPlayer.xml" >
+		<size size="6.5" targetScore="0" scale="0.4" />
+		<size size="8.5" targetScore="500" scale=".65" />
+		<size size="12.5" targetScore="1500" scale="1.00" />
+		<size size="13.5" targetScore="2000" scale="1.00" />
+	</playerFish>
+
+	<enemyFish name="Angler Medium" template="config/fish/AnglerMedium.xml" poolSize="2" >
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(2.0,5.0)" />
+	</enemyFish> 
+
+	<enemyFish name="SurgeonBSmallSchool" template="config/fish/surgeonBSmallSchool.xml" poolSize="6">
+		<spawnInfo playerSize="0"	maxCount="6"	respawnFreq="(1.0,2.0)" />
+	</enemyFish>
+
+
+	<enemyFish name="JohnDoryLarge" template="config/fish/JohnDoryLarge.xml" poolSize="2" >
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(1.0,4.0)" />
+	</enemyFish> 
+
+	<enemyFish name="SurgeonCLargeFlyBy" template="config/fish/SurgeonCLargeFlyBy.xml" poolSize="1" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(2.0,6.0)" />
+	</enemyFish> 
+
+	<enemyFish name="Shark" template="config/fish/SharkFlyby.xml" poolSize="1">
+		<spawnInfo playerSize="0" maxCount="1" respawnFreq="(20.0,50.0)" />
+	</enemyFish>
+	
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track3.wav" />
+		
+</stage>

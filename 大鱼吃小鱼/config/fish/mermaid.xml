@@ -1,0 +1,19 @@
+<fish name="Mermaid"
+	class="Mermaid"
+	maxSpeedX="(180,210)" 
+	maxSpeedY="(30,90)" 
+	sightDist="240" 
+	sightAngle="40"
+	accelRate="230" 
+	dragRate="40" 
+	scale="0.93"
+	size="2"
+	layer="mg"
+	spawnType="offStageLR"
+	animPath="resources/Mermaid/" 
+	chaseStateChangeFreq="(1.0,4.0)"
+	chaseMoveChangeFreq="(0.4,0.8)"	
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="0.5" />
+</fish>

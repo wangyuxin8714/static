@@ -1,0 +1,28 @@
+<fish name="Orca Large"
+	class="ChaserFish"
+	foodValue="100"
+	maxSpeedX="(100,150)" 
+	maxSpeedY="(30,70)" 
+	sightDist="200" 
+	sightAngle="40"
+	accelRate="230" 
+	dragRate="40" 
+	scale="1.0"
+	size="20"
+	spawnType="offStageLR"
+	hotSpot="-5,-23,45,30"
+	collision="0,26,182,92"
+	animPath="resources/Orca/" 
+	chaseStateChangeFreq="(1.0,4.0)"
+	chaseMoveChangeFreq="(0.4,0.8)"	
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="0.5" />
+	<menuImage onImage="resources/orca/hudImage.png" />
+
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+	<react class="ChaserFish" reaction="chase" reactFreq="0.95" />
+	<react class="SoldierFish" reaction="chase" reactFreq="0.95" />
+
+</fish>

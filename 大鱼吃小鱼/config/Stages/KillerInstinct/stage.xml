@@ -1,0 +1,98 @@
+<stage name="KillerInstinct" 
+	friendlyName="KillerInstinct"
+	stageWidth="1280" 
+	stageHeight="960"
+	time="2:00" >
+
+	<environment bgLayout="resources/backdrops/BigRidge/bgLayout.xml" 
+				 fgLayout="resources/backdrops/BigRidge/fgLayout.xml"
+				 mgLayout="resources/backdrops/BigRidge/mgLayout.xml" />
+				 
+	<playerFish config="config/Fish/OrcaPlayer.xml" >
+		<size size="12.5" targetScore="0" scale="0.42" />
+		<size size="16.5" targetScore="600" scale="0.76" />
+		<size size="21.5" targetScore="1500" scale="1.2" />
+		<size size="22.5" targetScore="2300" scale="1.2" />
+	</playerFish>
+
+<!-- Fish -->
+	
+	<enemyFish name="JohnDorySmall" template="config/fish/JohnDorySmall.xml" poolSize="20" displayMenuImage="false">
+		<spawnInfo playerSize="0"	maxCount="18"	respawnFreq="(0.1,0.5)" />
+	</enemyFish> 
+
+	<enemyFish name="BarracudaSmall" template="config/fish/BarracudaSmall.xml" poolSize="20" >
+		<spawnInfo playerSize="0"	maxCount="8"	respawnFreq="(1.0,2.0)" />
+	</enemyFish> 
+
+	<enemyFish name="MarlinMedium" template="config/fish/MarlinMedium.xml" poolSize="6" displayMenuImage="true">
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(2.0,4.0)" />
+		<spawnInfo playerSize="16.5" maxCount="3"	respawnFreq="(2.0,3.0)" />
+		<spawnInfo playerSize="21.5" maxCount="4"	respawnFreq="(1.0,2.0)" />
+	</enemyFish>
+
+	<enemyFish name="TunaMediumFlyby" template="config/fish/TunaMediumFlyby.xml" poolSize="6" >
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(2.0,4.0)" />
+		<spawnInfo playerSize="16.5" maxCount="3"	respawnFreq="(2.0,3.0)" />
+		<spawnInfo playerSize="21.5" maxCount="4"	respawnFreq="(2.0,3.0)" />
+	</enemyFish>
+
+	<enemyFish name="SharkLarge" template="config/fish/SharkLarge.xml" poolSize="6" >
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(4.0,6.0)" />
+		<spawnInfo playerSize="16.5" maxCount="3"	respawnFreq="(2.0,4.0)" />
+		<spawnInfo playerSize="21.5" maxCount="4"	respawnFreq="(2.0,4.0)" />
+	</enemyFish>
+
+<!-- Hazards -->
+
+	<enemyFish name="Jellies" template="config/fish/BasicJellyFish.xml" poolSize="5"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="5"	respawnFreq="(3.0,8.0)" />
+	</enemyFish>
+
+	<enemyFish name="Oysters" template="config/fish/oysterFast.xml" poolSize="2" displayMenuImage="false" mode="uncounted" >
+  		<staticSpawn pos="600,855" doRespawn="true" />
+  		<staticSpawn pos="1140,880" doRespawn="true" />
+		<spawnInfo playerSize="0"	maxCount="0"	respawnFreq="(.5,1.5)" />		
+	</enemyFish>
+
+	<enemyFish name="Poison Minnow" template="config/fish/PoisonMinnowMini.xml" poolSize="5" displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(6.0,10.0)" />
+		<spawnInfo playerSize="16.5" maxCount="3"	respawnFreq="(5.0,10.0)" />
+		<spawnInfo playerSize="21.5" maxCount="4"	respawnFreq="(5.0,10.0)" />
+	</enemyFish>
+
+<!-- Powerups -->
+
+	<enemyFish name="Bubbles" template="config/fish/BonusBubbleStar.xml" poolSize="1"  displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(1.0,7.0)" />
+	</enemyFish> 
+	
+	<enemyFish name="Speed Bubbles" template="config/fish/BonusBubbleSpeed.xml" poolSize="1" mode="uncounted" displayMenuImage="false">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(7.5,15.0)" />
+	</enemyFish>
+
+	<enemyFish name="Life Bubbles" template="config/fish/BonusBubbleFreeLife.xml" poolSize="1" mode="onlyUneaten" displayMenuImage="false">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(20.0,45.0)" />
+	</enemyFish>
+	
+	<enemyFish name="Shield Bubbles" template="config/fish/BonusBubbleShield.xml" poolSize="1"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(15.0,30.0)" />
+	</enemyFish>
+
+	<enemyFish name="Stun Bubbles" template="config/fish/BonusBubbleStun.xml" poolSize="1"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(7.5,15.0)" />
+	</enemyFish>
+
+	<enemyFish name="Fury Bubble" template="config/fish/BonusBubbleFeedingFury.xml" poolSize="1"  displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(7.5,15.0)" />
+	</enemyFish>
+
+	<enemyFish name="GoldenMinnow" template="config/fish/GoldenMinnowMini.xml" poolSize="1" displayMenuImage="false" mode="onlyUneaten" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(15,40)" />
+	</enemyFish>
+
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track3.wav" />
+		
+</stage>

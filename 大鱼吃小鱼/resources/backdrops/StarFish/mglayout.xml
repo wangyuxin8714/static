@@ -1,0 +1,9 @@
+<screen name="Stage MG">
+	<!-- <include file="resources\backdrops\StarFish\bgLayout.xml" /> -->
+	
+	<image name="rock1" file="resources\backdrops\StarFish\rock1.jpg" x="428" y="468" />
+	
+	<image name="plant" file="resources\backdrops\DeepSea\plant1.jpg" x="5" y="480" />
+	<image name="rock2" file="resources\backdrops\StarFish\rock2.jpg" x="-5" y="508" />
+
+</screen>

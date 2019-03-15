@@ -1,0 +1,18 @@
+<screen name="Stage 1 Load">
+
+	<include name="baseLyout" file="config\Stages\wyw\ssb_37.xml" />
+
+	<textSub name="title" string="" />
+								  
+	<textSub name="tagline" string="" />
+		
+	<textSub name="para1"  string="" />
+
+	<textSub name="para2"  string="" />
+
+	<image x="374" y="213" scaleX="0.5" scaleY="0.5" file="resources/shark/swim/swim_cycle.8.jpg" />
+
+	<textSub name="objectiveText" string="" />
+	<textSub name="timeObjectiveText" string="" />
+
+</screen>

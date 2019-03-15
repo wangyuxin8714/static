@@ -1,0 +1,12 @@
+<particleSystem >
+	<particleStream sequence="random" emitRate="30.0" autoStop="0.55" offset="0,0" parent="PlayGroup" offsetType="independent" >
+		<resource type="image" path="resources/FX/Stun/stunBonusParticle" />
+		<velocity startX="(-10,10)" startY="(-5,-8)" />
+		<acceleration rate="(0,0)" />
+		<extForce force="0,0" />
+		<position startX="(-320,320)" startY="(-320,320)" />
+		<scale startScale="0.1" endScale="(1.2,1.5)" constant="false"/>
+		<particleLife lifeTime="(0.1,0.1)" />
+		<opacity startOp="3" endOp="1" />
+	</particleStream>
+</particleSystem>

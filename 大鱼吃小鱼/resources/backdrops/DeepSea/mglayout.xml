@@ -1,0 +1,10 @@
+<screen name="Stage 1 MG">
+	<particleSystem x="400" y="300" file="config/fx/ambientBubbles.xml" />
+	<image name="coral" file="resources/backdrops/DeepSea/coral.jpg" scaleX="1" scaleY="1" x="388" y="467" />
+
+	<image name="shell" file="resources/backdrops/DeepSea/shell1.jpg" scaleX="1" scaleY="1" x="-5" y="537" />
+	<image name="shell" file="resources/backdrops/DeepSea/shell1.jpg" scaleX="1" scaleY="1" x="150" y="568" />
+
+	<image name="shell" file="resources/backdrops/DeepSea/shell1.jpg" scaleX="1" scaleY="1" x="395" y="571" />
+
+</screen>

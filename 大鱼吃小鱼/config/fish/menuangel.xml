@@ -1,0 +1,20 @@
+<fish name="Menu Angel"
+	class="SoldierFish"
+	foodValue="10"
+	maxSpeedX="(70,120)" 
+	maxSpeedY="(50,60)" 
+	sightDist="110" 
+	sightAngle="30"
+	accelRate="400" 
+	dragRate="70" 
+	scale="0.45"
+	size="1.1"
+	spawnType="offScreenLR"
+	animPath="resources/AngelFish/" >
+	
+	<react class="BrineShrimp" reaction="chase" reactFreq="0.65" />
+
+	<sound class="eaten" name="eatenSound" pitch="1.5" />
+	<menuImage onImage="resources/BrineShrimp/hudImage.png" />
+
+</fish>

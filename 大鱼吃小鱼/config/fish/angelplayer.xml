@@ -1,0 +1,14 @@
+<playerFish 
+	name="Angel" 
+	maxSpeedX="345" 
+	maxSpeedY="345" 
+	accelRate="550" 
+	fluidDrag="0.0001" 
+	drag="7"
+	animPath="resources/AngelFish/"
+	class="PlayerFish" 
+	hotSpot="-15,-24,30,25"
+	collision="5,19,95,90"
+	eatFinishFrame="3"
+	unsafeEatFrames="(3,3)"
+/>

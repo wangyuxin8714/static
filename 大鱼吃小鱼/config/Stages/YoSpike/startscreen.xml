@@ -1,0 +1,22 @@
+<screen name="Stage 1 Load">
+
+	<include name="baseLyout" file="config\Stages\wyw\ssb_17.xml" />
+
+	<image name="extraButton" file="resources\menus\screenExtras\circleBack.png" x="458" y="160" />
+	<image name="extraButton" file="resources\angler\swim\swim_cycle.1.jpg" scaleX="0.45" scaleY="0.5" x="470" y="170" />
+	<text  name="extraButtonCaption" font="resources\menus\infoText14.xml" x="490" y="174" string="Eddie"/>
+	<textSub name="title" string="" />
+								  
+	<textSub name="tagline" string="" />
+		
+	<textSub name="para1"  string="" />
+	
+	<textSub name="para2"  string=""/>
+
+	<image name="extraButton"  file="resources\bonus\furyBubble1.png" x="102" y="287" />
+	<image name="extraButton"  file="resources\bonus\furyBubble1.png" x="500" y="287" />
+
+	<textSub name="objectiveText" string="" />
+	<textSub name="timeObjectiveText" string="" />
+
+</screen>

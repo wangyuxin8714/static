@@ -1,0 +1,6 @@
+<screen name="Stage 1 BG">
+	<group x="-30" y="-100">
+		<image name="background" file="resources/backdrops/DeepSea/bgImg.jpg" scaleX="1" scaleY="1" />
+		<particleSystem x="132" y="452" file="config/fx/bubbleStreamNarrow.xml" />
+	</group>
+</screen>

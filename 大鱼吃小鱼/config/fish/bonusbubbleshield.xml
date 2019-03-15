@@ -1,0 +1,16 @@
+<fish name="StunBonus" class="BonusBubbleShield"
+						foodValue="2"
+						maxSpeedX="(8,10)" 
+						maxSpeedY="(60,140)" 
+						sightDist="0" 
+						accelRate="200"
+						dragRate="46" 
+						scale="1.0"
+						size="0.1"
+						spawnType="offstageBottom"
+						animPath="resources/bonus/shieldBubble" >
+	
+	<menuImage offImage="resources/bonus/shieldBubble1.png" onImage="resources/bonus/shieldBubble1.png" />
+
+	<sound class="eaten" name="eatenSound" pitch="1.0" />
+</fish>

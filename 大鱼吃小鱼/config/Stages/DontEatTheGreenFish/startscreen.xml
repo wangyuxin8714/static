@@ -1,0 +1,22 @@
+<screen name="Stage 1 Load">
+
+	<include name="baseLyout" file="config\Stages\wyw\ssb_15.xml" />
+
+	<image name="extraButton" file="resources\menus\screenExtras\circleBack.png" x="458" y="200" />
+	<image name="extraButton" file="resources\menus\screenExtras\greenFish.png" scaleX="1" scaleY="1" x="459" y="203" />
+	
+	<textSub name="title" string="" />
+								  
+	<textSub name="tagline" string="" />
+		
+	<textSub name="para1"  string="" />
+
+	<textSub name="para2"  string="" />
+
+
+
+
+	<textSub name="objectiveText" string="" />
+	<textSub name="timeObjectiveText" string="" />
+
+</screen>

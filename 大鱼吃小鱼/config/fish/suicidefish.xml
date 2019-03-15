@@ -1,0 +1,34 @@
+<fish name="Brine Shrimp" 
+	class="SuicideFish"
+	foodValue="1"
+	maxSpeedX="600"
+	maxSpeedY="300"
+	minSpeedX="(30,30)"
+	minSpeedY="(0,0)"
+	maxSpeedY="(50,60)" 
+	sightDist="110" 
+	sightAngle="30"
+	accelRate="400" 
+	dragRate="70" 
+	scale="0.68"
+	size="0.1"
+	spawnType="offStageLR"
+	animPath="resources/BrineShrimp/" 
+	wanderMoveChangeFreq="(2.0,7.0)"
+	wanderStateChangeFreq="(5.0,10.0)"
+	chaseMoveChangeFreq="(0.5,1.5)"
+	chaseStateChangeFreq="(2.0,5.0)"
+	runMoveChangeFreq="(1.0,5.0)"
+	runStateChangeFreq="(2.0,5.0)"
+	sightCheckFreq="100.2"
+	schoolSize="6"
+	schoolDist="60"
+	schoolNeighborDist="180"
+	schoolTargetMult="2.6"
+	schoolChaseMult="1.35"
+	>
+
+	<sound class="eaten" name="eatenSound" pitch="1.5" />
+	<menuImage onImage="resources/BrineShrimp/hudImage.png" />
+
+</fish>

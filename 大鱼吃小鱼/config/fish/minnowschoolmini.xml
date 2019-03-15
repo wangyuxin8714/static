@@ -1,0 +1,42 @@
+<fish name="Minnow Mini School" 
+	class="BrineShrimp"
+	foodValue="5"
+	maxSpeedX="(80,100)"
+	minSpeedX="(30,30)"
+	minSpeedY="(0,0)"
+	maxSpeedY="(50,60)" 
+	sightDist="198" 
+	sightAngle="40"
+	accelRate="280" 
+	dragRate="110" 
+	scale="0.50"
+	size="1"
+	spawnType="offStageLR"
+	animPath="resources/BrineShrimp/" 
+	wanderMoveChangeFreq="(2.0,7.0)"
+	wanderStateChangeFreq="(5.0,10.0)"
+	chaseMoveChangeFreq="(0.5,1.5)"
+	chaseStateChangeFreq="(2.0,5.0)"
+	runMoveChangeFreq="(1.0,5.0)"
+	runStateChangeFreq="(2.0,5.0)"
+	sightCheckFreq="0.15"
+	schoolSize="6"
+	schoolDist="13"
+	schoolNeighborDist="80"
+	schoolRunMult="3.0f"
+	>
+	
+
+	<sound class="eaten" name="eatenSound" pitch="1.5" />
+	<menuImage onImage="resources/BrineShrimp/hudImage.png" />
+
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="Barracuda" reaction="run" reactionFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+	<react class="PlayerFish" reaction="run" reactFreq="0.15" />
+	<react class="SoldierFish" reaction="avoid" reactFreq="0.4" />
+	<react class="AngelFish" reaction="avoid" reactFreq="1.0" />	
+	<react class="ChaserFish" reaction="avoid" reactFreq="0.6" />
+	<react class="PufferFish" reaction="avoid" reactFreq="0.8" />
+
+</fish>

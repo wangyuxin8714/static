@@ -1,0 +1,9 @@
+<screen name="Stage 1 FG">
+
+	<image name="logo" opacity="0.5" file="resources\menus\logo.png" pivot="center" x="220" y="50" />
+
+	<group x="250" y="-110">
+		<image name="plant" file="resources\backdrops\DeepSea\plant1.jpg" x="205" y="490" />
+		<image name="plant" file="resources\backdrops\DeepSea\plant1.jpg" x="110" y="530" />
+	</group>
+</screen>

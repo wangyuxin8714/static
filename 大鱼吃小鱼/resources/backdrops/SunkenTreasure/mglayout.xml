@@ -1,0 +1,15 @@
+<screen name="Stage 1 MG">
+	<particleSystem x="400" y="300" file="config/fx/ambientBubbles.xml" />
+<!--	<image name="bg" file="resources/backdrops/sunkentreasure/bgimg.jpg" />-->
+
+	<image name="greenBushSm2" scaleX="-1" scaleY="1" file="resources/backdrops/SunkenTreasure/mg_plant3.jpg" x="155" y="528" />
+	<image name="greenBushSm1" scaleX="1" scaleY="1" file="resources/backdrops/SunkenTreasure/mg_plant3.jpg" x="772" y="498" />
+
+	<image name="redC4" scaleX="-0.7" scaleY="0.6" file="resources/backdrops/SunkenTreasure/mg_plant2.jpg"  x="415" y="460"/>
+	<image name="redC5" scaleX="0.6" scaleY="0.7" file="resources/backdrops/SunkenTreasure/mg_plant2.jpg"  x="490" y="470"/>
+
+	<image name="more plants" scaleX="1" scaleY="1" file="resources/backdrops/SunkenTreasure/mg_plant1.jpg" x="0" y="362" />
+	<image name="rock" file="resources/backdrops/SunkenTreasure/mg_rock1.jpg" x="320" y="505" />
+	<image name="rock" file="resources/backdrops/SunkenTreasure/mg_rock1.jpg" x="-170" y="500" scaleX="-1" />
+
+</screen>

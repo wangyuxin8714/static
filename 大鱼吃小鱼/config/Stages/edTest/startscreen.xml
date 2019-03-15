@@ -1,0 +1,21 @@
+<screen name="Stage 1 Load">
+
+	<include name="baseLyout" file="config\Stages\stageStartBase.xml" />
+
+	<textSub name="title" string="XXX\n" />
+								  
+	<textSub name="tagline" string="It's crazy out there!" />
+		
+	<textSub name="para1"  string="This demo level includes the most recent power-up\n
+									additions to the game.  These include 'Stun', 'Shield'\n
+									and 'Feeding Fury'.
+									" />
+
+	<textSub name="para2"  string="Since these power-ups appear later in the game, we\n
+									decided to stick a little demo level in the front of\n
+									this build of the game." />
+
+	<textSub name="objectiveText" string=" " />
+	<textSub name="timeObjectiveText" string=" " />
+
+</screen>

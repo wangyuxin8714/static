@@ -1,0 +1,30 @@
+<fish name="Surgeon C Large Flyby"
+	class="FlyByFish"
+	foodValue="80"
+	maxSpeedX="(150,300)" 
+	minSpeedX="(100,150)"
+	maxSpeedY="(30,40)" 
+	sightDist="300" 
+	sightAngle="40"
+	accelRate="450" 
+	dragRate="40" 
+	scale="1.14"
+	size="12"
+	spawnType="offStageLR"
+	hotSpot="-2,-12,25,19"
+	collision="5,20,100,62"	
+	animPath="resources/SurgeonFish/" 
+	wanderStateChangeFreq="(2.0,4.0)"
+	chaseStateChangeFreq="(0.5,1.0)"
+	chaseMoveChangeFreq="(0.85,2.4)"	
+	hsvOffset="131,-.50,0"
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="0.5" />
+	<menuImage onImage="resources/surgeonFish/hudImage.png" />
+
+	<react class="PlayerFish" reaction="avoid" reactFreq="1.0" />
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+
+</fish>

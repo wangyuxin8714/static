@@ -1,0 +1,13 @@
+<screen name="Controls Tip">
+
+	<group name="popUp" x="170" y="135">
+		<image name="background" scaleY="1" file="resources\Hud\toolTipBase.png"  />
+		
+		<text string="Tip!" x="120" y="0" font="resources/menus/menuFont.xml" />
+		<text name="toolTipText" x="10" y="38" xAlign="left" font="resources/hud/textFont.xml" string="Your fish always swims toward the\n mouse cursor.\n\nSteer your fish to chase down\nand eat creatures that are smaller\n than you." />
+
+		<imageButton upImg="resources/menus/smallGenericButtonNormal.png" overImg="resources/menus/smallGenericButtonHigh.png" x="100" y="210" action="toolTipDone"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+		<text string="OK" font="resources/hud/buttonFont.xml" xAlign="center" x="148" y="215" />
+	</group>
+	
+</screen>

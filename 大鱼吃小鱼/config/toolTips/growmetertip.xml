@@ -1,0 +1,20 @@
+<screen name="GrowMeterTip">
+
+	<group name="toolTip" x="97" y="68" >
+		<image name="arrow" file="resources/hud/toolTipArrowUL.png" />
+
+		<group name="popUp" x="60" y="73">
+			<image name="background" scaleY=".9" file="resources\Hud\toolTipBase.png"  />
+			
+			<text string="Tip!" x="120" y="0" font="resources/menus/menuFont.xml" />
+			<text name="toolTipText" x="10" y="38" xAlign="left" font="resources/hud/textFont.xml" string="Eat fish to earn points and fill your\ngrowth meter.\n\nWhen the growth meter is full, your\nfish will grow to the next size!\n" />
+
+			<imageButton upImg="resources/menus/smallGenericButtonNormal.png" overImg="resources/menus/smallGenericButtonHigh.png" x="100" y="188" action="toolTipDone"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+			<text string="OK" font="resources/hud/buttonFont.xml" xAlign="center" x="148" y="193" />
+
+		</group>
+	
+	</group>
+	
+	
+</screen>

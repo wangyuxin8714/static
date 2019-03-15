@@ -1,0 +1,18 @@
+<screen name="Controls Tip">
+
+	<group name="toolTip" x="77" y="35" >
+
+		<group name="popUp" x="62" y="75">
+			<image name="background" scaleY="1" file="resources\Hud\toolTipBase.png"  />
+			
+			<text string="Tip!" x="120" y="0" font="resources/menus/menuFont.xml" />
+			<text name="toolTipText" x="10" y="38" xAlign="left" font="resources/hud/textFont.xml" string="The 'Menu' shows you which types\nof fish are safe to eat.   As you\ngrow, more fish will light up.\n\nThe bigger the fish, the bigger\nyour score!" />
+
+			<imageButton upImg="resources/menus/smallGenericButtonNormal.png" overImg="resources/menus/smallGenericButtonHigh.png" x="100" y="210" action="toolTipDone"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+			<text string="OK" font="resources/hud/buttonFont.xml" xAlign="center" x="148" y="215" />
+		</group>
+
+		<image name="arrow" file="resources/hud/toolTipArrowUL.png" />
+	</group>
+
+</screen>

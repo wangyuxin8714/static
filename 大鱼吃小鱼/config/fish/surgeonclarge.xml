@@ -1,0 +1,29 @@
+<fish name="Surgeon C Large"
+	class="ChaserFish"
+	foodValue="80"
+	maxSpeedX="(90,130)" 
+	maxSpeedY="(90,110)" 
+	sightDist="300" 
+	sightAngle="40"
+	accelRate="230" 
+	dragRate="40" 
+	scale="1.14"
+	size="12"
+	spawnType="offStageLR"
+	hotSpot="-2,-12,25,19"
+	collision="5,20,100,62"	
+	animPath="resources/SurgeonFish/" 
+	wanderStateChangeFreq="(2.0,4.0)"
+	chaseStateChangeFreq="(0.5,1.0)"
+	chaseMoveChangeFreq="(2.5,6.0)"	
+	hsvOffset="131,-.50,0"
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="0.5" />
+	<menuImage onImage="resources/surgeonFish/hudImage.png" />
+
+	<react class="PlayerFish" reaction="chase" reactFreq="1.0" />
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+
+</fish>

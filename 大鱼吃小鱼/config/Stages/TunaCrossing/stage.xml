@@ -1,0 +1,74 @@
+<stage name="Surgeon Crossing" 
+	friendlyName="Surgeon Crossing"
+	stageWidth="800" 
+	stageHeight="600"
+	time="1:30" >
+
+	<environment bgLayout="resources/backdrops/DeepSea/bgLayout.xml" 
+				 fgLayout="resources/backdrops/DeepSea/fgLayout.xml"
+				 mgLayout="resources/backdrops/DeepSea/mgLayout.xml" />
+
+	<toolTip file="config/toolTips/barracudaTip.xml" type="danger" delay="0.3" />
+	
+	<playerFish config="config/Fish/AnglerPlayer.xml" >
+		<size size="6.5" targetScore="0" scale="0.4" />
+		<size size="8.5" targetScore="500" scale=".65" />
+		<size size="12.5" targetScore="1000" scale="1.00" />
+		<size size="13.5" targetScore="2000" scale="1.00" />
+	</playerFish>
+
+<!-- Fish -->
+		
+	<enemyFish name="SurgeonBSmallFlyby" template="config/fish/SurgeonBSmallFlyby.xml" poolSize="20">
+		<spawnInfo playerSize="0"	maxCount="20"	respawnFreq="(0.5,0.8)" />
+		<spawnInfo playerSize="8.5" maxCount="10"	respawnFreq="(1.0,2.5)" />
+		<spawnInfo playerSize="12.5" maxCount="6"	respawnFreq="(1.0,2.5)" />
+	</enemyFish>
+
+	<enemyFish name="SurgeonB2MediumFlyby" template="config/fish/SurgeonB2MediumFlyby.xml" poolSize="10" >
+		<spawnInfo playerSize="0"	maxCount="6"	respawnFreq="(2.0,5.0)" />
+		<spawnInfo playerSize="8.5" maxCount="8"	respawnFreq="(0.5,0.8)" />
+		<spawnInfo playerSize="12.5" maxCount="6"	respawnFreq="(2.0,5.0)" />
+	</enemyFish>
+
+	<enemyFish name="SurgeonCLargeFlyBy" template="config/fish/SurgeonCLargeFlyBy.xml" poolSize="8" >
+		<spawnInfo playerSize="0"	maxCount="5"	respawnFreq="(0.5,1.5)" />
+		<spawnInfo playerSize="8.5" maxCount="6"	respawnFreq="(0.5,1.5)" />
+		<spawnInfo playerSize="12.5" maxCount="4"	respawnFreq="(0.5,1.5)" />
+	</enemyFish> 
+
+	<enemyFish name="Barracuda" template="config/fish/Barracuda.xml" poolSize="1" displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="0"	respawnFreq="(10.0,20.0)" />
+		<spawnInfo playerSize="8.5"	maxCount="0"	respawnFreq="(5.0,10.0)" />
+		<spawnInfo playerSize="12.5"	maxCount="1"	respawnFreq="(2.0,6.0)" />
+	</enemyFish>
+
+<!-- Hazards -->
+
+	<enemyFish name="Poison Minnow" template="config/fish/PoisonMinnow.xml" poolSize="5" displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="0"	respawnFreq="(0.5,4.0)" />
+		<spawnInfo playerSize="8.5" maxCount="1"	respawnFreq="(5.0,10.0)" />
+		<spawnInfo playerSize="12.5" maxCount="2"	respawnFreq="(5.0,7.0)" />
+	</enemyFish>
+
+<!-- Powerups -->
+
+	<enemyFish name="Bubbles" template="config/fish/BonusBubbleStar.xml" poolSize="2"  displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(3.0,8.0)" />
+		<spawnInfo playerSize="8.5" maxCount="2"	respawnFreq="(3.0,8.0)" />
+		<spawnInfo playerSize="12.5" maxCount="2"	respawnFreq="(3.0,8.0)" />
+	</enemyFish>
+
+	<enemyFish name="GoldenMinnow" template="config/fish/GoldenMinnow.xml" poolSize="1" displayMenuImage="false" mode="onlyUneaten" >
+		<spawnInfo playerSize="0"	maxCount="0"	respawnFreq="(15,40)" />
+	</enemyFish>
+
+	<enemyFish name="Fury Bubbles" template="config/fish/BonusBubbleFeedingFury.xml" poolSize="1"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(10.0,15.0)" />
+	</enemyFish>
+
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track4.wav" />
+		
+</stage>

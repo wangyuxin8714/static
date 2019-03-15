@@ -1,0 +1,42 @@
+<screen name="GameWon">
+
+	<image name="background" file="resources\menus\mainBg.jpg"  />
+	<image name="backdrop" file="resources\menus\infoFrameWon.png" pivot="center" opacity="0.9" x="320" y="240" />
+	
+	<text name="title" string="" font="resources/HUD/frenzyFontWhite.xml" xAlign="center" yAlign="top" size="18" x="320" y="92" />
+	<particleSystem name="fireworks" file="config/FX/fireworks.xml" x="320" y="115" />
+
+	<text name="congrat" font="resources/HUD/textFont.xml" xAlign="center"
+			x="320" y="145"
+			string=" " />
+			
+	<text name="timedMode" font="resources/HUD/textFont.xml" xAlign="center"
+			x="320" y="195"
+			string=" " />
+	
+	<text name="ssTitle" font="resources/menus/infoText14.xml" xAlign="center"
+			x="320" y="215"
+		string=" " />
+	
+	<text name="helpHeader" font="resources/menus/infoText14.xml" xAlign="left"
+			x="102" y="230"
+			string=" " />
+
+	<text name="timedHeader" font="resources/menus/infoText14.xml" xAlign="left"
+			x="102" y="230"
+			string=" " />
+
+	<text name="helpText" font="resources/menus/infoText14.xml"
+			x="114" y="251"
+			string=" " />
+
+	<text name="timedText" font="resources/menus/infoText14.xml"
+			x="114" y="251"
+			string=" " />
+						
+	<group name="continueBtnGroup" x="218" y="380">
+		<imageButton name="continueBtn" upImg="resources\menus\genericButtonNormal.png" overImg="resources\menus\genericButtonHigh.png" x="25" y="15" action="gameWonDone"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+		<text name="continueBtnText" string="A" font="resources/HUD/buttonFontDone.xml" xAlign="center" yAlign="top" size="18" x="96" y="30" />
+	</group>
+
+</screen>

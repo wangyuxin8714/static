@@ -1,0 +1,16 @@
+<screen name="Stage 1 Load">
+
+	<include name="baseLyout" file="config\Stages\wyw\ssb_30.xml" />
+
+	<textSub name="title" string="" />
+								  
+	<textSub name="tagline" string="" />		
+	<textSub name="para1"  string="\n" />
+
+	<textSub name="para2"  string="" />
+
+
+	<textSub name="objectiveText" string="" />
+	<textSub name="timeObjectiveText" string="" />
+
+</screen>

@@ -1,0 +1,28 @@
+<fish name="Parrot A Small"
+	class="SoldierFish"
+	foodValue="20"
+	maxSpeedX="(100,150)" 
+	maxSpeedY="(30,90)" 
+	sightDist="240" 
+	sightAngle="40"
+	accelRate="230" 
+	dragRate="40" 
+	scale="0.28"
+	size="8"
+	spawnType="offStageLR"
+	hotSpot="-10,-18,30,25"
+	collision="0,34,176,118"
+	animPath="resources/Parrot/" 
+	chaseStateChangeFreq="(1.0,4.0)"
+	chaseMoveChangeFreq="(0.4,0.8)"	
+	hsvOffset="-67,0.3,-0.15"
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="1.5" />
+	<menuImage onImage="resources/Parrot/hudImage.png" />
+
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+	<react class="PlayerFish" reaction="chase" reactFreq="0.95" />
+
+</fish>

@@ -1,0 +1,14 @@
+<particleSystem autoStop="-1.0" >
+
+<particleStream sequence="random" emitRate="30.0" offset="0,0" startDelay="0" offsetType="groupRelative" >
+	<velocity startX="80" startY="0" />
+	<rotation degrees="(0,360)" />
+	<extForce force="0,0" />
+	<position startX="22" startY="18" />
+	<scale startScale="1.0" constant="true" />
+	<particleLife lifeTime="(0.5,0.75)" />
+	<opacity startOp="1.0" endOp="0.0" />
+	<resource type="image" path="resources/FX/general/sparkle" />
+</particleStream>
+
+</particleSystem>

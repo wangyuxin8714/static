@@ -1,0 +1,84 @@
+<screen name="Main Menu">
+	<!--<image name="background" file="resources\menus\mainBg.jpg"  />
+	<image name="logo" file="resources\menus\logo.png" pivot="center" x="320" y="50" />-->
+
+	<group name="mainButtons" x="0" y="5">
+ 
+		<imageButton name="newGameBtnImg" 
+			upImg="resources\menus\mainNewNormal.png" 
+			overImg="resources\menus\mainNewHigh.png" 
+			pivot="center"
+			x="252" y="159" action="newGame"
+			overSound="resources/sounds/mouseOver.wav" 
+			activeSound="resources/sounds/mouseDown.wav"
+		/>
+
+		<imageButton name="timeGameBtnImg" 
+					upImg="resources\menus\mainTimeNormal.png"
+					overImg="resources\menus\mainTimeHigh.png"
+					x="392" y="212" action="timeGame"
+					pivot="center"
+					overSound="resources/sounds/mouseOver.wav" 
+					activeSound="resources/sounds/mouseDown.wav" 
+		/>
+		
+		<imageButton name="optionsBtn" 
+					upImg="resources\menus\mainOptionsNormal.png" 
+					overImg="resources\menus\mainOptionsHigh.png"
+					pivot="center"
+					x="257" y="319" action="options"  
+					overSound="resources/sounds/mouseOver.wav" 
+					activeSound="resources/sounds/mouseDown.wav" 
+		/>
+		
+		<imageButton name="highScoreBtnImg" 
+					upImg="resources\menus\mainHighScoreNormal.png" 
+					overImg="resources\menus\mainHighScoreHigh.png" 
+					x="370" y="353" action="highScores"
+					pivot="center"
+					overSound="resources/sounds/mouseOver.wav" 
+					activeSound="resources/sounds/mouseDown.wav" 
+		/>
+		
+		<imageButton name="quitBtnImg" 
+					upImg="resources\menus\mainQuitNormal.png" 
+					overImg="resources\menus\mainQuitHigh.png"
+					pivot="center"
+					x="283" y="419" action="quit"  
+					overSound="resources/sounds/mouseOver.wav" 
+					activeSound="resources/sounds/mouseDown.wav" 
+		/>
+
+	</group>
+	
+	<group name="newGameHelper">
+		<text font="resources\menus\infoText14NewGame.xml"
+				x="70" y="103"
+				string="A" />
+	</group>
+	
+	<group name="timedGameHelper">
+		<text font="resources\menus\infoText14TimeGame.xml"
+				x="480" y="163"
+				string="A" />
+	</group>
+	
+
+	<group name="creditBtn" x="540" y="434" >
+		<image opacity="0.9" name="creditBg" file="resources/HUD/counterBg.png" scaleX="0.9" />
+
+		<textButton name="quitBtn" 
+			opacity="0.9"
+			x="12" y="10" 
+			font="resources/HUD/textFontCredits.xml" upAddColor="-0.0,-0.0,-0.0"
+			overFont="resources/HUD/textFontCredits.xml" overAddColor="-1.0,0.0,0.0" 
+			activeFont="resources/HUD/textFontCredits.xml" activeAddColor="-1.0,0.0,0.0" 
+			string="A"
+			action="showCredits"
+			overSound="resources/sounds/mouseOver.wav"
+			activeSound="resources/sounds/mouseDown.wav"
+		/>
+	
+	</group>
+
+</screen>

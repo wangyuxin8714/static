@@ -1,0 +1,19 @@
+<screen name="Stage 1 Load">
+
+	<include name="baseLyout" file="config\Stages\wyw\ssb_21.xml" />
+
+	<textSub name="title" string="" />
+								  
+	<textSub name="tagline" string=""/>
+
+	<textSub name="para1"  string="" />
+
+	<textSub name="para2"  string=""/>
+
+	<image name="extraButton"  file="resources\hud\dangerSign.png" scaleX="0.75" scaleY="0.75" x="168" y="119" />
+	<image name="extraButton"  file="resources\hud\dangerSign.png" scaleX="0.75" scaleY="0.75" x="433" y="119" />
+
+	<textSub name="objectiveText" string=" " />
+	<textSub name="timeObjectiveText" string=" " />
+
+</screen>

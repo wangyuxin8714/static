@@ -1,0 +1,18 @@
+<screen name="Bubble Bubble Start">
+
+	<include name="baseLyout" file="config\Stages\wyw\ssb_10.xml" />
+
+	<textSub name="title" string="" />
+								  
+	<textSub name="tagline" string="" />
+		
+	<textSub name="para1"  string="" />
+
+	<textSub name="para2"  string=""/>
+
+	<image name="extraButton" scaleX="-0.50" scaleY="0.50" file="resources\pufferFish\puff\puff_cycle.6.jpg" x="440" y="218" />
+
+	<textSub name="objectiveText" string=" " />
+	<textSub name="timeObjectiveText" string=" " />
+
+</screen>

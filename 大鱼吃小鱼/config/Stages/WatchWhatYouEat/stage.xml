@@ -1,0 +1,61 @@
+<stage name="WatchWhatYouEat" 
+	friendlyName="Watch What You Eat"
+	stageWidth="800" 
+	stageHeight="600"
+	type="timedBonus"
+	time="1:00" >
+
+	<environment bgLayout="resources/backdrops/SunkenTreasure/bgLayout.xml" 
+				 fgLayout="resources/backdrops/SunkenTreasure/fgLayout.xml"
+				 mgLayout="resources/backdrops/SunkenTreasure/mgLayout.xml" />
+
+	<toolTip file="config/toolTips/mineTip.xml" type="levelStart" delay="0.3" />
+	
+	<playerFish config="config/Fish/LionPlayer.xml" >
+		<size size="6.5" targetScore="0" scale="0.8" />
+		<size size="7.5" targetScore="999999" scale="1.0" />
+	</playerFish>
+
+<!-- Fish -->
+
+	<enemyFish name="AngelASmall" template="config/fish/angelASmall.xml" poolSize="30" mode="onlyUneaten">
+		<spawnInfo playerSize="0"	maxCount="8"	respawnFreq="0.1" />
+	</enemyFish>
+
+	<enemyFish name="AngelASmallSchool" template="config/fish/angelASmallSchool.xml" poolSize="16" mode="onlyUneaten" displayMenuImage="false" >
+		<spawnInfo playerSize="0"	maxCount="8"	respawnFreq="(0.2,1.5)" />
+	</enemyFish>
+
+	<enemyFish name="AngelASmallSchool" template="config/fish/angelBSmallSchool.xml" poolSize="8" mode="onlyUneaten" displayMenuImage="false" >
+		<spawnInfo playerSize="0"	maxCount="8"	respawnFreq="(0.5,0.8)" />
+	</enemyFish>
+
+<!-- Hazards -->
+	
+	<enemyFish name="Poison Minnow" template="config/fish/PoisonMinnow.xml" poolSize="10" displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="8"	respawnFreq="(0.5,5.0)" />
+	</enemyFish> 
+	
+	<enemyFish name="Mine" template="config/fish/Mine.xml" poolSize="4" displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="4"	respawnFreq="(2.0, 5.0)" />
+	</enemyFish>
+
+<!-- Powerups -->
+
+	<enemyFish name="2x" template="config/fish/BonusBubble2X.xml" poolSize="1" displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(4.0,8.0)" />
+	</enemyFish>
+
+	<enemyFish name="Speed Bubbles" template="config/fish/BonusBubbleSpeed.xml" poolSize="1"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(8.0,14.0)" />
+	</enemyFish>
+
+	<enemyFish name="Life Bubbles" template="config/fish/BonusBubbleFreeLife.xml" poolSize="1"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="29.0" />
+	</enemyFish>
+
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track2.wav" />
+		
+</stage>

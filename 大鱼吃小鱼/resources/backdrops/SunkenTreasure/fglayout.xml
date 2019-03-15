@@ -1,0 +1,9 @@
+<screen name="Stage 1 FG">
+	<particleSystem x="400" y="300" file="config/fx/ambientBubbles.xml" />
+	<image name="redC1" scaleX="0.6" scaleY="0.6" file="resources/backdrops/SunkenTreasure/mg_plant2.jpg"  x="770" y="550"/>
+	<image name="redC2" scaleX="1" scaleY="1" file="resources/backdrops/SunkenTreasure/mg_plant2.jpg"  x="20" y="500"/>
+
+	<image name="redC3" scaleX="-0.5" scaleY="0.6" file="resources/backdrops/SunkenTreasure/mg_plant2.jpg"  x="360" y="560"/>
+	<image name="redC3" scaleX="0.4" scaleY="0.4" file="resources/backdrops/SunkenTreasure/mg_plant2.jpg"  x="410" y="570"/>
+
+</screen>

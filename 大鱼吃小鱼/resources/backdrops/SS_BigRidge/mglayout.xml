@@ -1,0 +1,22 @@
+<screen name="Stage 1 MG">
+	<group x="-30" y="-470">
+		<particleSystem x="400" y="300" file="config/fx/ambientBubbles.xml" />
+
+		<particleSystem x="900" y="300" file="config/fx/ambientBubbles.xml" />
+
+
+		<image name="tube" x="0" y="790" file="resources/backdrops/BigRidge/tube.jpg" />
+
+
+
+		<image name="plant1" x="750" y="850" file="resources/backdrops/DeepSea/plant1.jpg" />
+		<image name="plant1" x="580" y="820" scaleX="0.8" scaleY="0.8" file="resources/backdrops/DeepSea/plant1.jpg" />
+		<image name="rock" x="450" y="840" file="resources/backdrops/BigRidge/rock.jpg" />
+		<image name="rock" x="210" y="910" file="resources/backdrops/BigRidge/rock.jpg" />
+
+		<image name="plant1" x="150" y="850" file="resources/backdrops/DeepSea/plant1.jpg" />
+
+		<image name="rock" x="1010" y="910" scaleX="-1" file="resources/backdrops/BigRidge/rock.jpg" />
+		<image name="rock" x="1350" y="850" scaleX="-1" file="resources/backdrops/BigRidge/rock.jpg" />
+	</group>
+</screen>

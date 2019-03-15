@@ -1,0 +1,14 @@
+<particleSystem autoStop="-1.0" >
+
+	<particleStream sequence="sequence" emitRate="30.0" offset="0,0" parent="hudOffsetGroup" offsetType="independent">
+		<resource type="image" path="resources/FX/bubbleParticle" />
+		<velocity startX="(-50,50)" startY="(-60,50)" />
+		<acceleration rate="(5,10)" />
+		<extForce force="0,-70.8" />
+		<position startX="(-20,20)" startY="(-10,10)" />
+		<scale startScale="(0.2,0.3)" endScale="(0.3,0.7)" />
+		<particleLife lifeTime="(0.8,1.4)" />
+		<opacity startOp="0.8" endOp="0.0" />
+	</particleStream>
+
+</particleSystem>

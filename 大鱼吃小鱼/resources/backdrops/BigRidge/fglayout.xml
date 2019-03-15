@@ -1,0 +1,13 @@
+<screen name="Stage 1 FG">
+	<particleSystem x="400" y="300" file="config/fx/ambientBubbles.xml" />
+	<image name="plant1" x="20" y="880" scaleX="-1" file="resources/backdrops/BigRidge/plant1.jpg" />
+
+	<image name="plant2" x="10" y="850" file="resources/backdrops/BigRidge/plant2.jpg" />
+	<image name="plant2" x="260" y="870" file="resources/backdrops/BigRidge/plant2.jpg" />
+
+	<image name="plant1" x="1390" y="850" file="resources/backdrops/BigRidge/plant1.jpg" />
+	<image name="plant2" x="1290" y="880" file="resources/backdrops/BigRidge/plant2.jpg" />
+
+	<image name="plant2" x="1490" y="880" file="resources/backdrops/BigRidge/plant2.jpg" />
+
+</screen>

@@ -1,0 +1,28 @@
+<fish name="Shark Boss"
+	class="ChaserFish"
+	foodValue="1000"
+	maxSpeedX="360" 
+	maxSpeedY="(60,100)" 
+	sightDist="275" 
+	sightAngle="45"
+	accelRate="450" 
+	dragRate="40" 
+	scale="0.9"
+	size="20"
+	spawnType="offStageLR"
+	hotSpot="-5,-23,45,30"
+	collision="0,26,182,92"
+	animPath="resources/Shark/" 
+	chaseStateChangeFreq="(10.0,12.0)"
+	chaseMoveChangeFreq="(0.2,0.6)"
+	hsvOffset="+30,-0.2,+0.2"
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="0.5" />
+	<menuImage onImage="resources/Shark/hudImage.png" />
+
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+	<react class="PlayerFish" reaction="chase" reactFreq="0.95" />
+
+</fish>

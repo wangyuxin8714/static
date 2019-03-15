@@ -1,0 +1,28 @@
+<fish name="Lion A Medium"
+	class="SoldierFish"
+	foodValue="80"
+	maxSpeedX="(80,120)" 
+	maxSpeedY="(50,80)" 
+	sightDist="120"
+	sightAngle="40"
+	accelRate="400" 
+	dragRate="40" 
+	scale="0.50"
+	size="5"
+	spawnType="offStageLR"
+	animPath="resources/Lion/" 
+	hotSpot="0,-3,44,40"
+	collision="5,58,167,140"
+	>
+	
+	
+	<sound class="eaten" name="eatenSound" pitch="1.0" />
+	<menuImage onImage="resources/Lion/hudImage.png" />
+
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="PlayerFish" reaction="chase" reactFreq="0.3" />
+	<react class="SoldierFish" reaction="chase" reactFreq="0.6" />
+	<react class="BrineShrimp" reaction="chase" reactFreq="0.5" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+
+</fish>

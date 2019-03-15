@@ -1,0 +1,21 @@
+<screen name="Stage 1 Load">
+
+	<include name="baseLyout" file="config\Stages\wyw\ssb_33.xml" />
+
+	<image name="extraButton" file="resources\menus\screenExtras\circleBack.png" x="458" y="170" />
+	<image name="extraButton" file="resources\orca\swim\swim_cycle.1.jpg" scaleX="-0.5" scaleY="0.5" x="430" y="193" />
+	<text  name="extraButtonCaption" font="resources\menus\infoText14.xml" x="490" y="174" string="Orville"/>
+
+	<textSub name="title" string="" />
+								  
+	<textSub name="tagline" string="" />
+		
+	<textSub name="para1"  string="" />
+
+	<textSub name="para2"  string="" />
+
+
+	<textSub name="objectiveText" string="" />
+	<textSub name="timeObjectiveText" string="" />
+
+</screen>

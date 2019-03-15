@@ -1,0 +1,28 @@
+<particleSystem autoStop="2.0" >
+
+	<particleStream sequence="sequence" emitRate="3.0" offset="0,0" parent="PlayGroup" offsetType="independent">
+		<resource type="image" path="resources/FX/bubbleParticle" />
+		<velocity startX="(0,0)" startY="(-80,-160)" />
+		<acceleration rate="(5,10)" />
+		<extForce force="0,-70.8" />
+		<position startX="(-320,0)" startY="(320,290)" />
+		<scale startScale="(0.5,1.0)" endScale="(0.5,1.0)" constantScale="true" />
+		<particleLife lifeTime="(3.0,5.0)" />
+		<opacity startOp="1" endOp="1" />
+		<jitter axis="X" amplitude="(0.3,1.0)" period="(1.5,2.5)" rate="(1.5,2.5)" />
+	</particleStream>
+
+	<particleStream sequence="sequence" emitRate="3.0" offset="0,0" parent="PlayGroup" offsetType="independent">
+		<resource type="image" path="resources/FX/bubbleParticle" />
+		<velocity startX="(0,0)" startY="(-80,-160)" />
+		<acceleration rate="(5,10)" />
+		<extForce force="0,-70.8" />
+		<position startX="(0,320)" startY="(320,290)" />
+		<scale startScale="(0.5,1.0)" endScale="(0.5,1.0)" constantScale="true" />
+		<particleLife lifeTime="(3.0,5.0)" />
+		<opacity startOp="1" endOp="1" />
+		<jitter axis="X" amplitude="(0.3,1.0)" period="(1.5,2.5)" rate="(1.5,2.5)" />
+	</particleStream>
+
+
+</particleSystem>

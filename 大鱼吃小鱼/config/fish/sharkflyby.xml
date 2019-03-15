@@ -1,0 +1,25 @@
+<fish name="Shark Large"
+	class="FlyByFish"
+	foodValue="100"
+	maxSpeedX="(150,200)" 
+	maxSpeedY="20" 
+	sightDist="200" 
+	sightAngle="20"
+	accelRate="200" 
+	dragRate="40" 
+	scale="1"
+	size="20"
+	spawnType="offStageLR"
+	hotSpot="-5,-23,45,30"
+	collision="0,26,182,92"
+	animPath="resources/Shark/" 
+	chaseStateChangeFreq="(1.0,4.0)"
+	chaseMoveChangeFreq="(0.4,0.8)"	
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="0.5" />
+	<menuImage onImage="resources/Shark/hudImage.png" />
+
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+</fish>

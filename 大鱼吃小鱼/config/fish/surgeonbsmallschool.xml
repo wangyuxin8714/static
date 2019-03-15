@@ -1,0 +1,41 @@
+<fish name="Surgeon B Medium"
+	class="SoldierFish"
+	sightDist="120"
+	foodValue="20"
+	maxSpeedX="(150,250)" 
+	maxSpeedY="(20,30)" 
+	minSpeedX="(50,75)"
+	minSpeedY="(0,20)"
+	sightDist="90" 
+	accelRate="500" 
+	dragRate="40" 
+	scale="0.21"
+	size="6"
+	hotSpot="-2,-12,25,19"
+	collision="5,20,100,62"	
+	spawnType="offStageLR"
+	animPath="resources/surgeonFish/" 
+	wanderMoveChangeFreq="(5.0,8.0)"
+	wanderStateChangeFreq="(5.0,10.0)"
+	chaseMoveChangeFreq="(0.2,1.5)"
+	chaseStateChangeFreq="(3.0,7.0)"
+	runMoveChangeFreq="(1.0,5.0)"
+	runStateChangeFreq="(3.0,6.0)"
+	sightCheckFreq="0.06"	
+	hsvOffset="-38,0,0"
+	schoolSize="6"
+	schoolDist="25"
+	schoolNeighborDist="80"
+	schoolRunMult="3.0f"
+	>
+	
+	
+	<sound class="eaten" name="eatenSound" pitch="1.5" />
+	<menuImage onImage="resources/surgeonFish/hudImage.png" />
+
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="PlayerFish"  reaction="avoid" reactFreq="0.5" />
+	<react class="BrineShrimp" reaction="chase" reactFreq="0.5" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+
+</fish>

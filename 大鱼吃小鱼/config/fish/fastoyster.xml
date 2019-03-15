@@ -1,0 +1,22 @@
+<fish name="FastOyster"	class="Oyster"
+					foodValue="50"
+					maxSpeedX="(8,10)" 
+					maxSpeedY="(60,80)" 
+					sightDist="0" 
+					accelRate="300" 
+					dragRate="70" 
+					scale="1.2"
+					size="200.5"
+					layer="mg"
+					spawnType="offstageTop"
+					animPath="resources/Oyster/"
+					hotSpot="-37,15,37,35"
+					collision="38,50,67,83"
+					wanderStateChangeFreq="(1.5,4.0)"
+					wanderMoveChangeFreq="1.0"
+>
+	
+	<menuImage offImage="resources/oyster/open.1.jpg" onImage="resources/oyster/open.1.jpg" />
+
+	<sound class="eaten" name="eatenSound" pitch="1.0" />
+</fish>

@@ -1,0 +1,58 @@
+<stage name="PlayingChicken"
+	friendlyName="Playing Chicken" 
+	type="timedBonus"
+	stageWidth="800" 
+	stageHeight="600"
+	time="1:10" > 
+
+	<environment bgLayout="resources/backdrops/SunkenTreasure/bgLayout.xml" 
+				 fgLayout="resources/backdrops/SunkenTreasure/fgLayout.xml"
+				 mgLayout="resources/backdrops/SunkenTreasure/mgLayout.xml" />
+	
+	<playerFish config="config/Fish/AnglerPlayer.xml" >
+		<size size="6.5" targetScore="0" scale="0.6" />
+		<size size="7.5" targetScore="999999" scale="1.0" />
+	</playerFish>
+
+<!-- Fish -->
+	<enemyFish name="SurgeonBSmall" template="config/fish/surgeonBSmall.xml" poolSize="24" mode="onlyUneaten" >
+		<spawnInfo playerSize="0"	maxCount="6"	respawnFreq="(0.2,0.5)" />
+	</enemyFish>
+
+	<enemyFish name="SurgeonBSmallSchool" template="config/fish/surgeonBSmallSchool.xml" displayMenuImage="false" poolSize="24" mode="onlyUneaten" >
+		<spawnInfo playerSize="0"	maxCount="12"	respawnFreq="(0.2,0.5)" />
+	</enemyFish>
+
+	<enemyFish name="Barracuda" template="config/fish/Barracuda.xml" poolSize="2" displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(1.0,4.0)" />
+	</enemyFish>
+
+<!-- Hazards -->
+	
+	<enemyFish name="Poison Minnow" template="config/fish/poisonMinnow.xml" poolSize="2" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(2.0,5.0)" />
+	</enemyFish>
+
+<!-- Powerups -->
+	
+	<enemyFish name="2x" template="config/fish/BonusBubble2X.xml" poolSize="1" displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(5.0,15.0)" />
+	</enemyFish>
+
+	<enemyFish name="Speed Bubbles" template="config/fish/BonusBubbleSpeed.xml" poolSize="2"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(4.0,8.0)" />
+	</enemyFish>
+	
+	<enemyFish name="Life Bubbles" template="config/fish/BonusBubbleFreeLife.xml" poolSize="1"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(25.0,35.0)" />
+	</enemyFish>
+
+	<enemyFish name="Fury Bubbles" template="config/fish/BonusBubbleFeedingFury.xml" poolSize="1"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(10.0,15.0)" />
+	</enemyFish>
+
+	<music	introSound="stageIntro" 
+			outroSound="stageOutro" 
+			gameMusic="resources/music/track2.wav" />	
+
+</stage>

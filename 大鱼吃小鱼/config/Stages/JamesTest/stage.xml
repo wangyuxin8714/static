@@ -1,0 +1,32 @@
+<stage name="KillerInstinct" 
+	friendlyName="James Test"
+	stageWidth="1280" 
+	stageHeight="960"
+	time="3:00" >
+
+	<environment bgLayout="resources/backdrops/BigRidge/bgLayout.xml" 
+				 fgLayout="resources/backdrops/BigRidge/fgLayout.xml"
+				 mgLayout="resources/backdrops/BigRidge/mgLayout.xml" />
+				 
+	<playerFish config="config/Fish/OrcaPlayer.xml" >
+		<size size="12.5" targetScore="0" scale="0.45" />
+		<size size="16.5" targetScore="550" scale="0.6" />
+		<size size="21.5" targetScore="1350" scale="1.0" />
+		<size size="22.5" targetScore="2200" scale="1.0" />
+	</playerFish>
+	
+	<enemyFish name="JohnDorySmall" template="config/fish/JohnDorySmall.xml" poolSize="20" >
+		<spawnInfo playerSize="0"	maxCount="20"	respawnFreq="(0.1,0.4)" />
+	</enemyFish> 
+
+	<enemyFish name="Oysters" template="config/fish/oyster.xml" poolSize="2" displayMenuImage="false" mode="uncounted" >
+		<staticSpawn pos="600,800" doRespawn="true" />
+		<staticSpawn pos="1000,850" doRespawn="true" />
+		<spawnInfo playerSize="0"	maxCount="0"	respawnFreq="(.5,1.5)" />		
+	</enemyFish>
+
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track1.wav" />
+		
+</stage>

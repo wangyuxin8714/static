@@ -1,0 +1,28 @@
+<fish name="Angler Large"
+	class="SoldierFish"
+	foodValue="20"
+	maxSpeedX="(100,150)" 
+	maxSpeedY="(30,70)" 
+	sightDist="200" 
+	sightAngle="40"
+	accelRate="230" 
+	dragRate="40" 
+	scale="0.20"
+	size="8"
+	spawnType="offStageLR"
+	hotSpot="0,-10,65,65"
+	collision="19,57,158,162"
+	animPath="resources/Angler/" 
+	chaseStateChangeFreq="(1.0,4.0)"
+	chaseMoveChangeFreq="(0.5,1.0)"	
+	hsvOffset="0,-0.1,0"
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="0.5" />
+	<menuImage onImage="resources/Angler/hudImage.png" />
+
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+	<react class="PlayerFish" reaction="chase" reactFreq="0.95" />
+
+</fish>

@@ -1,0 +1,28 @@
+<screen name="Stage Start Base">
+
+	<image name="background" file="resources\menus\mainBg.jpg"  />
+	<image name="backdrop" file="resources\menus\infoFrameCredits.png" pivot="center" opacity="0.9" x="320" y="240" />
+	
+	<text name="title" string="" font="resources/menus/menuFont.xml" xAlign="center" yAlign="top" size="18" x="320" y="96" />
+								  
+	<text name="col1" 
+			xAlign="left" yAlign="top" size="18" x="155" y="144"  
+			string="" 
+			font="resources/menus/infoText14.xml" 
+			/>
+
+	<text name="col2" 
+			xAlign="left" yAlign="top" size="18" x="355" y="144"  
+			string="" 
+			font="resources/menus/infoText14.xml" 
+			/>
+
+	<group name="continueBtnGroup" x="218" y="380">
+		<imageButton name="continueBtn" upImg="resources\menus\genericButtonNormal.png" overImg="resources\menus\genericButtonHigh.png" x="25" y="15" action="creditsDone"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+		<text name="continueBtnText" string="A" font="resources/HUD/buttonFontDone.xml" xAlign="center" yAlign="top" size="18" x="96" y="30" />
+	</group>
+
+		
+<!--	<image name="logo" file="resources\menus\logo.png" pivot="center" x="320" y="50" /> -->
+
+</screen>

@@ -1,0 +1,55 @@
+<stage name="SS Starfish" 
+	friendlyName="Star Fish Screen Saver"
+	stageWidth="640" 
+	stageHeight="480"
+	type="menu"
+	>
+
+	<environment bgLayout="resources/backdrops/SS_StarFish/bgLayout.xml" 
+				 fgLayout="resources/backdrops/SS_StarFish/fgLayout.xml"
+				 mgLayout="resources/backdrops/SS_StarFish/mgLayout.xml" />
+				 
+	<toolTip file="config/toolTips/menuTip.xml" type="levelStart" delay="0.1" />
+
+	<playerFish config="config/Fish/AngelPlayer.xml" >
+		<size size="1.5" targetScore="0" scale="0.4" />
+		<size size="3.5" targetScore="23000" scale="0.67" />
+		<size size="5.5" targetScore="70000" scale="1.0" />
+		<size size="6.5" targetScore="11000" scale="1.0" />
+	</playerFish>
+	
+
+	<enemyFish name="Angels" template="config/fish/AngelBSmallSchool.xml" poolSize="8" >
+		<spawnInfo playerSize="0"	maxCount="8"	respawnFreq="(4.0,6.0)" />
+	</enemyFish>
+	
+
+	<enemyFish name="Jellies" template="config/fish/BasicJellyFish.xml" poolSize="4"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="4"	respawnFreq="(3.0,9.5)" />
+	</enemyFish>
+	
+	<enemyFish name="Angel Small" template="config/fish/AngelASmall.xml" poolSize="2">
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(1.0,6.0)" />
+	</enemyFish>
+
+	<enemyFish name="Surgeon A Medium" template="config/fish/SurgeonBMedium.xml" poolSize="2" >
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(1.0,10.0)" />
+	</enemyFish>
+
+	<enemyFish name="Surgeon A Medium" template="config/fish/SurgeonBMediumFlyBy.xml" poolSize="1" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(1.0,6.0)" />
+	</enemyFish>
+
+	<enemyFish name="Parrot A Large" template="config/fish/ParrotALarge.xml" poolSize="1" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(5.0,15.0)" />
+	</enemyFish> 
+
+	<enemyFish name="Shark" template="config/fish/SharkFlyby.xml" poolSize="1" displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0" maxCount="1" respawnFreq="(35.0,250.0)" />
+	</enemyFish>
+	
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track3.wav" />
+		
+</stage>

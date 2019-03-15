@@ -1,0 +1,15 @@
+<fish name="Speed Bonus"	class="BonusBubbleSpeed"
+						foodValue="0"
+						maxSpeedX="(8,10)" 
+						maxSpeedY="(60,80)" 
+						sightDist="0" 
+						accelRate="200"
+						dragRate="46" 
+						scale="1.0"
+						size="0.1"
+						spawnType="offstageBottom"
+						animPath="resources/bonus/speedBubble" >
+	
+	<sound class="eaten" name="eatenSound" pitch="1.0" />
+	<menuImage offImage="resources/bonus/speedBubble1.jpg" onImage="resources/bonus/speedBubble1.jpg" />
+</fish>

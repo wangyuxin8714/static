@@ -1,0 +1,5 @@
+<screen name="Stage 1 BG">
+	<image name="background" file="resources/backdrops/PotteryCave/bgImg.jpg" scaleX="1" scaleY="1" />
+	<particleSystem x="120" y="401" file="config/fx/bubbleStreamNarrow.xml" />
+	<particleSystem x="585" y="321" file="config/fx/bubbleStreamNarrow.xml" />
+</screen>

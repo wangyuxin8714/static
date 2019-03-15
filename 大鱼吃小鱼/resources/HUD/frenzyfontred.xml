@@ -1,0 +1,108 @@
+<font face="SF Fedora" image="resources/HUD/frenzyFontRed.png" height="47" spaceWidth="1" ascent="36" gap="2">
+   <!-- row 0 -->
+   <glyph char="32" a="0" b="5" c="8" />
+   <glyph char="33" a="3" b="17" c="-9" />
+   <glyph char="34" a="9" b="17" c="-9" />
+   <glyph char="35" a="7" b="20" c="-8" />
+   <glyph char="36" a="1" b="32" c="-9" />
+   <glyph char="37" a="3" b="31" c="-6" />
+   <glyph char="38" a="3" b="33" c="-9" />
+   <glyph char="39" a="9" b="11" c="-9" />
+   <glyph char="40" a="4" b="24" c="-10" />
+   <glyph char="41" a="0" b="24" c="-6" />
+   <glyph char="42" a="6" b="22" c="-6" />
+   <glyph char="43" a="6" b="18" c="-5" />
+   <glyph char="44" a="1" b="12" c="-2" />
+   <!-- row 1 -->
+   <glyph char="45" a="5" b="18" c="-6" />
+   <glyph char="46" a="3" b="11" c="-2" />
+   <glyph char="47" a="-1" b="30" c="-10" />
+   <glyph char="48" a="3" b="28" c="-7" />
+   <glyph char="49" a="3" b="24" c="-6" />
+   <glyph char="50" a="1" b="30" c="-5" />
+   <glyph char="51" a="3" b="31" c="-9" />
+   <glyph char="52" a="1" b="31" c="-7" />
+   <glyph char="53" a="3" b="30" c="-8" />
+   <glyph char="54" a="2" b="27" c="-5" />
+   <!-- row 2 -->
+   <glyph char="55" a="3" b="31" c="-10" />
+   <glyph char="56" a="2" b="29" c="-7" />
+   <glyph char="57" a="1" b="30" c="-7" />
+   <glyph char="58" a="3" b="15" c="-6" />
+   <glyph char="59" a="2" b="16" c="-6" />
+   <glyph char="60" a="6" b="18" c="-8" />
+   <glyph char="61" a="4" b="20" c="-6" />
+   <glyph char="62" a="3" b="17" c="-4" />
+   <glyph char="63" a="5" b="23" c="-7" />
+   <glyph char="64" a="5" b="25" c="-6" />
+   <glyph char="65" a="-1" b="29" c="-6" />
+   <glyph char="66" a="0" b="33" c="-7" />
+   <!-- row 3 -->
+   <glyph char="67" a="4" b="29" c="-8" />
+   <glyph char="68" a="1" b="30" c="-6" />
+   <glyph char="69" a="2" b="31" c="-9" />
+   <glyph char="70" a="2" b="31" c="-10" />
+   <glyph char="71" a="3" b="30" c="-7" />
+   <glyph char="72" a="1" b="33" c="-9" />
+   <glyph char="73" a="0" b="28" c="-8" />
+   <glyph char="74" a="0" b="33" c="-9" />
+   <glyph char="75" a="1" b="32" c="-9" />
+   <!-- row 4 -->
+   <glyph char="76" a="1" b="21" c="-3" />
+   <glyph char="77" a="1" b="40" c="-9" />
+   <glyph char="78" a="1" b="33" c="-8" />
+   <glyph char="79" a="4" b="29" c="-7" />
+   <glyph char="80" a="1" b="32" c="-8" />
+   <glyph char="81" a="4" b="29" c="-7" />
+   <glyph char="82" a="1" b="32" c="-6" />
+   <glyph char="83" a="1" b="29" c="-9" />
+   <glyph char="84" a="5" b="28" c="-10" />
+   <!-- row 5 -->
+   <glyph char="85" a="4" b="31" c="-9" />
+   <glyph char="86" a="4" b="29" c="-11" />
+   <glyph char="87" a="4" b="37" c="-10" />
+   <glyph char="88" a="0" b="33" c="-9" />
+   <glyph char="89" a="4" b="28" c="-11" />
+   <glyph char="90" a="0" b="34" c="-10" />
+   <glyph char="91" a="0" b="29" c="-11" />
+   <glyph char="92" a="7" b="15" c="-3" />
+   <glyph char="93" a="-1" b="29" c="-10" />
+   <glyph char="94" a="9" b="16" c="-8" />
+   <!-- row 6 -->
+   <glyph char="95" a="-3" b="25" c="-3" />
+   <glyph char="96" a="12" b="13" c="-10" />
+   <glyph char="97" a="1" b="24" c="-6" />
+   <glyph char="98" a="2" b="28" c="-8" />
+   <glyph char="99" a="5" b="24" c="-8" />
+   <glyph char="100" a="4" b="24" c="-7" />
+   <glyph char="101" a="4" b="25" c="-9" />
+   <glyph char="102" a="4" b="25" c="-10" />
+   <glyph char="103" a="5" b="24" c="-7" />
+   <glyph char="104" a="3" b="28" c="-9" />
+   <glyph char="105" a="3" b="18" c="-9" />
+   <glyph char="106" a="2" b="24" c="-9" />
+   <!-- row 7 -->
+   <glyph char="107" a="2" b="28" c="-10" />
+   <glyph char="108" a="3" b="18" c="-4" />
+   <glyph char="109" a="3" b="33" c="-9" />
+   <glyph char="110" a="3" b="27" c="-8" />
+   <glyph char="111" a="5" b="24" c="-7" />
+   <glyph char="112" a="3" b="26" c="-8" />
+   <glyph char="113" a="5" b="24" c="-7" />
+   <glyph char="114" a="3" b="26" c="-7" />
+   <glyph char="115" a="3" b="24" c="-9" />
+   <glyph char="116" a="6" b="23" c="-10" />
+   <glyph char="117" a="6" b="26" c="-9" />
+   <!-- row 8 -->
+   <glyph char="118" a="5" b="24" c="-10" />
+   <glyph char="119" a="5" b="31" c="-11" />
+   <glyph char="120" a="2" b="27" c="-10" />
+   <glyph char="121" a="5" b="23" c="-11" />
+   <glyph char="122" a="2" b="28" c="-9" />
+   <glyph char="123" a="4" b="27" c="-10" />
+   <glyph char="124" a="0" b="23" c="-10" />
+   <glyph char="125" a="0" b="27" c="-6" />
+   <glyph char="126" a="9" b="20" c="-10" />
+   <glyph char="169" a="5" b="26" c="-7" />
+   <glyph char="174" a="5" b="25" c="-6" />
+</font>

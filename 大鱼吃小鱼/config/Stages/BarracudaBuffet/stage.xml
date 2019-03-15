@@ -1,0 +1,58 @@
+<stage name="BarracudaBuffer" 
+	friendlyName="Barracuda Buffer"
+	stageWidth="1280" 
+	stageHeight="960"
+	type="timedBonus"
+	time="0:45" >
+
+	<environment bgLayout="resources/backdrops/BigRidge/bgLayout.xml" 
+				 fgLayout="resources/backdrops/BigRidge/fgLayout.xml"
+				 mgLayout="resources/backdrops/BigRidge/mgLayout.xml" />
+				 
+	<playerFish config="config/Fish/OrcaPlayer.xml" >
+		<size size="16.5" targetScore="0" scale="0.76" />
+		<size size="21.5" targetScore="9999" scale="1.2" />
+	</playerFish>
+
+<!-- Fish -->
+	
+	<enemyFish name="BarracudaSmall" template="config/fish/BarracudaSmall.xml" poolSize="60" mode="onlyUneaten" >
+		<spawnInfo playerSize="0"	maxCount="40"	respawnFreq="(0.1,0.5)" />
+	</enemyFish> 
+
+<!-- Hazards -->
+
+	<enemyFish name="Oysters" template="config/fish/oysterFast.xml" poolSize="2" displayMenuImage="false" mode="uncounted" >
+		<staticSpawn pos="600,855" doRespawn="true" />
+		<staticSpawn pos="1140,880" doRespawn="true" />
+		<spawnInfo playerSize="0"	maxCount="0"	respawnFreq="(.5,1.5)" />		
+	</enemyFish>
+
+
+	<enemyFish name="Jellies" template="config/fish/BasicJellyFish.xml" poolSize="5"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="5"	respawnFreq="(3.0,8.0)" />
+	</enemyFish>
+
+	<enemyFish name="Poison MinnowMini" template="config/fish/PoisonMinnowMini.xml" poolSize="4" displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="4"	respawnFreq="(5.0,10.0)" />
+	</enemyFish> 
+
+<!-- Powerups -->
+
+	<enemyFish name="2x" template="config/fish/BonusBubble2X.xml" poolSize="1" displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(5.0,15.0)" />
+	</enemyFish>
+
+	<enemyFish name="Fury Bubble" template="config/fish/BonusBubbleFeedingFury.xml" poolSize="1"  displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(7.5,15.0)" />
+	</enemyFish>
+
+	<enemyFish name="Life Bubbles" template="config/fish/BonusBubbleFreeLife.xml" poolSize="1"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(25.0,35.0)" />
+	</enemyFish>
+
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track2.wav" />	
+		
+</stage>

@@ -1,0 +1,4 @@
+<screen name="Main Menu">
+	<image name="backdrop" file="resources\menus\infoFrame.jpg" pivot="center" opacity="0.9" x="320" y="240" />
+	<text name="loadingText" string="Loading..." font="resources/HUD/textFont.xml" xAlign="center" yAlign="top" size="18" x="320" y="220" />
+</screen>

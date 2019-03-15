@@ -1,0 +1,12 @@
+<playerFish 
+	name="Spike" 
+	maxSpeedX="300" 
+	maxSpeedY="300" 
+	accelRate="400" 
+	fluidDrag="0.0001" 
+	drag="5"
+	hotSpot="-5,-20,43,41"
+	collision="12,26,135,106"
+	animPath="resources/PufferFish/"
+	class="JohnDoryPlayer" 
+/>

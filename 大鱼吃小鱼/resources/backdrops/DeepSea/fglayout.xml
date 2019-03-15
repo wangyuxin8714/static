@@ -1,0 +1,8 @@
+<screen name="Stage 1 FG">
+<!--	<include file="resources/backdrops/DeepSea/mgLayout.xml" />-->
+	<particleSystem x="400" y="300" file="config/fx/ambientBubbles.xml" />
+
+	<image x="-25" y="473" file="resources/backdrops/DeepSea/plant1.jpg" />
+	<image x="765" y="473" file="resources/backdrops/DeepSea/plant1.jpg" scaleX="-1" scaleY="1" />
+	<image x="735" y="513" file="resources/backdrops/DeepSea/plant1.jpg" scaleX="1" scaleY="1" />
+</screen>

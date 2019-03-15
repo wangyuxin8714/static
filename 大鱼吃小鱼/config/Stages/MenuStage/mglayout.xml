@@ -1,0 +1,10 @@
+<screen name="Menu MG">
+	<image name="rock1"  file="resources\backdrops\SunkenTreasure\mg_rock1.jpg" x="-85" y="415" />
+	<image name="rock2"  file="resources\backdrops\SunkenTreasure\mg_rock1.jpg" x="285" y="425" />
+
+	<image name="plant3" file="resources\backdrops\SunkenTreasure\mg_plant3.jpg" scaleX="1.0" x="485" y="384" />
+	<image name="plant2" file="resources\backdrops\SunkenTreasure\mg_plant1.jpg" scaleX="-1.0" x="505" y="255" />
+
+	<image name="plant1" file="resources\backdrops\SunkenTreasure\mg_plant1.jpg" scaleX="1.0" scaleY="0.8" x="-5" y="294" />
+
+</screen>

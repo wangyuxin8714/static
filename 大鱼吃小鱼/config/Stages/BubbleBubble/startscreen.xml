@@ -1,0 +1,19 @@
+<screen name="Bubble Bubble Start">
+
+	<include name="baseLyout" file="config\Stages\wyw\ssb_03.xml" />
+
+	<textSub name="title" string="" />
+								  
+	<textSub name="tagline" string="" />
+		
+	<textSub name="para1"  string="" />
+
+	<textSub name="para2"  string="" />
+								
+
+	<image name="extraButton" file="resources\bonus\starBubble1.png" x="475" y="265" />
+
+	<textSub name="objectiveText" string=" " />
+	<textSub name="timeObjectiveText" string=" " />
+
+</screen>

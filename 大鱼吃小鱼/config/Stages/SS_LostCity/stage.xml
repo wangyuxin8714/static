@@ -1,0 +1,49 @@
+<stage name="SS Sunken Treasure" 
+	friendlyName="Sunken Treasure Screen Saver"
+	stageWidth="640" 
+	stageHeight="480"
+	type="menu"
+	>
+
+	<environment bgLayout="resources/backdrops/SS_LostCity/bgLayout.xml" 
+				 fgLayout="resources/backdrops/SS_LostCity/fgLayout.xml"
+				 mgLayout="resources/backdrops/SS_LostCity/mgLayout.xml"/>
+				 
+	<toolTip file="config/toolTips/menuTip.xml" type="levelStart" delay="0.1" />
+
+	<playerFish config="config/Fish/JDPlayer.xml" >
+		<size size="9.5" targetScore="0" scale="0.40" />
+		<size size="14.5" targetScore="600" scale="0.65" />
+		<size size="17.5" targetScore="1600" scale="1.0" />
+		<size size="18.5" targetScore="2100" scale="1.0" />
+	</playerFish>
+	
+	<enemyFish name="JohnDoryMedium" template="config/fish/JohnDoryMedium.xml" poolSize="2">
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(1.0,1.5)" />
+	</enemyFish>
+	
+	<enemyFish name="Barracuda Medium" template="config/fish/BarracudaMedium.xml" poolSize="3" >
+		<spawnInfo playerSize="0"	maxCount="3"	respawnFreq="(1.0,4.0)" />
+	</enemyFish>
+	
+	<enemyFish name="Marlin Large" template="config/fish/MarlinLarge.xml" poolSize="2">
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(4.0,8.0)" />
+	</enemyFish>
+
+	<enemyFish name="Tuna" template="config/fish/TunaLargeFlyBy.xml" poolSize="2">
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(5.0,10.0)" />
+	</enemyFish>
+
+	<enemyFish name="Mine" template="config/fish/Mine.xml" poolSize="6" displayMenuImage="false" mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="4"	respawnFreq="(6.0, 20.0)" />
+	</enemyFish>
+	
+	<enemyFish name="mermaid" template="config/fish/Mermaid.xml" poolSize="1">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(10.0,60.0)" />
+	</enemyFish>
+
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track3.wav" />
+		
+</stage>

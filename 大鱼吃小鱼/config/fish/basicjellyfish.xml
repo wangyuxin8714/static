@@ -1,0 +1,17 @@
+<fish name="Jelly Fish"	class="BasicJellyFish"
+						foodValue="0"
+						maxSpeedX="(-8,-5)" 
+						maxSpeedY="(60,80)" 
+						sightDist="0" 
+						accelRate="290"
+						dragRate="35" 
+						scale="0.6"
+						size="998.1234"
+						spawnType="offstageBottom"
+						animPath="resources/jellyFish/"
+						collision="9,35,61,155"
+						hsvOffset="128,0,0"
+						>
+	
+	<menuImage offImage="resources/jellyFish/jellyFish1.jpg" onImage="resources/jellyFish/jellyFish1.jpg" />
+</fish>

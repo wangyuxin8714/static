@@ -1,0 +1,14 @@
+<screen name="Stage 1 FG">
+	<particleSystem x="400" y="300" file="config/fx/ambientBubbles.xml" />
+
+	<image name="logo" opacity="0.5" file="resources\menus\logo.png" pivot="center" x="520" y="420" />
+
+	<image name="stalag2fg" scaleX="1" scaleY="1" file="resources/backdrops/PotteryCave/fgStalag2.jpg" x="85" y="-4" />
+	<image name="stalag1fg" scaleX="1" scaleY="1" file="resources/backdrops/PotteryCave/fgStalag1.jpg" x="605" y="-22" />
+	<image name="stalag1fg" scaleX="1" scaleY="1" file="resources/backdrops/PotteryCave/fgStalag1.jpg" x="355" y="-82" />
+	
+	<image name="tower1" scaleX="0.5" scaleY="0.5" file="resources/backdrops/PotteryCave/fgTower1.jpg" y="546" x="100" />
+	<image name="tower1" scaleX="-0.5" scaleY="0.5" file="resources/backdrops/PotteryCave/fgTower1.jpg" y="546" x="600" />
+	<image name="plant1" scaleX="1" scaleY="1" file="resources/backdrops/PotteryCave/fgPlant1.jpg" y="526" x="30" />
+	<image name="plant2" scaleX="-1" scaleY="1" file="resources/backdrops/PotteryCave/fgPlant1.jpg" y="526" x="700" />
+</screen>

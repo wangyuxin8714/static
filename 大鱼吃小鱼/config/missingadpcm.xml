@@ -1,0 +1,16 @@
+<screen name="Main Menu">
+	<image name="backdrop" file="resources\menus\infoFrame.jpg" pivot="center" opacity="0.9" x="320" y="240" />
+	<text name="loadingText" font="resources/HUD/textFont.xml" xAlign="center" yAlign="top" size="18" x="320" y="120" 
+			string="Feeding Frenzy is unable to detect the ADPCM audio\n
+					codec.  This codec is required for playing many \n
+					of the sound effects in the game.  This problem may\n
+					occur if you do not have the codec installed on your\n
+					system, or if it has been manually disabled.\n\n
+					The game will contine with certain game sounds disabled\n" />
+
+	<group name="continueBtnGroup" x="218" y="380">
+		<imageButton name="continueBtn" upImg="resources\menus\genericButtonNormal.png" overImg="resources\menus\genericButtonHigh.png" x="25" y="15" action="codecMissingOK"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+		<text name="continueBtnText" string="OK" font="resources/HUD/buttonFont.xml" xAlign="center" yAlign="top" size="18" x="96" y="30" />
+	</group>
+
+</screen>

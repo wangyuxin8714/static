@@ -1,0 +1,5 @@
+<sounds>
+	<sound name="stageIntro"	file="resources/sounds/stageIntro.wav"		num="1" category="2"/>
+	<sound name="stageOutro"	file="resources/sounds/stageIntro.wav"		num="1" category="2"/>
+</sounds>
+

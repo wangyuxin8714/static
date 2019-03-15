@@ -1,0 +1,60 @@
+<stage name="Stage 1" 
+	friendlyName="Stage 1: Small Fish, Small Pond" 
+	nextLevelAt="500" 
+	nextStage="config/Stages/TestStage/shark.xml" 
+	stageWidth="800" 
+	stageHeight="600"
+	time="3:00" >
+
+	<environment bgLayout="resources/backdrops/SunkenTreasure/bgLayout.xml" 
+				 fgLayout="resources/backdrops/SunkenTreasure/fgLayout.xml"
+				 mgLayout="resources/backdrops/SunkenTreasure/mgLayout.xml" />
+
+	<toolTip file="config/toolTips/dashTip.xml" type="levelStart" delay="5.0" />
+	<toolTip file="config/toolTips/growMeterTip.xml" type="fishEaten" delay="0.1" />
+	<toolTip file="config/toolTips/fishGrowTip.xml" type="playerGrow" delay="0.5" />
+	
+
+	<playerFish name="Test Player" 
+				maxSpeedX="395" 
+				maxSpeedY="395" 
+				accelRate="400" 
+				fluidDrag="0.0001" 
+				drag="5"
+				collision="12,65,172,140"
+				animPath="resources/pufferFish/"
+				class="JohnDoryPlayer" 
+				hotSpot="-10,-12,10,12"
+				>
+		<size size="0.5" targetScore="0" scale="0.5" />
+		<size size="1.5" targetScore="200" scale="0.75" />
+		<size size="2.5" targetScore="400" scale="1.0" />
+		<size size="3.5" targetScore="600" scale="1.0" />
+	</playerFish>
+
+	
+	<enemyFish name="Mini Minnows" template="config/fish/minnowMiniSchool.xml" poolSize="25">
+		<spawnInfo playerSize="0"	maxCount="10"	respawnFreq="(1.0,5.0)" />
+		<spawnInfo playerSize="2.5" maxCount="10"	respawnFreq="(1.0,5.0)" />
+		<spawnInfo playerSize="3.4" maxCount="10"	respawnFreq="(1.0,5.0)" />
+		<spawnInfo playerSize="4.5" maxCount="10"	respawnFreq="(1.0,5.0)" />
+	</enemyFish>
+	
+	<enemyFish name="Mini Surgeon" template="config/fish/tunaMiniSchool.xml" poolSize="6">
+		<spawnInfo playerSize="0"	maxCount="6"	respawnFreq="(3.0,6.0)" />
+		<spawnInfo playerSize="2.5" maxCount="6"	respawnFreq="(3.0,6.0)" />
+		<spawnInfo playerSize="3.4" maxCount="6"	respawnFreq="(3.0,6.0)" />
+		<spawnInfo playerSize="4.5" maxCount="6"	respawnFreq="(3.0,6.0)" />
+	</enemyFish>
+	
+	<enemyFish name="Parrot" template="config/fish/ChaserParrot.xml" poolSize="5" >
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(2.0,5.0)" />
+		<spawnInfo playerSize="1.5" maxCount="2"	respawnFreq="(1.0,4.0)" />
+		<spawnInfo playerSize="2.4" maxCount="3"	respawnFreq="(1.0,4.0)" />
+	</enemyFish>
+
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/menuMusic.wav" />
+		
+</stage>

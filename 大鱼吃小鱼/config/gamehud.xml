@@ -1,0 +1,51 @@
+<screen name="Game Hud">
+	<image name="bg" file="resources\hud\hudBg.jpg" x="0" y="0" />
+
+	<group name="timerGroup" x="260" y="434">
+		<image opacity="0.85" file="resources/hud/timerBg.png" x="0" y="0" />
+		<text name="timerText" x="81" y="10" xAlign="center" font="resources/HUD/scoreFont.xml"
+			string="0:0" />
+	</group>
+
+	<group name="counterGroup" x="530" y="434">
+		<image opacity="0.85" file="resources/hud/counterBg.png" x="0" y="0" />
+		<text name="counterText" x="54" y="8" xAlign="center" font="resources/HUD/scoreFont.xml"
+			string="00                 00" />
+		<text name="counterTextOf" x="53" y="13" xAlign="center" font="resources/HUD/hudFont.xml"
+			string="of" />
+	</group>
+
+
+	<group scaleX="1" scaleY="1" x="550" y="14">
+		<text name="scoreText" x="0" xAlign="right" font="resources/HUD/scoreFont.xml" string="000,000" />
+	</group>
+
+	<text name="frenzyTextBg" x="260" y="82" xAlign="left" font="resources/hud/frenzyFontWhite.xml"
+		string="FRENZY!" opacity="0.2" />
+	<text name="frenzyText" x="260" y="82" xAlign="left" font="resources/hud/frenzyFontGreen.xml"
+		string="FRENZY!" opacity="0.6" />
+	<text name="frenzyText2x" x="260" y="82" xAlign="left" font="resources/hud/frenzyFontRed.xml"
+		string="FRENZY!" opacity="1.0" />
+	<text name="frenzyMultText" x="598" y="4" xAlign="center" font="resources/hud/frenzyFontWhite.xml"
+		string="2x" />
+	<text name="lifeCountText" font="resources/HUD/textFont.xml" string="03" x="598" y="54"
+		xAlign="left" />
+
+	<group name="menuImages" x="67" y="3">
+		<group name="menuImg0" x="30" y="25" />
+		<group name="menuImg1" x="105" y="25" />
+		<group name="menuImg2" x="180" y="25" />
+		<group name="menuImg3" x="265" y="25" />
+		<image name="menuBubble0" file="resources/HUD/hudBubble.png" x="30" y="25" pivot="center" />
+		<image name="menuBubble1" file="resources/HUD/hudBubble.png" x="105" y="25" pivot="center" />
+		<image name="menuBubble2" file="resources/HUD/hudBubble.png" x="180" y="25" pivot="center" />
+		<image name="menuBubble3" file="resources/HUD/hudBubble.png" x="265" y="25" pivot="center" />
+	</group>
+
+	<group name="bonusGroup" x="557" y="92">
+		<image name="bonusBubbleSpeed" x="40" y="0" file="resources/bonus/speedBubble1.jpg" />
+		<image name="bonusBubble2X" x="0" y="0" file="resources/bonus/2xBubble1.jpg" />
+	</group>
+
+	<image name="hudLifePlug" file="resources/hud/hudLifeCounterPlug.jpg" x="543" y="49" />
+</screen>

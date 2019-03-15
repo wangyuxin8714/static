@@ -1,0 +1,15 @@
+<playerFish 
+	name="Eddie" 
+	maxSpeedX="300" 
+	maxSpeedY="300" 
+	accelRate="500" 
+	fluidDrag="0.0001" 
+	drag="5"
+	collision="19,57,158,162"
+	animPath="resources/Angler/"
+	class="JohnDoryPlayer"
+	hotSpot="0,-10,65,65"
+	hsvOffset="-62,.30,0"	
+	eatFinishFrame="2"
+	unsafeEatFrames="(2,3)"
+/>

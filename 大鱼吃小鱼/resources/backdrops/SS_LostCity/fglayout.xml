@@ -1,0 +1,14 @@
+<screen name="Stage 1 FG">
+
+	<image name="logo" opacity="0.5" file="resources\menus\logo.png" pivot="center" x="520" y="50" />
+
+	<group x="-20" y="-115">
+		<particleSystem x="400" y="300" file="config/fx/ambientBubbles.xml" />
+
+		<image x="405" y="553" file="resources/backdrops/DeepSea/plant1.jpg" scaleX="0.65" scaleY="0.65" />
+		<image x="435" y="513" file="resources/backdrops/DeepSea/plant1.jpg" scaleX="0.95" scaleY="0.95" />
+
+		<image x="30" y="523" file="resources/backdrops/DeepSea/plant1.jpg" scaleX="0.95" scaleY="0.95" />
+	</group>	
+
+</screen>

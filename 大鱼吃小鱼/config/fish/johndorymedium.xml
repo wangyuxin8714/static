@@ -1,0 +1,28 @@
+<fish name="John Dory Small"
+	class="SoldierFish"
+	foodValue="20"
+	maxSpeedX="(110,160)" 
+	maxSpeedY="(40,100)" 
+	sightDist="250" 
+	sightAngle="45"
+	accelRate="230" 
+	dragRate="40" 
+	scale="0.6"
+	size="14"
+	spawnType="offStageLR"
+	hotSpot="-5,-20,40,40"
+	collision="5,58,167,140"
+	animPath="resources/JohnDory/" 
+	chaseStateChangeFreq="(1.0,4.0)"
+	chaseMoveChangeFreq="(0.4,0.8)"	
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="0.5" />
+	<menuImage onImage="resources/JohnDory/hudImage.png" />
+
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+	<react class="Shark" reaction="run" reactFreq="0.9" />
+	<react class="FlyByFish" reaction="chase" reactFreq="0.9" />
+
+</fish>

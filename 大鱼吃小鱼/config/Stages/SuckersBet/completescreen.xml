@@ -1,0 +1,3 @@
+<screen name="StageComplete">
+	<include name="baseLyout" file="config\Stages\stageCompleteBase.xml" />
+</screen>

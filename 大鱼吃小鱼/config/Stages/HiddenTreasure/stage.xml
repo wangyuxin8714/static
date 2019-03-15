@@ -1,0 +1,60 @@
+<stage name="HiddenTreasure" 
+	friendlyName="Hidden Treasure"
+	stageWidth="800" 
+	stageHeight="600"
+	time="0:30" >
+
+	<environment bgLayout="resources/backdrops/StarFish/bgLayout.xml" 
+				 fgLayout="resources/backdrops/StarFish/fgLayout.xml"
+				 mgLayout="resources/backdrops/StarFish/mgLayout.xml" />
+
+	<toolTip file="config/toolTips/barracudaTip.xml" type="danger" delay="0.3" />
+	
+	<playerFish config="config/Fish/AngelPlayer.xml" >
+		<size size="1.5" targetScore="0" scale="0.4" />
+		<size size="3.5" targetScore="230" scale="0.67" />
+		<size size="6.5" targetScore="700" scale="1.0" />
+		<size size="7.5" targetScore="1100" scale="1.0" />
+	</playerFish>
+
+<!-- Fish -->
+
+	<enemyFish name="Minnow Small" template="config/fish/minnowSmall.xml" poolSize="10">
+		<spawnInfo playerSize="0"	maxCount="10"	respawnFreq="0.3" />
+		<spawnInfo playerSize="3.5" maxCount="10"	respawnFreq="(0.5,0.7)" />
+		<spawnInfo playerSize="6.5" maxCount="10"	respawnFreq="(0.7,1.5)" />
+	</enemyFish>
+
+	<enemyFish name="Surgeon A Medium" template="config/fish/SurgeonAMedium.xml" poolSize="8" >
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(2.0,5.0)" />
+		<spawnInfo playerSize="3.5" maxCount="5"	respawnFreq="(1.0,2.5)" />
+		<spawnInfo playerSize="6.5" maxCount="6"	respawnFreq="(1.0,2.0)" />
+	</enemyFish>
+
+	<enemyFish name="Surgen B Large" template="config/fish/SurgeonBLarge.xml" poolSize="1" >
+		<spawnInfo playerSize="0"	maxCount="0"	respawnFreq="(1.0,4.0)" />
+		<spawnInfo playerSize="3.5" maxCount="1"	respawnFreq="(2.0,5.0)" />
+		<spawnInfo playerSize="6.5" maxCount="2"	respawnFreq="(1.0,3.0)" />
+	</enemyFish> 
+
+<!-- Hazards -->
+
+	<enemyFish name="Oysters" template="config/fish/oyster.xml" poolSize="2" displayMenuImage="false" mode="uncounted" >
+		<staticSpawn pos="555,525" doRespawn="true" />
+		<staticSpawn pos="80,530" doRespawn="true" />
+		<spawnInfo playerSize="0"	maxCount="0"	respawnFreq="(.5,1.5)" />		
+	</enemyFish>
+
+<!-- Powerups -->
+
+	<enemyFish name="Bubbles" template="config/fish/BonusBubbleStar.xml" poolSize="3"  displayMenuImage="false"  mode="uncounted" >
+		<spawnInfo playerSize="0"	maxCount="3"	respawnFreq="(3.0,8.0)" />
+		<spawnInfo playerSize="3.5" maxCount="3"	respawnFreq="(3.0,8.0)" />
+		<spawnInfo playerSize="6.5" maxCount="3"	respawnFreq="(3.0,8.0)" />
+	</enemyFish>
+
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track1.wav" />
+		
+</stage>

@@ -1,0 +1,121 @@
+<screen name="Main Menu">
+	<image name="backdrop" file="resources\menus\infoFrame.jpg" pivot="center" opacity="1.0" x="320" y="240" />
+	
+	<text name="introText" font="resources\hud\textFont.xml" xAlign="center" x="320" y="105"
+			string="Where do you want to start?" />
+	
+	<group name="andyGroup" x="215" y="146" >
+		<imageButton name="andyButton" 
+			upImg="resources\menus\stageChooser\andyNormal.png" 
+			overImg="resources/menus/stageChooser/andyHigh.png" 
+			action="stageChooseAndy" 
+			overSound="resources/sounds/mouseOver.wav" 
+			activeSound="resources/sounds/mouseDown.wav" />
+	</group>
+
+	<group name="leonGroup" x="378" y="138" >
+		<imageButton name="leonButton" 
+			upImg="resources/menus/stageChooser/leonNormal.png" 
+			overImg="resources/menus/stageChooser/leonHigh.png" 
+			action="stageChooseLeon" 
+			overSound="resources/sounds/mouseOver.wav" 
+			activeSound="resources/sounds/mouseDown.wav" 
+		/>
+		
+		<imageButton name="leonHidden" 
+			upImg="resources\menus\stageChooser\leonHidden.png" 
+			overImg="resources\menus\stageChooser\leonHidden.png"
+			action="hiddenStage"
+			/>
+	</group>
+
+
+	<group name="spikeGroup" x="145" y="240" >
+		<imageButton name="spikeButton" 
+			upImg="resources/menus/stageChooser/spikeNormal.png" 
+			overImg="resources/menus/stageChooser/spikeHigh.png" 
+			action="stageChooseSpike" 
+			overSound="resources/sounds/mouseOver.wav" 
+			activeSound="resources/sounds/mouseDown.wav" 
+		/>
+		
+		<imageButton name="spikeHidden" 
+			upImg="resources\menus\stageChooser\spikeHidden.png" 
+			overImg="resources\menus\stageChooser\spikeHidden.png" 
+			action="hiddenStage"/>
+			
+	</group>
+
+
+	<group name="jdGroup" x="285" y="225" >
+		<imageButton name="jdButton" 
+			upImg="resources/menus/stageChooser/jdNormal.png" 
+			overImg="resources/menus/stageChooser/jdHigh.png" 
+			action="stageChooseJD" 
+			overSound="resources/sounds/mouseOver.wav" 
+			activeSound="resources/sounds/mouseDown.wav" 
+		/>
+		
+		<imageButton name="jdHidden" 
+			upImg="resources\menus\stageChooser\jdHidden.png" 
+			overImg="resources\menus\stageChooser\jdHidden.png"
+			action="hiddenStage"/>
+	</group>
+
+
+	<group name="eddieGroup" x="432" y="240" >
+		<imageButton name="eddieButton" 
+			upImg="resources/menus/stageChooser/eddieNormal.png" 
+			overImg="resources/menus/stageChooser/eddieHigh.png" 
+			action="stageChooseEddie" 
+			overSound="resources/sounds/mouseOver.wav" 
+			activeSound="resources/sounds/mouseDown.wav" 
+		/>
+		
+		<imageButton name="eddieHidden" 
+			upImg="resources\menus\stageChooser\eddieHidden.png"
+			overImg="resources\menus\stageChooser\eddieHidden.png" 
+			action="hiddenStage"/>
+	</group>
+
+
+	<group name="marvinGroup" x="175" y="319" >
+		<imageButton name="marvinButton" 
+			upImg="resources/menus/stageChooser/marvinNormal.png" 
+			overImg="resources/menus/stageChooser/marvinHigh.png" 
+			action="stageChooseMarvin" 
+			overSound="resources/sounds/mouseOver.wav" 
+			activeSound="resources/sounds/mouseDown.wav" 
+		/>
+		
+		<imageButton name="marvinHidden" 
+			upImg="resources\menus\stageChooser\marvinHidden.png"
+			overImg="resources\menus\stageChooser\marvinHidden.png" 
+			action="hiddenStage"/>
+	</group>
+
+
+	<group name="chomperGroup" x="335" y="319" >
+		<imageButton name="chomperButton" 
+			upImg="resources/menus/stageChooser/chomperNormal.png" 
+			overImg="resources/menus/stageChooser/chomperHigh.png" 
+			action="stageChooseChomper" 
+			overSound="resources/sounds/mouseOver.wav" 
+			activeSound="resources/sounds/mouseDown.wav" 
+		/>
+		
+		<imageButton name="chomperHidden" 
+			upImg="resources\menus\stageChooser\chomperHidden.png" 
+			overImg="resources\menus\stageChooser\chomperHidden.png" 
+			action="hiddenStage"/>
+	</group>
+
+	<image name="textFrame" file="resources\menus\stageChooser\stageChooserTextFrame.jpg" pivot="center" x="320" y="422" />
+	<text name="chooserText" font="resources\menus\infoText14.xml" string="Choose a Fish" xAlign="center" x="320" y="410" />
+
+	<group name="backBtnGroup" x="92" y="367" >
+		<imageButton name="backBtn" upImg="resources\menus\smallGenericButtonNormal.png" overImg="resources\menus\smallGenericButtonHigh.png" x="0" y="0" action="abortNewGame"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+		<text name="backBtnText" string="Back" font="resources/HUD/buttonFont.xml" xAlign="center" yAlign="top" size="18" x="48" y="6" />
+	</group>
+	
+</screen>

@@ -1,0 +1,28 @@
+<fish name="Marlin Large"
+	class="ChaserFish"
+	foodValue="80"
+	maxSpeedX="(120,160)" 
+	maxSpeedY="(90,100)" 
+	sightDist="150" 
+	sightAngle="40"
+	accelRate="270" 
+	dragRate="40" 
+	scale="0.91"
+	size="15"
+	spawnType="offStageLR"
+	hotSpot="25,-8,95,30"
+	collision="71,65,170,117"
+	animPath="resources/Marlin/" 
+	wanderStateChangeFreq="(2.0,4.0)"
+	chaseStateChangeFreq="(1.0,1.5)"
+	chaseMoveChangeFreq="(0.6,2.0)"	
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="0.5" />
+	<menuImage onImage="resources/Marlin/hudImage.png" />
+
+	<react class="PlayerFish" reaction="chase" reactFreq="1.0" />
+	<react class="Mine" reaction="avoid" reactFreq="0.5" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+
+</fish>

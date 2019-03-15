@@ -1,0 +1,29 @@
+<fish name="SharkBossRunaway"	
+	class="ChaserFish"
+	foodValue="1000"
+	maxSpeedX="410" 
+	maxSpeedY="20" 
+	sightDist="500" 
+	sightAngle="50"
+	accelRate="500"
+	dragRate="40" 
+	scale="1.4"
+	size="20"
+	tailSpot="-68,-37,-35,37"
+	hotSpot="-10,-25,57,30"
+	collision="3,25,200,81"
+	spawnType="offstageLR"
+	chaseStateChangeFreq="(10.0,12.0)"
+	chaseMoveChangeFreq="(0.2,0.6)"
+	animPath="resources/shark/" 
+	hsvOffset="+30,-0.2,+0.2"
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="0.5" />
+	<menuImage onImage="resources/Shark/hudImage.png" />
+
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+	<react class="PlayerFish" reaction="avoid" reactFreq="1.0" />
+
+</fish>

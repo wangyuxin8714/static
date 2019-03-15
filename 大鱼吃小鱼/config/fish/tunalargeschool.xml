@@ -1,0 +1,33 @@
+<fish name="Tuna Large"
+	class="FlyByFish"
+	foodValue="80"
+	maxSpeedX="(100,140)" 
+	maxSpeedY="(70,90)" 
+	sightDist="175" 
+	sightAngle="40"
+	accelRate="250" 
+	dragRate="40" 
+	scale="0.75"
+	size="15"
+	spawnType="offStageLR"
+	hotSpot="-9,-7,30,23"
+	collision="10,35,173,102"
+	animPath="resources/Tuna/" 
+	wanderStateChangeFreq="(2.0,4.0)"
+	chaseStateChangeFreq="(0.5,1.0)"
+	chaseMoveChangeFreq="(0.85,2.4)"	
+	schoolSize="2"
+	schoolDist="60"
+	schoolNeighborDist="180"
+	schoolTargetMult="2.6"
+	schoolChaseMult="1.35"
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="0.5" />
+	<menuImage onImage="resources/Tuna/hudImage.png" />
+
+	<react class="JohnDoryPlayer" reaction="avoid" reactFreq="1.0" />
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="0.9" />
+
+</fish>

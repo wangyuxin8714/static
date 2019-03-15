@@ -1,0 +1,50 @@
+<particleSystem autoStop="-1.0" >
+
+	<particleStream sequence="sequence" emitRate="190.0" offset="0,0" parent="PlayGroup" offsetType="independent" autoStop="0.1">
+		<resource type="image" path="resources/mine/explodePuff" />
+		<velocity startX="(-250,250)" startY="(-250,250)" />
+		<acceleration rate="(200,200)" />
+		<extForce force="0,270.8" />
+		<position startX="(-20,20)" startY="(-10,10)" />
+		<scale startScale="(0.4,0.6)" endScale="(0.0,0.0)" />
+		<particleLife lifeTime="(0.4,0.9)" />
+		<opacity startOp="0.8" endOp="0.2" />
+	</particleStream>
+
+	<particleStream sequence="sequence" emitRate="40.0" offset="0,0" parent="PlayGroup" offsetType="independent" autoStop="0.35">
+		<resource type="image" path="resources/mine/smokePuff" />
+		<velocity startX="(-200,200)" startY="(-200,200)" />
+		<acceleration rate="(-200,-200)" />
+		<extForce force="0,-200.8" />
+		<position startX="(-20,20)" startY="(-10,10)" />
+		<scale startScale="(0.7,0.9)" endScale="(0.0,0.0)" />
+		<particleLife lifeTime="(0.8,1.8)" />
+		<opacity startOp="0.4" endOp="0.0" />
+	</particleStream>	
+
+	
+<!--<particleStream sequence="random" emitRate="30.0" offset="0,0" parent="PlayGroup" offsetType="independent" autoStop="0.3" >
+		<resource type="image" path="resources/FX/spark" />
+		<velocity startX="(-800,800)" startY="(-800,800)" />
+		<acceleration rate="(0,0)" />
+		<extForce force="0,-70.8" />
+		<position startX="(-10,10)" startY="(-10,10)" />
+		<scale startScale="(0.1,0.2)" endScale="(0.6,1.3)" />
+		<particleLife lifeTime="(0.4,0.7)" />
+		<opacity startOp="1.0" endOp="0.0" />
+	</particleStream>
+
+	<particleStream sequence="random" emitRate="15.0" offset="0,0" parent="PlayGroup" offsetType="independent" autoStop="0.3" >
+		<resource type="image" path="resources/FX/explosion" />
+		<velocity startX="(100,100)" startY="(100,100)" />
+		<acceleration rate="(0,0)" />
+		<extForce force="0,0" />
+		<position startX="(-10,10)" startY="(-10,10)" />
+		<scale startScale="(1.5,1.5)" endScale="(0.5,1.0)" />
+		<particleLife lifeTime="(0.2,0.5)" />
+		<opacity startOp="0.8" endOp="0.5" />
+	</particleStream>
+	
+-->
+	
+</particleSystem>

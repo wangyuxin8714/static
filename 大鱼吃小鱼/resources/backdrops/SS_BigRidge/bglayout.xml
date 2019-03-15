@@ -1,0 +1,5 @@
+<screen name="Stage 1 BG">
+	<group x="-60" y="-170">
+		<image name="background" file="resources/backdrops/BigRidge/bgImg.jpg" scaleX="1" scaleY="1" />
+	</group>
+</screen>

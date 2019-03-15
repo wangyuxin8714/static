@@ -1,0 +1,36 @@
+<fish name="Angel B Small"
+	class="SoldierFish"
+	foodValue="20"
+	maxSpeedX="(80,140)" 
+	maxSpeedY="(60,70)" 
+	sightDist="150" 
+	accelRate="400" 
+	dragRate="40" 
+	scale="0.30"
+	size="3"
+	hotSpot="-15,-24,30,25"
+	collision="5,19,95,90"
+	spawnType="offStageLR"
+	animPath="resources/angelFish/"
+	hsvOffset="-136,0,0"
+	wanderMoveChangeFreq="(2.0,7.0)"
+	wanderStateChangeFreq="(5.0,10.0)"
+	chaseMoveChangeFreq="(0.5,1.5)"
+	chaseStateChangeFreq="(2.0,5.0)"
+	runMoveChangeFreq="(1.0,5.0)"
+	runStateChangeFreq="(2.0,5.0)"
+	sightCheckFreq="0.2"
+	>
+	
+	<sound class="eaten" name="eatenSound" pitch="1.5" />
+	<menuImage onImage="resources/angelFish/hudImage.png" />
+	
+	
+	<react class="Mine" reaction="avoid" reactFreq="1.0" />
+	<react class="BasicJellyFish" reaction="avoid" reactFreq="1.0" />
+	<react class="PlayerFish" reaction="run" reactFreq="0.9" />
+	<react class="SoldierFish" reaction="avoid" reactFreq="0.7" />
+	<react class="BrineShrimp" reaction="avoid" reactFreq="0.7" />
+	<react class="ChaserFish" reaction="avoid" reactFreq="0.7" />
+	<react class="PufferFish" reaction="avoid" reactFreq="0.9" />	
+</fish>

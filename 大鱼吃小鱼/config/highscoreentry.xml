@@ -1,0 +1,21 @@
+<screen name="Game Over">
+
+	<image name="background" file="resources\menus\mainBg.jpg" scaleX="1" scaleY="1" />
+	<text name="titleText" string="" font="resources/menus/menuFont.xml" xAlign="center" yAlign="top" x="320" y="20" />
+
+	<text name="congratsText" string="\nYou got a high score!" font="resources/hud/textFont.xml" xAlign="center" yAlign="top" x="320" y="80" />
+
+	<text name="instructText" string="Please type in you name and click 'Done'." font="resources/hud/textFont.xml" xAlign="center" x="320" y="200" />
+
+	<text name="scoreText" string="100,000" font="resources/menus/menuFont.xml" xAlign="center" x="320" y="140" />
+	<image name="nameEntryBg" file="resources\menus\nameEntryBg.png" x="190" y="250"/>
+	
+	<text name="nameText" string="abcdefghiklm" font="resources/menus/menuFont.xml" xAlign="center" x="320" y="256" />
+
+	<group name="continueBtnGroup" x="250" y="360">
+		<imageButton name="continueBtn" upImg="resources\menus\genericButtonNormal.png" overImg="resources\menus\genericButtonHigh.png" x="0" y="0" action="highScoreEntryDone"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+		<text name="continueBtnText" string="A" font="resources/HUD/buttonFontDone.xml" xAlign="center" yAlign="top" size="18" x="68" y="15" />
+	</group>
+		
+
+</screen>

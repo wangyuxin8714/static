@@ -1,0 +1,14 @@
+<playerFish 
+	name="J.D." 
+	maxSpeedX="395" 
+	maxSpeedY="395" 
+	accelRate="400" 
+	fluidDrag="0.0001" 
+	drag="5"
+	collision="12,65,132,140"
+	animPath="resources/JohnDory/"
+	class="JohnDoryPlayer" 
+	hotSpot="-10,-20,40,40"
+	eatFinishFrame="3"
+	unsafeEatFrames="(2,2)"
+/>

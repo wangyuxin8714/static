@@ -1,0 +1,8 @@
+<screen name="Stage 1 FG">
+	<!-- <include file="resources\backdrops\StarFish\mgLayout.xml" /> -->
+	
+	<image name="plant" file="resources\backdrops\DeepSea\plant1.jpg" x="205" y="490" />
+	<image name="plant" file="resources\backdrops\DeepSea\plant1.jpg" x="110" y="530" />
+	<image name="plant" file="resources\backdrops\DeepSea\plant1.jpg" x="680" y="480" />
+
+</screen>

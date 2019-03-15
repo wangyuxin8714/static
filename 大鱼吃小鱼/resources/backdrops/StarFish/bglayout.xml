@@ -1,0 +1,5 @@
+<screen name="Stage 1 BG">
+	<image name="background" file="resources\backdrops\StarFish\bgImg.jpg" scaleX="1" scaleY="1" />
+
+	<particleSystem x="600" y="300" file="config/fx/ambientBubbles.xml" />
+</screen>

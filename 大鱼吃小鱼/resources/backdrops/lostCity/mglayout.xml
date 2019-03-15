@@ -1,0 +1,8 @@
+<screen name="Stage 1 MG">
+	<particleSystem x="400" y="300" file="config/fx/ambientBubbles.xml" />
+	<image name="mgRocks" scaleX="1" scaleY="1" file="resources/backdrops/LostCity/mg.jpg" y="451" x="0" />
+	
+	<image name="yelloPlant" file="resources/backdrops/LostCity/plant1.jpg" x="-15" y="495" />
+	<image name="yelloPlant" file="resources/backdrops/LostCity/plant1.jpg" x="605" y="500" scaleX="-1"/>
+	<image name="yelloPlant" file="resources/backdrops/LostCity/plant1.jpg" x="655" y="550" />
+</screen>

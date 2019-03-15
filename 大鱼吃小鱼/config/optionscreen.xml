@@ -1,0 +1,119 @@
+<screen name="OptionsScreen">
+	<group name="popUp" x="92" y="50">
+		<image name="background" file="resources\menus\popupbgOptions.png"  />
+		<text name="optionsTitle" string="" font="resources/menus/menuFont.xml" xAlign="center" yAlign="top" size="18" x="237" y="3" />
+
+		<group name="optionsGroup" y="-50" x="0" >
+			<text string="" font="resources/menus/menuFont.xml" xAlign="right" x="250" y="105" />
+			<text string="" font="resources/menus/menuFont.xml" xAlign="right" x="250" y="160" />
+			<text string="" font="resources/menus/menuFont.xml" xAlign="right" x="250" y="215" />
+			<text string="" font="resources/menus/menuFont.xml" xAlign="right" x="250" y="270" />
+			<text string="" font="resources/menus/menuFont.xml" xAlign="right" x="250" y="325" />
+
+			<text string="" font="resources/menus/infoText14.xml" xAlign="right" x="290" y="357" string="" />
+			<text string="" font="resources/menus/infoText14.xml" xAlign="right" x="415" y="357" string="" />
+			
+			<text name="soundErrorText" font="resources/menus/infoText14.xml" xAlign="left" x="302" y="117"
+					string="Sound error detected.\nPlease check your\nhardware and drivers.\n" />
+
+			<checkBox name="soundCheck" 
+				uncheckedImg="resources/menus/checkButtonNormal.png" 
+				checkedImg="resources/menus/checkButtonCheckedNormal.png" 
+				uncheckedOverImg="resources/menus/checkButtonHigh.png" 
+				checkedOverImg="resources/menus/checkButtonCheckedHigh.png" 
+				x="258" y="105" 
+				action="optionToggleSound"
+				overSound="resources/sounds/mouseOver.wav" 
+				activeSound="resources/sounds/mouseDown.wav"
+			/>
+				
+
+			<checkBox name="musicCheck" 
+				uncheckedImg="resources/menus/checkButtonNormal.png" 
+				checkedImg="resources/menus/checkButtonCheckedNormal.png" 
+				uncheckedOverImg="resources/menus/checkButtonHigh.png" 
+				checkedOverImg="resources/menus/checkButtonCheckedHigh.png" 
+				x="258" y="160" 
+				action="optionToggleMusic"
+				overSound="resources/sounds/mouseOver.wav" 
+				activeSound="resources/sounds/mouseDown.wav"
+			/>
+			
+			<checkBox name="fullScreenCheck" 
+				uncheckedImg="resources/menus/checkButtonNormal.png" 
+				checkedImg="resources/menus/checkButtonCheckedNormal.png" 
+				uncheckedOverImg="resources/menus/checkButtonHigh.png" 
+				checkedOverImg="resources/menus/checkButtonCheckedHigh.png" 
+				x="258" y="215" 
+				action="optionToggleFullScreen"
+				overSound="resources/sounds/mouseOver.wav" 
+				activeSound="resources/sounds/mouseDown.wav"
+			/>
+			
+			<checkBox name="toolTipsCheck" 
+				uncheckedImg="resources/menus/checkButtonNormal.png" 
+				checkedImg="resources/menus/checkButtonCheckedNormal.png" 
+				uncheckedOverImg="resources/menus/checkButtonHigh.png" 
+				checkedOverImg="resources/menus/checkButtonCheckedHigh.png" 
+				x="258" y="270" 
+				action="optionToggleToolTips"
+				overSound="resources/sounds/mouseOver.wav" 
+				activeSound="resources/sounds/mouseDown.wav"
+			/>
+
+			<checkBox name="Mouse1" 
+				uncheckedImg="resources/menus/checkButtonNormal.png" 
+				checkedImg="resources/menus/checkButtonCheckedNormal.png" 
+				uncheckedOverImg="resources/menus/checkButtonHigh.png" 
+				checkedOverImg="resources/menus/checkButtonCheckedHigh.png" 
+				x="258" y="325"
+				action="optionMouse1"
+				overSound="resources/sounds/mouseOver.wav" 
+				activeSound="resources/sounds/mouseDown.wav"
+			/>
+
+			<checkBox name="Mouse2" 
+				uncheckedImg="resources/menus/checkButtonNormal.png" 
+				checkedImg="resources/menus/checkButtonCheckedNormal.png" 
+				uncheckedOverImg="resources/menus/checkButtonHigh.png" 
+				checkedOverImg="resources/menus/checkButtonCheckedHigh.png" 
+				x="298" y="325"
+				action="optionMouse2"
+				overSound="resources/sounds/mouseOver.wav" 
+				activeSound="resources/sounds/mouseDown.wav"
+			/>
+
+
+			<checkBox name="Mouse3" 
+				uncheckedImg="resources/menus/checkButtonNormal.png" 
+				checkedImg="resources/menus/checkButtonCheckedNormal.png" 
+				uncheckedOverImg="resources/menus/checkButtonHigh.png" 
+				checkedOverImg="resources/menus/checkButtonCheckedHigh.png" 
+				x="338" y="325"
+				action="optionMouse3"
+				overSound="resources/sounds/mouseOver.wav" 
+				activeSound="resources/sounds/mouseDown.wav"
+			/>
+
+
+			<checkBox name="Mouse4" 
+				uncheckedImg="resources/menus/checkButtonNormal.png" 
+				checkedImg="resources/menus/checkButtonCheckedNormal.png" 
+				uncheckedOverImg="resources/menus/checkButtonHigh.png" 
+				checkedOverImg="resources/menus/checkButtonCheckedHigh.png" 
+				x="378" y="325"
+				action="optionMouse4"
+				overSound="resources/sounds/mouseOver.wav" 
+				activeSound="resources/sounds/mouseDown.wav"
+			/>
+			
+		</group>
+
+		<group x="129" y="314">
+			<imageButton name="OK" upImg="resources\menus\smallgenericButtonNormal.png" overImg="resources\menus\smallgenericButtonHigh.png" x="50" y="18" action="doOptionsDone"  overSound="resources/sounds/mouseOver.wav" activeSound="resources/sounds/mouseDown.wav" />
+			<text string="A" font="resources/hud/buttonFontDone.xml" xAlign="center" x="96" y="24" />
+		</group>
+		
+	</group>
+
+</screen>

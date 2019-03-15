@@ -1,0 +1,96 @@
+<splats>
+	<splat name="chompSplatMini1" lifeTime="0.48" >
+		<opacity startOp="2.0" endOp="0.5" />
+		<scale startScale="0.3" endScale="1.0" startAlpha="0" endAlpha="0.35" />
+		<extForce force="0,0" />
+		<resource type="image" path="resources/fx/eatFx/chompSplatMini1.png" />
+		<velocity startX="(-280,280)" startY ="-300" />
+  		<acceleration rate="-1100" />	
+	</splat>
+
+	<splat name="chompSplatMini2" lifeTime="0.48" >
+		<opacity startOp="2.0" endOp="0.5" />
+		<scale startScale="0.3" endScale="1.0" startAlpha="0" endAlpha="0.35" />
+		<extForce force="0,0" />
+		<resource type="image" path="resources/fx/eatFx/chompSplatMini2.png" />
+		<velocity startX="(-280,280)" startY ="-300" />
+  		<acceleration rate="-1100" />	
+	</splat>
+	
+	<splat name="chompSplatMini3" lifeTime="0.48" >
+		<opacity startOp="2.0" endOp="0.5" />
+		<scale startScale="0.3" endScale="1.0" startAlpha="0" endAlpha="0.35" />
+		<extForce force="0,0" />
+		<resource type="image" path="resources/fx/eatFx/chompSplatMini3.png" />
+		<velocity startX="(-280,280)" startY ="-300" />
+  		<acceleration rate="-1100" />	
+	</splat>
+
+	<splat name="chompSplatSmall1" lifeTime="0.48" >
+		<opacity startOp="2.0" endOp="0.5" />
+		<scale startScale="0.3" endScale="1.0" startAlpha="0" endAlpha="0.35" />
+		<extForce force="0,0" />
+		<resource type="image" path="resources/fx/eatFx/chompSplatSmall1.png" />
+		<velocity startX="(-280,280)" startY ="-300" />
+  		<acceleration rate="-1100" />	
+	</splat>
+
+	<splat name="chompSplatSmall2" lifeTime="0.48" >
+		<opacity startOp="2.0" endOp="0.5" />
+		<scale startScale="0.3" endScale="1.0" startAlpha="0" endAlpha="0.35" />
+		<extForce force="0,0" />
+		<resource type="image" path="resources/fx/eatFx/chompSplatSmall2.png" />
+		<velocity startX="(-280,280)" startY ="-300" />
+  		<acceleration rate="-1100" />	
+	</splat>
+
+	<splat name="chompSplatSmall3" lifeTime="0.48" >
+		<opacity startOp="2.0" endOp="0.5" />
+		<scale startScale="0.3" endScale="1.0" startAlpha="0" endAlpha="0.35" />
+		<extForce force="0,0" />
+		<resource type="image" path="resources/fx/eatFx/chompSplatSmall3.png" />
+		<velocity startX="(-280,280)" startY ="-300" />
+  		<acceleration rate="-1100" />	
+	</splat>
+	
+	
+	
+	<splat name="chompSplatLarge1" lifeTime="0.52" >
+		<opacity startOp="2.0" endOp="0.5" />
+		<scale startScale="0.3" endScale="1.0" startAlpha="0" endAlpha="0.35" />
+		<extForce force="0,0" />
+		<resource type="image" path="resources/fx/eatFx/chompSplatLarge1.png" />
+		<velocity startX="(-280,280)" startY ="-300" />
+  		<acceleration rate="-1100" />	
+	</splat>
+	
+	<splat name="chompSplatLarge2" lifeTime="0.52" >
+		<opacity startOp="2.0" endOp="0.5" />
+		<scale startScale="0.3" endScale="1.0" startAlpha="0" endAlpha="0.35" />
+		<extForce force="0,0" />
+		<resource type="image" path="resources/fx/eatFx/chompSplatLarge2.png" />
+		<velocity startX="(-280,280)" startY ="-300" />
+  		<acceleration rate="-1100" />	
+	</splat>
+	
+	<splat name="chompSplatLarge3" lifeTime="0.52" >
+		<opacity startOp="2.0" endOp="0.5" />
+		<scale startScale="0.3" endScale="1.0" startAlpha="0" endAlpha="0.35" />
+		<extForce force="0,0" />
+		<resource type="image" path="resources/fx/eatFx/chompSplatLarge3.png" />
+		<velocity startX="(-280,280)" startY ="-300" />
+  		<acceleration rate="-1100" />	
+	</splat>		
+
+
+	<splat name="chompSplatLevelEnd" lifeTime="0.42" >
+		<opacity startOp="2.0" endOp="0.0" />
+		<scale startScale="0.1" endScale="0.6" startAlpha="0" endAlpha="0.35" />
+		<extForce force="0,0" />
+		<resource type="image" path="resources/fx/eatFx/chompSplatSmall1.png" />
+		<velocity startX="(-80,80)" startY ="-220" />
+  		<acceleration rate="-600" />	
+	</splat>
+
+
+</splats>

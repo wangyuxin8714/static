@@ -1,0 +1,43 @@
+<stage name="Stage 1" 
+	friendlyName="Fish in a Barrel" 
+	type="timedBonus"
+	stageWidth="800" 
+	stageHeight="600"
+	time="1:00" >
+
+	<environment bgLayout="resources/backdrops/SunkenTreasure/bgLayout.xml" 
+				 fgLayout="resources/backdrops/SunkenTreasure/fgLayout.xml"
+				 mgLayout="resources/backdrops/SunkenTreasure/mgLayout.xml" />
+
+	<playerFish config="config/Fish/LionPlayer.xml" >
+		<size size="5.5" targetScore="0" scale="0.5" />
+		<size size="9.5" targetScore="9999" scale="1.0" />
+	</playerFish>
+
+<!-- Fish -->
+
+	<enemyFish name="AngelBSmallFlyby" template="config/fish/AngelBSmallFlyby.xml" poolSize="40" mode="onlyUneaten">
+		<spawnInfo playerSize="0"	maxCount="35"	respawnFreq="(.3,0.8)" />
+	</enemyFish>
+
+<!-- Hazards -->
+
+<!-- Powerups -->
+
+	<enemyFish name="Speed Bubbles" template="config/fish/BonusBubbleSpeed.xml" poolSize="4"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="2"	respawnFreq="(0.5,3.0)" />
+	</enemyFish>
+
+	<enemyFish name="2x" template="config/fish/BonusBubble2X.xml" poolSize="1" displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(5.0,15.0)" />
+	</enemyFish>
+
+	<enemyFish name="Life Bubbles" template="config/fish/BonusBubbleFreeLife.xml" poolSize="1"  displayMenuImage="false" mode="uncounted">
+		<spawnInfo playerSize="0"	maxCount="1"	respawnFreq="(25.0,35.0)" />
+	</enemyFish>
+
+	<music	introSound="stageIntro"
+			outroSound="stageOutro"
+			gameMusic="resources/music/track2.wav" />
+		
+</stage>

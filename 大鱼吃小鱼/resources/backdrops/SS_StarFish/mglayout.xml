@@ -1,0 +1,13 @@
+<screen name="Stage MG">
+
+
+	<particleSystem x="320" y="100" file="config/fx/ambientBubbles.xml" />
+	<particleSystem x="320" y="300" file="config/fx/ambientBubbles.xml" />
+
+	<group x="0" y="-110" >
+		<image name="rock1" file="resources\backdrops\StarFish\rock1.jpg" x="428" y="468" />
+		<image name="plant" file="resources\backdrops\DeepSea\plant1.jpg" x="5" y="480" />
+		<image name="rock2" file="resources\backdrops\StarFish\rock2.jpg" x="-5" y="508" />
+	</group>
+
+</screen>
