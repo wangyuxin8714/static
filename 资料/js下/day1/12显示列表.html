@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="显示">
+    <ul style="display: none">
+        <li>1111</li>
+        <li>1111</li>
+        <li>1111</li>
+        <li>1111</li>
+    </ul>
+</body>
+<script>
+    var oInput = document.getElementsByTagName("input")[0];
+    var ul = document.getElementsByTagName("ul")[0];
+    oInput.onclick = function(e){
+        var ev = e || window.event;
+        if(ev.stopPropagation){
+            ev.stopPropagation();
+        }else{
+            ev.cancelBubble = true;
+        }
+        ul.style.display = "block";
+    }
+    document.onclick = function () {
+        ul.style.display = "none";
+    }
+</script>
+</html>

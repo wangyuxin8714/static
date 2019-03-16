@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        span{
+            display: inline-block;
+        }
+        span:nth-child(1){
+            width:200px;
+            text-align: right;
+        }
+        .total{
+            width:200px;
+            height:30px;
+            background: #cecece;
+        }
+        .percent{
+            width:100px;
+            height:30px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <!--<li>
+        <span>保定</span>
+        <span class="total">
+            <span class="percent"></span>
+        </span>
+        <span>5000</span>
+    </li>-->
+</ul>
+</body>
+<script>
+    var ul = document.getElementsByTagName("ul")[0];
+    $ajax("datas.json");
+    function $ajax(url) {
+        var xhr = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+        xhr.open("get",url,true);
+        xhr.send(null);
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4){
+                if(xhr.status==200){
+                    var data = eval(xhr.responseText);//eval如果是数组就不用加小括号，如果是{},就需要加小括号
+                    draw(data);
+                }
+            }
+        }
+    }
+    function draw(datas){
+        datas.forEach(function(item,index){
+            var li  = document.createElement("li");//li标签
+            var span1 = document.createElement("span");//城市名称
+            span1.innerHTML = item.city;
+            li.appendChild(span1);
+            //占比
+            var span2 = document.createElement("span");//
+            var span3 = document.createElement("span");
+            span2.className = "total";
+            span3.className = "percent";
+            span3.style.width = getRadio(item)+"px"; //  span3.width/span2.width = item.num/8000
+            span3.style.background = item.color;
+            span2.appendChild(span3);
+            li.appendChild(span2);
+            //显示具体的值
+            var span4 = document.createElement("span");
+            span4.innerHTML = item.num;
+            li.appendChild(span4);
+            ul.appendChild(li);
+        })
+    }
+    function getRadio(item){
+        return item.num/8000*200;
+    }
+
+</script>
+</html>

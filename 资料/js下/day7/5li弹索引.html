@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        <li>qqq</li>
+        <li>bb</li>
+        <li>sss</li>
+    </ul>
+</body>
+<script>
+    var lis = document.getElementsByTagName("li");
+    /*for(let i=0;i<lis.length;i++){
+        lis[i].onclick = function(){
+            alert(i);
+        }
+    }*/
+    /*for(var i=0;i<lis.length;i++){
+        lis[i].index = i;
+        lis[i].onclick = function(){
+            alert(this.index);
+        }
+    }*/
+    for(var i=0;i<lis.length;i++){
+        (function(n){
+            lis[n].onclick = function(){
+                alert(n);
+            }
+        })(i);
+    }
+</script>
+</html>

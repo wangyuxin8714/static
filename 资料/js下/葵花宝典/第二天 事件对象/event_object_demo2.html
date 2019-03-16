@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件对象2</title>
+</head>
+<body>
+	
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+
+	</ul>
+	<script>
+		//需求 点击每一个 li, 显示 li 的文字
+
+		//思路 : 给每一个 li 添加点击事件呗.
+		//怎么给每一个 li 添加点击事件呢?
+
+		// var lis = document.getElementsByTagName("li");
+
+		// for(var i = 0; i < lis.length; i++){
+		// 	lis[i].onclick = function(){
+		// 		console.log(this.innerHTML);
+		// 	}
+		// }
+		//需求 点击每一个 li, 显示 li 的文字
+
+		//思路 : 利用闭包点击每一个li实现弹出相应的索引.
+		// var lis = document.getElementsByTagName("li");
+
+		// for(var i = 0; i < lis.length; i++){
+		// 	(function(x){
+		// 		lis[x].onclick = function(){
+		// 		console.log(x+1)
+		// 		console.log(i)
+		// 		// console.log(this.innerHTML);
+		// 		}
+		// 	}(i))
+			
+
+		// }
+
+		//需求 : 给 ul 添加点击事件,点击每一个 li, 显示 li 文字
+
+		//思路 : 获取 ul 
+		var ul = document.getElementsByTagName("ul")[0];
+
+		ul.onclick = function(){
+			console.log(event.target.tagName);
+
+			if(event.target.tagName == "LI"){
+				//显示当前文字
+				console.log(event.target.innerHTML);
+			}
+		}
+
+
+
+	</script>
+</body>
+</html>

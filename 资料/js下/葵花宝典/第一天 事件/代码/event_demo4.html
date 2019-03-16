@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> 跨浏览器事件处理 </title>
+</head>
+<body>
+	<button id="btn">按钮</button>
+	<span id = "span"> 啦啦啦</span>
+	<script>
+		var btn = document.getElementById("btn");
+		var span = document.getElementById("span");
+
+		//这段代码在 ie8及以下  下有效吗?
+		
+	
+
+		function addEvent(element,type,handler){
+			if(element.attachEvent){
+				element.attachEvent("on" + type,handler);
+
+			}
+
+			if(element.addEventListener){
+				element.addEventListener(type, handler, false);
+			}
+		}
+
+		
+		//只有把事件绑定在元素上,才是事件处理函数.
+
+
+		function stopEvent(e){
+			if(e.cancelBubble){
+				e.cancelBubble = true;
+			}
+			if(e.stopPropagation){
+				e.stopPropagation();
+			}
+		}
+
+		//阻止默认事件
+
+		//执行 a 函数就给 btn 添加了点击事件.
+		addEvent(btn,"dblclick",function(){
+			alert(1);
+			//阻止事件流
+			//stopEvent(event);
+
+		});
+
+		addEvent(span,"click",function(){
+			console.log(2);
+		});
+
+
+	</script>
+</body>
+</html>

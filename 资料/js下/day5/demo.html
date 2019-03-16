@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+// task1：将字符串s中的所有单个数字替换为对应的字母（如1对应a）
+// tips1：ascii码中0~9对应48~57，a对应97，b对应98，等等 A 65 Z 90
+// tips2：String.fromCharCode用来把ascii码转换为对应字符，如String.fromCharCode(97)结果为a
+var s = 'abc3d23e45f678';
+// your code here
+var reg = /\d/g;
+var arr = s.match(reg);//null
+console.log(res);
+
+
+// task2：用exec找出所有的连续数字（单个数字也算）
+var str = 'abc1d23e45f678';
+// your code here
+
+console.log(res);
+</script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .myAlert{
+            position: absolute;
+            width:200px;
+            border: 1px solid;
+            background: #fff;
+            min-height: 60px;
+        }
+        .btn{
+            display: inline-block;
+            width:60px;
+            height:30px;
+            line-height: 30px;
+            text-align: center;
+            background: #E61300;
+            color: #fff;
+            margin:0 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="myAlert">
+        <h2>标题</h2>
+        <p>dsrefsdfs</p>
+
+       <span class="btn">确定</span>
+       <span class="btn">关闭</span>
+
+    </div>-->
+    <input type="button" value="弹框">
+</body>
+<script>
+
+    function Dialog(obj){
+        this.tag = null;//弹框的标签
+        this.contents = obj.content();//定义的标题和内容
+        this.btns = obj.btn;//定义的按钮
+        this.create();
+        this.drag();
+    }
+    Dialog.prototype = {
+        constructor:Dialog,
+        create:function(){
+            var _this = this;
+            _this.tag = document.createElement("div");
+            _this.tag.className = "myAlert";
+            _this.tag.innerHTML = this.contents;
+            _this.btns.forEach(function(item){
+                var span = document.createElement("span");
+                span.innerHTML = item.txt;
+                span.className = "btn";
+                span.onclick = item.action;
+                _this.tag.appendChild(span);
+            });
+            document.body.appendChild(_this.tag);
+        },
+        drag:function(){
+            var _this = this;
+            var w = document.documentElement.clientWidth ||  document.body.clientWidth;//文档的宽度
+            var h = document.documentElement.clientHeight ||  document.body.clientHeight;//文档的高度
+            _this.tag.onmousedown = function(e){
+                 var ev = e || event;
+                 //pos是鼠标相对于触发该事件的最具体元素的位置坐标
+                 var pos = {
+                     x:ev.offsetX,
+                     y:ev.offsetY
+                 }
+                 document.onmousemove = function(e){
+                     var ev = e || event;
+                     var left = ev.clientX-pos.x,top=ev.clientY - pos.y;
+                     if(left<0)left=0;
+                     if(top<0)top=0;
+                     if(left>w-_this.tag.offsetWidth)left = w-_this.tag.offsetWidth;
+                     if(top>h-_this.tag.offsetHeight)top = h-_this.tag.offsetHeight;
+                     _this.tag.style.left = left+"px";
+                     _this.tag.style.top = top+"px";
+                 }
+                 document.onmouseup = function(){
+                     document.onmousemove = null;
+                     document.onmouseup = null;
+                 }
+            }
+        }
+    }
+    var oInput = document.getElementsByTagName("input")[0];
+    oInput.onclick = function(){
+        new Dialog({
+            content:function () { // 弹框的内容
+                var html = `<h2>温馨提示</h2>
+							<p>天气冷了，注意保暖</p>
+						`;
+                return html;
+            },
+            btn:[{// 按钮参数
+                txt:'确定',
+                action:function(){
+                    alert('知道了');
+                }
+            },{// 按钮参数
+                txt:'关闭',
+                action:function(){
+                    alert('点击了关闭');
+                }
+            }]
+        })
+    }
+
+</script>
+</html>

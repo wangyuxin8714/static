@@ -1,0 +1,64 @@
+常用地CSS命名规则：
+
+	我们要遵循计算机语言的语义化标准 语义化标准如下：
+
+		(sub) 代表子级  
+				
+		wrapper   页面外围控制整体布局宽度
+
+		header    页眉		content/container    内容		footer	  页脚
+	
+		nav 	  导航		sideber		     侧栏		column    栏目
+			
+		loginbar  登录条		logo		     标志/图片		banner	  广告
+
+		main/body 页面主体	hot		     热点		news	  新闻
+
+		download  下载		subnav		     子导航栏		menu	  菜单
+		
+		submenu	  子菜单		search		     搜索		friendlink交情连接
+
+		scrou	  滚动		copyright	     版权		tab	  标签页
+
+		list	  文章列表	msg		     提示信息		tips	  小技巧
+
+		title	  栏目标题	joinus		     加入		guild	  指南
+
+		service	  服务		regsiter	     注册		status	  状态
+
+		vote	  投票		partner		     合作伙伴 		summary   摘要
+
+		shop	  功能区		btn		     按钮		curent	  当前的
+
+		icom	  图标		note		     注释		
+
+
+
+
+	我是一个打字员，以下名称为什么带格式我也不知道#24（个人理解：我们创建style.css样式表时，使用的样式表名称。）
+
+		master.css	主要的			module.css	模块			base.css	基本公用
+		
+		layout.css	布局排版			themes.css	主题			columns.css	专栏
+
+		font.css	文字			forms.css	表单			mend.css	补丁
+
+		print.css	打印			
+
+
+
+
+
+
+
+<**************************以上内容有偏差或遗漏请自行不补全***人非圣贤孰能无过*敬请谅解*************************************>
+
+
+
+
+
+
+
+
+
+		

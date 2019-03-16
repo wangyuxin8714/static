@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+</body>
+<script>
+    function A(id,str,color){
+        this.dom = document.getElementById(id);
+        this.str=str;
+        this.color = color;
+        this.addInnerHtml();
+    }
+    A.prototype = {
+        constructor:A,
+        addInnerHtml:function(){
+            var _this = this;
+            _this.dom.innerHTML= _this.str;
+            document.addEventListener("click",function(){
+                _this.updateStyle();
+            })
+        },
+        updateStyle:function(){
+            this.dom.style.color = this.color;
+        }
+    }
+    new A("box1","<h1>seddw</h1>","red");
+    //
+    new A("box2","dse","green");
+    new A("box3","deee","blue");
+
+</script>
+</html>

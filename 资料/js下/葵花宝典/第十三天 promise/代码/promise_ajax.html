@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 异步编程 + ajax </title>
+</head>
+<body>
+	<script>
+		
+		// ajax 不就是异步的吗? 
+		// promise 也是异步的.
+		// ajax 为啥要放在 promise 里面啊?
+
+		// promise 解决回调函数深渊 问题
+
+
+
+		function ajax(){
+			return new Promise(function(resolve,reject){
+
+				var xhr = new XMLHttpRequest();
+				xhr.open("get", "data.json", true);	
+
+				xhr.send(null);
+
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState != 4){
+						return;
+					}
+					if(xhr.status == 200){
+						//成功了
+						resolve(xhr.responseText);
+					}else{
+						reject(" 请求错误" + xhr.status);
+					}
+				}
+			});
+		}
+
+		ajax().then(function(data){
+			console.log(data);
+		}).catch(function(data){
+			console.log(data);
+		});
+
+	</script>
+</body>
+</html>

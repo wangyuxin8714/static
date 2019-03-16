@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #contents div{
+            display: none;
+        }
+        .active{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="menu">
+            <span class="active" index="0">html</span>
+            <span index="1">css</span>
+            <span index="2">js</span>
+        </div>
+        <div id="contents">
+            <div style="display: block">就是一些标签</div>
+            <div>id选择器、类选择器等等</div>
+            <div>DOM、BOM、ES</div>
+        </div>
+    </div>
+</body>
+<script>
+    /*var oDiv = document.getElementById("menu");
+    var contents = document.getElementById("contents");
+    var current = 0;//当前选中的选项的索引
+    oDiv.onclick = function(e){
+        var ev = e || window.event;
+        var ele = ev.target || ev.srcElement;
+        if(ele.tagName=="SPAN"){
+            var index = ele.getAttribute("index");
+            contents.children[current].style.display = "none";
+            contents.children[index].style.display = "block";
+            oDiv.children[current].className = "";
+            ele.className = "active";
+            current = index;
+        }
+    }*/
+    function Tab(){
+        this.oDiv = document.getElementById("menu");
+        this.contents = document.getElementById("contents");
+        this.current = 0;
+    }
+    Tab.prototype = {
+        constructor:Tab,
+        change:function(){
+            //console.log(this);
+            var that = this;//实例
+            this.oDiv.onclick = function(e){
+                //console.log(this);  绑定该事件的元素
+                var ev = e || window.event;
+                var ele = ev.target || ev.srcElement;
+                if(ele.tagName=="SPAN"){
+                    var index = ele.getAttribute("index");
+                    that.contents.children[that.current].style.display = "none";
+                    that.contents.children[index].style.display = "block";
+                    that.oDiv.children[that.current].className = "";
+                    ele.className = "active";
+                    that.current = index;
+                }
+            }
+        }
+    }
+    var t=new Tab();
+    t.change();
+
+
+
+    function Tab(){
+        var box=document.getElementById('menu');
+        var cont=document.getElementById('contents')
+    }
+</script>
+</html>

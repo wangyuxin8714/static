@@ -1,0 +1,17 @@
+[{
+  "name":"阿迪1",
+  "price":25,
+  "src":"shirt1.gif"
+},{
+  "name":"阿迪2",
+  "price":35,
+  "src":"shirt2.gif"
+},{
+  "name":"阿迪3",
+  "price":45,
+  "src":"shirt3.gif"
+},{
+  "name":"阿迪4",
+  "price":55,
+  "src":"shirt4.gif"
+}]

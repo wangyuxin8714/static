@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>拖动 div </title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#div{
+			position: relative;
+			width: 200px;
+			height: 200px;
+			background-color: #f00;
+		}
+	</style>
+</head>
+<body>
+	<div id="div"></div>
+
+	<script>
+		
+		var div = document.getElementById("div");
+
+		// 需求分析 
+		// 1. 应该给 div 添加一个鼠标按下 事件, 
+		// 2. 鼠标在页面上滑动,应该给 document 添加一个移动事件,
+		// 3. 在移动事件里, 修改 div 的 left 和 top
+		// 4. 把 div 的 left 和 top 值修改成 ,鼠标在页面中的位置.
+		// 5. 鼠标抬起时,停止移动. 给鼠标添加一个鼠标抬起事件, 事件里把鼠标移动事件终止.
+
+
+		var flag = false;
+		var x , y ;
+		div.onmousedown = function(){
+			//鼠标按下去,表示 div可以移动了
+			flag = true;
+
+			x = event.offsetX;
+			y = event.offsetY;
+		}
+
+		document.onmousemove = function(){
+			//判断 div 可不可以移动
+			if(flag){
+				//修改 div 的 left 和 top
+
+				div.style.left = event.pageX - x + "px";
+				div.style.top = event.pageY - y + "px";
+
+				//offsetLeft  表示元素在页面中的位置
+				if(div.offsetLeft < 0){
+					div.style.left = 0 + "px";
+				}
+
+				if(div.offsetTop < 0 ){
+					div.style.top = 0 + "px";
+				}
+
+				console.log(window);
+
+				//如果盒子的偏移量 + 盒子自身的宽度  > 整个页面的宽度时,  div的 left =  页面宽- 盒子宽
+
+				// 获取元素自身大小 
+				//clientWidth  clientHeight
+				//offsetWidth  offsetHeight
+				if(div.offsetLeft + div.offsetWidth > window.innerWidth){
+					div.style.left = window.innerWidth - div.offsetWidth + "px";
+				}
+
+				if(div.offsetTop + div.offsetHeight > window.innerHeight){
+					div.style.top = window.innerHeight - div.offsetHeight + "px"; 
+				}
+			}
+		}
+
+		div.onmouseup = function(){
+			//鼠标抬起, div 就不可以移动了
+			flag = false;
+		}
+
+	</script>
+</body>
+</html>

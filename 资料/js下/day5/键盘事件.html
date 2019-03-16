@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //键盘弹起的触发
+    document.onkeyup = function(){
+
+    }
+    document.onkeydown = function(e){
+        var ev = e || window.event;
+        //console.log(ev.keyCode);
+        //console.log(ev.ctrlKey);//是否是Ctrl键 true
+        //console.log(ev.shiftKey);//是否shift键
+        //console.log(ev.altKey);//是否alt键
+        if(ev.ctrlKey&&ev.keyCode==13){
+            console.log("我是Ctrl键和enter键");
+        }
+    }
+</script>
+</html>

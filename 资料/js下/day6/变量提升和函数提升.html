@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //变量的提升：把变量的声明提前到当前执行环境的最前面
+    // console.log(a);//undefined
+    // var a = 123;
+    var a;
+    console.log(a);
+    a = 123;
+    //console.log(b); 报错；变量提升的是声明
+    b = 234;
+    //函数提升 把声明和值都提升并且优先级高于变量提升，只有函数声明的方式定义的函数才能提升
+    console.log(f);
+    function f() {
+        console.log(123);
+    }
+    /*f1(); 会报错  函数表达式声明的函数不能提升
+    var f1 = function(){
+        console.log(234);
+    }*/
+    console.log("=======================");
+    console.log(ff);//函数
+    var ff = 234;
+    console.log(ff);//234
+    function ff(){
+        console.log(344);
+    }
+    console.log(ff);//234
+</script>
+</html>

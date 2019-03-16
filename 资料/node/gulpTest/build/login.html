@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Document</title></head><body><input type="text"> <input type="password"> <input type="button" value="login"><br><a href="/register.html">没有账号，立即注册</a></body><script src="common/axios.js"></script><script>const user = document.querySelectorAll('input')[0]
+    const pwd = document.querySelectorAll('input')[1]
+    const btn = document.querySelectorAll('input')[2]
+    btn.onclick = function() {
+        axios({
+            url: '/api/login',
+            method: 'post',
+            data: {
+                user: user.value,
+                pwd: pwd.value
+            }
+        }).then(res => {
+            alert(res.data.msg);
+            if (res.data.code === 2) {
+                location.href = 'detail.html'
+            }
+        })
+    }</script></html>

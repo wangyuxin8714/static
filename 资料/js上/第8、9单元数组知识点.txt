@@ -1,0 +1,223 @@
+					第8单元数组的创建及使用
+8.1 创建数组（掌握）
+	1) 构造函数
+		var arr = new Array();// new 实例化
+		var arr = new Array( "red","yellow","green" );
+	2) 数组直接量 ==> 使用最多
+		var arr = ["red","yellow","green"];
+		
+	var arr = new Array( 20 );
+	console.log( arr.length );//20
+	console.log( arr );//[undefined*20]
+	var arr = [ 20 ];
+	console.log( arr.length );//1
+	
+	var arr = new Array();
+	arr[0] = 20;
+	
+8.2 数组元素的读和写（掌握）
+	var arr = ["red","yellow","green"];
+	console.log( arr[0] );//"red"
+	console.log( arr[2] );//"green"
+	console.log( arr[ arr.length - 1 ] );//"green"
+	
+	arr[0] = "aqua";
+	console.log( arr );//["aqua","yellow","green"]
+8.3 数组长度（掌握） ==> 不是只读
+	arr.length ==> number
+8.4 数组元素的添加和删除（掌握）
+	var arr = ["red","yellow","green"];
+	arr[3] = "blue";
+	console.log( arr );//["red","yellow","green","blue"]
+	arr[99] = "aqua";
+	console.log( arr.length );//100  arr.length - 1 = 99
+	
+	arr.length = 1;
+	console.log( arr );//["red"]
+	
+	arr.length = 0; // 清空数组
+	console.log( arr );// []
+8.5数组遍历（掌握）
+	var arr = ["red","yellow","green"];
+	for( var i=0;i<arr.length;i++ ){
+		console.log( arr[i] );
+	}
+	// 了解
+	for( var i in arr ){
+		console.log( arr[i] );
+	}
+8.6检测数组（了解）
+	数组也是对象
+	var arr = [1,2,3,4];
+	console.log( typeof arr );//"object"
+	var o = {};
+	console.log( typeof o );//"object"
+	
+	console.log( arr instanceof Array );// true
+	console.log( arr instanceof Object );// true
+	console.log( o instanceof Array );//false
+	instanceof ==> 返回布尔值 
+	多用于与if 语句搭配使用
+	
+	// 如果是字符串 前面加"bw-" ==> typeof
+	// 如果是数组 每一项前面加"bw-" ==> intanceof
+	
+					第9单元 数组方法
+9.1 数组方法
+	9.1.1转换方法（掌握）
+		字符串转数组 str.split( 分隔符 )
+			var str = "get-element-by-id";
+			var arr = str.split( "-" );
+			console.log( arr );//["get","element","by","id"]
+		数组转字符串 arr.join( 连接符 )
+			var arr = ["red","blue","yellow"];
+			var str = arr.join("-");
+			console.log( str );//"red-blue-yellow"
+			console.log( arr.join("") );//"redblueyellow"
+			如果不传递连接符,默认以","连接
+			console.log( arr.join() );//"red,blue,yellow"
+		// 转驼峰大小写
+			var str = "get-element-by-id";//getElementById
+			var arr = str.split("-");//["get","element","by","id"]
+			// 遍历
+			for( var i=1;i<arr.length;i++ ){
+				arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+			}
+			var newStr = arr.join("");
+			console.log(  );
+			
+	9.1.2栈方法（掌握） FILO 追加  Frist In Last Out 
+		1) push() ==> 向数组的末尾添加多个项,并返回新数组的长度
+			var arr = [1,2,3,4];
+			var len = arr.push(5,6,7,8);
+			console.log( arr );//[1,2,3,4,5,6,7,8]
+			console.log( len );// 8
+		2) pop() ==> 删除数组的最后一项,并返回被删除的项
+			var arr = [1,2,3,4];
+			var rItem = arr.pop();
+			console.log( arr );//[1,2,3]
+			console.log( rItem );//4
+		
+	9.1.3队列方法（掌握）FIFO
+		1) unshift() ==> 向数组的头部添加多个项,并返回新数组的长度
+			var arr = [1,2,3,4];
+			var len = arr.unshift( 5,6 );
+			console.log( arr );//[5,6,1,2,3,4]
+			console.log( len );//6
+		2) shift() ==> 删除数组的第一项,并返回被删除的项
+			var arr = [1,2,3,4];
+			var rItem = arr.shift();
+			console.log( arr );//[2,3,4]
+			console.log( rItem );//1
+		// 翻转数组
+		var arr = [1,2,3,4,5,6];//[6,5,4,3,2,1]
+		var newArr = [];
+		/*for(var i=0;i<arr.length;i++){
+			newArr.unshift( arr[i] );
+		}*/
+		for(var i=arr.length-1;i>=0;i--){
+			newArr.push( arr[i] );
+		}
+		console.log( newArr );
+	9.1.4重排序方法（掌握）
+		1)reverse() ==> 反转数组的项
+			var arr = [1,2,3,4];
+			arr.reverse();
+			console.log( arr );//[4,3,2,1]
+		2)sort() ==> 排序
+			var arr = [4,13,26,58,9];
+			arr.sort();
+			console.log( arr );//[13, 26, 4, 58, 9]
+			// 解决
+			arr.sort(function(a,b){
+				return a-b;//升序
+				return b-a;//降序
+			});
+				
+			for( var i=0;i<arr.length;i++ ){
+				for( var j=0;j<arr.length-i-1;j++ ){
+					var flag;
+					if( arr[j]>arr[j+1] ){
+						flag = arr[j];
+						arr[j] = arr[j+1];
+						arr[j+1] = flag;
+					}
+				}
+			}
+				
+	9.1.5操作方法（掌握）
+		1) concat() ==> 拼接数组     
+			var arr1 = [1,2,3],arr2=[4,5,6],arr3=[7,8];
+			var newArr = arr1.concat(arr2,arr3);
+			console.log( newArr );//[1,2,3,4,5,6,7,8]
+			console.log( arr1 );//[1,2,3]
+		2) slice() ==> 截取数组项
+			arr.slice( index , lastIndex )  [index,lastIndex)
+			index 指的是 起始下标
+			lastIndex 指的是 结束下标(不包括)
+			var arr = [1,2,3,4,5,6,7];
+			var newArr = arr.slice( 1 , 5 );
+			console.log( newArr );//[2,3,4,5]
+			console.log( arr.slice(3) );//[4,5,6,7]
+			console.log( arr.slice(-3) );//[5,6,7]
+		3) splice ==> 删除  插入  替换
+			arr.splice( index , count , item1, item2.... )
+			index 指的是 起始下标
+			count 指的是 删除的个数
+			item1, item2.... 指的是的要插入或者替换项
+			// 返回值:被删除的项组成的数组
+			1> 删除
+			var arr = [1,2,3,4,5,6,7,8];
+			var rItem = arr.splice( 2 , 4 );
+			console.log( arr );// [1,2,7,8]
+			console.log( rItem );// [3,4,5,6]
+			2> 插入
+			var arr = [1,2,3,4,5,6,7,8];
+			var rItem = arr.splice( 3 , 0 , 66 , 88 );
+			console.log( arr );//[1,2,3,66,88,4,5,6,7,8]
+			console.log( rItem );// []
+			3> 替换
+			var arr = [1,2,3,4,5,6,7,8];
+			var rItem = arr.splice( 3 , 2 , 66 , 88 );
+			console.log( arr );//[1,2,3,66,88,6,7,8]
+			console.log( rItem );// [4,5]
+		
+			// 一维数组转二维数组
+			var arr = [1,2,3,4,5,6,7,8];
+			//[[1,2],[3,4],[5,6],[7,8]]
+			var arr = [1,2,3,4,5,6,7,8];
+			var newArr = [];
+			while( arr.length > 0 ){
+				newArr.push( arr.splice( 0 , 3 ) );
+			}
+			console.log( newArr );//[[1,2],[3,4],[5,6],[7,8]]
+			console.log( arr );//[]
+	9.1.6位置方法（掌握）
+		1) indexOf() ==> 返回数组某一项首次出现的位置
+			arr.indexOf( fItem , index )
+			fItem 指的是 要查找的项
+			index 指的是 从哪个位置开始
+			var arr = [1,2,3,4,2,5];
+			console.log( arr.indexOf( 2 ) );//1
+			console.log( arr.indexOf( 2 , 3 ) );//4
+			console.log( arr.indexOf( "2" ) );//-1
+		2) lastIndexOf()  ==> 返回数组某一项最后一次出现的位置
+			var arr = [1,2,3,4,2,5];
+			console.log( arr.lasrIndexOf( 2 ) );//4
+			console.log( arr.lastIndexOf( 2 , 3 ) );//1
+			console.log( arr.indexOf( "2" ) );//-1
+	9.1.7迭代方法（了解）
+		some()
+		every()
+		map()
+		fifter()
+		forEach()
+	
+	
+	
+	
+	
+	
+	
+	
+	

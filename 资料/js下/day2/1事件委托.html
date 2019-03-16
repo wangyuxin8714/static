@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            border: 1px solid;
+            padding:20px;
+        }
+        li{
+            height:30px;
+            margin:10px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>33111</li>
+        <li>44111</li>
+        <li>55111</li>
+        <li>66111</li>
+        <li>77111</li>
+    </ul>
+</body>
+<script>
+    var ul = document.getElementsByTagName("ul")[0];
+    var lis = ul.getElementsByTagName("li");
+    // for(var i=0;i<lis.length;i++){
+    //     lis[i].onclick = function(e){
+    //         var ev = e || window.event;
+    //         //ev.target触发该事件的最具体的元素  不支持非标准的浏览器 非标准的使用ev.srcElement
+    //         //console.log(ev.target);
+    //         var ele = ev.target || ev.srcElement;//获取触发该事件的最具体的元素
+    //         alert(ele.innerHTML);
+    //     }
+    // }
+    //采用事件委托（原理：冒泡） 把事件委托给父级或者祖父等等
+    ul.onclick = function(e){
+        //this和事件对象里面的currentTarget 在事件中指的是绑定该事件的元素 this和target可能相等
+        //this一定和currentTarget相等
+        var ev = e || event;
+        var obj = ev.target || ev.srcElement;
+        //tagName是target的属性 大写的
+        var tagName = obj.tagName;//大写的
+        if(tagName=="LI"){
+            alert(obj.innerHTML);
+        }
+        console.log(ev.currentTarget);
+          // alert(this.innerHTML);
+    }
+</script>
+</html>

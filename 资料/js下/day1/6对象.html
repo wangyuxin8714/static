@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="div1" class="active">heheh</div>
+    </body>
+    <script type="text/javascript">
+    //对象  两种东西：1、属性 2、方法 
+    //var obj = {};//字面量的方式
+    var obj = {
+        name:"zhangsan",
+        age:20,
+        fn:function(){
+            console.log(123);
+        },
+        1:"haha"
+    }
+    //console.log(obj.name);
+    //obj.fn();
+    var tem = "age";
+    console.log(obj["name"]);
+    console.log(obj[tem]);
+    console.log(obj["1"]);//中扩号的方式优点：可以写变量、访问一些不合法的名称
+    var oDiv = document.getElementsByTagName("div")[0];
+    /*oDiv ={
+
+        style:{
+            background:"red",
+            width:""
+        }
+    }*/
+    //oDiv.style.background=
+    
+    </script>
+</html>

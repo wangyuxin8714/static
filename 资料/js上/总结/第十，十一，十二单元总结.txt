@@ -1,0 +1,82 @@
+ getElementById()==>通过id获取节点  (效率最高 性能最优)
+ getElementsByTagName() 通过标签名获取节点的集合
+ 伪数组
+   getElementsByClassName() 通过类名获取节点的集合伪数组
+   getElementsByName() 通过name名获取节点的集合
+   querySelector() 通过id名 类名 标签获取首个节点
+   querySelectorAll()通过id名 类名 标签名获取全部节点
+	
+ 节点的三大属性
+   nodeName nodeValue nodeType
+ TagName==NodeName 两种属性获取标签名
+
+ 节点属性
+   firstChild lastChild nextSibling previousSibling 该四个方法 存在兼容问题 需要在属性中添加Element  解决兼容问题
+   parentNode 获取父节点
+
+   children 节点中默认保存所有子元素节点的集合(伪数组)
+   childNodes 节点中默认保存所有子节点的集合(伪数组)
+
+ 写入方法 
+   innerHTML 给标签设置或获取  文本内容或标签
+   innerText 给标签设置或获取  文本内容
+
+ 属性方法
+   getAttribute()获取属性
+   setAttribute()设置属性
+   removeAttribute()删除属性
+   attributes 默认保存着节点属性的集合
+
+ 设置行内样式的属性
+   style   dom元素.style.样式名(驼峰)='样式值';
+           style.cssText dom元素.style.cssText='样式名1:样式值1;样式名2:样式值2;...';
+
+ 操作类名的属性
+   className 默认保存这节点的类名(字符串)
+ 设置(清空)或获取元素的类名
+
+ classList和它的四个方法
+   add() 增加类名
+   remove() 删除类名
+   contains() 查找类名 如果有返回true 没有返回false
+   item() 通过下标返回相应的类名
+
+ 创建元素和创建文本内容
+    document.createElement('要创建的元素名');
+        返回值为创建的元素
+    document.createTextNode('文本内容');
+        返回值为创建的文本内容
+ 追加节点
+    父元素.appendChild(要追加的节点)
+ 插入节点
+    父元素.insertBefore(要插入的节点,要插入的位置);
+ 删除节点
+    父元素.removeChild(被删除的节点);
+ 替换节点
+    父元素.replaceChild(新节点,被替换节点);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>模拟下拉列表</title>
+
+	<style>
+		ul{
+			list-style: none;
+		}
+
+		#warp{
+			width: 200px;
+			height: 100px;
+			overflow: scroll;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<button id="btn"> 按钮 </button>
+
+
+	<p id = "p">请选择</p>
+	<div id = "warp">
+		<ul id="ul">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+		
+	<script>
+		//  需求文档 : 点击 p 标签, ul 显示或隐藏, 点击空白, ul 隐藏
+
+		// 需求分析 
+		// 1. 给 p 标签添加一个点击方法,就要获取到 p 标签
+		// 2. 点击 p 标签,隐藏 div. 隐藏 div ,就要获取 div
+		// 3. 点击显示,点击隐藏,显示和隐藏的状态来回切换,
+		// 4. 点击的时候,应该判断一下 div 是显示的还是隐藏的. 如果是隐藏的,就显示,如果是显示的,就隐藏.
+		// 5. 怎么判断 div 的显示还是隐藏啊?
+
+		var p  = document.getElementById("p");
+		var ul = document.getElementById("ul");
+
+
+		//这个变量 表示的意思是,如果是假,就隐藏,如果是真,就显示
+		var flag = false; //false 表示隐藏
+
+		//如果是真 表示显示
+
+		p.addEventListener("click", function(){
+			
+			if(flag){
+				ul.style.display = 'block';
+				
+				//修改标志变量
+				flag = false;	
+
+			}else{
+				ul.style.display = 'none';
+				
+				//修改标志变量
+				flag = true;
+			}
+
+			event.stopPropagation();
+
+		}, false);
+
+		//点击空白处隐藏
+		document.addEventListener("click", function(){
+			ul.style.display = 'none';
+			//修改标志变量
+			flag = true;
+			
+		}, false);
+			
+		
+	</script>
+</body>
+</html>

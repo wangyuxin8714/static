@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 延长作用域链是在最前端加一个变量对象
+    //在js中可以延长作用域链的有三个：try catch、with、eval
+    try{
+        alrrt(123);
+    }catch(e){
+        console.log(e+"======");
+    }
+    var obj = {
+        name:"zhangsan",
+        classes:"js"
+    }
+    function getStr(){
+        // var str = "";
+        // str = obj.name+"在上"+obj.classes;
+        with(obj){
+            var str = name+"在上"+classes;
+        }
+        return str;
+    }
+    console.log(getStr());
+    //eval()
+    //eval("alert(123)");
+    var x = 1,test = eval;
+    function fn(){
+        var x = 2;
+        eval("alert(x)");
+        test("alert(x)");
+    }
+    fn();
+</script>
+</html>

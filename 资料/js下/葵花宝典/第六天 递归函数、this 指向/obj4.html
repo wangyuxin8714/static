@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>深度拷贝</title>
+</head>
+<body>
+	<script>
+				
+		//属性值可以是任意类型
+		var boy = {
+			name : "xiaoming",
+			age : 18,
+			gf : {
+				name : "xiaohua",
+				age : 17,
+				mother : {
+					name : "cuihua",
+					age : 55,
+				}
+			}
+		}
+
+		var me = {}
+		for(var k in boy){
+
+			//应该判断赋值类型是不是引用数据类型.
+			if(typeof boy[k] == "object"){
+				me[k] = {}
+				for(var j in boy[k]){
+					me[k][j] = boy[k][j];
+				}
+			}else{
+				me[k] = boy[k];
+			}
+		}
+
+
+		console.log(me);
+
+		boy.age = 81,
+		boy.gf.age = 80;
+
+		console.log(me.age);	
+		console.log(me.gf.age);
+
+
+		boy.gf.mother.age = 100;
+
+		console.log(me.gf.mother.age);
+
+
+	</script>
+</body>
+</html>

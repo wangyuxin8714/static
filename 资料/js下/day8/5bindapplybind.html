@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>dd</div>
+</body>
+<script>
+    //call、apply 是函数的方法,执行者两个方法：可以修改this的指向，并且会执行该函数
+    //第一个参数就是指的this指向(null\undefined this就是指的是window)，从第二个参数往后就是该函数原有的参数
+    var obj = {
+        name:"zhangsan",
+        age:20
+    }
+    function fn(a,b){
+        console.log(this.name+","+(a+b));
+    }
+    //fn(3,4); window 7
+    fn.call(obj,5,6);//zhangsan 11
+    fn.apply(obj,[1,3]);// zhangsan 4
+    console.log(Math.max(3,4,5,6));//6
+    console.log(Math.min(3,4,5,6));//3
+    //[2,5,1,6,2];
+    console.log(Math.max.apply(null,[2,5,1,6,2]));//6
+    console.log(Math.min.apply(null,[2,5,1,6,2]));//1
+    //bind是函数的方法，可以修改this指向，但是不会执行函数
+    var obj2 = {
+        name:"lisi",
+        age:20
+    }
+    console.log("===============================");
+    fn.bind(obj2)(5,6);
+
+</script>
+</html>

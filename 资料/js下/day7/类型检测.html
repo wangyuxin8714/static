@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // typeof 返回的是字符串 用来检测基本数据类型
+    var a = 123;
+    console.log(typeof a); //number
+    console.log(typeof "aa");//string
+    console.log(typeof true);//boolean
+    console.log(typeof undefined);//undefined
+    console.log(typeof null);//object
+    console.log(typeof [1,23]);//object
+    console.log(typeof function(){});//function
+    console.log(typeof {});//object
+    console.log(typeof typeof null);//string
+    //instanceof  检测引用数据类型    被检测的对象 instanceof 构造函数 返回值是boolean
+    // Object RegExp Date Array Function
+    console.log("====================================");
+    console.log([123,4] instanceof Array);// true
+    console.log([123,4] instanceof Object);//true 所有的对象都是Object的实例
+</script>
+</html>

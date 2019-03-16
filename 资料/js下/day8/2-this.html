@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+<script>
+    //this  谁调用的就指向谁
+    var oDiv = document.getElementsByTagName("div")[0];
+    oDiv.onclick = function(){
+        console.log(this);//this\target \currentTarget
+    }
+    function fn(){
+        console.log(this);
+    }
+    fn();//window
+    var obj = {
+        a:{
+            fn1:function(){
+                console.log(this);
+            }
+        },
+        fn:function(){
+            console.log(this+","+this.a);//undefined
+        }
+    }
+    obj.fn();
+    //obj.a.fn1();//a 如果是多层对象调用函数，则a就是离它最近的那个对象
+    var tem = obj.fn;
+    tem();//window
+    console.log("=======================");
+    setTimeout(function(){
+        //console.log(this);//window
+    },1000);
+    var num = 2;
+    var o = {
+        num:3,
+        fn:function(){
+            console.log(this.num+"=========");
+            setTimeout(function(){
+                console.log(this.num);//window
+            },1000);
+        }
+    }
+    o.fn();
+</script>
+</html>

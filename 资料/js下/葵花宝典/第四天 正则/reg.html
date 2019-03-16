@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>正则</title>
+</head>
+<body>
+	
+	<script>
+		
+		var reg = /\d/;
+
+		//正则有一个 test 方法,使用来判断字符串中是否 匹配正则.如果匹配成功,返回 true, 如果匹配失败,返回 false
+
+		console.log(reg.test("1"));
+		console.log(reg.test("a"));
+
+		var reg1 = /\w/;
+		console.log(reg1.test("A"));
+		console.log(reg1.test("1"));
+		console.log(reg1.test("_"));
+		console.log(reg1.test("*"));
+
+		var reg2 = /\W/;
+		console.log(reg2.test("a"));
+		console.log(reg2.test("*"));
+
+		var reg3 = /\s/;
+		console.log(reg3.test("a"));
+
+
+		var reg4 = /\d/;
+		console.log(reg4.test("12"));
+
+
+		/***************正则量词*******************/
+
+		var reg5 = /\d{2}/;
+
+		console.log(reg5.exec("123"));	//12
+
+		var reg6 = /abb/;
+		console.log(reg6.test("abc"));	//false
+
+
+		var reg7 = /\w*/;
+		console.log(reg7.exec("$abcd")); //""
+
+		var reg8 = /\d{4}/;
+
+		console.log(reg8.exec("1a1234a1"));	//1234
+
+		var reg9 = /\d?/;
+
+		console.log(reg9.exec("a"));	// ""
+		console.log(reg9.test("a"));	//true
+
+
+		/**************正则边界*****************/
+
+
+		var r = /\w/;
+
+		console.log(r.test("a"));		//true
+		console.log(r.test("@a"));		//true
+
+		var r1 = /^\w/;
+
+		console.log(r1.test("a"));		//true
+		console.log(r1.test("@a"));		//false
+
+
+		var r2 = /\d$/;
+
+		console.log(r2.test("a12"));	//true
+
+		var r3 = /^\d*$/;
+		console.log(r3.test("123"));	//ture
+		console.log(r3.test("1a2"));	//false
+
+
+
+	</script>
+</body>
+</html>

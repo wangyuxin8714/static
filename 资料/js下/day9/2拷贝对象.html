@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    var o1 = {
+        name:"zhangsan",
+        age:20,
+        height:"180",
+        classes:{
+            name:"结构样式"
+        },
+        hobby:["玩游戏","睡觉"]
+    }
+   //浅拷贝 深拷贝
+    function copy1(obj){
+        var o = new Object();
+        for(var i in obj){
+            o[i]=obj[i];
+        }
+        return o;
+    }
+    var o2 = copy1(o1);
+    console.log(o2);
+    o2.age = 12;
+    o2.classes.name = "js";
+    console.log(o1.age+","+o1.classes.name);//20
+    //深拷贝
+    function deepCopy(obj){
+        //var o = new Object();
+        var o = obj instanceof Array?[]:{};
+        for(var i in obj){
+            if(typeof obj[i]==="object"){
+                o[i]=deepCopy(obj[i]);
+            }else{
+                o[i] = obj[i];
+            }
+        }
+        return o;
+    }
+    console.log("=====================");
+    console.log(o1);
+    var o3 = deepCopy(o1);
+    o3.classes.name="模块化";
+    console.log(o1.classes.name);
+    console.log(o3);
+</script>
+</html>

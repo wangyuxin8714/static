@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin: 0;padding: 0;}
+	#box{border: 1px solid #ccc;margin: 100px 200px;float: left;}
+	input{float: left;}
+	ul{list-style: none;}
+	li{width: 100px;height: 40px;border: 1px solid aqua;float: left;text-align: center;line-height: 40px;border-right: none;cursor: pointer;}
+	li:nth-child(1){background:red; color:white}
+	li:last-child{border-right:1px solid aqua; }
+	#bottom{width: 100%;height: 300px;background: red;text-align: center;line-height: 300px;color: #fff;}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="top">
+			<ul>
+			</ul>
+		</div>
+		<div id="bottom"></div>
+	</div>
+	<script>
+			var ul = document.getElementById("top").getElementsByTagName("ul")[0]
+			,	bottom = document.getElementById("bottom");
+			var colorData = ["red","blue","green","pink","aqua","tan"]
+			,	schoolData = ["幼儿园","小学","初中","高中","大学","八维"];
+			bottom.innerHTML=schoolData[0];
+			//循环创建li
+			for(var i=0;i<schoolData.length;i++){
+				//创建li
+				var li=document.createElement('li');
+				//添加内容
+				li.innerHTML=schoolData[i];
+				//将li追加到ul中
+				ul.appendChild(li);
+				 								}
+
+			for(let i=0;i<ul.children.length;i++){
+					//给每个li绑定事件
+					ul.children[i].onclick=function(){
+						//排他
+						for(var j=0;j<ul.children.length;j++){
+							ul.children[j].style.cssText="background:white;color:black";
+							 }
+						ul.children[i].style.cssText="background:"+colorData[i]+";color:white;";
+						bottom.style.background=colorData[i];
+						bottom.innerHTML=schoolData[i];
+													  }
+				 }
+
+				 for(var i=1;i<ul.children.length;i++){
+				 	ul.children[i].style.background='white';
+				 	 }
+
+
+
+
+
+
+
+
+
+			// bottom.innerHTML=schoolData[0];
+			// //循环创建li
+			// for(var i=0;i<colorData.length;i++){
+			// 	var li=document.createElement('li');
+
+			// 	//拼接内容
+			// 	li.innerHTML=schoolData[i];
+			// 	ul.appendChild(li);
+			// 	//给所有的li绑定单击事件
+			// 	for(let j=0;j<ul.children.length;j++){
+			// 		ul.children[j].onclick=function(){
+			// 			//排他 全部li的背景设为白色
+			// 			for(var x=0;x<ul.children.length;x++){
+			// 				ul.children[x].style.background='white';
+			// 				ul.children[x].style.color='black';
+			// 				 }
+			// 			//点谁 给谁设置相应的背景
+			// 			ul.children[j].style.background=colorData[j];
+			// 			ul.children[j].style.color='white';
+			// 			bottom.innerHTML=schoolData[j];
+			// 			bottom.style.background=colorData[j];
+
+			// 										 }
+			// 										 }
+
+			// 	 							   }
+			// 	 		for(var i=1;i<ul.children.length;i++){
+			// 	 			ul.children[i].style.background='white';
+			// 	 			 }
+
+
+
+
+
+
+
+			//循环创建li
+			/*for(let i=0;i<colorData.length;i++){
+				//创建li
+				var li=document.createElement('li');
+				//判断是否为第一个li
+				li.innerHTML=schoolData[i];
+				ul.appendChild(li);//将新建的li追加到ul中
+				//给bootom写入内容
+				bottom.innerHTML=schoolData[0];
+				//给所有li循环绑定事件
+				for(let j=0;j<ul.children.length;j++){
+					ul.children[j].onclick=function(){
+					 		//排他 先将全部的字体变黑 背景变白
+					 		for(var x=0;x<ul.children.length;x++){
+					 			ul.children[x].style.cssText='background:white;color:black';
+					 			 								 }
+					 		//点谁 谁背景变成相应的颜色 bottom变成对应的颜色
+					 		ul.children[j].style.cssText=`background:${colorData[j]};color:white`;
+					 		bottom.style.background=colorData[j];
+					 		bottom.innerHTML=schoolData[j];
+					 								 }
+					}
+
+				}
+		for(var i=1;i<ul.children.length;i++){
+			ul.children[i].style.background='white';
+			ul.children[i].style.color='black';
+			 }*/
+			//ul.children[0].style.cssText='background:red;colorData'
+
+
+
+
+
+
+
+
+
+
+
+
+			// for(var i=0;i<schoolData.length;i++){
+			// 	var li = document.createElement("li");
+			// 	if(i == 0){
+			// 		li.style.background = colorData[i];
+			// 		bottom.innerHTML = schoolData[i];
+			// 	}
+			// 	li.innerHTML = schoolData[i];
+			// 	li.index = i;
+			// 	ul.appendChild(li);
+			// 	li.onclick=function(){
+			// 		var lis = ul.getElementsByTagName("li");
+			// 		for(var j=0;j<schoolData.length;j++){
+			// 			lis[j].setAttribute("style","background:#fff;color:#000;")
+			// 		}
+			// 		lis[this.index].setAttribute("style","background:"+colorData[this.index]+";color:#fff;");
+			// 		bottom.setAttribute("style","background:"+colorData[this.index]+";");
+			// 		bottom.innerHTML = schoolData[this.index];
+			// 	}
+			// }
+	</script>
+</body>
+</html>

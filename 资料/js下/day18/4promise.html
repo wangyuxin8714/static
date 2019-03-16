@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //Promise es6提供的构造函数 用来解决异步的 Promise resolve 表示成功  reject  失败
+    var p1 = new Promise(function(resolve,reject){
+        //如果符合某个条件 ，让他执行成功的代码
+        var xhr = null;
+        if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        }else{
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.open("get","",true);
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4){
+                if(xhr.status==200){
+                    resolve(eval("("+xhr.responseText+")"));
+                }else{
+                    reject();
+                }
+            }
+        }
+        xhr.send(null);
+    })
+
+
+    /*p1.then(function(){
+        //成功时候的函数
+    },function(){
+        //失败的时候的函数
+    })*/
+    /*p1.then(function(){
+
+    }).catch(function(){
+
+    })*/
+    p1.then((data)=>{
+
+    }).catch(()=>{
+
+    })
+</script>
+</html>

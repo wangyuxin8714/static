@@ -1,0 +1,37 @@
+继承：子类可以继承父类的一些功能，但是子类不会影响父类
+0、__proto__（[[prototype]]）
+    每个对象都有__proto__这个属性,实例对象的__proto__指向的是原型对象
+
+1、原型链继承
+    每个构造函数都有一个指向原型对象的属性(prototype)，每个原型对象也有一个指向构造函数的一个属性(constructor),
+    每个实例都有一个指向原型对象的属性(__proto__),如果我把某个类型(假如A)原型对象指向另外一个类型(假如是B)的实例，
+    该A的原型对象是不是也有一个属性指向另外一个类型的(B)原型对象,如果我再把B的原型对象指向另外一个类型(假如是C)，上面的结论仍然成立，
+    层层递进，形成了实例与原型对象的一个链条，就被称作原型链
+    A 继承B B 又继承了C 。。。。。Object
+    在javascript 中，继承就是靠原型链来实现的。
+    Array继承Object
+        Array.prototype=new Object()
+        Array.prototype.__proto__===Object.prototype
+        Function.prototype.__proto__===Object.prototype
+        Date.prototype.__proto__===Object.prototype
+        Object.prototype.__proto__===null
+    注意：
+    使用原型链的方式进行继承，子类型定义自己的方法或者子类型重写父类型的方法，注意书写的位置，
+        要放在原型链继承的那条语句下面
+    当对象访问属性或方法时，先从自身查找，找不到就去构造函数的原型对象上找，如果找不到，就去原型对象的原型对
+    象上找，直到 Object.prototype.__proto__ == null. 如果没找到，返回 undefined。
+    确定原型和实例的关系：
+            对象 instanceof 构造函数
+            原型对象.isPrototypeOf(对象)
+     hasOwnProperty()检测是不是对象自身下面的属性，实例对象.hasOwnProperty("属性名");
+     in
+    原型链继承的问题：
+    父类型的引用类型的属性会被子类型所有的实例共享
+    原型链继承一般不会单独使用
+2、构造函数继承
+    在子类型的构造函数里面调用父类型的构造函数，使用call或者apply
+    但是构造函数继承解决原型链引用数据类型的问题，但是它还有作为构造函数自己的问题
+    构造函数继承一般也不会单独使用
+ 我们通常使用原型链和构造函数结合起来进行继承
+
+

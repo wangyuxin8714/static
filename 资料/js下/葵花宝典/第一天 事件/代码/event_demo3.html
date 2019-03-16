@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 事件流</title>
+	<style>
+		
+		#sup_div{
+			width: 200px;
+			height: 200px;
+			background-color: #f00;
+		}
+
+		#sub_div{
+			width: 100px;
+			height: 100px;
+			background-color: #0f0;
+		}
+
+	</style>
+</head>
+<body>	
+	<div id = "sup_div">
+		<div id = "sub_div"></div>
+	</div>
+
+
+
+	<script>
+			
+		var supDiv = document.getElementById("sup_div");
+		var subDiv = document.getElementById("sub_div");
+
+
+		//添加事件 ,是通过元素添加的事件
+		supDiv.addEventListener("click", function(){
+			console.log("supdiv");
+			//阻止事件流
+
+			//事件处理函数中, 有一个 event 对象,这个对象系统会自动创建.我们直接用就可以了
+
+			//通过 事件对象来阻止事件流
+			//event.stopPropagation();
+
+		}, false);
+
+		subDiv.addEventListener("click", function(){
+			console.log("subdiv");
+
+			
+			event.stopPropagation();
+		}, false);
+
+
+
+	</script>
+</body>
+</html>

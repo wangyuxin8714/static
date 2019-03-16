@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="image/big.jpg" alt="">
+</body>
+<script>
+    document.onclick = function(){
+        aalert(123);
+    }
+    //onerror js脚本出错的时候触发
+    window.onerror = function(){
+        console.log(656);
+    }
+    var img = document.getElementsByTagName("img")[0];
+    img.onerror = function(){
+        console.log("图片没加载出来");
+    }
+    img.onload = function(){
+        console.log("图片加载出来了");
+    }
+</script>
+</html>

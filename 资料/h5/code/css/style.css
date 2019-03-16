@@ -1,0 +1,346 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  font-family: STHeitiSC-Light;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-text-size-adjust: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  font-family: arial, sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+ins,
+a {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  display: inline-block;
+}
+
+input,
+textarea {
+  border: none;
+  background: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
+  -o-tap-highlight-color: transparent;
+}
+
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+html {
+  font-size: 37.5px;
+}
+
+.swiper-container,
+.swiper-wrapper,
+.swiper-slide {
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-slide {
+  background: url(../image/bg.jpg) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+
+.swiper-pagination-bullet {
+  opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff;
+  opacity: 1;
+}
+
+.OneSlide {
+  height: 1.33333rem;
+  width: 100%;
+  background: url(../image/bonus_01.png) no-repeat 0 0;
+  background-size: 100% auto;
+  margin-top: 1.06667rem;
+}
+
+.twoSlide {
+  background: url(../image/bonus_02.jpg) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 100%;
+  height: 1.33333rem;
+  margin-top: 0.26667rem;
+}
+
+.threeSlide {
+  background: url(../image/001.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 100%;
+  height: 6.4rem;
+  margin-top: 1.06667rem;
+}
+
+.fourSlide {
+  background: url(../image/002.png) no-repeat 0 0;
+  background-size: 100% auto;
+  height: 10rem;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 180px;
+}
+
+.fiveSlide {
+  background: url(../image/003.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 100%;
+  height: 3.86667rem;
+  margin-top: 0.53333rem;
+}
+
+.SecondContentOne {
+  background: url(../image/004.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 100%;
+  height: 2.13333rem;
+  margin-top: 0.53333rem;
+}
+
+.SecondContentTwo {
+  background: url(../image/005.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 100%;
+  height: 1.33333rem;
+  margin-top: 0.53333rem;
+}
+
+.SecondContentThree {
+  background: url(../image/006.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 100%;
+  height: 9.33333rem;
+  margin-top: 0.8rem;
+}
+
+.ThirdContentOne {
+  background: url(../image/007.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 100%;
+  height: 2.13333rem;
+  margin-top: 0.53333rem;
+}
+
+.ThirdContentTwo {
+  background: url(../image/009.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 100%;
+  height: 2.66667rem;
+  margin-top: 0.53333rem;
+}
+
+.ThirdContentThree {
+  background: url(../image/008.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 100%;
+  height: 6.4rem;
+  margin-top: 1.06667rem;
+}
+
+.ThirdContentfour {
+  background: url(../image/010.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 100%;
+  height: 4.8rem;
+  margin-top: 20px;
+  position: absolute;
+  right: 0;
+  top: 6.4rem;
+}
+
+.FourthContentOne {
+  background: url(../image/001.jpg) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 100%;
+  height: 2.13333rem;
+  margin-top: 0.53333rem;
+}
+
+.FourthContentTwo {
+  background: url(../image/002.jpg) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 100%;
+  height: 11.06667rem;
+  margin-top: 1.06667rem;
+}
+
+.arrow {
+  background: url(../image/arrow.png) no-repeat 0 0;
+  background-size: 100% auto;
+  height: 0.66667rem;
+  width: 0.8rem;
+  position: fixed;
+  left: 50%;
+  bottom: 0.26667rem;
+  margin-left: -pxTorem(15px);
+  z-index: 999;
+  animation: runing 0.8s linear infinite;
+}
+
+@keyframes runing {
+  0% {
+    opacity: 1;
+    bottom: 0.26667rem;
+  }
+  100% {
+    opacity: 0;
+    bottom: 0.48rem;
+  }
+}

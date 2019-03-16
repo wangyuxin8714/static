@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Person(name,age,sex){
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.city = "bj";
+    }
+    Person.prototype = {
+        constructor:Person,
+        say:function(){
+            console.log("deee");
+        },
+        eat:function(){
+            console.log("dddss");
+        }
+    }//new Object()
+    //console.log(Person.prototype.constructor===Object);
+</script>
+</html>

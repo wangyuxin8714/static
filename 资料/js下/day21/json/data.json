@@ -1,0 +1,117 @@
+[	
+	{ 
+		"name" : "孙悟空",
+		"age"  : 5,
+		"className" : "一班",
+		"sex" : "男"
+	},
+	{ 
+		"name" : "猪八戒",
+		"age"  : 7,
+		"className" : "一班",
+		"sex" : "男"
+	},
+	{ 
+		"name" : "观音",
+		"age"  : 5,
+		"className" : "一班",
+		"sex" : "女"
+	},
+	{ 
+		"name" : "白骨精",
+		"age"  : 500,
+		"className" : "一班",
+		"sex" : "女"
+	},
+	{ 
+		"name" : "哪吒",
+		"age"  : 4,
+		"className" : "二班",
+		"sex" : "男"
+	},
+	{ 
+		"name" : "蜘蛛精",
+		"age"  : 300,
+		"className" : "二班",
+		"sex" : "女"
+	},
+	{ 
+		"name" : "铁扇公主",
+		"age"  : 10,
+		"className" : "二班",
+		"sex" : "女"
+	},
+	{ 
+		"name" : "如来",
+		"age"  : 1000,
+		"className" : "二班",
+		"sex" : "男"
+	},
+	{ 
+		"name" : "孔雀公主",
+		"age"  : 2,
+		"className" : "三班",
+		"sex" : "女"
+	},
+	{ 
+		"name" : "牛魔王",
+		"age"  : 14,
+		"className" : "三班",
+		"sex" : "男"
+	},
+	{ 
+		"name" : "嫦娥",
+		"age"  : 17,
+		"className" : "三班",
+		"sex" : "女"
+	},
+	{ 
+		"name" : "后羿",
+		"age"  : 8,
+		"className" : "三班",
+		"sex" : "男"
+	},
+	{ 
+		"name" : "杨戬",
+		"age"  : 7,
+		"className" : "四班",
+		"sex" : "男"
+	},
+	{ 
+		"name" : "哮天犬",
+		"age"  : 12,
+		"className" : "四班",
+		"sex" : "男"
+	},
+	{ 
+		"name" : "李逵",
+		"age"  : 19,
+		"className" : "四班",
+		"sex" : "女"
+	},
+	{ 
+		"name" : "林黛玉",
+		"age"  : 16,
+		"className" : "五班",
+		"sex" : "女"
+	},
+	{ 
+		"name" : "甄姬",
+		"age"  : 13,
+		"className" : "五班",
+		"sex" : "女"
+	},
+	{ 
+		"name" : "虞姬",
+		"age"  : 7,
+		"className" : "五班",
+		"sex" : "女"
+	},
+	{ 
+		"name" : "项羽",
+		"age"  : 2,
+		"className" : "五班",
+		"sex" : "男"
+	}
+
+]

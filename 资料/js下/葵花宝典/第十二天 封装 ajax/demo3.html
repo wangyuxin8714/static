@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>  三级联动 </title>
+	<script src= "index.js"></script>
+</head>
+<body>
+
+	<select id="province">
+		<option value="">请选择</option>
+	</select>
+	<select name="" id="city">
+		<option value="">请选择</option>
+	</select>
+	<select name="" id="area">
+		<option value="">请选择</option>
+	</select>
+	<script>
+	
+		function List(opt){
+			//获取省的下拉列表
+			this.pro = document.getElementById(opt.prov);
+			//获取市的下拉列表
+			this.city = document.getElementById(opt.city);
+			//获取地区的下拉列表
+			this.area = document.getElementById(opt.area);
+
+			//获取到的数据
+			this.data = null;
+
+			this.init();
+		}
+
+		//构造函数的原型
+		List.prototype = {
+			constructor : List,
+
+			init : function(){
+				var _this = this;
+				//请求数据
+				ajax({
+					url : "city.json",
+					success : function(data){
+						//获取到了数据
+						//console.log(data);
+						_this.data = data;
+						//初始化页面
+						_this.pro.innerHTML =  _this.drawPage();
+						//绑定事件
+						_this.bindEvent();
+					}
+				});
+			},
+
+			//把省渲染到第一个下拉列表中.
+			drawPage : function(){
+				
+				var arr = this.data;
+
+				var p = "<option>请选择</option>";
+				//遍历数组
+				for(var i in arr){
+					p += `<option>${arr[i].name}</option>`;
+				}
+
+				//把 p 赋值给 省的 select
+				return p;
+			},
+
+			//给省的下拉列表添加事件
+			bindEvent : function(){
+
+				var _this = this;
+				var province = null;
+				//值改变的时候才触发
+				this.pro.onchange = function(){
+
+					_this.clearData();
+
+					//获取省的名字
+					var p = this.value;
+					var arr = _this.data;
+					//在这个函数内 this 指向的谁下拉列表啊
+					//现在想用 List 对象的 data 属性
+					for(var i in arr){
+						if(p == arr[i].name){
+							province = arr[i];
+							_this.fillDataCity(arr[i].city);
+
+						}
+					}
+				},
+				this.city.onchange = function(){
+
+					//清空区域的内容
+					_this.area.innerHTML = "<option>请选择</option>";
+
+					//获取市的名字 
+					var cityName = this.value;
+					var arr = province.city;
+					arr.forEach( function(element) {
+						if(cityName == element.name){
+							_this.fillDataArea(element.area);
+
+						}
+					});
+				}
+
+			},
+
+			//渲染 city 下拉列表
+			fillDataCity : function(a,data){
+				var html = "<option>请选择</option>";
+				data.forEach( function(element) {
+					html += `<option>${element.name}</option>`;
+				});
+				this.city.innerHTML = html;
+			},
+			//给地区下拉列表进行赋值
+			fillDataArea : function(data){
+				var html = "<option>请选择</option>";
+				data.forEach( function(element) {
+					html += `<option>${element}</option>`;
+				});
+				this.area.innerHTML = html;
+			},
+
+			//清除数据
+			clearData : function(){
+				this.city.innerHTML = "<option>请选择</option>";
+				this.area.innerHTML = "<option>请选择</option>";
+			}
+		}
+		function ajax(opt){
+			var xhr = new XMLHttpRequest();
+			xhr.open("get", opt.url, true);
+			xhr.send(null);
+
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState == 4){
+					if(xhr.status == 200){
+						opt.success(eval("("+ xhr.responseText +")"));
+					}
+				}
+			}
+		}
+
+		new List({
+			prov : "province",
+			city : "city",
+			area : "area",
+		})
+
+	</script>
+</body>
+</html>
+

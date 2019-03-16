@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //constructor\prototype\__proto__
+    function A(name,age){
+        this.name = name;
+        this.age = age;
+    }
+    function B(){
+
+    }
+    B.prototype.say = function(){
+        console.log("hehe");
+    }
+    A.prototype = new B();//__proto__ B 的原型对象
+    console.log(A.prototype.__proto__===B.prototype);
+    /*function C(){
+
+    }
+    B.prototype = new C();*/
+    var a = new A();
+    a.say();
+    var b = new B();
+    b.say();
+</script>
+</html>

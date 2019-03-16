@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text">
+    <input type="button" value="验证">
+
+</body>
+<script>
+    var oInput = document.getElementsByTagName("input");
+    oInput[1].onclick = function(){
+        var value = oInput[0].value;
+        var reg = /^1[35789][0-9]{9}$/;//手机号
+        // @ .
+        reg =/^\w+@[a-z0-9]{2,}\.[a-z]{2,}$/;//\表示转义
+        reg=/[\u4e00-\u9fa5]/;//验证汉字
+        alert(reg.test(value));
+    }
+</script>
+</html>

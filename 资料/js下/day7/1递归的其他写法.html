@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //2!=2*1   3!=3*2*1  4！=4*3*2*1=4*3！   n!=n*(n-1)!
+    //用来求阶乘的
+   /* function facortial(n){
+        if(n<=1){
+            return 1;
+        }
+        return n* facortial(n-1);
+        //5*facortial(4)=5*4*facortial(3)=5*4*3*facortial(2)=5*4*3*2*facortial(1)
+    }
+    console.log(facortial(4));
+    var tem = facortial;//0x001
+    facortial = null;//
+    console.log(tem(1));//1
+    console.log(tem(2));//报错*/
+   //arguments.callee正在执行的函数  但是严格模式下不支持
+    /*function facortial(n){
+        if(n<=1){
+            return 1;
+        }
+        return n* arguments.callee(n-1);
+        //5*facortial(4)=5*4*facortial(3)=5*4*3*facortial(2)=5*4*3*2*facortial(1)
+    }
+    console.log(facortial(4));
+    var tem = facortial;//0x001
+    facortial = null;//
+    console.log(tem(1));//1
+    console.log(tem(2));//报错
+    console.log("========================");*/
+    //
+    var facortial = function f(n){
+        if(n<=1){
+            return 1;
+        }
+        return n*f(n-1);
+    }
+    console.log(facortial(4));
+    var tem = facortial;//0x001
+    facortial = null;//
+    console.log(tem(1));//1
+    console.log(tem(2));//
+</script>
+</html>

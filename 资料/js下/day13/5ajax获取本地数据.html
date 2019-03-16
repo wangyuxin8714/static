@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+</body>
+<script>
+	var xhr = null;
+	if(window.XMLHttpRequest){
+		xhr = new XMLHttpRequest();
+	}else{
+		xhr = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xhr.open("get","data.txt");
+	xhr.send(null);
+	xhr.onreadystatechange = function(){
+		if(xhr.readyState==4&&xhr.status==200){
+			console.log(typeof xhr.responseText);
+			var data = eval("("+xhr.responseText+")");
+			for(var i=0;i<data.length;i++){
+				document.write(data[i]);
+			}
+		}
+	}
+</script>
+</html>

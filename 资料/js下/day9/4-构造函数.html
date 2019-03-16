@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Object Array Date RegExp 构造函数通常首字母大写（就是为了其他的函数区分开），
+    // 构造函数的调用时new关键字调用
+    //缺点：对象上面的方法每个实例都重新创建了一遍
+    function Person(name,age,sex){
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.say = function(){
+            console.log("会说话");
+        }
+        //return this;
+    }
+    var p1=new Person("aa",21,"nv");//p1也叫做Person的一个实例
+    console.log(p1.name);
+    var p2 = new Person("qq",20,"nan");
+    console.log(p2.age);
+    console.log(p1.say==p2.say);//false
+    p1.say();
+    p2.say();
+</script>
+</html>

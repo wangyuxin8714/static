@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件对象</title>
+	<style>
+		
+		#div1{
+			width: 100px;
+			height: 100px;
+			background-color: #f00;
+		}
+		#div2{
+			width: 50px;
+			height: 50px;
+			background-color: #0f0;
+		}
+	</style>
+</head>
+<body>
+
+	<button id="btn">按钮</button>
+
+	<div id="div1">
+		<div id="div2"></div>
+	</div>
+	<script>
+		
+		var btn = document.getElementById("btn");
+
+		var div1 = document.getElementById("div1");
+		var div2 = document.getElementById("div2");
+
+		btn.onclick = function(){
+			
+			//获取 ie 下和非 ie 下的事件对象
+			var e = event || window.event;
+
+			//console.log(event);
+
+			console.log(event.target.tagName);
+			console.log(event.currentTarget);
+
+		}
+
+		// div1.addEventListener("click", function(){
+			
+		// 	console.log(event.currentTarget);
+		// 	console.log(event.target)
+
+		// 	//currentTarget 是事件绑定是元素
+		// 	//target 是事件触发的元素
+
+		// }, false);
+
+		// div2.addEventListener("click", function(){
+		// 	console.log(event.currentTarget);
+
+		// 	console.log(event.target);
+		// }, false);
+
+
+
+
+
+		//创建一个对象
+		//对象的多个属性之间,要用逗号分开
+		// 属性 : 属性值,
+		// 属性值可以使任意类型的
+		// 属性名称遵循 标识符的命名规范.
+		// var dog = {
+		// 	name : "大黄",
+		// 	age : 10,
+		// }
+
+		// console.log(dog);
+		
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        
+        #box {
+            margin: 0 auto;
+            height: 409px;
+            width: 1000px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        #box ol {
+            position: absolute;
+            left: 400px;
+            bottom: 20px;
+        }
+        
+        #box ol li {
+            background: white;
+            float: left;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        #box .bg {
+            background: red;
+        }
+        
+        #box span {
+            height: 100px;
+            width: 40px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 50px;
+            position: absolute;
+            top: 35%;
+            background: rgba(0, 0, 0, .5);
+            color: white;
+        }
+        
+        #left {
+            left: 10px;
+        }
+        
+        #right {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul>
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/4.jpg" alt=""></li>
+            <li><img src="img/5.jpg" alt=""></li>
+            <li><img src="img/6.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/4.jpg" alt=""></li>
+            <li><img src="img/5.jpg" alt=""></li>
+            <li><img src="img/6.jpg" alt=""></li>
+        </ul>
+        <ol>
+            <li class="bg">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ol>
+        <span id="left"><</span>
+        <span id="right">></span>
+    </div>
+    <script>
+  		//轮播图默认自动切换,鼠标移入box中 停止切换 
+  		//鼠标移出box中 继续切换
+  		//点击左按钮 图片和按钮往左切换
+  		//点击右按钮 图片和按钮往右切换
+  		//点击某个按钮 给该按钮添加背景并显示相应图片
+
+//先自动播放==>鼠标移入移出==>左右按钮==>点击按钮切换
+var box=document.getElementById('box'),
+	ulis=document.querySelectorAll('ul li'),
+	olis=document.querySelectorAll('ol li'),
+	left=document.getElementById('left'),
+	right=document.getElementById('right'),
+	timer,count=0;
+
+	//将定时器封装
+	function fn(){
+	timer=setInterval(function(){
+		count++;//计数器自增
+		////判断下标是否大于最大下标
+		if(count>olis.length-1){count=0;}
+		lbt(count);
+	},1000);}
+	fn();
+
+//给大盒子绑定移入事件
+box.onmouseover=function(){
+	clearInterval(timer);
+						 }
+
+//给大盒子绑定移出事件
+box.onmouseout=function(){
+	fn();
+					 	 }
+
+
+//给左箭头绑定事件
+left.onclick=function(){
+	count--;
+	if(count<0){
+		count=ulis.length-1;
+		}
+	lbt(count);				   
+					}
+
+right.onclick=function(){
+	count++;
+	if(count>ulis.length-1){
+		count=0;
+						   }
+	lbt(count);
+					    }
+
+
+//循环给按钮绑定事件
+for(let i=0;i<olis.length;i++){
+	olis[i].onclick=function(){
+		lbt(i);
+		count=i;//更新count值
+	 						  }
+	}
+
+
+
+//封装图片切换函数
+function lbt(count){
+	//排他思想 先隐藏所有图片并将所有按钮背景(bg)清空
+	for(var i=0;i<ulis.length;i++){
+		ulis[i].style.display='none';
+		olis[i].className='';
+		 						  }
+	//在将count相应的图片显示 背景添加
+	ulis[count].style.display='block';
+	olis[count].className='bg';
+			  	   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*var box = document.getElementById('box'),
+            uls = document.getElementsByTagName('ul'),
+            pics = uls[0].getElementsByTagName('li'),
+            ols = document.getElementsByTagName('ol'),
+            nums = ols[0].getElementsByTagName('li');
+        var timer = null;
+        var count = 0;
+        for (var i = 0; i < nums.length; i++) {
+            nums[i].index = i;
+            nums[i].onclick = function() {
+                changebj(this.index);
+                count = this.index;
+            }
+        }
+        lbt();
+
+        function lbt() {
+            timer = setInterval(function() {
+                count++;
+                if (count > pics.length - 1) count = 0;
+                changebj(count);
+            }, 1000);
+        }
+        box.onmouseover = function() {
+            clearInterval(timer);
+        }
+        box.onmouseout = function() {
+            lbt();
+        }
+        left.onclick = function() {
+            count--;
+            if (count < 0) count = pics.length - 1;
+            changebj(count);
+        }
+        right.onclick = function() {
+            count++;
+            if (count > 0) count = pics.length - 1;
+            changebj(count);
+        }
+
+        function changebj(n) {
+            for (var j = 0; j < nums.length; j++) {
+                nums[j].className = "";
+                pics[j].style.display = "none";
+            }
+            nums[n].className = "bg";
+            pics[n].style.display = "block";
+        }*/
+    </script>
+</body>
+
+</html>

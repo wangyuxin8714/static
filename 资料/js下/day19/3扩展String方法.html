@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //"{name:'zhangsan',age:20}"
+    String.prototype.formater = function(){
+        return eval("("+this+")");
+    }
+    //"a=90&b=100&c=ww"
+    String.prototype.formater2 = function(){
+        var arr = this.split("&");//["a=90","b=100","c=ww"]
+        var o = {};
+        for(var i in arr){
+            var a1 = arr[i].split("=");//["a",90]
+            o[a1[0]] = a1[1];
+        }
+        return o;
+    }
+    var str = "{name:'zhangsan',age:20}";
+    var o = str.formater();
+    console.log(o.name);
+    var str1 = "name=zhangsan&age=20&tel=13476567876&sex=男";
+    var o1 = str1.formater2();
+    console.log(o1.tel);
+</script>
+</html>

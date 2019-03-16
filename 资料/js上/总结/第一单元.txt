@@ -1,0 +1,86 @@
+ html + css +  js
+ html:结构
+ css:样式
+ js:行为 动作
+ js的组成部分 ?
+ DOM : document object model  文档对象模型
+ BOM : broswer object model   浏览器对象模型
+ ECMAscript   核心 ES5*/
+
+ js起源 javascript==>布兰登艾奇 面向对象的语言 脚本语言
+ js作用：可以和页面做交互
+
+ 变量、数据类型与表达式上
+ 变量:在程序执行过程中其值可以改变的量
+ 多个变量可以在一起定义,中间以逗号分隔
+
+ var 可以省略 加var可以使变量具有变量声明提升的作用
+ 常量:在程序执行过程中其值不可以改变的量
+ 如何定义变量？==>关键字:var
+ var 变量名=变量值; //js 弱类型语言
+ 变量默认是没有类型  变量的类型取决于变量的值
+
+ 5种基本数据类型
+    1)number 数值 ==>整型、浮点型统称为number类型
+      NaN not a Number 不是一个数值 是Number类型的一种
+      isNaN() 判断一个值是否是非数值 返回值为 布尔型
+    2)string 字符串==>被一对单引号或双引号包含的内容==>引号必须成对出现
+      字符串拼接 
+	ES5 将非变量部分用引号包起来,如果拼接变量 则用'+'做连接符  '#'+'#'+'#';
+	ES6 `###<标签>${变量}</标签>###`;
+      console.log() //控制台打印
+      document.write()//页面打印
+    3)null   空类型==> 空指针对象 他是一种特殊的对象(对象占位符)
+    4)undefined 未定义类型==>=如果定义了变量 没有赋值 则默认保存undefined
+    5)boolean   布尔型 只有两个值: true false
+
+ typeof(被检测的内容)  typeof 被检测的内容  操作符 一元(单目)运算符
+ typeof 返回值为 string类型
+    console.log(typeof 123);//'number'
+    console.log(typeof "xyz");//'string'
+    console.log(typeof undefined);//'undefined'
+    console.log(typeof false);//'boolean'
+    console.log(typeof null);//'object'
+    console.log(typeof typeof 123);//'string'
+    console.log(typeof typeof undefined);//'undefined'
+
+ js中严格区分大小写
+    var sum,Sum,SUM; //在内存中占着不同的内存
+
+ 标示符 :变量名、函数名、对象名
+ 标示符的命名规范:
+    1.必须由字母、数字、下划线和$组成
+    2.必须以字母或下划线或$开头
+    3.不能使用关键字和保留字
+    4.使用驼峰命名法==>如果变量是复合单词 则除了第一个单词以外的单词首字母大写
+    5.语义化==>见名识意
+
+ 可选分号  语句的结束
+ 单行注释/多行注释:注释的作用:1.解释作用 2.阻止代码的执行
+
+ 算数运算符
+    根据操作数的个数来分类:
+        一元(单目)运算符  ++ -- ! + -
+        二元(双目)运算符  + - * / % > < >= <= != == !== === && ||
+	三元(三目)运算符-==>条件运算符 条件1?条件2:条件3
+    加性运算符: + -
+        1) 正常运算
+        2) 字符串拼接(-没有)
+        3) 转Number
+    乘性运算符 * / %
+        正无穷  任何正数除以0 都等于正无穷 Infinity
+        负无穷  任何负数初以0  都等于负无穷 Infinity
+    ++ -- 自增自减运算符 ==>只能被变量使用
+        分为前置和后置   ++x x++  --x x--
+            前置:对变量先进行增一(减一)操作,然后再进行运算
+            后置:先运算,再对变量先进行增一(减一)操作
+
+ alert()==>系统弹出框
+ confirm()==>系统确认框
+ prompt() ==>系统输入框
+ prompt("请输入你的内容","在这里输入");
+
+ 
+ 
+
+ 

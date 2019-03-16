@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> promise 异步编程</title>
+</head>
+<body>
+	
+	<script>
+		
+		// for(var i = 0;i<5;i++){
+		// 	setTimeout(function(){
+		// 		console.log(n);
+		// 	},0);
+		// }
+
+
+		// promise 语法
+
+
+
+		// 把浪费时间的业务,放在 promise 里面.就变成了异步的.
+		// 你单独去处理这个任务, 我自己做自己的事情,等待着结果
+		// 
+
+		var p = new Promise(function(resolve,reject){
+			
+
+			//比如处理图片
+			//把代码写在这里就变成了异步的.
+			if(true){
+				//告诉你成功了
+				resolve();
+			}else{
+				//告诉你失败了
+				reject();
+			}
+		});
+		p.then(function(){
+			//这个函数表示成功
+			console.log("成功");
+		},function(){
+			//这个函数表示失败
+			console.log("失败");
+		});
+
+
+	</script>
+
+</body>
+</html>

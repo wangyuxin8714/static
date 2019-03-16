@@ -1,0 +1,78 @@
+项目命名
+全部采用小写方式， 以下划线分隔。
+例：my_project_name
+
+目录命名:scripts, styles, images, data_models
+
+html,css,JS文件命名:account_model字母都小写下划线做分割
+
+
+html:
+1.缩进使用soft tab（4个空格）
+2.在属性上，使用双引号，不要使用单引号
+3.class属性名称全小写中划线做分割,id名称驼峰形式
+
+HTML5 doctype
+doctype来启用标准模式，使其在每个浏览器中尽可能一致的展现；
+doctype不区分大小写，但是按照惯例，doctype大写 （关于html属性，大写还是小写）。
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">优先使用Ie的最新版本浏览器渲染
+
+属性应该按照特定的顺序出现：class id data-tit(自定义)
+class
+id
+name
+data-*
+src, for, type, href, value , max-length, max, min, pattern
+placeholder, title, alt
+aria-*, role
+required, readonly, disabled
+
+class是为高可复用组件设计的，id更加具体且应该尽量少使用
+
+
+css,scss
+每个属性声明末尾都要加分号。
+最外层统一使用双引号；url的内容要用引号；属性选择器中的属性值需要引号。
+scss中的变量、函数、混合、placeholder采用驼峰式命名
+颜色16进制用小写字母；颜色16进制尽量用简写。
+
+JavaScript
+以下几种情况后需加分号：变量声明,表达式,return,throw,break,continue,do-while
+引号:最外层统一使用单引号。
+常量全大写，用下划线连接
+构造函数，大写第一个字母
+jquery对象必须以'$'开头命名
+
+多个变量尽量使用一个var来声明逗号隔开
+
+数组、对象
+对象属性名不需要加引号；
+
+对象以缩进的形式书写，不要写在一行；
+
+数组、对象最后不要有逗号。
+
+null：初始化一个将来可能被赋值为对象的变量
+
+
+undefined
+永远不要直接使用undefined进行变量判断；
+
+使用typeof和字符串'undefined'对变量进行判断
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            div{
+                margin:10px auto;
+            }
+            #div1{
+                width:500px;
+                height:500px;
+                background:red;
+                padding:20px;
+            }
+            #div2{
+                height:400px;
+                background:green;
+                padding:20px;
+            }
+            #div3{
+                height:300px;
+                background:blue;
+            }
+        </style>
+    </head>
+    <body>
+         <div id="div1">
+            <div id="div2">
+                <div id="div3"></div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+    
+    var oDiv = document.getElementsByTagName("div");
+    /*if(oDiv[0].addEventListener){
+        oDiv[0].addEventListener("click",showDiv3,false);
+    }else if(oDiv[0].attachEvent){
+        oDiv[0].attachEvent("onclick",showDiv3)
+    }else{
+        oDiv[0].onclick = showDiv3;
+    }*/
+    addEvent(oDiv[0],showDiv3,"click");
+    /*oDiv[1].addEventListener("click",showDiv2,false);*/
+    addEvent(oDiv[1],showDiv2,"click");
+
+    addEvent(oDiv[2],function(){
+        console.log("最里层的div");
+    },"click");
+
+    /**
+     * [addEvent description]
+     * @param {[type]}   ele  [description] 元素
+     * @param {Function} fn   [description] 绑定的函数
+     * @param {[type]}   type [description] 事件类型
+     */
+    function addEvent(ele,fn,type){
+        if(ele.addEventListener){
+            ele.addEventListener(type,fn,false);
+        }else if(ele.attachEvent){
+            ele.attachEvent("on"+type,fn)
+        }else{
+            //ele.onclick = fn;
+            ele["on"+type] = fn;
+    }
+    }
+    function showDiv3(){
+        console.log("最外层的div");
+    }
+    function showDiv2(){
+        console.log("第二的div");
+    }
+    </script>
+</html>

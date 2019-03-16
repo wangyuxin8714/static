@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var xhr = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+
+    xhr.open("get","data.json",false);
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState==4){
+            console.log(xhr.responseText);
+        }
+    }
+    xhr.send();//send()方法是提交，执行完send方法，已经从后台获取了相应，也就是已经获取了数据
+    console.log(xhr.readyState);
+
+
+</script>
+</html>

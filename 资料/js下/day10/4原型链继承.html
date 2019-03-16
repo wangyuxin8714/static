@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Son(name,age,famliy){
+        this.name = name;
+        this.age = age;
+        this.famliy = famliy;
+    }
+    function Father(){
+        this.famliy = "张";
+        this.friends = ["zhangsan","lisi","wangwu"];
+    }
+    Father.prototype.hasMoney = function () {
+        console.log("5套房，500万");
+    }
+    Son.prototype = new Father();
+    console.log(Son.prototype);//有个属性高famliy = "张"
+    var s1 = new Son("大儿子",20,"赵");
+    s1.hasMoney();
+    console.log(s1.famliy);//某个对象访问属性，先看自己有没有，再看自己的原型对象有没有，就去继承的上一级去找，就再去上一级的原型对象找，一直到Object
+    //最后还找不到就返回undefined
+    console.log(s1.friends);
+    var s2 = new Son("二儿子",18);
+    s2.friends.push("aa");
+    console.log(s1.friends);
+    //原型链继承存在的问题：父类上的引用数据类型被子类所有的实例公用
+</script>
+</html>

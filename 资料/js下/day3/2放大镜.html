@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            position: relative;
+            display: inline-block;
+            width:430px;
+            height:430px;
+            overflow: hidden;
+        }
+        span{
+               position: absolute;
+                left:0;
+                top:0;
+               width:100px;
+            height:100px;
+            background: rgba(0,0,255,.3);
+        }
+        img{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="small">
+        <img src="image/small.jpg" alt="">
+        <span></span>
+    </div>
+    <div id="big">
+        <img src="image/big.jpg" alt="" id="pic">
+    </div>
+</body>
+<script>
+    /**
+     * 1、鼠标移动 mousemove 小块位置发生变化 修改坐标x、y
+     *   ev.clientX-
+     */
+      var small = document.getElementById("small");
+      var big = document.getElementById("big");
+      var oSpan = small.getElementsByTagName("span")[0];
+      var pic = document.getElementById("pic");
+    small.onmousemove = function(e){
+        var ev = e || event;
+        var pos = {
+            x:ev.clientX - small.offsetLeft - oSpan.clientWidth/2,
+            y:ev.clientY - small.offsetTop - oSpan.clientHeight/2
+        }
+        if(pos.y<0)pos.y=0;//判断上边界
+        if(pos.x<0)pos.x=0;//判断左边界
+        if(pos.x>small.clientWidth-oSpan.clientWidth)pos.x=small.clientWidth-oSpan.clientWidth;
+        if(pos.y>small.clientHeight-oSpan.clientHeight)pos.y=small.clientHeight-oSpan.clientHeight;
+        oSpan.style.left = pos.x+"px";
+        oSpan.style.top = pos.y+"px";
+        //pos.x/(small.clientWidth-oSpan.clientWidth)
+        //?/(pic.clientWidth-big.clientWidth)
+        pic.style.left = -(pos.x/(small.clientWidth-oSpan.clientWidth))*(pic.clientWidth-big.clientWidth)+"px";
+        pic.style.top = -(pos.y/(small.clientHeight-oSpan.clientHeight))*(pic.clientHeight-big.clientHeight)+"px";
+    }
+</script>
+</html>

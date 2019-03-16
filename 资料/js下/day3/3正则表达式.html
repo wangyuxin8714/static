@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var reg = /a/i;//字面量的创建方式
+    var str = "eAdrrs";
+    console.log(reg.test(str));
+    var tem = "a";
+    var reg1 = new RegExp(tem,"i");//对象的方式 区别：1、对象这种方式可以写变量
+    console.log(reg1.test(str));
+    console.log(/\d/.test("w22essd"));
+    console.log(/\w/.test("++++_"));
+    console.log(/\s/.test(" 344"));
+    console.log(/[acd]/.test("wasee"));
+</script>
+</html>

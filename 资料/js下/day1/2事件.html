@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            div{
+                width:100px;
+                height:30px;
+                line-height: 30px;
+                text-align: center;
+                background: orange;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="btn">修改背景</div>
+    </body>
+    <script type="text/javascript">
+    var oDiv = document.getElementById("btn");
+    /*if(oDiv.addEventListener){
+        oDiv.addEventListener("click",function(){
+            document.body.style.background = "red";
+        })
+    }else if(oDiv.attachEvent){
+        oDiv.attachEvent("onclick",function(){
+            document.body.style.background = "red";
+        });
+    }else{
+       oDiv.onclick = function(){
+         document.body.style.background = "red";
+       } 
+    }*/
+    if(oDiv.addEventListener){
+        oDiv.addEventListener("click",changeBg)
+    }else if(oDiv.attachEvent){
+        oDiv.attachEvent("onclick",changeBg);
+    }else{
+       oDiv.onclick = changeBg;
+    }
+    /**修改背景颜色
+     * [changeBg description]
+     * @return {[type]} [description]
+     */
+    function changeBg(){
+        document.body.style.background = "red";
+    }
+    </script>
+</html>

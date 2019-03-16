@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>拷贝对象</title>
+</head>
+<body>
+	<script>
+		
+		var dog = {
+			name : "eh",
+			age : 1,
+		}
+
+		dog.col = "red";
+		dog["id"] = "007",
+
+
+		console.log(dog);
+
+		var newObj = {} 
+
+		for(var k in dog){
+			newObj[k] = dog[k];
+		}
+
+		//newObj 对象和 dog 没有任何关系.
+
+		console.log(newObj);
+		newObj.name = "hh",
+
+		//原来的 dog 对象 没有改变
+		console.log(dog.name);
+
+
+		
+
+
+
+	</script>
+</body>
+</html>

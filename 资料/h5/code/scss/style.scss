@@ -1,0 +1,163 @@
+@import "common.scss";
+@import "_minix.scss";
+.swiper-container,
+.swiper-wrapper,
+.swiper-slide {
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-slide {
+    background: url(../image/bg.jpg) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+.swiper-pagination-bullet {
+    opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fff;
+    opacity: 1;
+}
+
+.OneSlide {
+    height: pxTorem(50px);
+    width: 100%;
+    background: url(../image/bonus_01.png) no-repeat 0 0;
+    background-size: 100% auto;
+    margin-top: pxTorem(40px);
+}
+
+.twoSlide {
+    background: url(../image/bonus_02.jpg) no-repeat 0 0;
+    background-size: 100% auto;
+    width: 100%;
+    height: pxTorem(50px);
+    margin-top: pxTorem(10px);
+}
+
+.threeSlide {
+    background: url(../image/001.png) no-repeat 0 0;
+    background-size: 100% auto;
+    width: 100%;
+    height: pxTorem(240px);
+    margin-top: pxTorem(40px);
+}
+
+.fourSlide {
+    background: url(../image/002.png) no-repeat 0 0;
+    background-size: 100% auto;
+    height: pxTorem(375px);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 180px;
+}
+
+.fiveSlide {
+    background: url(../image/003.png) no-repeat 0 0;
+    background-size: 100% auto;
+    width: 100%;
+    height: pxTorem(145px);
+    margin-top: pxTorem(20px);
+}
+
+.SecondContentOne {
+    background: url(../image/004.png) no-repeat 0 0;
+    background-size: 100% auto;
+    width: 100%;
+    height: pxTorem(80px);
+    margin-top: pxTorem(20px);
+}
+
+.SecondContentTwo {
+    background: url(../image/005.png) no-repeat 0 0;
+    background-size: 100% auto;
+    width: 100%;
+    height: pxTorem(50px);
+    margin-top: pxTorem(20px);
+}
+
+.SecondContentThree {
+    background: url(../image/006.png) no-repeat 0 0;
+    background-size: 100% auto;
+    width: 100%;
+    height: pxTorem(350px);
+    margin-top: pxTorem(30px);
+}
+
+.ThirdContentOne {
+    background: url(../image/007.png) no-repeat 0 0;
+    background-size: 100% auto;
+    width: 100%;
+    height: pxTorem(80px);
+    margin-top: pxTorem(20px);
+}
+
+.ThirdContentTwo {
+    background: url(../image/009.png) no-repeat 0 0;
+    background-size: 100% auto;
+    width: 100%;
+    height: pxTorem(100px);
+    margin-top: pxTorem(20px);
+}
+
+.ThirdContentThree {
+    background: url(../image/008.png) no-repeat 0 0;
+    background-size: 100% auto;
+    width: 100%;
+    height: pxTorem(240px);
+    margin-top: pxTorem(40px);
+}
+
+.ThirdContentfour {
+    background: url(../image/010.png) no-repeat 0 0;
+    background-size: 100% auto;
+    width: 100%;
+    height: pxTorem(180px);
+    margin-top: 20px;
+    position: absolute;
+    right: 0;
+    top: pxTorem(240px);
+}
+
+.FourthContentOne {
+    background: url(../image/001.jpg) no-repeat 0 0;
+    background-size: 100% auto;
+    width: 100%;
+    height: pxTorem(80px);
+    margin-top: pxTorem(20px);
+}
+
+.FourthContentTwo {
+    background: url(../image/002.jpg) no-repeat 0 0;
+    background-size: 100% auto;
+    width: 100%;
+    height: pxTorem(415px);
+    margin-top: pxTorem(40px);
+}
+
+.arrow {
+    background: url(../image/arrow.png) no-repeat 0 0;
+    background-size: 100% auto;
+    height: pxTorem(25px);
+    width: pxTorem(30px);
+    position: fixed;
+    left: 50%;
+    bottom: pxTorem(10px);
+    margin-left: -pxTorem(15px);
+    z-index: 999;
+    animation: runing 0.8s linear infinite;
+}
+
+@keyframes runing {
+    0% {
+        opacity: 1;
+        bottom: pxTorem(10px);
+    }
+    100% {
+        opacity: 0;
+        bottom: pxTorem(18px);
+    }
+}

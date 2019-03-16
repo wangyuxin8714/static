@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>递归函数</title>
+</head>
+<body>
+	<script>
+			
+		//需求: 使用递归,实现打印 n 次 666
+
+
+		function print(n){
+
+
+			//判断临街条件
+
+			if(n <= 0){
+				//return 返回一个数据, 终止函数执行
+				return ;
+			}
+
+			console.log(666);
+
+			// 目的是让打印的次数减一
+			n -= 1;
+
+			print(n);
+
+		}
+
+		print(10);
+
+
+		//需求  : 使用递归 实现0-n 的相加. 
+
+		// var total = 0;
+		// function sum(n){
+
+		// 	if(n <= 0){
+		// 		return;
+		// 	}
+
+		// 	total += n;
+
+		// 	n -= 1;
+		// 	sum(n);
+		// }
+		// sum(10);
+		// console.log(total);
+
+
+
+		//需求  : 使用递归 实现0-n 的相加. 
+
+
+		function sum(n){
+			//1. 判断临街条件
+			if(n == 1){
+				//表示的是什么意思? 表示的是 0-1 的和
+				return 1;
+			}
+
+			//2. 0-10 的和 是   0-9的和 + 10    
+			// 0-n 的和  是  0 - n-1 的和 + n
+
+			return sum(n-1) + n;
+		}
+
+		console.log(sum(10));
+
+		// 0-n的阶乘
+
+
+
+	</script>
+</body>
+</html>

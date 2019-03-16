@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var arr = [5,3,6,7];
+    //数组的方法，返回一个新的数组，遍历数组，遍历的过程中执行回调函数(过滤的规则),
+    // 这个回调函数有返回值（boolean类型）,最终会把返回值是true的元素重新组合成一个新的数组
+    var arr1=arr.filter(function(item,index,array){
+        /*if(item%2!=0){
+            return true;
+        }else return false;*/
+        return item%2!=0;
+    })
+    console.log(arr1);
+
+    /**
+     * 自己封装个的filter
+     * @param callback
+     * @param arrary
+     * @returns {Array}
+     */
+    function myFilter(callback,arrary){
+        var newArr = [];
+        for(var i=0;i<array.length;i++){
+            var flag=callback(arrary[i],i,array);
+            if(flag){
+                newArr.push(array[i]);
+            }
+        }
+        return newArr;
+    }
+</script>
+</html>

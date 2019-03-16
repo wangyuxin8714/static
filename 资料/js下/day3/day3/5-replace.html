@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var str = "border-top-color";
+    //border-top-color   borderTopColor
+    //font-size  fontSize
+    var reg = /-(\w)/g;
+    //replace 第二个参数是函数的时候，这个函数第一个参数指的是 匹配项 第二个参数开始指的是第一个小括号里面的东西 第三个参数 第二个小括号。。。
+    //这个函数有返回值，返回值就是替换的文本
+    var newStr=str.replace(reg,function(a,b){
+        console.log(a+","+b);
+        return b.toUpperCase();
+    });
+    console.log(newStr);
+    //
+    reg = /(-)(\d)/g;
+    str = "-2-34";//2-3-4
+    console.log(str.replace(reg,"$2$1"));//$1指的是第一个小括号的内容 。。。$99
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 遍历 对象 </title>
+</head>
+<body>
+	<script>
+			
+		//遍历数组
+
+
+		// var arr = [1,2,3,4,5];
+
+		// for(var i = 0;i<arr.length;i++){
+		// 	arr[i];
+		// }
+
+		// for(var i in arr){
+		// 	arr[i]
+		// }
+
+		// arr.forEach(function(item){
+		// 	console.log(item);
+		// });
+
+
+		//遍历对象
+		//为啥要遍历对象 ?
+
+
+		//创建对象?
+
+		// var o = {
+		// 	属性名称 : 属性值,
+		// 	属性名称 : 属性值, 
+		// }
+
+		var o = {
+			name : "likui",
+			age : 18
+		}
+
+		//访问对象特殊属性名称是,属性名称不合法时,使用什么来访问? 
+
+
+		// o["1"] = 10;
+
+		// console.log(o.name);
+		// console.log(o["1"]);
+
+
+
+		for(var k in o){
+			console.log(k);
+			console.log(k + "=" + o[k]);
+		}
+
+	
+	</script>
+</body>
+</html>

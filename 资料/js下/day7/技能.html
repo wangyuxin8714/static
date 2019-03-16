@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //（1）、字符串替换：将字符串“<tr><td>{$id}</td></tr>”中的{$id}替换成10（使用正则表达式）。
+    var str = "<tr><td>{$id}</td></tr>";
+    console.log(str.replace(/\{\$id\}/,10));
+    //（2）、书写一个解析地址栏参数的函数getParameter(),使用正则获取指定参数，
+    // 如：getParameter(“name”);输出的结果是”xh”
+    //http://www.weibosina.com?name=zhangsan&pwd=123456&sex=male&age=20
+    //name  zhangsan   pwd  123456
+    function getParams(url,attr){
+        // name=zhangsan pwd=123456 sex=male age=20
+        var reg = /[?&](\w+)=(\w+)/g;
+        var val = "";
+        var str=url.replace(reg,function(a,b,c){
+            //第一个参数 是匹配项 从第二个参数开始指的是当前匹配项对应的小括号的值
+            console.log(a+","+b+","+c);
+            if(attr==b){
+                val = c;
+            }
+            //return 23;
+        })
+        console.log(str);
+        return val;
+    }
+    var url = "http://www.weibosina.com?name=zhangsan&pwd=123456&sex=male&age=20&a=123";
+    console.log(getParams(url,"a"));
+</script>
+</html>

@@ -1,0 +1,83 @@
+express简介：
+Express 是一个自身功能极简，完全是由路由和中间件构成一个的 web 开发框架
+路由：
+1、路由（Routing）是由一个 URL（或者叫路径）和一个特定的 HTTP 方法（GET、POST 等）组成的，涉及到应用如何响应客户端对某个网站节点的访问。
+2、路由方法源于 HTTP 请求方法，和 express 实例相关联。
+3、每一个路由都可以有一个或者多个处理器函数，当匹配到路由时，这些函数将被执行。
+4、路由的定义由如下结构组成：app.METHOD(PATH, HANDLER)。其中，app 是一个 express 实例；METHOD 是某个 HTTP 请求方式中的一个；PATH 是服务器端的路径；HANDLER 是当路由匹配到时需要执行的函数。
+注：app.all() 是一个特殊的路由方法，没有任何 HTTP 方法与其对应，它的作用是对于一个路径上的所有请求加载中间件。
+5、路由路径：路由路径和请求方法一起定义了请求的端点，它可以是字符串、字符串模式或者正则表达式。
+// 匹配 acd 和 abcd
+app.get('/ab?cd', function(req, res) {
+res.send('ab?cd');
+});
+// 匹配 abcd、abbcd、abbbcd等
+app.get('/ab+cd', function(req, res) {
+res.send('ab+cd');
+});
+// 匹配 abcd、abxcd、abRABDOMcd、ab123cd等
+app.get('/ab*cd', function(req, res) {
+res.send('ab*cd');
+});
+// 匹配 /abe 和 /abcde
+app.get('/ab(cd)?e', function(req, res) {
+res.send('ab(cd)?e');
+});
+// 匹配任何路径中含有 a 的路径：
+app.get(/a/, function(req, res) {
+res.send('/a/');
+});
+// 匹配 butterfly、dragonfly，不匹配 butterflyman、dragonfly man等
+app.get(/.*fly$/, function(req, res) {
+res.send('/.*fly$/');
+});
+6、路由句柄
+可以为请求处理提供多个回调函数，这些回调函数有可能调用 next('route') 方法而略过其他路由回调函数。可以利用该机制为路由定义前提条件，如果在现有路径上继续执行没有意义，则可将控制权交给剩下的路径。
+重要：next
+如果当前中间件没有终结请求-响应循环，则必须调用 next() 方法将控制权交给下一个中间件，否则请求就会挂起。
+next函数主要负责将控制权交给下一个中间件，如果当前中间件没有终结请求，并且next没有被调用，那么请求将被挂起，后边定义的中间件将得不到被执行的机会
+next函数主要是用来确保所有注册的中间件被一个接一个的执行，如果我们定义的中间件终结了本次请求，那就不应该再调用next函数，
+它负责同一个路由的多个中间件的控制权的传递，并且它会接收一个参数"route"，如果调用next(“route”)，则会跳过当前路由的其它中间件，直接将控制权交给下一个路由
+7、路由句柄有多种形式，可以是一个函数、一个函数数组，或者是两者混合
+
+响应方式：
+res.download()  提示下载文件。
+res.end()   终结响应处理流程。
+res.json()  发送一个 JSON 格式的响应。
+res.jsonp() 发送一个支持 JSONP 的 JSON 格式的响应。
+res.redirect()  重定向请求。
+res.render()    渲染视图模板。
+res.send()  发送各种类型的响应。
+res.sendFile    以八位字节流的形式发送文件。
+res.sendStatus()    设置响应状态代码，并将其以字符串形式作为响应体的一部分发送。
+
+app.route()
+可使用 app.route() 创建路由路径的链式路由句柄。由于路径在一个地方指定，这样做有助于创建模块化的路由，而且减少了代码冗余和拼写错误。
+express.Router
+可使用 express.Router 类创建模块化、可挂载的路由句柄。
+
+中间件概念：
+中间件（Middleware） 是一个函数，它可以访问请求对象（request object (req)）, 响应对象（response object (res)）, 和 web 应用中处于请求-响应循环流程中的中间件，一般被命名为 next 的变量。
+分类：
+应用级中间件
+路由级中间件
+错误处理中间件
+内置中间件
+第三方中间件
+应用级中间件
+
+应用级中间件绑定到 app 对象 使用 app.use() 和 app.METHOD()
+路由级中间件
+路由级中间件和应用级中间件一样，只是它绑定的对象为 express.Router()。
+错误处理中间件
+内置中间件
+express.static 是 Express内置的中间件。它基于 serve-static，负责在 Express 应用中提托管静态资源。
+通过 Express 内置的 express.static 可以方便地托管静态文件，例如图片、CSS、JavaScript 文件等。
+如果你的静态资源存放在多个目录下面，你可以多次调用 express.static 中间件
+1、该root参数指定从中提供静态资产的根目录。该函数通过req.url与提供的root目录结合来确定要提供的文件。
+2、当找不到文件时，它不是发送404响应，而是调用next（）继续下一个中间件
+
+第三方：
+bodyParser中间件用来解析http请求体，是express默认使用的中间件之一
+bodyParser.urlencoded则是用来解析我们通常的form表单提交的数据
+当extended为false的时候，键值对中的值就为'String'或'Array'形式

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>删除事件</title>
+</head>
+<body>
+	<button id="btn" >按钮</button>
+	<button id="btn2">添加多个事件</button>
+
+	<script>
+		var btn = document.getElementById("btn");
+		var btn2 = document.getElementById("btn2");
+
+
+		// btn.onclick = function(){
+		// 	console.log(111);
+		// }
+
+		// 取消按钮绑定事件
+		// btn.onclick = null;
+
+
+		function fn(){
+			console.log(1);
+		}
+
+
+		//通过 DOM2级事件添加 点击事件
+		btn.addEventListener("click", fn, false);
+
+		//怎么取消绑定事件呢? 删除事件绑定
+		btn.removeEventListener("click", fn, false);
+
+
+
+		//需求 : 给 btn2按钮添加两个点击事件
+
+		// btn2.onclick = function(){
+		// 	console.log(1);
+		// }
+
+		// btn2.onmouseenter = function(){
+		// 	console.log(2);
+		// }
+
+		//上面代码并不能实现 给一个元素添加两个点击事件
+
+		//我们可以通过 DOM2级事件来做
+
+		btn2.addEventListener("click", function(){
+			console.log(1);
+		}, false);
+
+
+		btn2.addEventListener("click", function(){
+			console.log(2);
+		}, false);
+
+
+
+	</script>	
+</body>
+</html>

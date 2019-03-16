@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            display: inline-block;
+            min-width: 60px;
+            height:30px;
+            line-height: 30px;
+            text-align: center;
+            margin:0 10px;
+            cursor: pointer;
+        }
+        .active{
+            color:red;
+        }
+        #tab-content div{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="tabs">
+        <!--<div id="tab-title">
+            <span class="active">首页1</span>
+            <span>首页2</span>
+            <span>首页3</span>
+        </div>
+        <div id="tab-content">
+            <div style="display: block">dsdff1</div>
+            <div>dsdff2</div>
+            <div>dsdff3</div>
+        </div>-->
+    </div>
+</body>
+<script>
+    function ajax(obj){
+        console.log('ajax的方法');
+        var xhr = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+        xhr.open("get",obj.url,true);
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4){
+                if(xhr.status==200){
+                    obj.success(eval("("+xhr.responseText+")"));
+                }else{
+                    obj.error(xhr.status);
+                }
+            }
+        }
+        xhr.send(null);
+    }
+
+    //面向对象的选项卡
+    function Tab(){
+        this.container = document.getElementById("tabs");
+        this.init();
+    }
+    Tab.prototype = {
+        constructor:Tab,
+        //获取ajax的数据
+        init:function(){
+            console.log("init......");
+            var _this = this;
+            ajax({
+                url:"data.json",
+                success:function(data){
+                    console.log("ajax成功");
+                    _this.renderHtml(data);
+                    _this.bindEvent();
+                }
+            })
+        },
+        //渲染页面
+        renderHtml:function(data){
+            var _this = this;
+            var tabs = data.tabs;
+            var titleContainer = document.createElement("div");//放title的容器
+            titleContainer.id="tab-title";
+            var contentContainer = document.createElement("div");//放内容的容器
+            contentContainer.id="tab-content";
+            for(var i=0;i<tabs.length;i++){
+                var span = document.createElement("span");
+                span.innerHTML = tabs[i].title;
+                if(i==0)span.className = "active";
+                titleContainer.appendChild(span);
+                var div = document.createElement("div");
+                div.innerHTML = tabs[i].contents;
+                if(i==0)div.style.display = "block";
+                contentContainer.appendChild(div);
+            }
+            _this.container.appendChild(titleContainer);
+            _this.container.appendChild(contentContainer);
+        },
+        bindEvent:function(){
+            console.log("bind.....");
+            var tabs = this.container.getElementsByTagName("span");
+            var  contents = document.getElementById("tab-content");
+            for(var i=0;i<tabs.length;i++){
+                tabs[i].index = i;
+                tabs[i].onclick = function(){
+                    for(var j=0;j<tabs.length;j++){
+                        tabs[j].className = "";
+                        contents.children[j].style.display = "none";
+                    }
+                    tabs[this.index].className="active";
+                    contents.children[this.index].style.display = "block";
+                }
+            }
+        }
+    }
+
+
+    //调用面向对象
+    new Tab();
+</script>
+</html>

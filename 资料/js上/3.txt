@@ -1,0 +1,130 @@
+1.[单选题](5分)
+
+var id = "023";if(typeof(id)==="number"){alert("编号用户");}else if(typeof(id)==="string"){alert("随机用户")}else{alert("临时用户")}以上代码的弹出结果是？———[赵晓茹]
+
+    A: 编号用户
+    B: 随机用户
+    C: 临时用户
+    D: undefined
+
+正确答案： B
+试题解析：
+2.[单选题](5分)
+
+var width = "102.6px",height = "h102.5px",result = "占位"; if(parseInt(width)>100 && parseInt(height)>100){ result = "广告"; }else{ result = "导航"; } console.log(result);打印结果是?
+
+    A: 占位
+    B: 广告
+    C: 导航
+    D: undefined
+
+正确答案： C
+试题解析：
+3. [多选题] (5分)
+
+以下哪些方法返回的结果是boolean型?
+
+    A: if()
+    B: typeof()
+    C: isNaN()
+    D: parseInt()
+
+正确答案： AC
+试题解析：
+4. [多选题] (5分)
+
+以下语句没有语法错误的有哪些?(请注意标点符号)———[赵晓茹]
+
+    A: var a="hello",a+=" world";
+    B: var a;if(a=""){alert("a需要赋值")}
+    C: if(isNaN("name55")==true){console.log("ok")}
+    D: var level="";if(!level)console.log("需要有分级");
+
+正确答案： CD
+试题解析：
+5. [多选题] (5分)
+
+以下表达式返回为false的有哪些?———[赵晓茹]
+
+    A: "" == 0
+    B: null == ""
+    C: undefined == null
+    D: undefined === null
+
+正确答案： BD
+试题解析：
+6. [判断题] (5分)
+
+if()的条件语句中不可以出现赋值即一个等号。———[赵晓茹]
+正确答案： 对
+试题解析：
+7. [判断题] (5分)
+
+parseInt()和parseFloat()的返回结果有可能是Number，也有可能是String。———[赵晓茹]
+正确答案： 错
+试题解析：
+8. [判断题] (5分)
+
+if与if之间是不可以互相嵌套的。———[赵晓茹]
+正确答案： 错
+试题解析：
+9. [判断题] (5分)
+
+var sex="男",str="";if(sex=="女"){str="hello女士"}else{str="hello先生"}与str=(sex=="女")?"hello女士":"hello先生"的作用与执行结果一样。———[赵晓茹]
+正确答案： 对
+试题解析：
+10. [填空题(人工判卷)] (5分)
+
+网站+使用if语句时，小括号内的条件返回的是____________类型。———[赵晓茹]
+正确答案： boolean(或布尔)
+试题解析：
+11. [填空题(人工判卷)] (5分)
+
+网站+var msg = "hello",result;if(msg){result="yes"}else{rsult="no"};console.log(result)打印结果是______________。———[赵晓茹]
+正确答案： yes
+试题解析：
+12. [填空题(人工判卷)] (5分)
+
+网站+var floor = "8L";if(isNaN(floor)){console.log(0)}else{console.log(1)}打印结果是__________________。———[赵晓茹]
+正确答案： 0
+试题解析：
+13. [填空题(人工判卷)] (5分)
+
+网站+var level = "",money = 8690,orders = 55;if(orders<20 && money<5000){ level = "入门级会员"}else{if(money>=20000 || orders>50){level = "黄金会员"}else{level = "VIP会员"}}console.log(level)打印结果是___________。———[赵晓茹]
+正确答案： 黄金会员
+试题解析：
+14. [填空题(人工判卷)] (5分)
+
+网站+var name,type="";if(typeof(name)==="undefined"){type="boolean"}else if(typeof(name)==="string" || typeof(name)==="number"){type="string"}else{type="object"}console.log(type);打印结果是___________________。———[赵晓茹]
+正确答案： boolean
+试题解析：
+15. [填空题(人工判卷)] (5分)
+
+网站+var sock = 91.5,level = parseInt(sock/10),result;if(level<6){result="不及格"}else if(level>=6 && level<=8){result="及格"}else if(level==9 || level==10){result="优秀"}else{result="成绩出错"}console.log(result)打印结果是___________________。———[赵晓茹]
+正确答案： 优秀
+试题解析：
+16. [填空题(人工判卷)] (5分)
+
+网站+ var dis = "99.86px";console.log(parseInt(dis));的打印结果是___________________。———[赵晓茹]
+正确答案： 99
+试题解析：
+17. [填空题(人工判卷)] (5分)
+
+网站+ var floor = "C#1206";console.log(parseInt(floor));打印结果是___________。———[赵晓茹]
+正确答案： NaN
+试题解析：
+18. [填空题(人工判卷)] (5分)
+
+网站+ var msg = "hello520";if(!isNaN(msg)){msg = parseInt(msg);}console.log(msg);打印结果是_____________。———[赵晓茹]
+正确答案： hello520
+试题解析：
+19. [填空题(人工判卷)] (5分)
+
+网站+ var s = ("88"!==88)?"yes":"no";console.log(s);打印结果是____________。
+正确答案： yes
+试题解析：
+20. [填空题(人工判卷)] (5分)
+
+console.log(isNaN("5"));打印结果是_____________。———[赵晓茹]
+正确答案： false
+试题解析：

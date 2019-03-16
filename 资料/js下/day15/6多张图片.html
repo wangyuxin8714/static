@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var p1 = new Promise(function(resolve,reject){
+        setTimeout(function(){
+            var img = document.createElement("img");
+            img.src="images/img1444.jpg";
+            img.onload = function(){
+                resolve(img);
+            }
+            img.onerror = function(){
+                reject(img.src);
+            }
+        },2000);
+
+    });
+    var p2 = new Promise(function(resolve,reject){
+        var img = document.createElement("img");
+        img.src="images/img233.jpg";
+        img.onload = function(){
+            resolve(img);
+        }
+        img.onerror = function(){
+            reject(img.src);
+        }
+    })
+    Promise.all([p1,p2]).then(function (data) {
+        console.log("23344");
+        for(var i=0;i<data.length;i++){
+            document.body.appendChild(data[i]);
+        }
+    }).catch(function(error){
+        console.log(111111+error);
+    })
+
+</script>
+</html>

@@ -1,0 +1,213 @@
+
+```
+第五单元 盒模型及文本属性
+    
+    盒模型（宽度） = width + height(content) + padding + margin + border + background
+     div盒子的实际宽度：
+    背景：
+    1. background属性的应用
+        1.1 background-color 背景颜色
+                #CCC
+                red
+                rgb   三原色  red  green  blue
+                rgba   a = alphe 透明度   0 完全透明  1 不透明  取值 0-1之间的小数（255，255，255，0）
+                hsl
+                hsla
+                
+        1.2 background-image  背景图片
+                url 路径
+                
+        1.3 background-repeat 背景图的平铺方式
+                repeat 平铺/铺满   默认铺满整个父元素
+                no-repeat 不平埔 显示一个  
+                repeat-x 水平平铺
+                repeat-y 垂直平铺
+                
+        1.4 background-position 背景图的显示位置
+                默认值  left top 左上角
+                语法:background-position:X Y   /  X
+                如果该属性有两个值，第一个值表示水平方向
+                                    第二个值表示垂直方向
+                如果该属性提供一个值，则表示水平方向，第二个值采取默认值 center  ***
+                
+                取值可以是 关键字   如  left  top  center....
+                            %
+                            number+px
+        1.5 background-attachment 设置背景图片是否跟随浏览器滚动
+                scroll 默认值  滚动
+                fixed 固定 不滚动
+        1.6  background-size:cover \50%\100%  设置图片的大小
+                
+        1.6总结  background 是一个复合属性
+                  语法： background: color image repeat position attachment;
+                  一个元素上添加 多个背景图片的方法是
+                  多个url路径 逗号 隔开、
+                 多个属性值之间用空格
+                    
+    2. margin属性的使用/应用
+        margin 设置盒子与盒子的距离 即 外边距 支持负值
+            
+        2.1 margin:10px;
+            一个值表示上 右 下 左 四个方向都是10px
+            
+        2.2 margin:10px 20px;
+            第一个值表示 上下 第二个这表示左右
+                
+        2.3 margin：10px 20px 30px
+            第一个值表示上  第二个值表示左右  第三个值表示下
+            
+        2.4 margin:10px 20px 30px 40px
+            第一个值表示上  第二个值表示右  第三个值表示下   第四个值表示左
+            
+        2.5 margin可以支持某一个方向的定义
+            eg:margin-top / right / bottom / left
+            
+        2.6 margin 是一个复合属性
+        
+    3. padding属性的应用
+            与上同理
+            注意:  padding 不支持负值
+            padding 设置内容距离边框的距离 即 内边距/内填充/内补白
+            
+    4. border属性的应用
+        border 边框属性
+        
+        4.1 border-width 边框的宽度/粗细
+        
+        4.2 border-color 边框颜色
+        
+        4.3 border-style 设置边框的样式
+                none 默认值 无
+                solid 实线
+                dotted 点线
+                dashed 虚线
+                double 双线
+                
+        4.4 总结: border 是一个复合属性
+            border 的顺序可以被打乱
+            注意:一条边边框线显示必须 三个属性同时存在
+            
+             border-width:20px 30px;
+            border-style:solid double;
+            border-color:red orange;
+            
+    5. 字体属性
+        5.1 font-family 设置字体的类型
+            宋体  有衬线字体
+            微软雅黑   无衬线字体
+            
+        5.2 font-size 设置文本的字体大小
+                px 绝对单位
+                em 相对单位 相对于父元素
+                rem 相对单位 相对于html
+                默认 16px = 100% = 1em = 1rem
+                pc端常见的字体大小是12px或者14px
+                
+        
+        5.3 font-weight 设置文本的粗细/ 加粗程度
+                nromal 设置文本为正常，不加粗
+                bold 加粗
+                bolder 比加粗更粗
+                lighter 比正常更细
+                100 - 500 正常
+                600 - 900 加粗
+                
+        5.4 font-style 设置字体的样式/字体是否倾斜显示
+                normal 默认值正常
+                italic 倾斜
+                oblique 斜体
+                
+        5.5 color 文本的颜色
+        
+        5.6 text-align 设置文本的水平对齐方式
+                left 左对齐
+                center 居中对齐
+                right 右对齐
+                
+        5.7 text-decoration 设置文本的修饰
+                none 无修饰
+                underline 下划线
+                overline 上划线
+                line-through 中划线/删除线
+                blink 文本闪烁
+        
+        5.8 text-indent 设置文本的首行缩进
+                em
+                px
+                rem
+                %
+                支持负值
+                
+        5.9 line-height 设置文本的行间距
+                number+px 具体值
+                number 文本的几倍
+                    eg:line-height:2; 表示行间距是文字高度的二倍
+                    eg:font:16px/2; 表示字体为16px,行间距是字体的两倍
+                
+        5.10 letter-space 设置文字与文字之间的间距
+        
+        5.11 word-space 设置单词与单词之间的间距
+        
+        5.12 vertical-align 垂直对齐: baseline top middel bottom 
+
+             word-break : normal | break-all所有的长短单词词内换行 | keep-all 
+
+             word-wrap : normal | break-word 只针对长单词词内换行
+
+             white-space : normal | pre | nowrap不换行 
+
+             text-overflow 文本溢出: clip裁切掉 | ellipsis 省略号显示
+
+             单行文本的省略号显示：width+overflow+nowrap+text-overflow
+             
+             
+             
+             
+             border-image-source // 使用绝对或相对地址url,引入图片
+
+            border-image-slice   //切割图片，取值支持:<number> 或<percentage>其中number是没有单位的，
+            
+            border-image-width //边框图片的宽度
+            
+            border-image-outset //边框向外延伸的距离
+            
+            border-image-repeat //边框如何重复取值有： stretch | repeat | round
+            
+            它的默认值是：none 100% 1 0 stretch。
+            
+            none:是border-image的默认值，如果取值为none时，表示边框无背景图片。
+
+ 
+
+        使用 border-image 时，其将会替换掉border-style 属性所设置的边框样式。
+
+        此外，规范要求使用 border-image 时边框样式必须存在。
+        
+        
+        
+        补充  
+		小三角形的制作
+			原理:border边框对角线相连 实现四个小三角
+			width:0;
+			height:0;
+			border:number solid transparent;
+			border-top-color:color;  向下的三角
+
+	单行文本省略号
+		第一步:强制文本再一行显示
+			white-space:nowrap
+		第二步:溢出的内容隐藏
+			overflow:hidden
+		第三步:溢出的内容显示省略号
+			text-overflow:ellipsis
+				clip 裁切 默认值‘
+box-sizing:border-box;弹性盒
+
+
+                
+        
+        
+                    
+            
+        
+```

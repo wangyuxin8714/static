@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var obj = new Object();
+    obj.name = "aa";
+    obj.age = 20;
+    var obj1 = {
+        name:"qq",
+        age:18
+    }
+    //对象由两部分组成：属性（对象里面的变量）、方法（对象里面的函数）
+    var person1 = {
+        name:"zhangsan",
+        sex:"男",
+        weight:70,
+        age:22,
+        say:function(language){
+            console.log("会说"+language);
+        },
+        cook:function(cate){
+            console.log("会做各种样式的菜"+cate);
+        }
+    }
+    var person2 = {
+        name:"lisi",
+        sex:"男",
+        weight:80,
+        age:20
+    }
+    //1、这种创建方式叫做工厂模式，把创建对象的过程、细节给封装起来了
+    //对象有很多种类型 Object（Array、Function、Date、RegExp...）
+    //缺点：把对象的类型就明确定义成Object
+    function createPerson(name,age,sex){
+        var obj = new Object();
+        obj.name = name;
+        obj.age = age;
+        obj.sex = sex;
+        return obj;
+    }
+    var p1 = createPerson("aw",22,"nan");
+    var p2 = createPerson("aw3",12,"nan");
+    var p3 = createPerson("aw3",12,"nan");
+</script>
+</html>

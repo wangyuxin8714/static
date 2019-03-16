@@ -1,0 +1,53 @@
+ 字符串的创建:
+     var str="hello world";
+ .length 获取长度
+         通过下标来获取相应的字符
+
+ 字符串截取方法
+     字符串.charAt(下标值)==>通过下标 获取字符串中相应的字符
+         console.log(str.charAt(7));//'o'
+     字符串.charCodeAt(下标值)==>通过下标 获取字符串中相应的字符的ASCII值
+         console.log(str.charCodeAt(5));
+     字符串.slice(起始下标,结束下标);  左包右不包 遇见负数加字符串长度(length) 返回值:string
+         console.log(str.slice(1));//'ello world'
+         console.log(str.slice(3,8));//'lo wo'
+         console.log(str.slice(-4));//'orld'
+         console.log(str.slice(-1,5));//''
+         console.log(str.slice(-8,-5));//'lo '
+     字符串.substr(起始下标,截取个数);
+         console.log(str.substr(1));//'ello world'
+         console.log(str.substr(3,7));//'lo worl'
+         console.log(str.substr(-4));//'orld'
+         console.log(str.substring(-1,7));//'d'
+         console.log(str.substr(-5,-5));//''
+     字符串.substring(起始下标,结束下标)
+         console.log(str.slice(2,5));//'llo'
+	 console.log(str.substring(2,5));//'llo'
+	 console.log(str.slice(5,2));//""
+	 console.log(str.substring(5,2));//'llo'
+	 console.log(str.substring(-1,5));//'hello'
+	 console.log(str.substring(-5,-3));//''
+     查找方法
+	 indexOf(查找字符(串),起始下标)==> 查找字符(串)在字符串中首次出现的位置(下标)  左==>右
+	 查找不着 默认返回-1
+	     console.log(str.indexOf('e'));//1
+	     console.log(str.indexOf('o'));//4
+	     console.log(str.indexOf('o',5));//7
+	     console.log(str.indexOf('x'));//-1
+	     console.log(str.indexOf('wor'));//6*/
+	 lastIndexOf(查找字符(串),起始下标)==> 查找字符(串)在字符串中最后一次出现的位置(下标)  右==>左
+	     console.log(str.lastIndexOf('o'));//7
+	     console.log(str.lastIndexOf('lo'));//3
+	     console.log(str.lastIndexOf("l",6));//3
+     toUpperCase() 转大写
+     toLowerCase() 转小写
+
+ Math.ceil  向上取整
+ Math.floor 向下取整
+ Math.round 四舍五入
+ Math.min  最小值
+ Math.max  最大值
+ Math.random() 随机数 随即生成0--1之间的数   [0,1)
+ Math.floor(Math.random()*(最大值-最小值+1)+最小值);
+ Math.abs() 取绝对值
+ Math.pow(m,n)  求m的n次幂  

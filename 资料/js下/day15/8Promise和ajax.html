@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    var p1 = new Promise(function(resolve,reject){
+        var xhr = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+        xhr.open("get","d.txt",true);
+        xhr.send(null);
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4){
+                if(xhr.status==200){
+                    resolve(eval("("+xhr.responseText+")"));
+                }else{
+                    reject(xhr.status);
+                }
+            }
+        }
+    });
+    p1.then(function(data){
+        var list = data.list;
+        list.forEach(function(item){
+            document.write(item);
+        })
+    }).catch(function(error){
+        alert("出错了"+error);
+    })
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" value="请输入">
+</body>
+<script>
+    var oInput = document.getElementsByTagName("input")[0];
+    oInput.onfocus = function(){
+        console.log(123);
+        this.value = "";
+    }
+    oInput.onblur = function(){
+        console.log(345);
+        this.value="请输入";
+    }
+    oInput.focus();//自动获取焦点
+</script>
+</html>

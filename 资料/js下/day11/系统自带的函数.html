@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 所有的对象都继承Object
+    //数组是对象 Array 继承Object RexExp继承Object   通过原型链的方式实现的
+    console.log(Array.prototype.__proto__==Object.prototype);
+    function A(){
+
+    }
+    function B(){
+
+    }
+    A.prototype = new B();
+    console.log(A.prototype.__proto__==B.prototype)
+    console.log(B.prototype.__proto__==Object.prototype)
+    //A继承B  B继承Object
+    console.log(Object.prototype.__proto__);//null
+</script>
+</html>

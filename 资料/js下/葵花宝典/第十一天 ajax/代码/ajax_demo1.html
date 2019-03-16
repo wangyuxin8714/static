@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> AJAX </title>
+</head>	
+<body>
+	<button id="btn">发送请求</button>
+	
+	<script>
+		//数组存储数据? 怎么存储的
+
+		btn.onclick = function(){
+			//点击按钮向服务器发送请求
+			
+			//有一个对象,可以向服务器发送请求
+
+			var xhr = new XMLHttpRequest();
+
+			//  http://10.106.97.12:8888/login
+
+			//向服务器请求数据
+			xhr.open("get" , "http://10.106.97.12:8888/login?user=xiaohong&pwd=123456" , true);
+			//向服务器发送数据的
+			xhr.send(null);
+
+			// onreadystatechange 这是一个方法. 服务器返回数据后,调用的方法.
+			// 请求是异步的.你什么时候返回数据我不管, 
+			// onreadystatechange 回调方法.
+
+			xhr.onreadystatechange = function(){			
+				if(xhr.readyState == 4 && xhr.status == 200){
+					console.log(xhr.responseText);
+				}
+			}
+			//继续执行下面的代码
+		}
+	</script>
+</body>
+</html>
+
+
+

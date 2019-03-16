@@ -1,0 +1,1469 @@
+
+内嵌：
+<script></script>
+
+位置：head  body 里都可以 
+
+执行顺序：由上到下 
+
+属性：type=text/javascript  是可选的 
+ language=javascript  是可选的
+
+alert("")
+
+外部文件：
+<script src="路径/文件名.js" ></script>
+
+ src是必选项
+
+defer="defer"  延时  只对外部文件生效，对内嵌不生效。
+ 
+
+
+基本语法：
+
+1、区分大小写 
+2、注释：
+   html <!--  - ->
+   css  /*  */
+   js  单行注释//
+       多行注释 /*   */
+
+ 
+3、结束以 ；分号 
+
+
+
+console.log()  控制台显示信息
+
+
+4、
+
+所谓标识符，指变量、函数、属性的名字，
+
+命名规范：
+字母  数字  下划线_  $ 
+第一个字符必须是 字母  _  $
+ 
+关键字和保留字不能用来做标识符 。
+
+变量：  
+字母  数字 下划线命名 。
+第一个字符只能是字母和_.
+
+定义变量的关键字 var 
+
+定义变量的过程:
+var  变量名=赋值;
+多个变量之间用逗号隔开。
+
+
+变量后赋值覆盖先赋值
+
+ 
+var定义的变量叫显式声明 
+没有用var的变量叫隐式声明
+
+var  num1
+
+num1=2334
+
+输入框：prompt(text,value) 
+        prompt(信息，默认值)
+        prompt("请输入信息","这里是默认值")
+
+可选项
+--------
+
+
++  的功能：两个：１个是加法，１个是字符串连接，拼接。
+
+输出的三种方式：
+
+ console.log()         控制台输出
+ alert()                    弹出框
+ document.write()   文档内
+
+
+
+变量的数据类型：
+
+５个基本型，１个复杂型对象类型 object
+
+
+undefined  未定义类型
+null  空类型
+boolean 布尔类型
+number   数值型
+string   字符串类型
+object    对象类型
+   
+判断数据类型的函数： typeof 变量名  或者  typeof(变量名)
+
+1、未定义类型 undefined
+
+    值只有一个 undefined
+  1) 这个变量定义了，没有赋值，那么值为 undefined .类型也是 undefined
+  var  a
+  console.log(a)  a=undefined
+  2)变量从未定义过 ，他的类型为undefined ，值报错。
+  typeof e  
+   
+2、空类型   null
+
+   Null类型是第二个只有一个值的类型，这个特殊值是null。null值表示一个空对象指针。    
+特殊的对象类型：object
+
+3、布尔类型   boolean      
+
+只有两个值 true 真 false 假  。
+
+
+
+Boolean(变量名)
+
+数字：  非0数字为true      0为false
+字符串： 非空字符串为true  "" 空字符串为false
+未定义和null类型都为false
+
+
+4、数值类型   number         数字
+
+整型  45
+浮点型  4.522
+
+范围：
+
+Number.MIN_VALUE: 5e-324
+Number.MAX_VALUE:1.7976931348623157e+308
+-Infinity(负无穷)、+Infinity(正无穷)
+
+3/0   +Infinity(正无穷)
+-3/0  -Infinity(负无穷)
+
+
+NaN   not a Number 不是一个数字   特殊的数值类型 
+
+
+转化为数字：
+Number(变量名)
+
+字符串 ：  "12333"      12333    
+           "adfdf3434"  NaN
+           ""            0
+          "adsfdsf"     NaN
+
+布尔值 ：  true   1   
+           false  0
+ 
+未定义：  NaN  
+null ：     0
+ 
+Number()
+
+"4578abvcd"
+"45.7962dfsfjkl"
+字符串转化为数字的函数：
+parseInt(  )  从第一位起取到整数部分
+parseFloat(  ) 从第一位起取到小数部分
+
+
+isNaN(变量)   不是一个数字为真，是数字为假。
+
+
+5、 字符串类型  string       双引号"" 或者单引号  ''
+
+
+typeof判断变量的数据类型：
+typeof(变量名)  typeof 变量名 
+
+String 数据类型包含一些特殊的字符字面量，也叫转义序列，用于表示非打印字符，
+\n 换行
+\t  制表
+\b 空格
+\r  回车
+\f  进纸
+
+转化为字符串2种方法：
+可以转化任意类型 ：
+ String(123)      "123"
+ String(3>4)      "false"
+ String(3<4)      "true"
+ String(num1)     "undefined"
+ String(null)     "null"
+
+不能转化空类型和未定义 类型 ：
+变量名.toString()
+
+
+
+
+object 
+其实就是一组数据和功能的集合。
+对象的实例化。
+人：手  脚  头 头发  身高   年龄 体重   性别 
+特征：     
+性别：男 
+年龄 ：20
+身高 ：１７０
+肤色：　偏黄
+头发：　短发　
+功能：　
+
+吃饭　
+睡觉
+跑步
+唱歌跳舞　
+上网　
+
+
+女朋友：  
+特征：
+性别： 女 
+年龄： 18-25
+身高：160-165
+体重：100斤
+头发：长发
+长相：甜美
+功能：
+学习 
+做饭
+洗衣服
+上班
+跳舞
+唱歌
+化妆
+打台球
+打篮球
+上网玩游戏
+
+
+
+猫咪:
+
+
+
+大象：
+
+
+
+桌子：
+
+
+
+
+isNaN()   判断是不是数值的函数。返回值为布尔值true  ,false 
+
+如果是数值就为false  ，如果不是数值就为true.
+先往数值转化 ，然后在判断是不是数字。
+
+
+4+3
+一元
+二元
+三元
+
+
+操作符 ：
+
+将同类型的数据（如常量、变量、函数等），用运算符号按一定的规则连接起来的、有意义的式子称为表达式。
+
+一元运算符：
+++  --  
+前置 后置 
+区别？
+
+前置  先增加值在运算
+后置  先运算在增加值
+
+算数运算符：
+
+加性运算符：+  -
+乘性运算符： *  / %
+
+a=3+3  6
+a=3+"3"  33
+a="abc"+true   "abctrue"
+
+
+
+b=3-2  1
+b=3-"2" 1
+b="3"-"2" 1
+b=4-true 3
+b=4-false 4
+b=4-"abc"  NaN
+b=3>5-2   false
+
+c=3*3  9
+c=3*"3" 9
+c=3*true 3
+c=3*false 0
+c="abc"*3  NaN
+
+e=5%2  求余数
+
+e=2%5   2
+
+2-(4+5)*3/2
+
+
+
+优先级：乘性操作符优先于加性操作符，结合性：从左往右。
+
+
+关系运算符（比较运算符）：
+
+返回值为布尔值 true false
+
+<  >  <= >= 
+
+
+1)如果两个操作数都是数值，则执行数值比较。
+2)如果两个操作数都是字符串，则比较两个字符串对应的字符编码值。
+按位比较。
+3)如果一个操作数是数值，则将另一个操作数转换为一个数值，然后执行数值比较。
+注意：如果有一个转化为数字后为NaN，则返回值为false
+
+如果 成绩大于60  则输出 恭喜你及格了，
+否则  则输出   不及格，继续努努力。
+
+
+if(条件表达式){
+条件成立执行的语句;
+}
+else{
+
+条件不成立执行的语句；
+}
+
+  if(a<=18){
+          alert("未成年  ，努力长大哦")
+      }
+   else if(a<=50){
+          alert("恭喜你，成年了，努力奋斗")
+      }
+   else{
+          alert("老年人 ，享受生活")
+      }
+
+作业：  14:21 2015/6/1fdsfs  isNaN(num)   true 
+0   不及格  60   及格 70   良好  80  优秀 100  
+
+
+相等运算符：
+
+返回值布尔值 true  false
+==  !=  ===  !==
+
+相等和不等运算符：先转化类型在比较。
+3==3  3=="3"   true   3=="abc" false 
+
+3!=3 false  3!="abc" true
+
+全等和不全等运算符：不转化，直接比较。
+
+3===3  3==="3" 3!=="3"
+
+
+判断用户名和密码?  用户名=“你的名字”  密码=123456
+
+如果是输入的是星期一  星期二   星期五   工作日
+               星期六   星期日          休息日 
+
+
+
+布尔操作符（逻辑运算符）:
+
+逻辑与  逻辑或  逻辑非 
+
+&&       ||    !
+
+返回值大部分情况下是布尔值
+
+1\>17
+2\学费交齐
+3\考试通过 >60
+
+
+女朋友：
+1）性别：女
+2）年龄：18-25
+3）身高：165以上
+4）相貌：长相甜美
+5）性格：活泼开朗
+
+
+逻辑与：
+多个条件同时满足，才为真。
+true  true   true 
+true  false  false
+false true   false
+false false  false
+
+
+如果有一个操作数不是布尔值的时候：
+1）如果第一个操作数为true，则返回第二个操作数。
+2)如果第一个操作数为false，则不管后面是什么，都返回 
+false.
+
+逻辑与操作属于短路操作， 即如果第一个操作数能够决定结果， 那么就不会再对第二个操作数求值。
+对于逻辑与操作而言，如果第一个操作数是 false ，则无论第二个操作数是什么值，结果都不再可能是
+true 了。
+
+
+//console.log(3<4 && 4!=3 && "abde" && 123)
+
+逻辑或：
+
+只要有一个条件满足，就为真。
+true  true  true 
+true  false  true
+false  true   true
+false  false  false
+
+
+
+
+
+如果第一个操作数为true,则返回true.
+如果第一个操作数为false,则返回第二个操作数。
+
+ //  console.log(4<3 || 3!=5 || 5  ||  "123")
+
+逻辑非 ：
+
+取反 ！
+返回结果是布尔值 
+
+1号   10号   上旬 
+11  20  中旬 
+21  30   下旬 
+
+赋值运算符 ：
+
+简单的赋值操作符由等于号 （ = ） 表示， 其作用就是把右侧的值赋给左侧的变量.
+
+var  a=10
+复合赋值操作符：
+   乘/赋值（ *= ） ；
+   除/赋值（ /= ） ；
+   模/赋值（ %= ） ；
+   加/赋值（ += ） ；
+   减/赋值（ -= ） ；
+   左移/赋值（ <<= ） ；
+   有符号右移/赋值（ >>= ） ；
+   无符号右移/赋值（ >>>= ） 。
+
+逗号操作符：
+
+分隔多个变量 
+var  a=3,b=4,c=4;
+逗号操作符还可以用于赋值。在用于赋值时，逗号操作符总会返回表达式中的最后一项.
+
+条件操作符应该算是 ECMAScript 中最灵活的一种操作符。是三元操作符 。
+
+
+
+variable = boolean_expression ? true_value : false_value;
+
+               条件表达式  ?    为真的结果 :为假的结果
+
+
+var max=a>b?a:b
+
+
+
+一元操作符：
+一元加和减操作符
++
+一元加操作符以一个加号（+）表示，放在数值前面，对数值不会产生任何影响。  在对非数值应用一元加操作符时， 该操作符会像 Number() 转型函数一样对这个值执行转换。
++45 
+
+一元减操作符：
+-
+在将一元减操作符应用于数值时，该值会变成负数（如上面的例子所示） 。而当应用于非数值时，
+一元减操作符遵循与一元加操作符相同的规则，最后再将得到的数值转换为负数。
+
+
+1001
+
+
+优先级：    
+赋值操作符<逻辑运算符<关系运算符（相等运算符）<算数运算符 
+
+a=3<4  &&  3=="4" &&  4+3-2>6
+a=true  &&  false  && true
+
+
+————————————————
+语句：
+流程控制语句：
+
+条件语句 和 循环语句 
+
+if(条件表达式 ){ 
+
+}
+
+if(条件表达式 ){ 
+
+}
+else{
+
+}
+
+
+if(条件表达式 1){ 
+
+}
+else if(条件表达式2）{
+
+}
+
+else if(条件表达式3){
+
+}
+else{
+
+
+}
+
+
+0   不及格  60   及格 70   良好  80  优秀 100  
+
+
+
+输入格式有误 
+isNaN()
+
+
+document 文档
+
+get 获取
+
+Element 元素 
+
+By  通过 按照
+
+Id id名 
+
+   document.getElementById("id名")
+驼峰规则 
+
+-----------------
+鼠标事件：
+onclick 单击
+onmouseover 鼠标划过
+onmouseout  鼠标离开
+
+btn.onclick=function(){
+
+实现的功能
+
+}
+
+
+
+
+表单的值的获取与赋值：
+
+document.getElementById("id名").value
+
+
+document.getElementById("id名").value=""
+
+
+DIV盒子的值的获取与赋值：
+
+document.getElementById("id名").innerHTML
+
+document.getElementById("id名").innerHTML=""
+
+计算器的应用：
+
+1）搭DIV结构
+
+2）获取计算按钮
+
+3） 单击按钮的时候：
+      获取第一个操作数的值 
+      获取第二个操作数的值
+      把操作数的值转化为数字
+      通过if语句判断是选中的何种运算符
+      进行 运算，输出值 
+
+数组：
+
+一组有序的数据序列。
+
+1403A
+
+1403A[0]="牛玉静"
+1403A[1]="张敏"
+1403A[2]="倪艺芮"
+1403A[3]="张婷婷"
+1403A[4]="李盼盼"
+
+
+var class1403A=["牛玉静","张敏","倪艺芮","张婷婷","李盼盼"]
+数组的长度 数组名.length
+
+
+
+获取单选框：
+
+
+ysf=document.getElementsByName("名字")
+获取的是一组数据
+
+ysf[0]
+ysf[1]
+
+ysf[ysf.length-1]
+
+
+_____________________________
+
+switch语句： 条件分支语句
+
+switch(变量名){
+   case  值1：
+    语句1;
+    break;
+
+  case  值2：
+    语句2;
+    break;
+ 
+  case  值3：
+    语句3;
+    break;
+
+default:
+
+ 语句N;
+
+
+}
+
+
+
+
+合并语句 ：
+
+switch(变量名){
+   case  值1：
+   case  值2：
+    语句2;
+    break;
+ case  值3：
+    语句3;
+    break;
+
+default:
+
+ 语句N;
+
+
+}
+
+
+1  10 号   上旬
+11  20    中旬
+21  30    下旬 
+
+60 不及格
+
+60  80  良好
+80  100  优秀 
+
+
+
+在switch 语句中使用任何数据类型 ，无论是字符串，还是对象都没有问题。
+每个 case 的值不一定是常量，可以是变量，甚至是表达式。
+
+default: default 关键字则用于在表达式不匹配前
+面任何一种情形的时候，执行机动代码。
+
+
+
+for(初始化表达式;控制表达式;循环后表达式){
+     循环体；
+ }
+
+for(初始化变量;条件表达式；增量）{
+循环体；
+}
+
+for(var i=1;i<=10;i++){
+
+
+}
+
+无限循环：
+for(var i=1;i<=10;){
+
+}
+for( ; ; ){
+
+}
+
+
+var i=1;
+
+for(;i<=10;){
+
+
+}
+
+for属于前测试循环。
+
+
+while 循环：前测试循环。
+
+变量赋初值
+ while(条件){
+
+循环体;
+增量
+}
+
+
+
+
+
+do- while 循环： 后测试循环
+
+至少执行一次循环体。
+
+do{
+循环体;
+增量；
+
+}while(条件)
+
+
+for in 循环：
+
+是一种精准的迭代语句，可以用来枚举对象的属性 。
+
+
+
+for( 变量i in  数组名){
+
+ 数组名[i]
+}
+
+退出语句： break 和 continue 语句用于在循环中精确地控制代码的执行。 其中， break 语句会立即退出循环，
+强制继续执行循环后面的语句。而 continue 语句虽然也是立即退出本次循环，但退出循环后会从循环的顶
+部继续执行。
+
+
+——————————————-
+函数 ：
+函数： 实现某一功能的多条代码或语句。
+可以在任何时候、任何地方调用 。（随时随地）
+
+上操流程{
+
+	1: 7:20 到操场 集合整队;
+	2: 7:40 站军姿 授旗；
+        3: 7:50 班长述职、文化书记述职
+        4: 8:00 院长讲话
+        5: 8:10 做操
+        6：8:20 喊口号
+        7: 8:30 回班级
+   
+
+}
+
+
+函数的定义：
+声明函数的关键字function
+
+
+函数声明：
+function  函数名(形式参数1，形式参数2.....){
+函数体；
+}
+
+
+调用函数：
+
+直接调用：js
+函数名(实际参数1，实际参数2....)
+
+鼠标事件调用 :html网页中 
+<input type="button"  value="计算"  onclick="函数名(实际参数1，实际参数2)">
+
+写在js里不带参数: DOM0事件处理程序
+
+btn.onclick=function(){
+
+
+}
+
+
+函数的返回值
+
+return 返回
+
+return  变量名;
+
+return之后的语句不执行。
+return 返回值是undefined. 
+
+
+任意个数相加的和
+
+3+4
+5+6+6
+7+9+5+6+7
+sum(3,4,5)
+
+sum(1,2)
+
+sum(4,56,7,44)
+
+
+arguments对象：
+
+
+函数的 参数在内部是用一个数组来表示的。函数接收
+到的始终都是这个数组，实际上，在函数体内可以通过 arguments 对象来
+访问这个参数数组，从而获取传递给函数的每一个参数。
+arguments.length  
+arguments[0]
+arguments[1]
+
+arguments[arguments.length-1]
+
+
+求和：
+
+如果传递过来的是一个参数则  让这个参数加100
+
+
+如果 传递过来的是2个参数  ，则让这两个参数和加200
+
+
+
+
+——----------
+函数没有重载
+
+函数不能重名，后写的函数覆盖先写的函数。
+
+function aa(){
+alert("你好")
+}
+
+function aa(a,b){
+alert(a+b)
+}
+
+aa()
+
+
+函数表达式：
+
+
+var 函数名=function(形式参数1，形式参数2...){
+
+}
+先定义再调用。。
+
+
+函数的作用域 执行环境 
+
+全局变量 可在全局环境中使用，可被任何函数使用 。
+
+局部变量  在局部环境中使用，不能被其他函数使用。
+
+
+
+BOM:浏览器对象模型 
+
+
+window对象：
+
+全局作用域：
+因此所有在全局作用域中声明的变量、函数都会变成 window 对象的属性和方法.
+
+window 对象同时扮演着 js中 Global 对象的角色.
+
+var  a=10
+
+console.log(a)
+console.log(window.a)
+
+框架:
+frame  
+frameset
+iframe
+
+在使用框架的情况下，浏览器中会存在多个 Global 对象。在每个框架中定义的
+全局变量会自动成为框架中 window 对象的属性。
+
+<iframe src="index.html" width="300" height="300"></iframe>
+
+
+
+框架集frameset
+框架 frame
+一般用于论坛、信箱、后台管理系统中实现。
+
+
+间歇调用：
+
+id名=setInterval(函数名,时间间隔毫秒）
+
+setInterval(function(){函数体},时间间隔毫秒）
+
+
+5张图片自动播放 
+
+arr=["1.jpg","2.jpg"]
+
+
+arr[0]
+arr[1]
+
+
+clearInterval(id名)
+
+超时调用：
+
+id=setTimeout(函数名,时间间隔毫秒)   只调用一次
+
+clearTimeout(id名)
+
+
+
+
+系统对话框：
+
+window. alert() 　　弹出框  警告框
+window. prompt(text,value)     输入框 
+window.confirm()    确认框  返回值：true  false   布尔值 
+
+alert()
+prompt()
+confirm()
+
+
+
+
+
+窗口的位置：
+IE、Safari、Opera 和 Chrome :
+
+window.screenTop
+window.screenLeft
+
+FF  IE、Safari、Opera 和 Chrome:
+window.screenX
+window.screenY
+
+窗口的移动：
+
+moveTo(x,y) 接收的是新位置的 x 和 y 坐标值
+moveTo(100,200)
+
+moveBy(x,y)接收的是在水平和垂直方向上移动的像素数
+moveBy(200,100)
+
+窗口的大小：
+
+浏览器窗口大小 
+window.outerHeight
+window.outerWidth
+
+可视区大小 ： 视口大小
+
+window.innerHeight
+window.innerWidth
+
+可视区的宽度和高度：
+document.documentElement.clientWidth
+document.documentElement.clientHeight 
+
+document.body.clientWidth
+document.body.clientHeight
+
+
+窗口的打开和关闭：
+
+
+wd=window.open("url","窗口名字","窗口特性width=150,height=120,fullscreen=yes")
+
+wd.window.close()
+wd.close()
+
+location 对象：
+location 是最有用的 BOM对象之一，它提供了与当前窗口中加载的文档有关的信息，还提供了一些导航功能。
+
+获取地址栏信息
+location.href
+对地址栏信息赋值  超链接跳转
+location.href="http://www.baidu.com"
+
+
+
+
+navigator 对象:
+
+现在已经成为识别客户端浏览器的事实标准。 判断浏览器的版本和类型。
+
+
+screen对象：
+ 
+screen 对象基本上只用来表明客户端的能力.其中包括浏览器窗口外部的显示器的信息，如像素宽度和高度等。
+screen.width  屏幕宽度
+screen.height  屏幕高度
+
+
+history对象：
+历史记录
+前进    history.go(1)   go(4)   history.forward() 前进一步 
+后退    history.go(-1)  go(-3)  history.back()   后退一步
+  
+
+
+DOM:document object model
+
+
+DOM树
+
+
+节点之间的关系：
+
+父子关系：firstChild  lastChild   childNodes  childNodes.length   childNodes[0]
+ childNodes[1]   childNodes[2]      parentNode
+兄弟关系 ：nextSibling  下一个 previousSibling 上一个 
+
+节点的类型：12
+
+ 元素节点  1  
+ 属性节点  2
+ 文本节点  3
+ 注释节点  8
+ 文档节点  9
+
+
+获取属性节点：
+
+getAttributeNode("属性名")
+class="bg"  节点
+get 获取 
+Attribute 属性 
+Node      节点 
+
+
+获取属性节点的值：
+getAttribute("属性名")  "bg" 值 
+设置属性节点的值：
+setAttribute("属性名","属性值"）
+
+
+
+
+
+节点属性：
+节点的类型　  节点的名字　　　            节点的值　
+nodeType      nodeName                    nodeValue
+
+元素节点 1     head  div  h1(元素名)       null
+
+文本节点 3     #text                        文本本身
+
+属性节点 2    class href  id（属性名）      属性值
+
+
+
+节点的方法：
+
+节点的查找方法：
+1)document.getElementById("id名") 一个
+
+2)aa=document.getElementsByName("name名字") 查找到的是一组数据
+aa.length
+
+3)元素名： 
+ document.getElementsByTagName("标签名")  查找到的是一组数据
+length 个数
+
+
+
+插入节点：
+
+创建文本节点 
+
+var text=document.createTextNode("文字信息")
+创建元素节点：
+var 元素名=document.createElement("元素名")
+
+
+父节点.appendChild(子节点)
+
+子节点作为父节点的最后一个元素存在。
+
+
+父节点.insertBefore(新节点，哪个节点之前)
+
+可以做图片切换 ????
+
+
+删除节点 ：
+
+父节点.removeChild(子节点)
+
+
+替换节点：
+父节点.replaceChild(新节点，要替换的节点)
+
+
+
+
+增 删 改 查 
+
+复制节点：
+克隆节点
+
+
+  要复制的节点.cloneNode()  false  不写  只复制结构，不复制内容
+ 
+  要复制的节点.cloneNode(true )  true   既复制结构也复制内容。
+
+
+<ul>
+	<li>11111111111</li>
+	<li>2222222222</li>
+</ul>
+————————————
+
+
+DOM可以改变样式、内容。
+
+html网页信息:
+.innerHTML    
+
+识别的文字信息            
+.innerText   ff不识别
+
+.textContent 都识别
+
+
+改变样式：
+
+
+box.style.属性名="属性值"
+
+font-size  fontSize  驼峰规则
+
+
+box.className="样式名"
+
+box.className=""
+
+
+文档输入：输出流写入到网页的能力
+document.write()
+document.writeln()  空格的距离
+open（）
+close()
+
+
+
+
+_____________________
+
+事件:
+
+鼠标事件：
+
+onclick   单击
+onmouseover  鼠标滑过
+onmouseout   鼠标离开
+
+onmousedown  鼠标按下
+onmouseup    鼠标释放
+
+
+ondbclick  双击 
+
+onmousemove  鼠标移动
+
+onmouseenter  鼠标进入
+onmouseleave  鼠标离开  
+
+键盘事件
+
+keydown    任意键
+keypress   字符键
+
+keyup      释放
+
+
+UI事件类型：
+
+load  加载
+unload  卸载 
+error  错误
+select 文本框选中 
+resize 重调窗口大小 
+scroll 滚动条
+
+<body onload="cc()"  onunload="dd()">
+
+btn.onselect=function(){
+btn.value=""
+}
+
+焦点事件：
+
+focus 获取焦点
+blur  失去焦点
+
+
+事件：文档或浏览器窗口中发生的一些特定的交互瞬间。
+
+事件流：页面接收事件的顺序。
+
+IE：事件冒泡   ：即事件开始时由最具体的元素（文档中嵌套层次最深
+的那个节点）接收，然后逐级向上传播到较为不具体的节点（文档） 。
+
+
+事件捕获：事件捕获的思想
+是不太具体的节点应该更早接收到事件，而最具体的节点应该最后接收到事件。
+
+事件捕获的用意在于在
+事件到达预定目标之前捕获它。
+
+
+DOM事件流：
+“DOM2级事件”规定的事件流包括三个阶段：事件捕获阶段、处于目标阶段和事件冒泡阶段。
+
+
+
+事件就是用户或浏览器自身执行的某种动作。click  mouseover 
+
+事件处理程序：响应某个事件的函数。事件处理程序的名字以 "on" 开头。
+
+
+
+HTML事件处理程序
+<input type="button"  onclick="aa()">
+
+
+DOM0级事件处理程序
+btn.onclick=function(){
+
+}
+
+DOM2级事件处理程序
+
+
+数组：
+
+数组：数据的有序列表。
+      数组的大小可以动态调整。
+      数组的每一项可以保存任何数据类型
+
+数组的创建：
+ 
+ 字面量法：
+
+arr=[1,2,5,6,7]
+
+arr=[]  
+
+
+构造函数法：
+
+var  arr=new Array(3)
+
+var arr=new Array()
+
+数组的赋值 ：
+
+arr[0]=
+arr[1]=
+
+
+方法：
+
+转换方法：
+toString()   字符串  
+valueOf()    数组  对象
+join("/")     用不同的分隔符连接数组的每一项。 转化为字符串
+
+
+插入和删除方法：
+
+1）栈的方法：后进先出   last in  first out
+
+追加一个元素
+数组名.push(值)  返回值是数组的长度
+
+删除一个元素
+
+数组名.pop()    返回值是删除的元素
+
+
+2)队列的方法：
+
+
+追加到最前面
+数组名.unshift(值)  返回的是数组的长度
+
+删除元素
+
+数组名.shift() 返回值是删除的元素
+
+
+
+
+排序的方法：
+
+arr.reverse() 颠倒前后顺序
+
+arr.sort()  按照大小顺序排。
+
+
+不生成新数组，改变的是数组本身。
+
+
+数组的连接方法：
+
+数组名1.concat(数组名2，数组名3......)
+
+生成一个新数组，不会改变数组本身。
+
+查找子数组方法：
+
+数组名.slice(开始下标，结束下标) 包含开始下标， 不包含结束下标
+
+数组名.slice(开始下标) 从开始下标到数组的最后一个元素。
+
+生成一个新数组，不会改变数组本身。
+
+
+splice（）方法：
+
+删除子数组  数组名.splice(开始下标，长度)    返回值是要删除的子数组。
+ 
+            数组名.splice(开始下标）删除开始下标之后的所有数组对象 。
+
+添加子数组  数组名.splice(开始下标，0，值1，值2....)
+
+替换子数组： 数组名.splice(开始下标 ，长度，值1，值2....)
+
+------------------
+string类型：是字符串的对象包装类型。
+
+var  str="hello wellcome to bawei"
+var  str=new String("info here")
+
+字符串属性：
+length
+
+
+字符串的方法:
+清空字符串前后空格的方法：
+trim()
+
+
+字符方法：
+charAt(下标)    返回的是字符串中特定位置的字符。
+
+charCodeAt(下标)返回的是字符串中特定位置的字符的ascii码值
+
+字符串的位置方法：
+
+indexOf(“子字符串”，开始下标)  子字符串在父字符串的位置，返回第一次出现的下标，如果查不到，返回-1.
+lastIndexOf()  从后往前查找第一次出现的位置，返回其所在下标，如果查不到，返回-1.
+
+
+字符串的大小写转化方法：
+
+转化为大写的: toUpperCase()   toLocaleUpperCase()
+转化为小写的：toLowerCase()  toLocaleLowerCase()
+
+查找子字符串的方法：
+
+slice(开始下标，结束下标)  开始下标到结束下标前一位。 下标可以是负数
+slice(开始下标)                   开始下标到结束。
+
+substr(开始下标，长度)    开始下标起，查找长度位。 开始下标可以是负值，长度如果是
+负值会转化为0。
+substr(开始下标)        
+
+substring(开始下标，结束下标) 开始下标到结束下标前一位。 下标不能是负数 
+如果是负数，自动转化为0.
+
+
+
+1、长度6-12之间
+2、第一位必须是字母
+3、其它位只能是字母或数字。
+
+切割字符串  或分割字符串方法：
+
+split("")    一个字符一个字符的分割为数组
+split("分隔符" )  以分隔符分割。
+
+贵妃酸辣粉，烙饼卷带鱼，红烧肉，粉蒸排骨，大拌菜，酸汤洄鱼、珍珠丸子
+ 
+
+——————————————————————————————
+
+
+数学对象：
+
+Math对象
+
+Math的属性：
+Math.PI
+Math.E
+Math.LN10
+Math.LOG2E
+Math.LOG10E
+Math.SQRT2
+Math.SQRT1_2
+
+
+Math.min()  Math.max()  最大值最小值方法：
+Math.min(1,24，6)   1
+Math.max(1,4,-7) 4
+ 
+舍入方法：
+
+Math.ceil()  入上去
+Math.round()  四舍五入
+Math.floor()   舎去
+
+random随机数的方法:
+Math.random()  [0  ,1) 随机数。
+
+Math.random() *10       [0  10] 随机整数  
+
+[50  100]   随机整数
+Math.round(Math.random()*50)+50
+
+小值+Math.round(Math.random()*(大值-小值))
+
+Math.abs()  绝对值方法:
+Math.pow(3,5) 幂的方法：
+Math.sqrt(100) 平方根：
+
+
+
+日期对象
+
+
+
+
+
+

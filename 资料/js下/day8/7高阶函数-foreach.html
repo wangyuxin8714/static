@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //某个函数，如果它的参数是函数，那么这个函数就叫做高阶函数，同时它的参数叫做回调函数
+    var arr = [3,4,5,2,3,4];
+    //数组的方法  forEach 用来遍历数组，它的参数就是函数
+    //item 指的是当前遍历的元素 index 当前遍历的下标 array 该数组
+    arr.forEach(function(item,index,array){
+        console.log(item+":"+index+":"+array);
+    })
+
+    /**
+     * 自己封装的forEach方法
+     * @param callback
+     * @param array
+     */
+    function myForEach(callback,array){
+        for(var i=0;i<array.length;i++){
+            callback(array[i],i,array);
+        }
+    }
+    myForEach(function(a,b,c){
+        alert(a);
+    },["as","drr","frr"]);
+</script>
+</html>

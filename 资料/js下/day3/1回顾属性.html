@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background: red;
+            padding:2px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+<script>
+    //clientWidth 盒子的width属性值+padding值
+    // offsetWidth 盒子的width属性值+padding值+border值
+    var oDiv = document.getElementsByTagName("div")[0];
+    console.log(oDiv.clientWidth+","+oDiv.offsetWidth);
+    document.getElementsByTagName("div")[0].onmousemove = function(e){
+        var ev = e || window.event;
+        //console.log(ev.pageX)//相对于页面  计算滚动条
+        //console.log(ev.clientX);//相对于浏览器的可视区
+        console.log(ev.screenX);//相对于屏幕，显示屏
+    }
+</script>
+</html>

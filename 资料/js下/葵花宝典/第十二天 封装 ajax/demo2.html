@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 封装 ajax </title>
+	<script src="ajax.js"></script>
+</head>
+<body>
+	<script>
+		$ajax({
+			url : "data.json",
+			success : function(data){
+				console.log(data);
+			}	
+		})
+
+	</script>
+</body>
+</html>

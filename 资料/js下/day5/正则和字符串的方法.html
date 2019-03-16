@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //match 返回的是数组
+    var reg = /\d/g;
+    var str = "dwes12awew45dfs3sdr34";
+    var arr = str.match(reg);//null
+    for(var i=0;i<arr.length;i++){
+        console.log(arr[i]);
+    }
+    console.log("=======================");
+    reg = /\d{4}-(\d{2})-(\d{2})/;
+    str = "2018-12-21dsfw2017-10-09";
+    arr = str.match(reg);//null
+    for(var i=0;i<arr.length;i++){
+        console.log(arr[i]);
+    }
+    console.log("=======================");
+    //match方法全局搜索不会取子匹配项
+    reg = /\d{4}-(\d{2})-(\d{2})/g;
+    str = "2018-12-21dsfw2017-10-09";
+    arr = str.match(reg);//null
+    for(var i=0;i<arr.length;i++){
+        console.log(arr[i]);
+    }
+    console.log("=======================");
+    //test()
+    reg = /\d{4}-(\d{2})-(\d{2})/g;
+    console.log(reg.lastIndex);//0
+    console.log(reg.test(str));//true
+    console.log(reg.lastIndex);//10
+    console.log(reg.test(str));//true
+    console.log(reg.lastIndex);
+    console.log(reg.test(str));//false
+    console.log(reg.lastIndex);
+    console.log("=======================");
+    reg = /\d{4}-\d{2}-\d{2}/g;
+    str = "2018-12-21dsfw2017-10-09";
+    arr = reg.exec(str);//
+    arr = reg.exec(str);//
+    for(var i=0;i<arr.length;i++){
+        console.log(arr[i]);
+    }
+    console.log("=======================");
+    reg = /\d{4}-(\d{2})-(\d{2})/;
+    str = "2018-12-21dsfw2017-10-09";
+    arr = reg.exec(str);//
+    arr = reg.exec(str);//
+    for(var i=0;i<arr.length;i++){
+        console.log(arr[i]);
+    }
+    console.log("=======================");
+    reg = /\d{4}-(\d{2})-(\d{2})/g;
+    str = "2018-12-21dsfw2017-10-09";
+    arr = reg.exec(str);//
+    arr = reg.exec(str);//
+    for(var i=0;i<arr.length;i++){
+        console.log(arr[i]);
+    }
+</script>
+</html>

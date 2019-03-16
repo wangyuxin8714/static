@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var p1 = new Promise(function(resolve,reject){
+        // if(成功的条件){
+        //     resolve(data);
+        // }else{
+        //     reject();
+        // }
+        console.log(1111);
+        //resolve("成功了");
+        reject();
+    });
+    /*p1.then(function(message){
+        console.log("成功的函数"+message);
+    },function(error){
+        console.log(error);
+    })*/
+    p1.then(function(data){
+        console.log("成功了");
+    }).catch(function(){
+        console.log("error");
+    })
+    //p1.then((data)=>{console.log("成功了")}).catch(()=>{console.log("error")});
+    console.log(222);
+</script>
+</html>

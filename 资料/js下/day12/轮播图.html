@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        div{
+            position: relative;
+            width:730px;
+        }
+        div img{
+            display: none;
+        }
+        ol{
+            position: absolute;
+            bottom: 20px;
+            left:0;
+            width:100%;
+            text-align: center;
+        }
+        li{
+            display: inline-block;
+            width:15px;
+            height:15px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 15px;
+            border:1px solid #fff;
+            margin:0 10px;
+            background: #ffffff;
+        }
+        .active{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="carousel">
+        <img src="images/img1.jpg" alt="" style="display: block">
+        <img src="images/img2.jpg" alt="">
+        <img src="images/img3.jpg" alt="">
+        <img src="images/img4.jpg" alt="">
+        <ol><li class="active"></li><li></li><li></li><li></li></ol>
+    </div>
+</body>
+<script>
+    var oDiv = document.getElementById("carousel");//图片的容器
+    var imgs = document.getElementsByTagName("img");//图片
+    var lis = document.getElementsByTagName("li");//页码
+    var index = 0;//当前播放的图片的下标
+    var timer = null;
+    auto();
+    oDiv.onmouseover = function(){
+        clearInterval(timer);
+    }
+    oDiv.onmouseout = function(){
+        auto();
+    }
+    function auto(){
+        timer=setInterval(function(){
+            next();
+        },1000);
+    }
+    //切换下一页
+    function next(){
+        //index  是不是之前播放的图片的小标
+        imgs[index].style.display = "none";//让上一次播放的图片隐藏
+        //console.log(index+"++++++");//上一张
+        lis[index].className = "";
+        index++;//1
+        //console.log(index+"=================");//下一张
+        if(index==imgs.length)index=0;
+        imgs[index].style.display = "block";
+        //设置选中的当前页
+        lis[index].className = "active";
+    }
+
+</script>
+</html>

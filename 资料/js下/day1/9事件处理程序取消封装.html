@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background: orange;
+            color:white;
+            margin-left:10px;
+            cursor: pointer;
+        }
+        div{
+            height:300px;
+            border:1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <span>+</span>
+    <span>取消增大</span>
+    <div style="font-size: 16px;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae blanditiis, cumque dicta dolor doloremque dolores eaque eius enim eos ex, fugit inventore ipsa laudantium minus mollitia natus nesciunt quae recusandae reiciendis sit totam vero vitae voluptatum. Aliquam blanditiis, dignissimos labore natus placeat possimus provident quia quis rerum ullam?
+    </div>
+</body>
+<script>
+    //dom0级事件处理程序取消 元素.on事件类型=null
+    var spans = document.getElementsByTagName("span");
+    var oDiv = document.getElementsByTagName("div")[0];
+    addEvent(spans[0],"click",fn);
+    addEvent(spans[1],"click",fn1);
+    /**
+     * 绑定事件
+     * @param ele
+     * @param type
+     * @param fn
+     */
+    function addEvent(ele,type,fn){
+        if(ele.addEventListener){
+            ele.addEventListener(type,fn,false);
+        }else if(ele.attachEvent){
+            ele.attachEvent("on"+type,fn);
+        }else{
+            ele["on"+type] = fn;
+        }
+    }
+    /**
+     *取消事件绑定
+     * @param ele
+     * @param type
+     * @param fn
+     */
+    function removeEvent(ele,type,fn){
+        if(ele.removeEventListener){
+            ele.removeEventListener(type,fn,false);
+        }else if(ele.detachEvent){
+            ele.detachEvent("on"+type,fn);
+        }else{
+            ele["on"+type] = null;
+        }
+    }
+    function fn(){
+        oDiv.style.fontSize = parseInt(oDiv.style.fontSize)+1+"px";
+    }
+    function fn1(){
+        removeEvent(spans[0],"click",fn);
+    }
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function A() {
+    }
+    console.log(A.prototype.constructor===A);//true
+    var a = new A();
+    console.log(a.constructor===A);
+    console.log(new A().constructor===A);
+    //系统自带构造函数Array、Date、Object、RegExp
+    console.log(Array.prototype.constructor===Array);
+    var a1 = [];//new Array()
+    console.log(a1.constructor===Array );
+    //A是一个函数  A是Function的一个实例
+    //var A = new Function()
+    console.log(Function.prototype.constructor===Function);
+    console.log(A.constructor===Function);
+    //Array 构造函数 是Function的一个实例
+    console.log(Array.constructor===Function);
+</script>
+</html>

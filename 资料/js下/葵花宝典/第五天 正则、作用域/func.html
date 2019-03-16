@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 函数传参 </title>
+</head>
+<body>
+	<script>
+		
+
+		function fn(a){
+			a = 10;
+			console.log(a);
+		}
+
+		var a = 1;
+
+		fn(a);
+
+		console.log(a);	// 1
+
+
+
+		var b = {
+			c : 1,
+		}
+
+		console.log(b);
+
+
+		function fo(o){
+			//修改 b 对象
+			o.c = 10;
+
+			o = {}	//形参创建新对象, 实际参数不变.	
+		}
+
+		fo(b);
+
+		console.log(b);
+
+		console.log(b.c);
+		
+
+		// 总结 : 当传递的实参是基础数据类型时, 修改形参,实参的值不会改变
+		// 		 当传递的实参是引用数据类型时, 修改形参的属性,实参的值会改变.
+
+
+		// 深层次理解 , 传递基本数据类型时,是在函数内部赋值了一个新的.
+		//            传递引用数据类型, 其实形参是一个引用(指针).
+		
+	</script>
+</body>
+</html>

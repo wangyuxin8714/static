@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //javascript 的继承是基于原型链的继承来实现的
+    //Array 继承了Object Function 继承了Object Date 继承了Object RegExp 继承了Object
+    //Array.prototype = new Object()
+    console.log(Array.prototype.__proto__===Object.prototype);//true
+    console.log(Function.prototype.__proto__===Object.prototype);//true
+    console.log(Object.prototype.__proto__);//null
+    console.log(Object.__proto__===Function.prototype);//Object是Function 的实例
+</script>
+</html>

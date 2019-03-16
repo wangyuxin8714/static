@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function A(){}
+    var a1 = new A();
+    console.log(a1.__proto__===A.prototype);
+    // 确定实例和原型对象的关系：instanceof  isPrototypeOf
+    //A  A.prototype
+    console.log(a1 instanceof A);//true
+    console.log(A.prototype.isPrototypeOf(a1));//true
+    var arr = new Array();
+    console.log(A.prototype.isPrototypeOf(arr));//false
+</script>
+</html>

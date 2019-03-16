@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //修饰符i忽略大小写
+    var reg = /a/ig;
+    console.log(reg.test("QASW"));
+    //修饰符m  查找多行
+    reg = /^a/igm;
+    console.log(reg.test("wed\nardd"));
+    //第二种创建方式 1、区别 多加\ 2、可以使用变量
+    var reg1 = new RegExp("\\d","g");
+    var temp = "\\d{2}";
+    console.log(reg1.test("23wse"));
+    reg2 = new RegExp(temp,"g");
+    console.log(reg2.test("23wse"));
+
+</script>
+</html>

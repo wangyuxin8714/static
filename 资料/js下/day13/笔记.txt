@@ -1,0 +1,38 @@
+1、ajax的使用过程
+	1、创建对象
+	  var xhr = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+	2、创建一个http链接，设置一些相关的信息
+	  xhr.open();
+	    open方法有三个参数：
+	    	1、method   
+	    	     get(GET)或者post(POST)
+	    	2、url 
+	    		请求的地址
+	    	3、是否异步
+	    		true|false  默认是true
+	3、提交，发送请求
+	   xhr.send()
+	   	send方法里面的参数是一个字符串，这个参数表示的是向后台传递的参数
+	   	如果设置的请求是get  那么send方法里面就直接写null 
+	   	如果是post请求，并且要向后台传递一些参数，那么就把这些参数以字符串的形式写进来
+2、readystate： ajax的状态值 
+	ajax对象有一个属性 readystate ajax的状态值
+	0 还未初始化 还没调用open方法  
+	1 已经调用了open方法，还没调用send();
+	2 调用了send()
+	3 后台只是发送了一部分数据或者后台正在解析数据 
+	4 已经获取了所有的数据，可以进行操作了
+
+3、ajax对象提供了一个事件onreadystatechange，这个事件是readystate发生变化的时候会触发这个事件
+4、status:http的状态码
+	200 表示的是成功  404 请求的资源没找到  500 服务器内部错误
+
+5、xhr.responseText 请求回来以后后台返回来的响应数据，这是一个字符串
+6、get和post的区别
+	1、get传输的数据大小有限制，最多一般不超过2Kb,post基本无限制
+	2、传递参数的方式不同
+	    get：直接把参数拼接到请求地址的后面http://www.weibo.sina.com?name=zhangsan&age=20&sex=male&tel=13456765678
+	    post:
+	      xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+	      xhr.send("name=lisi&age=20&tel=13456787656");
+	 3、get请求不安全

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+   //[^abc] 非、除了a、b、c
+    //[^0-9] ==  \D
+    //正则的方法  exec() 返回符合匹配模式的字符结果 是一个数组，如果没找到匹配项 返回null，
+   // 返回的数组第一个元素是匹配结果第一项，第二个元素开始就是符合匹配的子匹配项
+    var reg = /\d{3}/g;
+    var str = "sw34de56gt";
+    console.log(reg.exec(str));//34
+   console.log(reg.lastIndex);//4
+    console.log(reg.exec(str));//56
+    //分组
+    reg = /(abc)?/;
+    console.log(reg.test("wseab"));//true
+    reg = /-(\w)(\s)/;
+    console.log(reg.exec("esd-e sd-de"));//["-e ","e"," "]
+    //字符串的match() 把符合匹配模式的字符取出来 返回的是数组，没有匹配项也是返回null
+    reg = /\d/g;
+    str="sew123dee566";
+    console.log(str.match(reg));
+    str = "2018-12-20,2017-10-22,desdad";
+    reg = /\d{4}-\d{2}-\d{2}/g;
+    console.log(str.match(reg));
+   reg = /\d{4}-(\d{2})-(\d{2})/g;
+    console.log(str.match(reg));
+    /*
+    * match方法是字符串的方法，会把符合匹配模式的字符取出来，组成一个新的数组，如果匹配模式没有g，
+    * 则返回的数组第一个元素是对应的匹配项，第二个元素开始就是子匹配项(第一个小括号)
+    * 如果匹配模式是g，则返回所有的匹配项，不返回子匹配项
+    * exec是正则的方法 返回的结果是数组，没有匹配项返回null，如果匹配模式是g ，那么它再次查找的时候会在上一次查找的基础之上去查找
+    * 如果匹配模式不是g ，始终从字符串 0 去查找
+    * */
+</script>
+</html>

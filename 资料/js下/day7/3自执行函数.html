@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*function f(){
+        console.log(123);
+    }
+    f()*/
+    (function(){
+        console.log(123);
+    })();
+    (function(i){
+        var a = 3;
+        console.log(i);
+    })(2);
+    //模仿块级作用域
+    (function(){
+        if(true){
+            var b = 4;
+        }
+    })();
+
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 作用域 </title>
+</head>
+<body>
+	<script>
+		/********** 全局作用域 ********/
+
+		var a = 10; 	//a 就是全局作用域,a 在任何地方都可以访问到,可以是用a
+
+
+		{
+			var b = 10;
+		}
+
+		console.log(b);		// 10
+	
+
+		if(false){
+			var c = 10;
+		}		
+		console.log(c);		//undefind
+
+
+		for(var i = 0;i<10;i++){
+
+		}
+		console.log(i);		//10
+
+ 
+		/************** 局部作用域 ****************/
+
+		function fn(){
+
+			var a =10
+		}
+    
+
+
+	</script>
+</body>
+</html>

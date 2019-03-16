@@ -1,0 +1,173 @@
+开发：  1建盒子--标签--结构层级标签----考虑用哪个标签最合适？----html页面
+	2填内容--内容层级标签-----html页面中
+	3表现--使用哪个选择器？---添加那些属性？------css文件
+
+标签学习：是什么标签，什么情况下使用，注意事项有啥，写法与标签属性？？？？
+
+<div></div> 通用块元素 容器  1结构盒子 2内容混杂
+
+
+
+标题标签：<h1></h1>---<h6></h6> 容器 块 加粗 字号
+	h1用法：logo图 网页欢迎词
+	h2-h6:标题文字
+	h标签不能嵌套h
+
+段落标签：<p></p> 容器 块
+	用法：1多行段落文字、2孤立的单行文本
+	p内部只能嵌套内联元素
+
+
+
+无序列表标签：块 容器
+	用法：1 子元素表现一致
+<ul>块 容器
+    <li><a href="#">首页</a></li>块 容器
+    <li><a href="#">百家</a></li>
+    <li><a href="#">新闻</a></li>
+    <li><a href="#">社会</a></li>
+     <p>dfgfg</p>
+    <li><a href="#">首页</a></li>
+</ul>
+
+默认特点：实心圆（disc）；空心圆（circle）、方块（square）、隐藏（none）（decimal）数字  通过list-style或list-style-type属性改变风格
+
+list-style-image:url();将图片作为列表的项目符号
+
+项目符号的位置
+list-style-position：inside；
+list-style-position ：outside； 默认
+
+应用：导航、整齐的列表项
+
+有序列表：
+<ol type="a" reversed="reversed" start=“1”>
+    <li><a href="#">首页</a></li>
+    <li><a href="#">百家</a></li>
+    <li><a href="#">新闻</a></li>
+    <li><a href="#">社会</a></li>
+    <li><a href="#">首页</a></li>
+</ol>
+
+默认特点：数字索引；通过ol标签上的type属性改变风格：A、a、I、i
+
+start：起始值
+
+reversed="reversed"反转
+
+ul li,ol li{ list-style-type:none;}群组选择器，用逗号分隔
+
+定义列表：名词 块 容器
+<dl>
+    <dt>北京</dt>
+    <dd>海淀区</dd>
+    <dd>朝阳区</dd>
+    <dd>大兴区</dd>
+    <dt>河南</dt>
+    <dd>郑州</dd>
+    <dd>焦作</dd>
+    <dd>济源</dd>
+</dl>
+
+dt是定义项，dd是描述项
+
+应用：图文混排 dt名词/标题/ 简单，dd定义/描述/复杂
+浮动并行时，要定义dt或dd宽度
+
+子元素有两种不同的表现
+
+
+
+
+
+
+
+
+图片标签：传达信息用图 <img src=“” alt=“替换文本” title=“鼠标下显示的描述/标题文字/提示”/> 空 内联
+css背景图：修饰用图
+
+
+超链接标签：<a href=“#”></a> 容器 内联
+<a href="html/jiadian.html" target="_blank" name="">家电城</a>
+
+target=目标文件的打开位置。默认在原窗口打开  _self
+
+target="_blank" 新建窗口打开
+
+target="_parent"父级框架
+
+target="_top"最顶级框架
+
+锚点/书签链接实现同页面或不同页面指定打开位置的跳转，实现原理，a元素里的href值=#+目标元素的id值或name值
+
+<a href="#name">我要找到你</a>
+
+<h1 id="name">我在这里等你！</h1>
+<a name="name"></a>
+
+href的链接对象：网址、空链接、图片、exe应用程序，邮件mailto:
+
+
+span:特殊的文本字节、日期---通用的内联元素--修改行内特例
+格式化span标签：
+b、strong：加粗
+em、i：倾斜
+u ：下划线
+sup：上标
+sub：下标
+
+a
+img
+
+br 
+
+标签的表现特征：
+标签分类：1、block块标签的特点：独占一行，自动换新行；支持所有属性【div、hn、p、ul、li、ol、dl、dt、dd,table,form】，默认宽度100% 默认高度内容
+
+	  2、行内/内联标签inline的特点：默认在一行内显示；行内元素的宽高默认被内容所撑开；默认不支持width、height、上下margin、上下padding属性【a、img、span、b、strong、em、i、u，input、textarea select label,sup,sub】，内容的宽度
+	
+	
+
+如何转化标签？
+
+	1、display：block；将行内元素转化为块元素
+
+	2、display：inline；将块元素转化为行内元素（默认值）img
+
+	3、display：inline-block；内联块元素属性；既支持宽高又支持在一行显示 ie6兼容
+
+	4、display：none；整体隐藏 br datalist
+	
+	5、display:list-item
+	6、display:table-cell 内的元素可垂直居中
+
+	**或者：float/position：absolute/fixed
+	注意：是元素表现特征的转换，3种方法
+
+色块：1、margin：0 auto；快元素居中
+      2、text-algin:center；  内联元素居中
+
+标签的嵌套规则：块》块、内联
+	  内联》内联
+
+《结构层-表现层-行为层-内容层》
+
+
+思考总结：各个元素的不同作用，什么情况下使用
+
+
+
+
+&lt; <
+
+&gt; >
+
+&quot;"
+
+&reg; 注册
+
+&copy;版权
+
+&nbsp;半角空格
+
+

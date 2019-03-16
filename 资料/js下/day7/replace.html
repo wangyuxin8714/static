@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var str = "border-left-color";
+    // borderLeftColor
+    var reg = /-([a-z])/g;
+    var str1=str.replace(reg,function(a1,a2){
+            //a1  当前匹配项
+        console.log(a1+"++++"+a2);
+        //return a1.substring(1).toUpperCase();
+        return a2.toUpperCase();
+    })
+    console.log(str1);
+</script>
+</html>

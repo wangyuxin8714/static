@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 阻止默认事件</title>
+</head>
+<body>
+
+	<input type="text">
+	<br>
+	<input type="text">
+
+	<a href="http://www.google.com" id="a">跳转</a>
+	
+	<script>
+		//获取 a 标签
+		var a = document.getElementById("a");
+
+		//a 标签在创建的时候,会自带一个点击事件. 
+
+		//给 a 标签添加一个点击事件
+
+		// a.onclick = function(){
+
+		// 	//调用这个方法,就阻止了默认事件.
+
+		// 	preventDefault(event);
+
+		// }
+
+		// a1.onclick = function(){
+		// 	preventDefault(event);
+		// }
+
+		// function preventDefault(event){
+		// 	//非 IE
+		// 	if(event.preventDefault){
+		// 		event.preventDefault();
+		// 	}
+		// 	//IE 8及以下
+		// 	if(event.returnValue){
+		// 		event.returnValue = false;
+		// 	}
+		// }
+
+
+		//封装事件对象 , 
+		var eventUtil = {
+			//添加一个事件
+			addEvent : function(element,type,fn){
+				if(element.addEventListener){
+					element.addEventListener(type, fn, false);
+				}else if(element.attachEvent){
+					element.attachEvent("on" + type,fn);
+				}else{
+					element["on" + type] = fn
+				}
+			},
+			//删除一个事件
+			removeEvent : function(element,type,fn){
+				if(element.removeEventListener){
+					element.removeEventListener(type, fn, false);
+				}else if(element.detachEvent){
+					element.detachEvent("on" + type,fn);
+				}else{
+					element["on"+type] = null;
+				}
+			},
+			//阻止事件流
+			stopEvent : function(event){
+				if(event.stopPropagation){
+					event.stopPropagation();
+				}
+				if(event.cancelBubble){
+					event.cancelBubble = true;
+				}
+			},
+			//阻止默认事件
+			preventDefault : function(event){
+				if(event.preventDefault){
+					event.preventDefault();
+				}
+				if(event.returnValue){
+					event.returnValue = false;
+				}
+			}
+		}
+
+
+		function fn(){
+			console.log("a被点击了");
+			var e = event || window.event;
+			eventUtil.preventDefault(e);
+		}
+
+
+		//给 a 添加一个点击方法
+
+		eventUtil.addEvent(a,"click",fn);
+		eventUtil.removeEvent(a,"click",fn);
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+ switch语句 是选择结构的一种 
+	switch后小括号中和case后可以是任意类型的内容
+	switch会用 switch后 小括号中的值 和 每个case后的值 做全等比较 如果全等 执行 相应case后的代码块
+
+ break:立即结束switch的执行 (可选的)
+	执行语句中,没有遇到break 则会一直往下执行 直到遇到break 如果一支没有遇到 break 则会将switch语句执行完毕 
+	case 和default的位置 不会影响执行效果
+	多个case 可以执行 同一条语句
+
+ default:缺省值 (可选的)
+	语法结构:
+	    switch('a'){
+			case 'a':代码块;break;  
+			case value:代码块;break;  
+			case value:代码块;break;  
+			case value:代码块;break;  
+			case value:代码块;break;
+			...  
+			default:代码块;
+			}
+ if和switch的区别
+     1)可以互相替换
+     2) 当分支在三条以内时(<=3)使用if语句,当分支在四条及以上(>=4)时 使用switch语句
+ 
+ 逻辑运算符： 按照优先级 ! > && > ||
+  ! 
+     结果类型为 boolean类型 非真即假 非假即真
+  && 
+      找假==> 1)逻辑表达式中 如果有假的值 则返回第一个为假的值
+              2)全部为真时,返回最后一个为真的值
+  || 
+      找真==> 1)逻辑表达式中 如果有真的值 则返回第一个为真的值
+              2)全部为假时,返回最后一个为假的值

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //函数里面套函数，并且把这个函数返回回去 这就形成了一个闭包
+    //外部可以访问内部的变量
+    function fn(){
+        var a = 0;
+        function fn1(){
+            //fn1 > fn > window
+            return a++;
+        }
+        return fn1;
+    }
+    console.log(fn()());
+    function fn(){
+        var a = 1;
+        return function(){
+            console.log(234);
+            //return a;
+        };
+    }
+    console.log(fn()());//undefined
+
+    function fn1(){
+        var a = 1;
+        function fn2(){
+            a++;
+            console.log(a);
+        }
+        return fn2;
+    }
+    var tem = fn1();// fn2 一直在内存保存着
+    tem();//2
+    tem();//3
+    tem();//4
+    fn1()();//2
+    fn1()();//2
+    fn1()();//2
+    ////////
+    function f(a){
+        return function(b){
+            return function (c){
+                alert(a+b+c);
+            }
+        }
+    }
+    f(1)(2)(3);
+</script>
+</html>

@@ -1,0 +1,107 @@
+单选：
+	1.当前文件为html文件夹下的demo.html，现在在demo.html中点击首页连接
+	与html文件处于同一目录的index.html这个文件夹，正确的写法 A
+
+	A <a href="../index.html">首页</a>
+	B <a href="./index.html">首页</a>
+	C <a href="index.html">首页</a>
+	D <a href="../../index.html">首页</a>
+
+
+	2.a{width：100px；height：20px；}加上（）属性就可以让设置的宽高起作用？A
+	
+	A display:block;
+	B display:inline;
+	C display:table;
+	D display:cell;
+
+	3.以下HTML的注释，使用方法正确的是（）C
+
+	A #
+	B //
+	C <!---->
+	D /**/
+
+	4.引入外部CSS文件的标签是（）D
+	
+	A style
+	B meat
+	C head
+	D link
+
+	5.标签用于存放浏览器不可见的信息，以下正确的是（）B
+
+	A HTML
+	B HEAD
+	C BODY
+	D 以上都不对
+
+	6.以下那个标签是行内元素（）B
+
+	A P
+	B IMG
+	C UL
+	D DIV
+
+多选：
+	7.表单的提交方式有哪两种？（）AB
+
+	A get
+	B post
+	C default
+	D request
+
+	8.哪两个标签是用来书写下拉列表（）AB
+	
+	A select
+	B option
+	C textarea
+	D form
+
+	9.HTML4中有哪些类型的input元素？()ABCD
+	
+	A text
+ 	B password
+	C submit
+	D button
+
+判断题：
+	10.strong与em标签属于行内元素，两个标签都是用来加粗文本的。错
+	
+	
+	
+	11.<input type="radio" id="man"><label>男人<label>点击“男”就可以操作单选按钮  对
+	
+	
+
+	12.link标签是空标签   错
+
+	
+
+填空题：
+	13.（）标签最常见的用途是连接样式表 link	
+
+	14.（）标签是用于内嵌样式表的   style
+
+s
+	15.（）标签中的内容在浏览器中是可见的页面内容  body
+
+	16. HTML的注释是（）   <!------>
+
+	17.（）标签存放的浏览器不可见的信息   haed
+
+	18.（<input type="text"/>）标签可以在页面中显示一个单行文本框，它的值可以通过（value）属性来设置。  
+
+	19. input标签的type值为（submit）时可以书写一个提交按钮
+
+	20. （textarea）标签用来书写多行文本域
+
+*
+*
+*
+*
+*
+*
+*
+*
+*

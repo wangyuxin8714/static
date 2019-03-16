@@ -1,0 +1,56 @@
+事件：
+	文档或浏览器窗口中发生的一些特定的交互瞬间
+事件处理程序：
+	 1、HTML事件处理程序
+        缺点就是html代码和js的耦合性太强
+	2、DOM0级事件处理程序
+		元素.onclick = function(){}
+    3、DOM2级事件处理程序
+		标准：addEventLIstener("click",fn1,false) 第三个参数：是否在捕获阶段调用事件处理程序，默认false
+		绑定带参数的函数
+			addEventListener("click",fn1,false)
+			按添加事件的顺序执行
+		非标准：attachEvent("on"+事件名称,事件函数)ie不支持捕获，所以只会在冒泡阶段调用事件处理程序
+				倒序执行   
+		事件取消 
+			1、DOM0级  
+			元素.onclick = null
+			2、DOM2级
+			标准：removeEventLIstener() 与添加事件传入参数相同，所以不能移除匿名函数的事件
+			非标准：detachEvent()
+事件流：
+	DOM是树形结构，当标签元素产生一个事件的时候，该事件会在元素节点与根节点之间的路径传播，路径所经过的节点都会收到
+    该事件，这个传播的过程就叫做dom事件流。
+    IE提出的是冒泡流，而网景Netscape提出的是捕获流
+    目前低版本的IE浏览器还是只能支持冒泡流，所以为了能够兼容更多的浏览器，建议大家使用冒泡流。
+    一个完整的JS事件流是从document开始，最后回到document的一个过程,有的浏览器一直冒泡到window
+    dom2级事件规范要求从document开始，但是有的浏览器是从window开始的
+    dom2级事件流包括3个阶段:事件捕获阶段、处于目标阶段、事件冒泡阶段，首先发生的是事件捕获
+	两种事件流：   
+    1、冒泡   
+        当一个元素接收到事件时，会把他接收到的所有传播给它的父级
+        阻止事件冒泡
+        ev.stopPropagation() 兼容谷歌、火狐、ie11及以上
+        ev.cancelBubble = true 兼容ie
+        if(ev.stopPropagation){
+                    ev.stopPropagation();
+                }else{
+                    ev.cancelBubble = true;
+                }
+    2、捕获
+        先由不具体的元素接收事件，最具体的节点最后才接收到事件。
+        由外到内
+事件委托也叫事件代理，利用事件冒泡
+取消浏览器默认行为(事件的默认行为)，比如点击超链接、取消提交表单  
+    ev.preventDefault()兼容谷歌火狐ie9及以上
+        ev.returnValue = false 兼容ie
+事件对象
+    事件源(触发事件的元素) ev.target() 不支持ie8及以下  ev.srcElement不支持火狐
+    默认为函数的第一个参数为事件对象，ie浏览器需要使用window的event属性，HTML级事件处理绑定事件，需要传入event
+    var ev = ev || window.event;
+	
+对象的格式：两种访问方法:.和[]
+    btn.onclick = function(){}
+    btn["onclick"] = function(){} 主要是为了解决属性名不是合法的标识符。
+
+	

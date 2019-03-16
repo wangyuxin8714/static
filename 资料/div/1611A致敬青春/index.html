@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>滑动</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="div">
+					<audio src="voice/华语群星 - 北京东路的日子 [mqms].mp3" autabutter autoplay="autplay" autloop  loop="1"></audio>
+				</div>
+	<div id="wrap">
+		<div id="div1">
+			<div id="ms">
+				1611A
+			</div>
+			<div id="yw">
+				致<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;全体英才!
+			</div>
+			<div id="sd">
+				
+			</div>
+			<p>
+				成功在明天 努力在今天
+			</p>
+			<div id="time">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<ul>
+			<li class="a">
+				1611A <br>
+				优秀只是一种习惯<br>
+				成功只是家常便饭
+			</li>
+			<li>
+				<img src="images/一组/尚宗泽.jpg" >
+				<img src="images/一组/张猛.jpg" >
+				<img src="images/一组/杨质瑞.jpg" >
+				<img src="images/一组/江琪.jpg" >
+				<img src="images/一组/王昱鑫.jpg" >
+				<img src="images/一组/邢长江.jpg" >
+
+			</li>
+			
+			<li>
+				
+				<img src="images/二组/IMG20180822134641.jpg">
+				<img src="images/二组/IMG20180822134721.jpg">
+				<img src="images/二组/IMG20180822134751.jpg">
+				<img src="images/二组/IMG20180822134808.jpg">
+				<img src="images/二组/mmexport1534917103996.jpg">
+				<img src="images/二组/P80822-122055.jpg">
+			</li>
+			
+			<li>
+				<img src="images/三组/刘慧敏.JPG" >
+				<img src="images/三组/张智轶.jpg" >
+				<img src="images/三组/张泽林.jpg" >
+				<img src="images/三组/李航飞.JPG" >
+				<img src="images/三组/申丹丹.JPG" >
+				<img src="images/三组/邓浩东.jpg" >
+			</li>
+			
+			<li>
+				<img src="images/四组/任雅茹.jpg">
+				<img src="images/四组/刘显通.jpg">
+				<img src="images/四组/刘海祥.jpg">
+				<img src="images/四组/叶文程.jpg">
+				<img src="images/四组/李江.jpg">
+				<img src="images/四组/王晓.jpg">
+			</li>
+			
+			<li>
+				
+				<img src="images/五组/唐小彬.jpg" >
+				<img src="images/五组/曹品.jpg" >
+				<img src="images/五组/王艳侠.jpg" >
+				<img src="images/五组/郑文文.jpg" >
+				<img src="images/五组/郑王飞.jpg" >
+				<img src="images/五组/陈永坤.jpg" >
+			</li>
+			
+			<li>
+				<img src="images/六组/张婉莹.jpg" >
+				<img src="images/六组/杜丽雯.jpg" >
+				<img src="images/六组/王贞尧.jpg" >
+				<img src="images/六组/韩金洪.JPG" >
+				<img src="images/六组/赵思荣.JPG" >
+				<img src="images/六组/李伟泽.jpg" >
+			</li>
+			<ol>
+			<li></li>
+			<li class="a1">尚宗泽</li>
+			<li class="a1">张猛</li>
+			<li class="a1">杨质瑞</li>
+			<li class="a1">江琪</li>
+			<li class="a1">王昱鑫</li>
+			<li class="a1">邢长江</li>
+			<li class="a2">段然</li>
+			<li class="a2">胡芮宾</li>
+			<li class="a2">徐国鑫</li>
+			<li class="a2">赵张宝</li>
+			<li class="a2">单彩风</li>
+			<li class="a2">张震</li>
+			<li class="a3">刘慧敏</li>
+			<li class="a3">张志轶</li>
+			<li class="a3">张泽林</li>
+			<li class="a3">李航飞</li>
+			<li class="a3">申丹丹</li>
+			<li class="a3">邓浩东</li>
+			<li class="a4">任雅茹</li>
+			<li class="a4">刘显通</li>
+			<li class="a4">刘海祥</li>
+			<li class="a4">叶文成</li>
+			<li class="a4">李江江</li>
+			<li class="a4">王晓</li>
+			<li class="a5">唐小彬</li>
+			<li class="a5">曹品</li>
+			<li class="a5">王艳霞</li>
+			<li class="a5">郑文文</li>
+			<li class="a5">郑王飞</li>
+			<li class="a5">陈永坤</li>
+			<li class="a6">张婉莹</li>
+			<li class="a6">杜丽霞</li>
+			<li class="a6">王贞尧</li>
+			<li class="a6">韩金红</li>
+			<li class="a6">赵思荣</li>
+			<li class="a6">李伟泽</li>
+		</ol>
+		</ul>
+
+		
+	</div>
+	
+	
+	<script type="text/javascript">
+	//--倒计时
+	var wrap=document.getElementById("wrap");
+	var time=document.getElementById("time");
+	var sps=time.getElementsByTagName("span");
+	var k=setInterval("fun('2018-8-1')",1000);
+	function fun(time)
+	{
+		//获取时间戳
+		var ntime=new Date();
+		var ftime=new Date(time);
+		var ctime=ftime.getTime()-ntime.getTime();//获取毫秒时间戳
+		var h=Math.floor(ctime/1000/60/100%24);
+		var f=Math.floor(ctime/1000/60%60);
+		var m=Math.floor(ctime/1000%60);
+		var arr=[h,f,m];
+		for(var i=0;i<arr.length;i++)
+		{
+			if(arr[i]<10)
+			{
+				arr[i]="0"+arr[i];
+			}
+			sps[i].innerText=arr[i];
+		}
+	}
+	//向左滑动
+	var ul=document.getElementsByTagName("ul");
+	var lis=document.getElementsByTagName("li");
+	var left=document.getElementById("left");
+	var right=document.getElementById("right");
+	var count=0;
+	var z=setInterval(lunbo,100);
+	function lunbo()
+	{
+		
+		if(ul[0].offsetLeft<-6840)
+		{
+			ul[0].style.left=190+"px";
+		}
+		ul[0].style.left=ul[0].offsetLeft-5+"px";
+
+	}
+	left.onclick=function()
+	{
+		count++;
+		if(count>=36)
+		{
+			count=0;
+		}
+		ul[0].style.left=-7000*count+"px";
+	}
+	right.onclick=function()
+	{
+		count--
+		if(count<0)
+		{
+			count=0;
+		}
+		ul[0].style.left=7000*count+"px";
+	}
+	wrap.onmousemove=function()
+	{
+		clearInterval(z);
+		z=null;
+	}
+	wrap.onmouseout=function()
+	{
+		z=setInterval(lunbo,100);
+	}
+	
+	</script>
+</body>
+</html>

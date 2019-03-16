@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1">
+        see
+    </div>
+</body>
+<script>
+    var oDiv = document.getElementsByTagName("div")[0];
+    // 阻止冒泡
+    //事件对象：把与事件相关的一些信息保存到一个对象里面，这个对象就是事件对象
+    oDiv.onclick = function(e){
+        //console.log(e);//第一个参数默认是事件对象 不支持低版本的ie，低版本的ie直接从window里面取
+        //console.log(window.event);//兼容低版本的ie
+        var ev = e || window.event;//兼容的写法
+        // var ev = e?e:window.event;
+        // for(var i in ev){
+        //     console.log(i+":"+ev[i]);
+        // }
+        //ev.stopPropagation();//阻止冒泡
+        //ev.cancelBubble = true;//兼容低版本的ie
+        if(ev.stopPropagation){
+            ev.stopPropagation();
+        }else{
+            ev.cancelBubble = true;
+        }
+        console.log("我是div");
+    }
+    document.onclick = function(){
+        console.log("document的");
+    }
+</script>
+</html>

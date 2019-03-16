@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+</body>
+<script>
+	var obj = {
+		name:"zhangsan",
+		age:20,
+		color:["red","green"],
+		friends:[{
+			name:"aa",
+			age:20
+		},{
+			name:"aa2",
+			age:22
+		}]
+	}
+   var str = JSON.stringify(obj);//对象转字符串
+   var o1 = JSON.parse(str);//字符串转对象
+   obj.color.push("blue");
+   console.log(o1);
+   console.log(obj);
+</script>
+</html>

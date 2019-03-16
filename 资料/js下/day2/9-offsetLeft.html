@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height:100px;
+            background: red;
+            margin:30px;
+        }
+        body{
+            /*border:1px solid;*/
+        }
+    </style>
+</head>
+<body style="position:relative">
+    <div></div>
+</body>
+<script>
+    //offsetLeft
+    /*元素的属性：
+    clientWidth\clientHeight  元素的width+padding
+    offsetWidth\offsetHeight  元素的width+padding+border
+    offsetLeft、offsetTop   元素距离有定位父级的距离，如果父级都没有定位，就相当于文档的距离
+    事件对象：
+    clientX\clientY 鼠标相对于可视区 视口的距离
+    pageX\pageY、 鼠标相对页面的距离 （clientX+scroolLeft\clientY+scrollTop）
+    offsetX\offsetY 鼠标相对于触发该事件的元素的距离
+    */
+    console.log(document.getElementsByTagName("div")[0].offsetLeft);
+    console.log(document.getElementsByTagName("div")[0].offsetTop);
+</script>
+
+</html>

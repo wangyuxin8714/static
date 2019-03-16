@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>title</title>
+		<style type="text/css" media="screen">
+			body{
+				height:2000px;
+				border:1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript" charset="utf-8">
+			document.onkeydown = function(event){
+				var Event = event || window.event;
+				console.log(Event);
+				alert(Event.keyCode);
+			}
+		</script>
+	</body>
+</html>

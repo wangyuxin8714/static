@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box">
+			<span>删除</span>
+	</div>
+	
+	<div>
+		<label for="">虹口</label><input type="checkbox" name="">
+		<label for="">闸北</label><input type="checkbox" name="">
+		<label for="">宝山</label><input type="checkbox" name="">
+		<label for="">奉贤</label><input type="checkbox" name="">
+		<label for="">静安</label><input type="checkbox" name="">
+		<label for="">浦东</label><input type="checkbox" name="">
+	</div>
+	
+	<script>
+		var labs=document.querySelectorAll('label'),
+			ipts=document.querySelectorAll('input'),
+			box=document.getElementById('box');
+
+			//给复选框循环绑定事件
+			for(let i=0;i<ipts.length;i++){
+				ipts[i].onclick=function(){
+				//判断当前复选框的选中状态
+				if(ipts[i].checked){
+					//创建元素
+					var span=document.createElement('span');
+					//拼接
+					span.innerHTML=`<span>${labs[i].innerHTML}</span><span>X</span> `;
+					//将拼接后的span元素插入到box中
+					box.insertBefore(span,box.lastElementChild);
+					fn();
+					newFn();
+								   	}
+				else{
+					//遍历box中的子元素的第一个子元素的文本内容
+					for(var j=0;j<box.children.length-1;j++){
+						//判断
+						if(labs[i].innerHTML==box.children[j].firstElementChild.innerHTML){
+							//删除该节点
+							box.removeChild(box.children[j]);
+						 	}
+															}
+					}
+									  }
+				 						  }			
+
+		//给box中的子元素的最后一个子元素(X)绑定事件
+		function fn(){
+		for(var i=0;i<box.children.length-1;i++){
+			box.children[i].lastElementChild.onclick=function(){
+				box.removeChild(this.parentNode);
+				//用该节点的文本内容和每个label标签中的值比较
+				for(var j=0;j<labs.length;j++){
+					//判断
+					if(this.previousElementSibling.innerHTML==labs[j].innerHTML){
+						ipts[j].checked=false;
+								  }
+											  }
+			 									}
+					}
+			 		}
+
+		//给删除按钮绑定事件
+		function newFn(){
+		box.lastElementChild.onclick=function(){
+			//清空box内容(除了删除)
+			box.innerHTML=`<span>删除</span>`;
+			for(var i=0;i<ipts.length;i++){
+				ipts[i].checked=false;
+				}
+				  }
+		}
+
+
+	</script>
+</body>
+</html>

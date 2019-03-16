@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding:0;list-style:none}
+		#btn{display:inline-block;width:213px;height:30px; text-align:center;line-height:30px;background:green; opacity:1; color:red;}
+		#zzBox{width:100%; height:100%; position:fixed; left:0;top:0;background:rgba(0,0,0,.3);}
+		#sonBox{width:400px;height:300px;background:#fff;margin-left:33%; margin-top:10%;}
+		.dis{display:none}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<p>北京上地八维111号默认地址<span>X<span></p>
+		<p>上海奉贤八维222号默认地址<span>X<span></p>
+		<p>宿迁职院八维333号默认地址<span>X<span></p>
+		<p>黄埔哈哈八维444号默认地址<span>X<span></p>
+	</div>
+	<span id="btn">添加地址</span>
+
+
+	<div id="zzBox" class='dis'>
+	  <div id="sonBox">
+		家庭地址:<input type="text"><br>
+		门牌号码:<input type="text"><br>
+		<button id="qr">确认</button>
+		<button id="qx">取消</button>
+	  </div>	
+	</div>
+
+	<script>
+		var btn=document.getElementById('btn'),
+			zzBox=document.getElementById('zzBox'),
+			qr=document.getElementById('qr'),
+			qx=document.getElementById('qx'),
+			ipts=document.querySelectorAll('input'),
+			box=document.getElementById('box');
+
+		//给按钮绑定事件
+		btn.onclick=function(){
+			zzBox.className='';
+							  }
+
+		//给确认按钮绑定事件
+		qr.onclick=function(){
+			//创建标签
+			var p=document.createElement('p');
+			//拼接字符串
+			p.innerHTML=`${ipts[0].value}${ipts[1].value}默认地址<span>X<span>`;
+			//将p标签追加到大盒子中
+			box.appendChild(p);
+			fn();
+			//清内容 关闭遮罩(添加类名)
+			ipts[0].value='';
+			ipts[1].value='';
+			zzBox.className='dis';
+							 }
+		//给取消按钮绑定事件
+		qx.onclick=function(){
+			//清内容 关闭遮罩(添加类名)
+			ipts[0].value='';
+			ipts[1].value='';
+			zzBox.className='dis';
+							 }
+
+		//给box中的每个子元素的最后一个子元素(X)绑定事件
+		fn();
+		function fn(){
+		for(var i=0;i<box.children.length;i++){
+			box.children[i].lastElementChild.onclick=function(){
+				box.removeChild(this.parentNode);
+															   }
+			 								  }
+			 		}
+
+
+
+
+	</script>
+
+</body>
+</html>

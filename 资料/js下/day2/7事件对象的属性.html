@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background:red;
+            margin:20px auto;
+        }
+    </style>
+</head>
+<body style="height:1000px;">
+    <div></div>
+</body>
+<script>
+    document.onmousemove = function(e){
+        var ev = e || event;
+        //console.log(ev.type);//事件类型
+        //clientX clientY  鼠标到可视区、视口 的距离
+        //console.log(ev.clientX+","+ev.clientY);
+        //pageX、pageY 鼠标到页面的距离 会算上滚动条的距离
+        //console.log(ev.clientY+","+ev.pageY+","+document.documentElement.scrollTop);
+        //console.log(ev.screenX+","+ev.screenY);//鼠标到屏幕的距离
+    }
+    document.getElementsByTagName("div")[0].onmousemove = function(e){
+        var ev = e || event;
+        console.log(ev.offsetX+","+ev.offsetY)//鼠标相对于触发该事件的元素的距离
+    }
+</script>
+</html>

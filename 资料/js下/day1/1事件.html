@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div>aaa</div>
+    </body>
+    <script type="text/javascript">
+        //DOM0级事件处理程序
+        var oDiv = document.getElementsByTagName("div")[0];
+        /*oDiv.onclick = function(){
+            alert(123);
+        }*/
+        //事件处理程序(事件绑定)
+        //1、HTML事件处理程序
+        //  缺点：html和js耦合性太强，关联太密切
+        //2、DOM0级事件处理程序  只能绑定一个函数
+        //3、DOM2级事件处理程序 
+        function fn(){
+            alert("dom2级html中的绑定函数");
+        }
+        //DOM0级事件处理程序 
+        /*oDiv.onclick = function(){
+            console.log(123);
+        }*/
+        function fn1(){
+            alert("fn1的函数");
+        }
+        /*oDiv.onclick = fn;
+        oDiv.onclick = fn1;*/
+        //DOM2级事件处理程序 三个参数：1、事件类型2、绑定的函数3、是否在捕获阶段执行函数，默认值false，第三个参数可以省略
+        //可以绑定多个函数
+        //addEventListener标准的浏览器
+        //非标准的浏览器：attachEvent("onclick",fn) 两个参数1、事件类型，需要加on2、绑定的函数
+        // oDiv.addEventListener("click",fn,false);
+        //  oDiv.addEventListener("click",fn1,false);
+        //oDiv.attachEvent("onclick",fn);//兼容非标准的ie
+        //兼容浏览器的dom2级 
+        if(oDiv.addEventListener){
+            oDiv.addEventListener("click",fn,false);
+        }else if(oDiv.attachEvent){
+            oDiv.attachEvent("onclick",fn);
+        }else{
+            oDiv.onclick = fn;
+        }
+    </script>
+</html>

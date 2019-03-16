@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <li>用户名：</li>
+        <input type="text" placeholder="登录名">
+        <p></p>
+        <!-- 支持中文,字母,数字,'-','_'的组合，4-20个字符 -->
+        <!-- 格式错误，仅支持中文,字母,数字,'-','_'的组合 -->
+    </div>
+    <div>
+        <li>设置密码：</li>
+        <input type="password" placeholder="至少两种字符">
+    </div>
+    <div>
+        <li>确认密码：</li>
+        <input type="password" placeholder="再次输入密码">
+    </div>
+    <div>
+        <button>立即注册</button>
+    </div>
+</body>
+<!-- （1）、初始状态显示为图一。
+（2）、用户名的文本框被激活时显示为图二，下面提示用户名的规则。
+（3）、用户输入用户名后先做验证，如果用户名不合法，则显示图三所示的状态（下面有具体的提示文本及文本框显示为红色边框）。
+（4）、如果所输入的用户名合法，则做ajax请求，要求将用户设置的用户名作为参数传递给服务器端（checkuser.json）文件中进行检测。
+（5）、通过服务器端的返回值做出判断，如果返回的object的isHas为true则出现图四所示的状态，提示用户已注册，推荐您选择，推荐选择为随机生成，规则为：
+用户所输入的用户名加随机生成的3位或4位或5位数字。
+（6）、通过服务器端的返回值做出判断，如果返回的object的isHas为false则出现图五所示的状态。 -->
+<script>
+    /*
+        、获得焦点显示图二（5分）
+    （2）、正确按照要求验证用户名是否合法，并做出相应的提示（25分）
+    （3）、正确编写ajax请求，传递参数（25分）
+    （4）、正确做出判断，在已注册的情况下，按要求正确显示推荐（30分）
+    （5）、用户名可以注册的情况下正确显示图五（15分）
+
+    */
+    var inp=document.querySelectorAll('input');
+    var div1=document.getElementById('div1');
+    var p=document.querySelector('p');//用户名下面的提示信息
+    inp[0].onfocus=function(){
+        p.style.display='block';
+        p.innerHTML="支持中文,字母,数字,' - ','_'的组合，4-20个字符";
+    }
+    /*inp[0].onblur = function(){
+        p.style.display='none';
+    }*/
+    inp[0].oninput=function(){
+        var reg=/^([\u4e00-\u9fa5]|\w|-){4,20}$/;
+        var jg=reg.test(this.value);//是否符合规则
+        if(jg){
+            p.style.display = 'none';
+            //要求将用户设置的用户名作为参数传递给服务器端（checkuser.json）文件中进行检测
+            //ajax(this.value);
+            ajax({
+                url:"checkuser.json",
+                method:"get",
+                params:"name="+this.value,
+                success:function(data){
+                    var isHas = data.isHas;
+                    console.log(isHas);
+                    if(isHas=="true"){
+                        p.style.display = 'block';
+                        p.innerHTML="<h4>用户名已存在，推荐下面的账号:</h4>" +
+                            "<h5>"+inp[0].value+getRandom(3)+"</h5>"+
+                            "<h5>"+inp[0].value+getRandom(4)+"</h5>"+
+                            "<h5>"+inp[0].value+getRandom(5)+"</h5>"
+                    }else{
+                    }
+
+                }
+            })
+        }else{
+            p.style.display = 'block';
+            p.innerHTML = "格式错误，仅支持中文,字母,数字,'-','_'的组合,4-20个字符";
+        }
+    }
+    function getRandom(n){
+        //0-9 之间的随机数
+        var str = ""
+        for(var i=0;i<n;i++){
+            str+=Math.floor(Math.random()*10);
+        }
+        return str;
+    }
+    function ajax(o) {
+        var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+        if(o.method=="get"||o.method=="GET"){
+            xhr.open('get', o.url+"?"+o.params, true);
+            xhr.send(null);
+        }else{
+            xhr.open("post",o.url,true);
+            xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+            xhr.send(o.params);
+        }
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if(xhr.status==200){
+                    var data = eval('(' + xhr.responseText + ')');
+                    o.success(data);
+                }else{
+                    o.error(xhr.status);
+                }
+
+            }
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="css/swiper-4.1.6.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body,
+    .swiper-container {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .home {
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        line-height: 36px;
+    }
+</style>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background: red;">
+                <p class="ani home" swiper-animate-effect="swing" swiper-animate-duration="0.5s">首页</p>
+                <p class="ani home1" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">列表</p>
+            </div>
+            <div class="swiper-slide" style="background: pink;">
+                <p class="ani detail" swiper-animate-effect="rotateIn" swiper-animate-duration="0.5s">第二页</p>
+                <p class="ani detail1" swiper-animate-effect="slideInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">列表</p>
+            </div>
+            <div class="swiper-slide" style="background: blue;">1</div>
+        </div>
+    </div>
+</body>
+<script src="../js/swiper-4.1.6.min.js"></script>
+<script src="../js/swiper.animate1.0.3.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        on: {
+            init: function() {
+                swiperAnimate(this); //初始化动画
+            },
+            slideChangeTransitionEnd: function() {
+                swiperAnimate(this);
+            }
+        }
+    });
+</script>
+
+</html>

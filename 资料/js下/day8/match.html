@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var reg = /(\d)(-)/;
+    var str = 'sde12-3sde4-55ddwe';
+    console.log(str.match(reg));//2-,2,-
+    console.log("=================")
+    var reg1 = /(\d)-/g;//加全局不会去取子匹配项
+    var str1 = 'sde12-3sde4-55ddwe';
+    console.log(str1.match(reg1));//
+</script>
+</html>

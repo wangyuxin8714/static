@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background: orange;
+            color:white;
+            margin-left:10px;
+            cursor: pointer;
+        }
+        div{
+            height:300px;
+            border:1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <span>+</span>
+    <span>取消增大</span>
+    <div style="font-size: 16px;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae blanditiis, cumque dicta dolor doloremque dolores eaque eius enim eos ex, fugit inventore ipsa laudantium minus mollitia natus nesciunt quae recusandae reiciendis sit totam vero vitae voluptatum. Aliquam blanditiis, dignissimos labore natus placeat possimus provident quia quis rerum ullam?
+    </div>
+</body>
+<script>
+    //dom0级事件处理程序取消 元素.on事件类型=null
+    var spans = document.getElementsByTagName("span");
+    var oDiv = document.getElementsByTagName("div")[0];
+    /*spans[0].onclick = function(){
+        oDiv.style.fontSize = parseInt(oDiv.style.fontSize)+1+"px";
+    }
+    spans[1].onclick = function(){
+        spans[0].onclick = null;
+    }*/
+    // spans[0].addEventListener("click",fn,false);
+    //dom2级addEventListener 取消事件  removeEventLister
+    //注意：参数要保持一致
+    /*spans[0].addEventListener("click",fn,false);
+    spans[1].addEventListener("click",fn1,false);
+    function fn(){
+        oDiv.style.fontSize = parseInt(oDiv.style.fontSize)+1+"px";
+    }
+    function fn1(){
+        spans[0].removeEventListener("click",fn,false);
+    }*/
+    //dom2级 attachEvent  取消事件 detachEvent() 参数要保持一致
+    spans[0].attachEvent("onclick",fn);
+    spans[1].attachEvent("onclick",fn1);
+    function fn(){
+        oDiv.style.fontSize = parseInt(oDiv.style.fontSize)+1+"px";
+    }
+    function fn1(){
+        spans[0].detachEvent("onclick",fn);
+    }
+</script>
+</html>

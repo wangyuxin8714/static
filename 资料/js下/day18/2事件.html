@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        deee
+        <h2>dwqqq</h2>
+    </div>
+</body>
+<script>
+    var oDiv = document.getElementsByTagName("div")[0];
+    if(oDiv.addEventListener){
+        oDiv.addEventListener("click",fn,false);
+    }else if(oDiv.attachEvent){
+        oDiv.attachEvent("onclick",fn)
+    }else{
+        oDiv.onclick = fn
+    }
+    function fn(e){
+        var ev = e || window.event;//target
+        var ele =  ev.target || ev.srcElement;//触发事件的最具体的元素
+        //console.log(ele);
+        console.log(this);//事件绑定里面的this指的是绑定该事件的元素
+        console.log(ev.currentTarget);//和this相等
+    }
+</script>
+</html>

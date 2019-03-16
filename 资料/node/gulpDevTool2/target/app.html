@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style1.css">
+</head>
+
+<body>
+    <input type="text">
+    <input type="password">
+    <input type="button" value="register">
+    <script src="js/axios.js"></script>
+    <script src="js/ajax.js"></script>
+    <script>
+        const username = document.querySelectorAll('input')[0];
+        const password = document.querySelectorAll('input')[1];
+        const registerBtn = document.querySelectorAll('input')[2];
+        registerBtn.onclick = () => {
+            const ins = axios.create({
+                url:'/register',
+                method: 'post',
+                data:{
+                    user: username.value,
+                    pwd: password.value
+                },
+                transformRequest: function (data) {
+                    return Object.entries(data).map(val=>val[0]+'='+val[1]).join('&')
+                }
+                
+            })
+            ins().then(res=>{
+                alert(res.data.msg);
+                if (res.data.code === 2) {
+                    location.href = '/login.html';
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>

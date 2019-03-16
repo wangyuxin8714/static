@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //[]   {}
+    var o1 = [1,2,3];
+    var o2 = {name:"zhangsan"};
+    console.log(o1 instanceof Object);//所有的对象 instanceof Object 都是true
+    //1、instanceof
+    console.log(o1 instanceof Array);//
+    //2、Object.prototype.toString.call(o1)   "[object Array]"
+    console.log(Object.prototype.toString.call(o1)=="[object Array]")
+    //3、constructor
+    console.log(o1.constructor == Array);
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //new Animal() 构造函数的缺点 每个实例都会重新把方法创建一遍
+    function Animal(a,b,leg){
+        this.name = a;
+        this.color = b;
+    }
+    /*Animal.prototype.country = "china";
+    Animal.prototype.run = function(){
+        console.log("会跑");
+    }*/
+    console.log(Animal.prototype.constructor===Animal);//true
+    Animal.prototype = {
+        constructor:Animal,
+        country:"china",
+        run:function(){
+            console.log("会跑");
+        }}
+    // }//new Object()//Object 实例  Object.prototype.construcor == Object
+    var cat = new Animal("小花","黑白",3);//cat 就是构造函数的实例
+    var dog = new Animal("小黑","黑色");
+    cat.run();
+     console.log(Animal.prototype.constructor===Animal);
+</script>
+</html>

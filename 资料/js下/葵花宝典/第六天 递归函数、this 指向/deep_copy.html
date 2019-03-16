@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>深度拷贝对象</title>
+</head>
+<body>
+	
+	<script>
+		
+		var boy = {
+			name : "xiaoming",
+			age : 18,
+			gf : {
+				name : "xiaohua",
+				age : 17,
+				mother : {
+					name : "cuihua",
+					age : 55,
+				}
+			}
+		}
+
+		function deepCopyObj(o){
+
+			//判断传递进来的参数是不是引用数据类型
+			//如果不是引用数据类型
+
+			if(typeof o != "object"){
+				return o;
+			}	
+
+			// 判断传进来是数组还是对象啊?
+
+			var newObj = o instanceof Array ? [] : {};
+
+
+			for(var k in o){
+				if(typeof o[k] == "object"){
+					newObj[k] = deepCopyObj(o[k]);
+				}else{
+					newObj[k] = o[k];
+				}
+			}
+			return newObj;
+
+		}
+		var a = deepCopyObj(boy);
+
+		boy.gf.mother.age = 100;
+		console.log(a.gf.mother.age);
+
+	</script>
+</body>
+</html>

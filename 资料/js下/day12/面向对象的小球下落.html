@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .ball{
+            width: 50px;
+            height:50px;
+            position: absolute;
+            top:0;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+<script>
+    function Ball(){
+        this.div = document.createElement("div");
+        this.w = document.documentElement.clientWidth || document.body.clientWidth; //clientWidth  offsetWidth
+        this.h = document.documentElement.clientHeight || document.body.clientHeight;
+        this.create();
+        this.down();
+    }
+    Ball.prototype = {
+        constructor:Ball,
+        create:function(){
+            this.div.className = "ball";
+            this.div.style.background = "rgb("+this.getRandom(256)+","+this.getRandom(256)+
+                ","+this.getRandom(256)+")";//0-255
+            this.div.style.left=this.getRandom(this.w-50)+"px";//小球left 不能超过 w-50
+            document.body.appendChild(this.div);
+        },
+        down:function(){
+            var _this = this;
+            setInterval(function(){
+                _this.div.style.top = _this.div.offsetTop+5+"px";
+                //小球的top
+                if(_this.div.offsetTop+50>_this.h){
+                    document.body.removeChild(_this.div);
+                }
+            },1);
+        },
+        getRandom:function(n){
+            return Math.floor(Math.random()*n);//0,-n-1
+        }
+    }
+
+    setInterval(function(){
+        new Ball();
+    },100)
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>递归函数</title>
+</head>
+<body>
+	
+	<script>
+			
+		function f(){
+			console.log(11);
+		}
+
+		function e(){
+			//调用函数
+			f();
+		}
+
+		//调用函数
+		e();
+
+
+
+		function fn(n){
+			if(n <= 0){
+				//退出
+				return ;
+			}
+			n -= 1;
+			console.log("递归函数调用");
+			fn(n);
+		}	
+		fn(10);
+
+		
+
+
+	</script>
+
+</body>
+</html>

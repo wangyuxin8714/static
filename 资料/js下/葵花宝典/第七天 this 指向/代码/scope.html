@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>模拟块级作用域</title>
+</head>
+<body>
+
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script>
+				
+		for(var i = 0; i < 5 ; i++){
+
+			setTimeout(function(){
+				console.log(i);
+			}, 50);
+
+		}
+		
+		//为什么是5个 5 ?
+		//定时器在创建时,把时间设置成0,也不是立即执行的意思.
+		//举个例子 : 如果把设置成1秒,这个定时器表示的意思, 不是一秒后执行. 是一秒后提交给 cpu 去执行,如果 cpu 有空闲时间,他就执行,如果cpu 在忙碌中,这个定时器就会一直等待,等待 cpu 有时间执行自己.
+
+		//定时器在执行时,里面打印 i, 是不是全局变量.
+		//当定时器执行时, i 都已经变成了5,所有打印了5次 5
+
+		//解决方案?
+
+		// (function(a){
+		// 	console.log(a);
+		// }());
+
+		//()操作符的作用是?	是把整个函数返回
+
+		// for(var i = 0; i < 5 ; i++){
+			
+		// 	(function(num){
+		// 		setTimeout(function(){
+		// 			console.log(num);
+		// 		}, 0);
+		// 	})(i);
+		// }
+
+		//创建自执行函数,把每一个 i 都保存在函数内部的作用域里. 这样,打印的就是函数内部的作用域的 i.
+
+
+		var lis = document.getElementsByTagName("li");
+
+		for(var i = 0;i < lis.length ;i++){
+			(function(n){
+				lis[i].onclick = function(){
+					console.log(n);
+				}
+			})(i);
+		}
+
+	</script>
+</body>
+</html>

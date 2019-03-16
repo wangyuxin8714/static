@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 原型链继承 </title>
+</head>
+<body>
+	<script>
+		
+		function A(name,age){
+			this.name = name;
+			this.age = age;
+		}
+
+		A.prototype.sex = "man";
+
+		var a = new A("a",1);
+
+
+		function B(){}
+
+		//B.prototype = A.prototype;
+
+		B.prototype = new A();
+
+		// 把原型上的constructor 指向 , 指回 B 的构造函数.
+		B.prototype.constructor = B;
+
+
+		// 当 b 对象 访问属性 name 时,先自身找,如果没有,就去 B 的原型上找 .
+		var b = new B();
+
+		console.log(b.sex);
+
+	</script>
+</body>	
+</html>

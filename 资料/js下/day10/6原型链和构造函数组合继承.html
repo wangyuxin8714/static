@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Father(name,age){
+        this.name = name;
+        this.age = age;
+        this.friends = ["zhangsan","lisi","wangwu"];
+    }
+    Father.prototype.say = function(){
+        console.log("能说话");
+    }
+    function Son(name,age){
+        Father.call(this,name.age);
+    }
+    Son.prototype = new Father();
+    var s1 = new Son("heihei",20);
+    console.log(s1.friends);//
+    s1.say();
+</script>
+</html>

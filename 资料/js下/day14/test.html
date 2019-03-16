@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            border: 1px solid;
+            width:200px;
+            min-height:50px;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="弹窗">
+</body>
+<script>
+    var oInput = document.getElementsByTagName("input")[0];
+    oInput.onclick = function(){
+        Dialog("ddde");
+    }
+    function Dialog(str){
+        var oDiv = document.createElement("div");
+        oDiv.innerHTML = str;
+        document.body.appendChild(oDiv);
+    }
+</script>
+</html>

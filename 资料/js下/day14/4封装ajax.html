@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+</body>
+<script>
+	/**
+	 * [ajax description]
+	 * @param  {[type]}  method  [description]  是get还是post
+	 * @param  {[type]}  url     [description] 请求地址
+	 * @param  {Boolean} isAsync [description] 是否异步 boolean
+	 * @param  {[type]}  params  [description] 要传递的参数 {"name":"zhangsan",sex:"nan"},如果没参数传递null
+	 * @return {[type]}          [description]
+	 */
+	function ajax(method,url,isAsync,params,success,error){
+			var xhr = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+			if(method==("get"||"GET")){
+				var link = url;
+				if(params!=null){
+					link+="?";
+					//http://www.baidu.com  url
+					//{"name":"zhangsan",sex:"nan","tel":1345678} params
+					//http://www.baidu.com?name=zhangsan&sex=nan&tel=1345678
+					for(var i in params){
+						link+=i+"="+params[i]+"&";
+					}
+					link = link.substring(0,link.length-1);
+				}
+				xhr.open("get",link,isAsync);
+				xhr.send(null);
+			}else{
+				xhr.open("post",url,isAsync);
+				//post 方法
+				xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+
+				if(params!=null){
+					var link= "";
+					for(var i in params){
+						link+=i+"="+params[i]+"&";
+					}
+					link = link.substring(0,link.length-1);
+					xhr.send(link);
+				}else{
+					xhr.send(null);
+				}
+			}
+			//如果当前是同步   readyState = 4
+			xhr.onreadystatechange = function(){
+			    if(xhr.readyState==4){
+			        if(xhr.status == 200){
+			            var data = eval("("+xhr.responseText+")");
+						success(data);//成功以后去操作的函数
+					}else{
+			            error(xhr.status);
+					}
+				}
+			}
+			//同步
+			if(!isAsync){
+                if(xhr.status == 200){
+                    var data = eval("("+xhr.responseText+")");
+                    success(data);//成功以后去操作的函数
+                }else{
+                    error(xhr.status);
+                }
+			}
+	}
+	ajax("get","data.json",true,null,function(data){
+	    console.log(JSON.stringify(data));
+	},function(error){
+		console.log("出错了"+error);
+	});
+    ajax("get","1.txt",true,null,function(data){
+        data.forEach(function(item){
+            document.write(item);
+		})
+    },function(error){
+        console.log("出错了"+error);
+    });
+</script>
+</html>

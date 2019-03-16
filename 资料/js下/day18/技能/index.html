@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tip</title>
+    <style type="text/css" media="screen">
+		*{margin:0; padding:0;}
+		#wrap{
+			width:100%;
+			position:absolute;
+			left:0; bottom:10px;
+			text-align:center;
+		}
+		#wrap img{
+			width:64px;
+		}
+	</style>
+</head>
+<body>
+    <div id="wrap">
+        <img src="img/1.png" alt="">
+        <img src="img/2.png" alt="">
+        <img src="img/3.png" alt="">
+        <img src="img/4.png" alt="">
+        <img src="img/5.png" alt="">
+    </div>  
+    <script>
+        /*
+            思路：
+            1. 在mousemove事件中
+            2. 计算鼠标到图片中心的距离
+            3. 根据鼠标到图片的距离控制图片的宽度
+            4. 使用面向对象实现
+        */
+        function AppleMove(options){
+            this.div = document.getElementById(options.el);//这个是容器
+            this.imgs = document.getElementsByTagName("img");
+            this.init();
+        }
+        // 初始化
+        AppleMove.prototype.init = function(){
+            this.addEvent();
+        }
+
+        // 添加mousemove事件
+        AppleMove.prototype.addEvent = function(){
+            var _this = this;
+            document.onmousemove = function(e){
+                var ev = e || window.event;
+                _this.mouseMove(ev);
+            }
+
+        }
+
+        // 鼠标滑动事件逻辑
+
+        AppleMove.prototype.mouseMove = function(ev){
+            var _this = this;
+            for(var i=0;i<_this.imgs.length;i++){
+                var d = _this.getDis(ev,_this.imgs[i]);
+                var max = 200;
+                if(d>max)d=max;
+                _this.imgs[i].style.width = (1-d/max)*64+64+"px";
+            }
+        }
+
+        // 计算两点之间的逻辑  鼠标到图片中心点的距离
+
+        AppleMove.prototype.getDis = function(ev,dom){
+            var _this = this;
+            var x = Math.pow(ev.clientX-dom.offsetLeft-dom.clientWidth/2,2);
+            var y = Math.pow(ev.clientY-dom.offsetTop-_this.div.offsetTop-dom.clientHeight/2,2);
+            var z = Math.sqrt(x+y);//鼠标距离中心点的距离
+            return z;
+        }
+
+        // 实例化,传入元素的id名实现所要求的效果
+
+        new AppleMove({
+            el:'wrap'
+        });
+
+
+    
+    </script>
+</body>
+</html>

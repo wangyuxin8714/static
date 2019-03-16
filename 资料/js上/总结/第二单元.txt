@@ -1,0 +1,130 @@
+各种类型转数值
+    1) Number() 强转函数==>可以将任意类型转为数值
+        Number() 强转函数==>可以将任意类型转为数值
+	console.log(Number(true));//1
+	console.log(Number(false))//0
+	console.log(Number('abc'));//NaN
+	console.log(Number('5'));//5
+	console.log(Number('12ab'));//NaN
+	console.log(Number(''));//0
+	console.log(Number(' '));//0
+	console.log(Number(null));//0
+	console.log(Number(undefined));//NaN
+    2)parseInt() ==>将字符串转为整型
+        1)会忽略前置空格 从第一个非空格字符开始往后查找 直到找到第一个非数值字符 停止 并返回该非数值前的内容
+        2)忽略前置空格 如果第一个非空格字符就是非数值 则返回NaN
+        console.log(parseInt('3.14'));//3
+        console.log(parseInt(' 45.56'));//45
+        console.log(parseInt('  w123'));//NaN
+        console.log(parseInt('100',2));4
+    3)parseFloat()==>将字符串转为小数
+        console.log(parseFloat('12.34'));//12.34
+	console.log(parseFloat('12.34.56'));//12.34
+	console.log(parseFloat('12.3a4'));//12.3
+	console.log(parseFloat('a12.34'));//NaN
+    4) +d
+        console.log(+'5');//5
+        console.log('5'*1);//5
+ 隐式转换==>后台调用Number()方法
+     - * / % > < >= <= isNaN() != ==
+ NaN
+     1)任何涉及到NaN的操作 都返回NaN
+     2)NaN不等于任何数 包括它自己
+ js规定 undefined只等于它本身和null  null只等于它本身和undefined
+ 各种类型转字符串 
+     1) String()==>强转函数 可以将各类型转为字符串
+	console.log(String(true));//'true'
+	console.log(String(123));//'123'
+	console.log(String(null));//'null'
+	console.log(String(undefined));//'undefined'
+	console.log(typeof String(fn));//'String'
+     2)toString() ==>可以将除了null各undefined以外的所有类型转为字符串(参数必须是变量)
+        字符串下标==>从0开始 
+        .length==>获取字符串和数组的长度
+     3)各种类型转布尔 
+	Boolean()==>强转函数 可以将任意类型转为boolean
+			        true                       false
+        Number           除了NaN和0以外的所有数            NaN和0
+        String           除了空串以外的字符串              空串
+        undefined              无                          undefined
+        对象(object)	 除了null以外的所有对象            null
+
+ 2大类
+    基本数据类型:number string boolean null undefined
+    复杂数据类型:obejct 数组 对象 函数
+    typeof 的返回值有6种:number string undefined boolean object function
+
+表达式的概念
+    按照特定的规则 由运算符和操作数组成的式子
+    运算符的分类:
+    按照操作数个数分类:
+        一元运算符: ++ -- + - !
+        二元运算符: * / % > < == !=
+	三元运算符： 条件运算符 条件1?条件2:条件3
+ 操作数类型和结果类型 
+    操作数可以是:基本数据类型 和复杂数据类型
+    结果:4大数据类型(null不经常出现)
+ 运算符的优先级:() []  >  ++ -- ! +(转数值) - > * / %  >  > < >= <=  >  + - (运算、拼接) > && ||
+ 隐式转换:后台调用Number()方法 
+    具有隐式转换功能的运算符:+(操作数都不是字符串时) - * / % < > <= >= == != isNaN() 
+
+ 加性运算符  + -
+    +号的作用  1)运算  2) 拼接(加号遇到字符串拼接) 3)转数值  
+    -号的作用  1)运算  2)转数值
+
+ 乘性运算符 * / %
+ 关系运算符  > < <= >=  返回值:boolean类型
+ 相等和不相等运算符 == != === !== 
+ 相等和不相等 == !=  会进行隐式转换 只比较值
+ 全等和不全等 === !== 不会进行隐式转换 先比较类型是否一致 再去比较值是否相等
+ 逻辑运算符  !>&&>||
+ ! 返回值为boolean类型 非真即假,非假即真  逻辑非
+ && ==> 逻辑与and
+     1)找假(false)==> 当表达式中,有假时,返回第一个为假的值
+     2)如果表达式中 全部为真,则返回最后一个为真的值
+ 逻辑或 || 
+     1)找真==>当表达式中,有真时,返回第一个为真的值
+     2)全部为假时,返回最后一个为假的值
+ 初等运算符 () []  ==>优先级最高的运算符
+ 逗号运算符 , ==>优先级最低的运算符 默认取的是最后一个值
+ 赋值运算符 =  运算顺序 从右到左,左边必须只能是变量
+ 复合赋值运算符 += -= *= /= %= 运算顺序 从右到左
+ 条件运算符 ?:
+     条件1?条件2:条件3
+ 两个字符串比较 比较的是ASCII码值
+ 运算符的优先级:() [] 》 ++ -- !  》 * / % 》 + - 》  < > <= >= 》 == != === !== 》 && 》 || 》 ?: 》 = += -=  》 ,
+     三元运算符： 条件运算符 条件1?条件2:条件3
+
+
+ 
+
+ if语句  选择结构(分支结构)的一种 switch语句
+   if语句有三种形态
+     1)单分支 ==>判断小括号里的内容 结果是否成立,成立则执行大括号中的内容,不成立则什么都不做
+       当大括号中的内容 只有一条时 可以省略大号
+          if(判断条件){ 代码块;  }
+     2)双分支==>判断if后小括号中的内容是否成立 如果成立 则执行if后大括号中的内容 如果不成立 则执行else中的内容
+          if(判断条件){
+	               代码块
+	               }
+           else{
+	         代码块
+                }
+      3)多分支  三条及三条以上   if else-if
+           if(){
+
+               }
+           else if(){
+
+                    }
+           else if(){
+
+                    }
+           .....
+           else{
+
+               }
+ alert('dasd'); //系统弹出框
+    var x=confirm("确定吗");// 系统确认框 点确认返回true 点取消返回false 
+ 系统输入框
+    var x=prompt('提示文字','默认文本'); //点击确认返回输入框中的文本(String类型) 点击取消返回null

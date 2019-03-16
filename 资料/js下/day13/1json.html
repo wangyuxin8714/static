@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    </body>
+    <script type="text/javascript">
+    	//json 一种数据格式 
+    	//1、 字符串、数字、boolean
+    	// 2、数组和对象
+    	// json格式的对象属性名称必须是双引号，属性值如果是字符串也必须是双引号
+    	var obj = {
+    		"name":"zhangsan",
+    		"age":20
+    	}
+    	var o = {
+    		name:"zhangsan",
+    		sex:'女'
+    	}
+    	var arr = ["aa","bb","cc","dd"];
+    	//json常用的方法
+    	//1、JSON.stringify() 把对象转换成字符串
+    	console.log(JSON.stringify(obj));//方便我们去查看对象里面的具体内容
+    	console.log(typeof JSON.stringify(obj));//string 
+    	//2、JSON.parse(str)  把JSON格式的字符串转换成json格式的对象
+    	//JSON.parse解析字符串的时候，字符串必须是JSON格式的对象，里面的属性名称必须是双引号
+    	var s = '{"name":"aa","age":20}';
+    	var o1 = JSON.parse(s);
+    	for(var i in o1){
+    		console.log(i+","+o1[i]);
+    	}
+    	console.log("======================");
+    	console.log(JSON.stringify(o));
+    	//把任意对象转换成字符串，其实就是把属性方法显示出来
+    </script>
+</html>

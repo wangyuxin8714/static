@@ -1,0 +1,164 @@
+					第10单元 函数
+10.1 函数定义 
+	函数:函数是指由事件驱动或可重复调用执行的代码块
+	btn.onclick = function(){
+		alert("OK");
+	}
+	function rYear(min,max){
+		for(var i=min;i<=max;i++){
+			if( i%4==0 && i%100!=0 || i%400==0 ){
+				document.write( i + " " );
+			}
+		}
+	}
+	rYear( 2000 , 3000 );
+	rYear( 3000 , 4000 );
+	函数 ==> 一次声明多次调用 ==> 节省代码 ==> 页面加载效率提高 ==>
+	用户体验良好
+	
+	10.1.1 函数命名（了解）
+		标识符:变量 函数  属性的名字  以及 函数的参数
+		addZero() ==> 加零
+		
+	定义函数的两种形式
+	10.1.2 函数声明（掌握） ==> 使用最多
+		function fn( 形参 ){
+			函数代码块
+		}
+	10.1.4 函数表达式  ==> 将一个匿名函数赋值给一个变量(函数名)
+		var fn = function(){
+			函数代码块
+		};
+	10.1.5 函数声明与函数表达式的区别
+		函数表达式: 先定义 后调用  如果先调用会报错
+		函数声明: 函数一旦声明,无论在哪里调用都可以执行
+		原因:函数声明有提升的过程
+10.2 函数调用（掌握）
+	函数名( 实参 ); ==> 执行函数
+10.3 函数参数(教材P64)
+	10.3.1 形式参数（掌握） ==> 形参:用于接受实参的变量
+	10.3.2 真实参数（掌握） ==> 实参:调用函数时传递的参	数
+	function rYear(a,b,c){ // min = 2000   max = 3000  形参
+		console.log( c );//undefined
+	}
+	rYear( 2000 , 3000 );// 2000,3000 实参
+	console.log( a );//报错
+	规则:
+		1> 实参与形参是一一对应的
+		2> 如果形参没有接受到实参,该形参默认保存undefined ==>
+	声明了变量但未赋值
+		3> 形参属于局部变量,当函数执行完毕自动销毁
+		
+10.4 函数返回值（掌握）==> return
+	规则:
+		1> 有返回值的功能,返回到调用函数的那个地方
+		2> 如果没有用return,或者用了return但什么都不返回,默认返回undefined
+		3> 终止函数的功能
+		
+	什么时候用return: 需要返回值的时候需要
+		btn.onclick = function(){
+			document.body.style.background = "red";
+		}
+	
+10.5 函数内外变量(局部、全局)
+10.6  全局变量与局部变量的区别
+		// 作用域: 
+		/*全局作用域:在函数外部的作用域
+		局部(函数)作用域:在函数内部的作用域
+		全局变量:在全局作用域下声明的变量(整个生存周期)
+		局部变量:在局部作用域下声明的变量(函数内)*/
+		/*var i = 10;// 全局变量
+		function fn(){
+			var i = 20;// 局部变量 ==> 函数执行完毕自动销毁
+		}
+		fn();
+		console.log( i );//10*/
+
+		var i = 10;// 全局变量
+		function fn(){
+			i = 20;// 覆盖 全局变量
+		}
+		fn();
+		console.log( i );//20
+10.7 arguments ==> 是对象,以数组的形式保存着实参的集合(伪数组)
+	function fn( a , b ,c ){
+		/*console.log( arguments );//[10,20,30]
+		console.log( typeof arguments );//"object"
+		console.log( arguments instanceof Array );//false*/
+		arguments[0] = 80;
+		console.log( a );//80
+		// arguments.length 模拟函数重载 ==> 多态
+		if( arguments.length == 1 ){// 传递1个实参
+
+		}else if( arguments.length == 2 ){// 传递2个实参
+
+		}
+	}
+	fn( 10,20,30 );
+第11单元 数组的综合应用
+11.1  数组排序 ==> sort()
+		var nums = [1,6,2,4,5,3];
+		function sortArr( arr ){	
+			for(var i=0;i<arr.length;i++){
+				for(var j=0;j<arr.length-i-1;j++){
+					var temp;
+					if( arr[j] > arr[j+1] ){
+						temp = arr[j];
+						arr[j] = arr[j+1];
+						arr[j+1] = temp;
+					}
+				}
+			}
+		}
+		sortArr( nums );
+		console.log( nums );
+11.2  数组翻转 ==> reverse()
+		var nums = [1,2,3,4,5,6];
+		// 封装函数模拟reverse方法
+		function reverseArr( arr ){
+			var newArr = [];
+			// 正序遍历
+			for(var i=0;i<arr.length;i++){
+				newArr.unshift( arr[i] );
+			}
+			// 倒序遍历
+			for(var i=arr.length-1;i>=0;i--){
+				newArr.push( arr[i] );
+			}
+			return newArr;
+		}
+		var newArr = reverseArr( nums );
+		console.log( newArr );
+11.3  数组排重 ==> set()
+		var nums = [1,2,1,2,3,4,3,5,4,6,5];
+		//封装函数模拟set方法 
+		function setArr(arr){
+			var newArr = [];
+			// 判断数组的每一项是否在新数组中,如果不在则添加新数组
+			for(var i=0;i<arr.length;i++){
+				if( newArr.indexOf( arr[i] ) == -1 ){
+					newArr.push( arr[i] );
+				}
+			}
+			return newArr;
+
+		}
+		var newArr = setArr( nums );
+		console.log( newArr );
+11.4  数组查找 ==> indexOf()
+		var nums = [1,2,3,2,5,6,3,2,1];
+		function inArray( arr , item ,index = 0 ){
+			// 遍历
+			for(var i=index;i<arr.length;i++){
+				// 判断
+				if( arr[i] === item ){
+					return i;
+				}
+			}
+			return -1;// 默认没有匹配到 返回-1
+		}
+		var index = inArray( nums , 2  );
+		console.log( index );
+
+
+

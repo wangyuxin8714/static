@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var data = null;
+
+
+    /*function fn(data){
+        console.log(data);
+    }*/
+    ajax("d.txt",function(data){
+            console.log(data);
+    },function(eror){
+        console.log(eror);
+    })
+
+    function ajax(url,success,error){
+        var xhr = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+        xhr.open("get",url,true);//异步
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4){
+                if(xhr.status==200){
+                    console.log(1222);
+                    //data = eval("("+xhr.responseText+")");
+                    success(xhr.responseText)
+                }else{
+                    error(xhr.status);
+                }
+            }
+        }
+        xhr.send(null);
+    }
+</script>
+</html>

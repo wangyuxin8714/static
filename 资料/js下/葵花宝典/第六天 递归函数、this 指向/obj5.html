@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 递归打印对象的属性值 </title>
+</head>
+<body>
+	<script>
+		var boy = {
+			name : "xiaoming",
+			age : 18,
+			gf : {
+				name : "xiaohua",
+				age : 17,
+				mother : {
+					name : "cuihua",
+					age : 55,
+				}
+			}
+		}
+
+		
+		function print(obj){
+
+			if(typeof obj != "object"){
+				//如果传进来的参数 不是对象.
+				return;
+			}
+
+
+			// 变量当前对象
+			for(var k in obj){
+				//如果有一个属性是 引用数据类型
+				if(typeof obj[k] == "object"){
+
+					//继续递归啊
+					print(obj[k]);
+
+				}else{
+					console.log(k + "=" + obj[k]);
+				}
+			}
+		}
+
+
+		print(boy);
+
+		//赋值新对象.
+
+	</script>
+</body>
+</html>

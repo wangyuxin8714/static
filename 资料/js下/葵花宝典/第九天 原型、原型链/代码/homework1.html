@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 作业练习 </title>
+	<style>
+			
+		.div{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			background-color: pink;
+		}
+
+	</style>
+</head>
+<body>
+	<script>
+		
+		//创建一个盒子对象
+
+		function abc(){
+		return {
+			//页面中没有盒子, 第一步是创建一个盒子
+
+			div : document.createElement("div"),
+
+			//设置个属性,表示的是 盒子移动偏移量
+
+			topOffset : 0,
+
+
+
+			//初始化方法
+			init : function(){
+				//设置 div 的属性
+				this.div.className = "div";				
+				this.div.style.left = Math.floor( Math.random() * window.innerWidth - 100) + "px";
+				this.div.style.top = "0px";
+				//把 div 添加到页面中
+				document.body.appendChild(this.div);
+
+				//添加到页面中,立即下落
+				this.move();
+			},
+			//开始下落
+
+			move : function(){
+				//保存下 this 指向 ,因为定时器函数里, tihs 指向的是 window
+				var _this = this;
+				var timeId;
+				timeId = setInterval(function(){
+
+					if(_this.topOffset > window.innerHeight){
+						_this.div.style.top = "-100px";
+						_this.div.style.left = Math.floor( Math.random() * window.innerWidth - 100) + "px";
+						_this.topOffset = -100;
+						// //把盒子删除 在页面中
+						// document.body.removeChild(_this.div);
+						// //清除定时器
+						// clearInterval(timeId);
+						// _this.init();
+						// //return;
+					}else{
+						_this.topOffset += 5;
+						_this.div.style.top = _this.topOffset + "px";
+					}
+
+				}, 50);
+			}
+		}
+
+		}
+
+		abc().init();
+		abc().init();
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Document</title></head><body>detail<div id="box"></div><script src="common/axios.js"></script><script>const box = document.querySelector('#box');
+        axios.get('/api/detail').then(res => {
+            box.innerHTML = res.data.map(val => `<p><span>姓名：${val.user}</span><span>性别：${val.sex}</span><span>班级：${val.class}</span><button data-id=${val.id}>删除</button></p>`).join('')
+        })
+        box.onclick = function(e) {
+            const target = e.target;
+            if (target.nodeName === 'BUTTON') {
+                axios.get(`/api/delete?id=${target.getAttribute('data-id')}`).then(res => {
+                    alert(res.data.msg);
+                })
+            }
+        }</script></body></html>

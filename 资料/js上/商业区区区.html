@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box">
+		<span>删除</span>
+	</div>
+	<div>
+		<input type="checkbox"><label>金</label>
+		<input type="checkbox"><label>木</label>
+		<input type="checkbox"><label>水</label>
+		<input type="checkbox"><label>火</label>
+		<input type="checkbox"><label>土</label>
+		<input type="checkbox"><label>冰</label>
+	</div>
+
+	<script>
+		var box=document.getElementById('box'),
+			ipts=document.querySelectorAll('input'),
+			labs=document.querySelectorAll('label');
+
+			//给复选框循环绑定事件
+			for(let i=0;i<ipts.length;i++){
+				ipts[i].onclick=function(){
+					//判断复选框是否为选中状态
+					if(ipts[i].checked){
+						//创建元素
+						var span=document.createElement('span');
+						//拼接内容
+						span.innerHTML=`<span>${labs[i].innerHTML}</span><span>X</span> `;
+						//给每个新建的span记录下标
+						span.index=i;
+						//插入到box中
+						box.insertBefore(span,box.lastElementChild);
+						fn();
+						newFn();
+										  }
+					 else{
+					 	for(var j=0;j<box.children.length-1;j++){
+					 		//用当前的i值和box中的每个子元素的index值比较
+					 		if(i==box.children[j].index){
+					 			//删除该元素
+					 			box.removeChild(box.children[j]);
+					 									 }
+					 		 							 }
+					 	  								 }
+										  				 }
+				 						  				 }
+
+				 	//给box的每个子元素的X绑定事件
+				 	function fn(){		  				 
+				 	for(var i=0;i<box.children.length-1;i++){
+				 		box.children[i].lastElementChild.onclick=function(){
+				 			box.removeChild(this.parentNode);
+				 			ipts[this.parentNode.index].checked=false;
+				 		 				}
+				 						}
+				 				}
+				 	//给删除绑定事件
+				 	box.lastElementChild.onclick=function(){
+				 		for(var i=0;i<box.children.length-1;i++){
+				 			box.children[i].innerHTML='';
+				 			 }
+				 		for(var i=0;i<ipts.length;i++){
+				 			ipts[i].checked=false;
+				 			 }
+				 			}
+				 					
+
+
+	</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="province">
+    <option>-请选择-</option>
+</select>
+<select id="city">
+    <option>-请选择-</option>
+</select>
+<select id="area">
+    <option>-请选择-</option>
+</select>
+</body>
+<script>
+    function Sel(){
+        this.province = document.getElementById("province");//省
+        this.city = document.getElementById("city");//市
+        this.area = document.getElementById("area");//区
+        this.init();
+    }
+    Sel.prototype = {
+        constructor:Sel,
+        init:function(){
+            var _this = this;
+            ajax({
+                url:"data.json",
+                success:function(data){
+                    /* data.forEach(function(item){
+                         //创建省份
+                         var option = document.createElement("option");
+                         option.innerHTML = item.name;
+                         province.appendChild(option);
+                     })*/
+                    _this.drawSelect(data,_this.province);
+                    _this.bindEvent(data);
+                }
+            })
+        },
+        bindEvent:function(data){
+            var _this = this;
+            _this.province.onchange = function(){
+                var cities = null;
+                for(var i in data){
+                    if(this.value==data[i].name){
+                        cities=data[i].city;
+                        break;
+                    }
+                }
+                _this.drawSelect(cities,_this.city);//更新城市对应的下拉框
+            }
+            _this.city.onchange = function(){
+                for(var i=0;i<data.length;i++){
+                    if(data[i].name==_this.province.value){
+                        var cityes = data[i].city;
+                        for(var j=0;j<cityes.length;j++){
+                            if(cityes[j].name==this.value){
+                                var areas = cityes[j].area;//对应的区域
+                                _this.drawSelect(areas,_this.area);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+        },
+        drawSelect:function(data,sel){
+            var _this = this;
+            sel.innerHTML="<option>-请选择-</option>";//每次更新先清空
+            data.forEach(function(item){
+                var option = document.createElement("option");
+                if(sel==_this.area){
+                    option.innerHTML = item;
+                }else{
+                    option.innerHTML = item.name;
+                }
+                sel.appendChild(option);
+            })
+        }
+    }
+
+    /**
+     * {url:"",success:function(){}}
+     * @param obj
+     */
+    function ajax(obj){
+        var xhr = null;
+        if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        }else{
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.open("get",obj.url,true);
+        xhr.send(null);
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4){
+                if(xhr.status==200){
+                    obj.success(JSON.parse(xhr.responseText));
+                }else{
+                    obj.error();
+                }
+            }
+        }
+    }
+
+    new Sel();
+</script>
+</html>

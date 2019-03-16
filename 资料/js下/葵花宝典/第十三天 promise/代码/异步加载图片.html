@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 异步加载图片 </title>
+</head>
+<body>
+	<script>
+		//创建一个图片
+		var arr = ["http://h.hiphotos.baidu.com/image/pic/item/c995d143ad4bd1137c1d50b556afa40f4afb0560.jpg", "http://d.hiphotos.baidu.com/image/pic/item/b64543a98226cffc9d56fb38b5014a90f603ea38.jpg", "http://g.hiphotos.baidu.com/image/pic/item/6f061d950a7b020855d6e2656ed9f2d3572cc813.jpg", "http://e.hiphotos.baidu.com/image/pic/item/4afbfbedab64034f8c730299a3c379310b551df7.jpg","http://www.ggeye.com/pic/big/3/p9886.jpg","http://www.demaxiya.com/pubg/attachment/allimg/1804/15-1P42G0413G92.jpg"];
+
+		//如果不适用异步加载.
+		//加载完第一张,才会加载第二张.
+		//弄成异步的.每个图片都会自己加载自己的.
+
+		arr.forEach( function(element) {
+			asyncLoadImg(element).then(function(img){
+				document.body.appendChild(img);
+			});
+		});
+
+		//异步加载图片
+		function asyncLoadImg(url){
+			return new Promise(function(resolve,reject){
+				var img = new Image();
+				img.src = url;
+
+				img.onload = function(){
+					resolve(img);
+				}
+			});
+		}
+
+		asyncLoadImg(url).then(function(img){
+			document.body.appendChild(img);
+		});
+
+	</script>
+</body>
+</html>

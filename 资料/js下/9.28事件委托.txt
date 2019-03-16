@@ -1,0 +1,93 @@
+
+
+
+事件委托：
+	获取触发事件的最具体的元素
+	
+	**=*.target || *.srcElement 兼容写法；
+	
+采用事件委托（原理：冒泡）吧事件委托给父级或者祖父等等；
+	this一定跟currentTarget相等
+	this 和事件对象currentTarget 在事件中指的是绑定该事件的元素，可能跟target相等
+	*.on事件=function(e){
+		var **  = e || event;
+		var *** = **.target || **srcElement;
+		var tagName = ***.tagName;
+		if(tagName=="***"){
+			函数代码段		
+		}
+	}
+
+
+
+事件对象的属性：
+	元素的属性：
+		clientWidth\clientHeight  元素的   width+padding
+		offsetidth\offsetheight   元素的  width+padding+border
+		offsetLeft\offsetTop      元素距离有定位父级的距离，如果没有就相当于文档的距离的事件对象
+		clientX\clientY		  鼠标相对于可视区的距离
+		pageX\pageY		  (clientX+scrollLeft\clientY+scrollTop)
+		offsetX\offsetY		  鼠标相对于触发事件的元素距离
+	键盘事件：
+		keyCode 获取键盘上的ASCII值；
+
+	文本事件：
+		onchange  当Value发生改变并且失去焦点后触发函数；
+		oninput  当Value发生变化时触发函数效果；不支持低版本 IE；
+		IE特有事件：
+			onpropertchange  属性改变时触发
+
+
+DOM对象的可视区域：---------（元素的可视大小）
+	clientWidth  取值 width+padding
+	offseWidth  取值  width+padding+border
+
+鼠标到可视区的距离 ----------->>>（类似于固定定位）
+	clientX clientY
+
+鼠标到页面的距离，计算加上滚动条；---------->>>（类似于绝对定位）
+	pageX pageY
+
+鼠标距离显示器边缘的距离：   ----(不常用属性)；
+	screenX  screenY
+
+鼠标相对于元素可视区的距离： ------------------>>>鼠标与元素边框的距离
+	offsetX offsetY
+
+
+
+
+
+
+
+UI事件：非用户操作事件；
+	1）onload 推迟加载，当页面加载完毕在执行函数下的代码块； 通常情况一般是：window、body、img
+		window.onload = function{
+			
+		}页面中只能存在一个window.onload；
+
+	2）onnerror  JS脚本出错的时候触发
+		window.onerror = function(){
+			
+		}
+	
+	3）onresize 
+		window.onresize = function(){
+			
+		}
+	4）onscroll 
+		window.onscroll= function(){
+		
+		}
+
+*
+*
+*
+*
+*
+
+*
+*
+*
+*
+*

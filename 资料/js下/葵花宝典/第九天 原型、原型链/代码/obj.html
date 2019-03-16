@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 原型对象 </title>
+</head>
+<body>
+	<script>
+
+		function A(){}
+
+		A.prototype.print = function(){
+			console.log(111);
+		}
+
+		var a = new A();
+
+		console.log(a);
+
+		//a 有 constructor 属性吗?
+		console.log(a.constructor == A);
+
+		a.print();
+
+
+	</script>
+</body>
+</html>

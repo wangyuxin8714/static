@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //给Date对象扩展getTotal方法,用于根据当前日期对象获取该月份的总天数
+    Date.prototype.getTotal = function(){
+        var d =this;
+        var m = d.getMonth()+1;
+        var total = 0;
+        if(m==1||m==3||m==5||m==7||m==8||m==10||m==12){
+            total = 31;
+        }else if(m==4||m==6||m==9||m==11){
+            total=30
+        }else{
+            var year = d.getFullYear();//什么情况是闰年
+            if(year%4==0||(year%400==0&&year%100!=0)){
+                total = 29;
+            }else{total=28};
+        }
+        return total;
+    }
+    var d = new Date();
+    console.log(d.getTotal());
+    var d1 = new Date();
+    console.log(d1.getTotal());
+    /*function getTotal(){
+        var d = new Date();
+        var m = d.getMonth()+1;
+        console.log(m);
+        var total = 0;
+        if(m==1||m==3||m==5||m==7||m==8||m==10||m==12){
+            total = 31;
+        }else if(m==4||m==6||m==9||m==11){
+            total=30
+        }else{
+            var year = d.getFullYear();//什么情况是闰年
+            if(year%4==0||(year%400==0&&year%100!=0)){
+                total = 29;
+            }else{total=28};
+        }
+        return total;
+    }
+    console.log(getTotal());*/
+</script>
+</html>

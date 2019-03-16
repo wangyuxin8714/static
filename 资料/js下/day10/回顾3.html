@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*var name="海尔";
+    var thing = "elephent";
+    function open(name){
+        console.log(name+"冰箱门打开了");
+        push(thing);
+    }
+    function push(a){
+        console.log(a+"放进去了");
+        close();
+    }
+    function close(){
+        console.log("关上门");
+    }
+    open(name);*/
+    function IceBox(name,thing){
+        this.name = name;//冰箱的品牌
+        this.thing = thing;//冰箱要放的东西
+        this.open();
+    }
+    IceBox.prototype = {
+        constructor:IceBox,
+        open:function(){
+            console.log(this.name+"冰箱门打开了");
+            this.push();
+        },
+        push:function(){
+            console.log(this.thing+"放进去了");
+            this.close();
+        },
+        close:function(){
+            console.log("关上门了")
+        }
+    }
+    var b1 = new IceBox("美菱","猫");
+    //b1.open();//b1.name
+    /*b1.push();
+    b1.close();*/
+    var b2 = new IceBox("海尔","狗");
+    //b2.open();//b1.name
+    /*b2.push();
+    b2.close();*/
+    new IceBox("三星","大象");
+
+
+
+
+</script>
+</html>

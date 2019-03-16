@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型</title>
+</head>
+<body>
+	<script>
+
+
+		//现在想创建一个对象 
+		//想使用构造函数去创建对象, 就应该弄一个构造函数
+
+		function Person(name,age,sex){
+			this.name = name;
+			this.age = age;
+			this.sex = sex;
+			this.eat = function(foot){
+				console.log("正在吃饭");
+			}
+		}
+
+		//23行代码 ,代表的意思是,构造函数实例化对象.
+		//构造函数实例化对象时,创建一个对象,实例化对象 p1.
+
+		//构造函数还会自动创建一个对象.这个对象就是原型对象.
+
+		//怎么找到原型对象?   构造函数有一个属性,指向的是原型对象 , prototype
+
+		var p1 =  new Person("zhangsan",20,"man");
+		// 问  p1 有什么属性和方法?
+		
+		var p2 =  new Person("lis",30,"man");
+		// 问 p2 有什么属性和方法 ? 
+
+
+		//原型对象是干嘛的?
+
+		//一般情况下 , 会把方法都放在原型对象中,属性写在构造函数里.
+
+		function Dog(name,age){
+			this.name = name;
+			this.age = age;
+		}
+
+		//给 Dog 的原型对象上 添加 一个方法
+
+		Dog.prototype.eat = function(){
+			console.log("吃吃吃");
+		}
+
+		//Dog构造函数能创建多少个对象啊 ?
+
+		//Dog构造函数实例化的对象,都可以访问 Dog 的原型对象
+
+		var d1 = new Dog();
+		var d2 = new Dog();
+
+		console.log(d1);
+
+		d1.eat();
+		d2.eat();
+	
+
+
+	</script>
+</body>
+</html>

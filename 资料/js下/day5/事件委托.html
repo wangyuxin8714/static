@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            list-style: none;
+            padding:10px;
+            background: red;
+        }
+        li{
+            background: green;
+            margin:10px 0px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+        <li>66</li>
+        <li>777</li>
+        <li>aaa111</li>
+        <li>aaa222</li>
+        <li>aaa333</li>
+        <li>aaa444</li>
+        <li>aaa555</li>
+        <li>aaa66</li>
+        <li>aa777</li>
+    </ul>
+</body>
+<script>
+    var lis = document.getElementsByTagName("li");
+    var ul = document.getElementsByTagName("ul")[0];
+    // for(var i=0;i<lis.length;i++){
+    //     lis[i].onclick = function(){
+    //         alert(this.innerHTML);
+    //     }
+    // }
+    ul.onclick = function(e){
+        var ev = e || window.event;
+        var obj = ev.target || ev.srcElement;//获取事件源  触发该事件的最具体的元素
+        //this  绑定该事件的元素 ul
+        if(obj.tagName=="LI"){
+            alert(obj.innerHTML);
+        }
+
+    }
+</script>
+<script>
+
+</script>
+</html>

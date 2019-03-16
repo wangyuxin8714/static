@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+	</style>
+</head>
+<body>
+	<div>您抽中的奖品是：<span id="result"></span></div>
+	<input type="button" value="抽 奖" id="btn" />
+	你还有<span id="count">3</span>次机会
+
+	<script>
+        var prices = ["Iphone7","Ipad","Ipad mini","小米Note4","谢谢参与","50员充值卡","300元京东购物卡","新马泰7日游"];
+      	var btn=document.getElementById('btn'),
+      		spn=document.getElementById('result'),
+      		count=document.getElementById('count'),timer=null;
+
+      		//给抽奖按钮绑定事件
+      		btn.onclick=function(){
+      			btn.disabled=true;
+      			count.innerHTML-=1;//计数器自减
+      			if(count.innerHTML>=0){//判断次数是否大于等于0
+      				timer=setInterval(gift,100);
+      				//使用超时调用
+      				setTimeout(fn,3000);
+      				}
+      			else{
+      				alert("次数用完");
+      				count.innerHTML=0;
+      				btn.disabled=true;
+      				}
+      							  }
+
+function gift(){
+	//获取数组中的随机下标
+	var index=Math.floor(Math.random()*prices.length);
+	//通过下标将奖品写入到span中
+	spn.innerHTML=prices[index];
+				}
+
+function fn(){
+	clearInterval(timer);//清除奖品随机滚动
+	btn.disabled=false;//接触按钮禁用
+
+			 }
+
+
+        // 补全代码，实现点击“抽奖”按钮进行抽奖，具体要求如下:
+        // 点击“抽奖”按钮后，在数组中随机生成一个奖品，生成时间为3秒，必须有随机生成的
+        // 过程，即需要使用定时器，<span id="result"></span>中要显示抽中的奖品，40秒后定时器停止，此时抽中哪个奖品，显示
+        // 哪个奖品名称，同时抽中的奖品从数组中删除。
+        // 抽奖过程中“抽奖”按钮不可再次点击，抽奖结束后，可以继续点击抽
+        // 每一个用户只有3次抽奖机会，如果是第四次抽，点击按钮时，提示用户“您的抽奖次数已用完~，明天再来抽吧！”
+	</script>
+</body>
+</html>

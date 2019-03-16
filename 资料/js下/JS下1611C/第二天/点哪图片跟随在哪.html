@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 案例</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		#box{
+			width: 200px;
+			height: 200px;
+			position: relative;
+			background-color:blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+   <script>
+
+   		var box=document.getElementById("box");
+
+   		//获取元素大小
+
+   		var w = box.offsetWidth;
+   		var h =  box.offsetHeight;
+
+   	    document.addEventListener("click",function(){
+
+            box.style.left = event.clientX - w/2 + "px";
+
+            box.style.top = event.clientY - h/2 + "px";
+
+   	    },false);
+   	    
+   	    
+   	    
+   </script>
+</body>
+</html>

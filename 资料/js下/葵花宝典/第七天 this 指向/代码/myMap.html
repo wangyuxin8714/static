@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自己实现 map</title>
+</head>
+<body>
+	<script>
+		
+		//自己动手实现 map 的源码
+
+		var arr = [1,2,3,4,5];
+
+		// arr.map(function(){
+
+		// });
+
+		function myMap(arr,fn){
+
+			var newArr = [];
+			for(var i = 0;i<arr.length;i++){
+				//把数组存到新数组中
+				newArr[i] = fn(arr[i]);
+			}
+			return newArr;
+		}
+
+
+		//把接口暴露个外部,让外部人员自己实现.
+
+		myMap(arr,function(item){
+			return item + 20;
+		});
+
+		myMap(arr,function(item){
+			return item * 20;
+		});
+
+
+		
+
+
+
+	</script>
+</body>
+</html>

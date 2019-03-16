@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text"><br>
+	<input type="text">
+	<button id="btn">点击获取</button>
+	<script>
+	//获取文本框
+	var ipts=document.querySelectorAll('input'),
+		btn=document.getElementById('btn'),
+		str='qwertyuiopasdfghjklzxcvbnm',yzm='',timer=null,
+		count=3;
+
+		//给按钮绑定事件
+		btn.onclick=function(){
+			//判断第一个文本框中的值是否合法
+			if(isNaN(ipts[0].value)||String(ipts[0].value).length!=11){
+				alert("手机输入有误");
+				}
+			else{
+				//随机获取四位数验证码
+				yzm='';
+				for(var i=1;i<=4;i++){
+					yzm+=str[Math.floor(Math.random()*str.length)];
+					 				  }
+				//将验证码写入到第二个文本框中
+				ipts[1].value=yzm;
+
+				//定义定时器
+				timer=setInterval(fn,1000);
+				}
+
+							  }
+	function fn(){
+		btn.disabled=true;//按钮禁用
+		btn.innerHTML= count-- +"秒后重试";//按钮值自减
+		if(count<0){//判断计数器是否小于0
+			btn.innerHTML='点击重获';//更新按钮上文本内容
+			btn.disabled=false;//接触禁用
+			count=3;//计数器值重置
+			clearInterval(timer);//清除定时器
+
+				   }
+				 }
+
+
+
+
+
+
+
+
+	/*//获取文本框和按钮
+	var ipts=document.getElementsByTagName('input'),
+		btn=document.getElementById('btn'),
+		count=3,
+		time=null;
+
+		//给按钮绑定事件
+		btn.onclick=function(){
+			var str="qwertyuiopasdfghklzxcvbnm",newStr="";
+			if(isNaN(ipts[0].value)||ipts[0].value.length!=11){
+				alert("手机输入有误!");
+															 }
+
+			else{
+				for(var i=1;i<=4;i++){
+						var index=Math.floor(Math.random()*str.length);
+						newStr+=str[index];
+					 }
+				ipts[1].value=newStr;
+				
+				time=setInterval(fn,1000);
+				}
+							  }
+
+		function fn(){
+			btn.disabled=true;
+		btn.innerHTML = count--+"秒后重试"
+		if(count<0){
+			clearInterval(time);
+			btn.innerHTML = "重新获取"
+			count = 3;
+			btn.disabled=false;
+				  }
+				 }*/
+
+			
+			         
+	</script>
+</body>
+</html>

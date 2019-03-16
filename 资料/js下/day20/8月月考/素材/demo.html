@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box div {
+            display: none;
+        }
+        .box div.show {
+            display: block;
+        }
+        .box .on {
+            color: rgb(31, 210, 241);
+        }
+        label {
+            display: block;
+        }
+        button {
+            display: block;
+        }
+        .error {
+            color: #f00;
+        }
+        .wrap label{height:30px;line-height:30px;}
+    </style>
+</head>
+<body>
+   <!--题一：tab切换-->
+   <div class="box" id="box">
+        <input type="button" value="按钮1" class="on" id='btn'>
+        <input type="button" value="按钮2" >
+        <input type="button" value="按钮3" >
+        <div class="show">11111</div>
+        <div>22222</div>
+        <div>33333</div>
+    </div>
+   <!-- <div class="box" id="box2">
+        <input type="button" value="按钮1" class="on" >
+        <input type="button" value="按钮2" >
+        <input type="button" value="按钮3" >
+        <div class="show">11111</div>
+        <div>22222</div>
+        <div>33333</div>
+    </div>-->
+    <hr />
+
+
+<script>
+
+// task1：选项卡，必须使用面向对象编程实现
+/**
+ *
+ * @param boxId   选项卡容器的id
+ * @constructor
+ */
+    function Tab(boxId){
+            this.tabTitleBox = document.getElementById(boxId);//选项卡的容器
+            this.oInputs = this.tabTitleBox.getElementsByTagName("input");//获取所有的选项卡标题按钮
+            this.oDivs = this.tabTitleBox.getElementsByTagName("div");//选项卡的内容
+            this.currentIndex = 0;//当前选中选项卡的索引
+            this.bindEvent();
+    }
+    Tab.prototype = {
+        constructor:Tab,
+        bindEvent:function(){
+            var _this = this;
+            for(var i=0;i<_this.oInputs.length;i++){
+                _this.oInputs[i].index = i;
+                //给每个input绑定点击事件
+                _this.addEvent(_this.oInputs[i],"click",function(){
+                    //清空原来的样式
+                    _this.oInputs[_this.currentIndex].className = "";
+                    _this.oDivs[_this.currentIndex].className = "";
+                    _this.currentIndex = this.index;
+                    //更新点击的选项卡的样式
+                    this.className = "on";
+                    _this.oDivs[this.index].className = "show";
+                });
+            }
+        },
+        /**
+         * dom2级绑定事件兼容浏览器
+         * @param ele 绑定事件的元素
+         * @param type 事件的类型
+         * @param fn 事件处理函数
+         */
+        addEvent:function(ele,type,fn){
+            if(ele.addEventListener){
+                ele.addEventListener(type,fn,false);
+            }else if(ele.attachEvent){
+                ele.attachEvent("on"+type,fn);
+            }else{
+                ele["on"+type] = fn;
+            }
+        }
+    }
+    new Tab("box");
+</script>
+</body>
+</html>

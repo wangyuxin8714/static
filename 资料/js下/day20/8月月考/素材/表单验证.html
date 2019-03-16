@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        label {
+            display: block;
+        }
+        button {
+            display: block;
+        }
+        .error {
+            color: #f00;
+        }
+        .wrap label{height:30px;line-height:30px;}
+    </style>
+</head>
+
+<body>
+<!--题二：表单验证-->
+<div class="wrap">
+    <label>用户名：<input type="text" class="username" name="username"><span class="error"></span></label>
+    <label>密码：<input type="text" class="password" name="password"><span class="error"></span></label>
+    <label>重复密码：<input type="text" class="confirm-password" name="confirmPassword"><span class="error"></span></label>
+    <label>手机号：<input type="text" class="phone" name="phone"><span class="error"></span></label>
+
+    <button type="submit">提交</button>
+</div>
+</body>
+<script>
+    // task2：表单验证，实时验证，即输入错误时，马上在文本框的后面提示应该输入的内容，正确时，信息自动隐藏
+    // 姓名规则：长度应为4~12位
+    // 密码规则：长度应为6-12位的字母、数字或下划线
+    // 重复密码：只需和密码相等即可
+    // 手机号：
+    // 表单提交的验证
+    // 点击“提交”按钮时验证输入信息，当信息错误时，在输入错误的文本后显示错误信息
+    var oInputs = document.getElementsByTagName("input");
+    var errors = document.getElementsByClassName("error");
+    var checkName = false;//姓名是否正确
+    var checkPwd = false;//密码是否正确
+    var checkPwd2 = false;//重置密码是否正确
+    var btn = document.getElementsByTagName("button")[0];//提交按钮
+    //验证姓名
+    oInputs[0].oninput = function(){
+        var reg = /^.{4,12}$/;
+        checkName = reg.test(this.value);
+        if(!checkName){
+            errors[0].style.display="inline-block";
+            errors[0].innerHTML = "姓名长度应为4~12位";
+        }else{
+            errors[0].style.display="none";
+        }
+    }
+    //验证密码
+    oInputs[1].oninput = function(){
+        var reg = /^\w{6,12}$/;
+        checkPwd = reg.test(this.value);
+        if(!checkPwd){
+            errors[1].style.display="inline-block";
+            errors[1].innerHTML = "密码长度应为6-12位的字母、数字或下划线";
+        }else{
+            errors[1].style.display="none";
+        }
+    }
+    //重复密码
+    oInputs[2].oninput = function(){
+        var reg = new RegExp("^"+oInputs[1].value+"$");
+        checkPwd2 = reg.test(this.value);
+        if(!checkPwd2){
+            errors[2].style.display="inline-block";
+            errors[2].innerHTML = "密码不一致";
+        }else{
+            errors[2].style.display="none";
+        }
+    }
+    //点击提交
+    btn.onclick = function(){
+        if(checkName && checkPwd && checkPwd2){
+            //所有信息都填写成功 ，发送ajax
+            ajax({
+                method:"get",
+                url:"demo_server.html",
+                params:"name="+encodeURI(oInputs[0].value)+"&pwd="+oInputs[1].value,
+                success:function(){
+
+                }
+            })
+        }else{
+
+        }
+    }
+    // ajax请求的封装，请求地址为demo_server.html
+    /**
+     *   obj{
+     *      method:请求方法
+     *      url:请求地址      demo_server.html
+     *      params:参数  字符串的形式     name=oInput[0}.value&pwd=oInput[1].value
+     *      success：成功的函数
+     *   }
+     * @param obj
+     */
+    function ajax(obj){
+        var xhr = null;
+        if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        }else{
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        var url = obj.url;
+        if(obj.method.toLowerCase()=="get"){
+            //demo_server.html?name=oInput[0}.value&pwd=oInput[1].value
+            xhr.open("get",url+"?"+obj.params,true);
+            xhr.send(null);
+        }else{
+            xhr.open("post",url,true);
+            xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+            xhr.send(obj.params);
+        }
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4){
+                if(xhr.status==200){
+                    obj.success(xhr.responseText);
+                }
+            }
+        }
+    }
+</script>
+</html>

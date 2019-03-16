@@ -1,0 +1,236 @@
+第二单元：常用块及行内元素
+1.常见的块元素：
+      html  根元素  祖先元素
+      head  头部   在页面中只可以出现一次
+      body   内容
+      div    盒子  容器    页面布局
+      h1 一号标题标签
+      h2 二号标题标签
+      h3 三号标题标签
+      h4
+      h5
+      h6
+      特点:降级显示   
+           独占一行
+           默认加粗
+      p 段落标签
+      ul  无序列表
+        li  有多少条数据取决于多少个li
+        默认是实心小圆disc
+              circle 空心小圆
+              square 实心方块
+    ol  有序列表
+        默认是 阿拉伯数字   decimal
+        A  大写英文   upper-alpha
+        a 小写英文    lower-alpha
+        I  大写罗马文
+        i  小写罗马文
+    dl 自定义列表
+        dt 定义项  装图片 (可以装任意元素)
+        dd 描述项 装文本  (可以装任意元素，包括行内与块元素)
+     form 表单元素  做数据交互
+    table  表格 做数据展示  
+    address  倾斜  地址
+
+  块级元素的特点
+           独占一行，自动换行；
+           宽度100%  可以容纳其他块元素、行内元素
+2、常见的行内元素有：
+      a   跳转，下载，超链接，锚点链接
+      span  特殊文本
+      b 加粗
+      strong 加粗  强调作用
+      i 倾斜
+      em 倾斜  强调作用
+      time 时间
+      sub  下标
+      sup  上标
+      br 强制换行
+      label 给表单元素作标注
+    
+  行内元素的特点：
+         默认在一行显示；
+         行内元素的宽高默认被内容所撑开；
+         只能容纳文本或行内元素;
+         多个行内元素在同一行显示；
+         行内元素设置上下margin值无效；
+         行内元素设置宽高无效;
+3.常见的行内块元素有：
+       img  图片
+       input  表单元素
+       select  下拉菜单
+       textarea  文本域
+      行内块元素的特点:可以再一行显示并且支持宽高的元素
+  行内块元素之间的相互转换：
+         display：inline 块元素转化为行内元素 / 解决IE6浏览器双倍间距的兼容问题
+         block 行内元素转化为块元素 / 显示元素
+         inline-block 行内块元素
+	 none 隐藏元素 不占位
+	 table 让元素变成表格元素 
+	 table-cell 让元素变成表单 单元格 元素
+
+4.<h1></h1>~<h6></h6>标题标签 自动加粗 级别最高为h1   级别最低为h6  一级标题 h1
+h标签不可以嵌套h标签     属于块级元素
+5.标签：用来表示网页中的不同的部分
+  双标签：<标签名></标签名>
+          <h1></h1>......<h6></h6>    标题
+          <p></p>   段落
+          <i></i>   倾斜
+          <b></b>   加粗
+          <strong></strong>    加强调，加粗
+          <em></em>     强调显示，倾斜
+          <u></u>   下划线
+          <s></s>    删除线
+  单标签：<标签名/>
+          <br>   强制换（单标签）}
+          <hr>   水平线
+          <img>  图像
+          <meta>  语言声明，语言编码（utf-8、gb2312）
+          <link> 外部链接
+属性：用来表示标签的特征
+属性值：为属性赋的值
+判断题：单标签是空标签
+<hr> 水平线的属性：
+	color颜色
+	size尺寸，大小，高度
+	width宽度
+	align水平对齐方式（left、center、right）
+特殊符号：
+   &nbsp;    空格		    &amp;	   &
+   &lt;       小于号		&quot;     "
+   &gt;       大于号
+   &copy;     版权
+   &reg;      注册
+列表：
+    无序列表：列表项没有先后顺序的列表形式
+    <ul>
+       <li></li>  
+         ...
+    </ul>
+    ul的属性：type类型（值：disc实心圆、circle空心圆、square小方块）
+
+    有序列表：列表项有先后顺序的列表形式
+    <ol>
+      <li></li>
+        ...
+    </ol>
+    ol的属性：type类型（值：1  A  I）    start开始
+自定义列表
+    <dl>
+      <dt>定义项</dt>
+      <dd>描述项</dd>
+    </dl>
+
+超链接
+    <a></a> 超链接：	
+            属性：href超链接的路径、地址（可以链接任意类型的文件）
+             target窗口打开方式（值：_blank新窗口、_self本窗口（默认值）、_parent父级、_top顶部、new）
+
+第三单元
+用来书写下拉列表的标签有：option\select
+input元素的类型：text(文本)、possword(密码)、submit(提交)、button(按钮)
+
+form标签上的属性
+        action  提交地址
+        method 提交/请求方式
+            post
+            get
+          get：提交量小100，安全性低
+
+          post：提交量大，安全性高
+        title 鼠标划过提示信息
+        name 表单名称  默认form1
+        target 打开方式
+            _self  默认值 原窗口
+            _blank  新窗口
+            _parent  
+            _top
+
+form    双标签 块元素   作用于数据交互
+        表单控件类型
+            text  文本框   
+            password  密码框
+            radio 单选  (女男性别选择)
+            checkbox 复选  (爱好，运动)
+            reset 重置 
+            submit 提交按钮
+            button 普通按钮
+            image 图像域  (可作为提交按钮)
+            file 文件域  (上传图片)
+            hidden 隐藏域  (星级评级)
+            
+        多行文本域：<textarea cols="50" rows="10" maxlength="60"></textarea>
+
+             cols：控制宽（列-字符数）  rows：控制高（行数）maxlength：设置输入的最大字符数
+
+             input、select、textarea共同属性：name（不可省略，记忆功能）、value
+
+             disabled 不可编辑 hidden除外 禁用
+
+              readonly  对text只读
+
+        select 下拉菜单
+            必须配合option使用
+
+    单选按钮的实现
+        指定多个单选框的 name 属性指定相同，绑定为一组
+        eg: <input type="radio" name="sex"> 男
+            <input type="radio" name="sex"> 女
+
+    checked 属性  默认选中   只作用于radio与checkbox
+
+3.下拉菜单：：<select multiple="multiple">
+        	<option value="1">请选择</option>
+                <option value="2">北京</option>
+                <option value="3" selected="selected">上海</option>
+                <option value="4">广州</option>
+              </select>
+		<optgroup>选项组</optgroup>
+
+       select的属性：
+            multiple:实现多选 
+            size：多行显示为列表，值为数字
+       option的属性：1、value 是菜单的提交值  2、selected="selected" 默认选中状态/值
+
+    label 标签的 for 属性可把 label 绑定到另外一个元素
+        eg： <input type="checkbox" name="sex" checked id="b"> <label for="b">音乐</label>
+                实现点击文本按钮选中
+
+
+
+表格：
+
+表格标签：<table></table>
+
+行：<tr></tr>
+列单元格：<td></td>
+
+单元格标题标签：<th></th> 默认加粗居中
+
+表格标题标签：<caption>我是表格的标题标签</caption>
+
+划分区域：<thead></thead>表头（一个表格中只使用一次）  <tbody></tbody>主体（多次） <tfoot></tfoot>表页脚（一次）
+
+
+表格的标签属性：table  
+	     cellspacing：单元格（边框）之间的间距；默认值是2
+	     cellpadding：内容与边框的边距
+	     width：宽
+	     height：高
+	     border：边框
+	     align：水平对齐方式 属性值：left、center、right
+	     valign:垂直对齐方式  属性值：baseline（基线）、top、middle、bottom
+	     bgcolor：背景色
+	     background：背景图
+
+
+实现表格1像素细线的方法：1、border-collapse:collapse;合并边框css--table
+	   		 2、单元格间距设为1；添加表格背景色；添加单元格背景色
+
+	td  colspan：水平合并单元格（列）
+	    rowspan：垂直合并单元格（行）
+		
+	    
+
+
+

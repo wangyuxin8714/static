@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件类型</title>
+</head>
+<body>
+
+	<!-- html 0 级事件,写在标签内部的 , 不建议使用.  因为耦合性高 -->
+	<button onclick = "alert(1)">html0级事件</button>
+	<button id = "btn">DOM0级事件</button>
+
+	<button id = "btn1">DOM2级事件</button>
+		
+	<script>
+		var btn = document.getElementById("btn");
+		var btn1 = document.getElementById("btn1");
+		//给 btn 添加一个点击事件
+		btn.onclick = function(){
+			console.log("按钮被点击了");
+		}
+
+
+		//通过 DOM2级事件 来添加事件 ,推荐使用此方法
+
+		btn1.addEventListener("click", function(){
+
+			console.log("DOM2级事件,按钮被点击了");
+		}, false);
+
+
+		// //ie8及以下浏览器 添加事件
+		// btn.attachEvent("onclick",function(){
+		// 	console.log(1111);
+		// });
+
+
+	</script>
+
+</body>
+</html>

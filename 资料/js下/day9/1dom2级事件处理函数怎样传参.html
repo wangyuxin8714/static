@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    document.addEventListener("click",fn(3,4));
+    document.addEventListener("click",fn2.bind(document,1,2));
+    function fn(a,b){
+        return function(){
+            console.log(a+b);
+        }
+    }
+    function fn2(a,b){
+        console.log(a+b);
+    }
+    //fn2.bind(document)(4,5);
+    fn2.bind(document,6,7)();
+</script>
+</html>

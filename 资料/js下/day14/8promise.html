@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Promise  es6  用来解决异步的  resolve 表示成功  reject 表示失败  pending 进行中
+    //构造函数promise的参数是一个函数，这个函数的参数也是函数，resolve表示成功的函数，reject表示失败的函数
+    var a = 5;
+    var p1 = new Promise(function(resolve,reject){
+        if(a%2==0){
+            resolve("ddde");
+        }else{
+            reject("出错了");
+        }
+    });
+    p1.then(function(data){
+        console.log("45e"+data);
+    },function(error){
+        console.log("1111"+error);
+    })
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 原型链 + 构造函数 </title>
+</head>
+<body>	
+	<script>
+
+
+		function A(name,age,like){
+			this.like = like;
+			B.call(this, name,age);
+		}
+
+		function B(name,age){
+			this.name = name;
+			this.age = age;
+		}
+
+		B.prototype.eat = function(){
+			console.log(1);
+		};
+
+		A.prototype = B.prototype;
+		A.prototype.constructor = A;
+
+		var a = new A("lisi",10,"code");
+		console.log(a);
+		a.eat();
+
+	</script>
+</body>
+</html>

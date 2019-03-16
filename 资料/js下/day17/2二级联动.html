@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #left,#right{
+            margin-right:60px;
+            float: left;
+        }
+        .active{
+            color:red;
+            background: #cccccc;
+        }
+        h2{
+            cursor: pointer;
+        }
+        h2,h4{
+            margin:5px;
+        }
+        #right div{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="left">
+       <!-- <h2>A</h2>
+        <h2>B</h2>-->
+    </div>
+    <div id="right">
+       <!-- <div>
+            <h4>澳门</h4>
+            <h4>安徽</h4>
+        </div>-->
+    </div>
+</body>
+<script>
+    function ajax(obj){
+        var xhr = null;
+        if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        }else{
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.open("get",obj.url,true);
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4){
+                if(xhr.status==200){
+                    obj.success(eval(xhr.responseText));
+                }else{
+                    obj.error(xhr.status);
+                }
+            }
+        }
+        xhr.send(null);
+    }
+    function Sel(){
+        this.left = document.getElementById("left");
+        this.right = document.getElementById("right");
+        this.currentIndex = 0;//当前选中的字母下标
+        this.init();
+    }
+    Sel.prototype = {
+        constructor:Sel,
+        init:function(){
+            var _this = this;
+            ajax({
+                url:"data.json",
+                success:function(data){
+                    console.log(data);
+                    _this.renderPage(data);
+                }
+            })
+        },
+        /**
+         * 渲染页面
+         * @param data
+         */
+        renderPage:function(data){
+            var _this = this;
+            data.forEach(function(item,index){
+                //左边
+                var h2 = document.createElement("h2");
+                h2.innerHTML = item[0];
+                h2.index = index;//给每个h2绑定一个下标
+                _this.left.appendChild(h2);
+                //右边
+                var div = document.createElement("div");
+                var cities = item[1];//对应字母的所有城市
+                cities.forEach(function(ele){
+                    var h4 = document.createElement("h4");
+                    h4.innerHTML = ele;
+                    div.appendChild(h4);
+                })
+                _this.right.appendChild(div);
+                //添加默认的样式，默认让第一个A对应的信息显示
+                if(index==0){
+                    h2.className="active";
+                    div.style.display = "block";
+                }
+                _this.changeTab(h2);
+            })
+        },
+        changeTab:function(tab){
+            var _this = this;
+            tab.onmouseover = function(){
+                //清空上一次选中的状态
+                _this.right.children[_this.currentIndex].style.display = "none";
+                _this.left.children[_this.currentIndex].className = "";
+                //设置当前选中的样式
+                this.className = "active";
+                _this.right.children[this.index].style.display = "block";
+                _this.currentIndex = this.index;
+            }
+        }
+    }
+
+
+    new Sel();
+</script>
+</html>

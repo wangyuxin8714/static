@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="ElongLogin" class="formbox">   
+        <div class="inputbox login_id">
+              <span class="icon"></span>
+              <input class="blur" type="text" id="UserName" value="用户名/卡号/手机号/邮箱">
+              <div class="input_tip" name="input_error_tip" style="display: none;"> 您输入的用户名和密码不匹配，请重新输入！
+              </div>
+        </div>
+        <div class="inputbox login_pw" style="" id="input_password">
+            <span class="icon"></span>
+            <input class="blur" type="password" method="PassWord" id="PassWord">
+            <div class="input_tip" name="input_error_tip" style="display: none;">您输入的密码和用户名不匹配，请重新输入！
+            </div>
+        </div>
+	  <div class="inputbox">
+	  	  <input class="test" type="text" value="验证码" id="ValidateCode">
+	  	  <p class="test-wrap">QNMP</p>
+	  	  <a href="#?" id="ValidateHref">换一张</a>
+	  	  <div class="input_tip input_tip_yzm" id="validate_result" style="display: none;">您输入的验证码有误</div>
+	  </div>
+        <a class="loginbtn" href="#?" usable="true" method="LoginSubmit">登录</a>
+    </div>
+    <script>
+       // 不允许修改与样式！！！！！！！！！！！！！！！！
+       // 用户点击“登陆”按钮之后进行信息验证：
+       //验证用户名与密码的格式是否正确，要求用户名必须是字母、数字的组合，且必须是5到12位。
+//码必须是6-12位，如果密码是纯数字或纯字母，在下方提示用户”您的密码过于简单，建议重新设置”
+//证用户名与密码是否正确，如果用户名或密码错误，显示蓝色框内的信息，用户名错误蓝色框出现在用户名文本框的下方，密码错误则蓝色框出现在密码文本框的下方。假设正确的登陆信息是：用户名：myBawei88,密码是wangzhan123。
+//果验证码错误，显示黑色框内的信息
+//击“换一张”按钮在26个子母中随机生成4位大写字母显示出来。
+//果用户名、密码、验证码均填写正确，跳转到login.html页面中，将用户填写的用户名和密码以?参数=参数值的形式传递过去，中文需编码。
+    var reg1 = /^[a-z0-9]{5,12}$/i;// 用户名必须是字母、数字的组合，且必须是5到12位
+    var reg2 = /^.{6,12}$/;//密码是6-12
+    var reg3 = /(^\d{6,12}$)|(^[a-z]{6,12}$)/i;
+     var loginBtn = document.getElementsByClassName("loginbtn")[0];
+     var changeCode = document.getElementById("ValidateHref");//换一张
+       var realCode = changeCode.previousElementSibling;//获取的生成的验证码对应的元素
+       var codeMsg = document.getElementById("validate_result");
+        var inputCode = document.getElementById("ValidateCode");//输入框输入的验证码
+       //点击登录
+     addEvent(loginBtn,"click",function(){
+            var userName = document.getElementById("UserName");
+            var userNameMsg = userName.nextElementSibling;
+            var pwd = document.getElementById("PassWord");
+            var pwdMsg = pwd.nextElementSibling;
+            var isFlag = true;//是否正确
+            //验证用户名
+            if(!reg1.test(userName.value)){
+                userNameMsg.innerHTML = "用户名必须是字母、数字的组合，且必须是5到12位";
+                userNameMsg.style.display = "block";
+                isFlag = false;
+            }else{
+                if(/^myBawei88$/.test(userName.value)){
+                    userNameMsg.style.display = "none";
+                }else{
+                    userNameMsg.innerHTML = "您输入的用户名和密码不匹配，请重新输入！";
+                    userNameMsg.style.display = "block";
+                    isFlag = false;
+                }
+            }
+            //验证密码
+            if(!reg2.test(pwd.value)){
+                pwdMsg.innerHTML = "密码必须是6-12位";
+                pwdMsg.style.display = "block";
+                isFlag = false;
+            }else{
+                if(reg3.test(pwd.value)){
+                    pwdMsg.innerHTML = "您的密码过于简单，建议重新设置";
+                    pwdMsg.style.display = "block";
+                    isFlag = false;
+                }else{
+                    //校验密码是否wangzhan123
+                    if(/^wangzhan123$/.test(pwd.value)){
+                        pwdMsg.style.display = "none";
+                    }else{
+                        pwdMsg.innerHTML = "您输入的密码和用户名不匹配，请重新输入！";
+                        pwdMsg.style.display = "block";
+                        isFlag = false;
+                    }
+                }
+            }
+            //校验验证码
+            /*if(inputCode.value.toUpperCase() == realCode.innerHTML.toUpperCase()){
+                codeMsg.style.display = "none";
+            }else{
+                codeMsg.style.display = "block";
+            }*/
+            var reg4 = new RegExp("^"+realCode.innerHTML+"$","i");
+            if(reg4.test(inputCode.value)){
+                codeMsg.style.display = "none";
+            }else{
+                codeMsg.style.display = "block";
+                isFlag = false;
+            }
+            if(isFlag){
+                //alert(encodeURI("张三"));//使用的是utf-8
+                window.location.href="login.html?name="+encodeURI(userName.value)+"&pwd="+pwd.value;
+
+            }
+       });
+     //换一张验证码
+       addEvent(changeCode,"click",function(){
+            //大写字母 65-90 65 A
+           //console.log(String.fromCharCode(68));//把大写字母对应Unicode编码找到大写字母
+           //console.log(Math.floor(Math.random()*26)+65);//获取65-90之间的随机数
+           var codes = "";
+           for(var i=0;i<4;i++){
+                var random = Math.floor(Math.random()*26)+65;
+                var code = String.fromCharCode(random);//对应的字母
+               //获取不重复的验证码
+                if(codes.indexOf(code)!=-1){
+                    //验证码里面已经有code字母了
+                    i--;
+                }else{
+                    codes+=code;
+                }
+           }
+           //console.log(codes);
+           realCode.innerHTML = codes;
+       });
+       /**
+        * dom2级绑定事件
+        * @param ele元素
+        * @param type 事件类型
+        * @param fn 事件处理函数
+        */
+     function addEvent(ele,type,fn){
+         if(ele.addEventListener){
+             ele.addEventListener(type,fn);
+         }else if(ele.attachEvent){
+             ele.attachEvent("on"+type,fn);
+         }else{
+             ele["on"+type] = fn;
+         }
+     }
+    </script>
+</body>
+</html>

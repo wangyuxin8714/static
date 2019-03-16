@@ -1,0 +1,148 @@
+ 对象 类数组 方便操作数据  
+     对象的创建 
+	 var obj={}  对象字面量
+	 var obj=new Object();   构造函数创建对象
+
+     在对象中 基本类型被称为对象的属性
+	      复杂类型被称为对象的方法
+     var obj={
+         name:'哈哈',   键值对  
+	 age:18,
+	 sex:'',
+	 fn:function(){
+	        console.log(123);
+	    return 1;
+		}
+	}
+     console.log(obj.fn())
+
+     动态的去创建属性
+         var obj={};
+             obj.kg='75kg';
+             obj.cm='260cm';
+             obj.mm='26000mm';
+             obj.fn=function(){
+	                alert(123);
+			}
+
+         console.log(obj.fn());
+
+ 通过id获取元素方法的封装(byId)
+ function $(id){
+	return document.getElementById('box');
+	}
+
+     判断DOM元素上是否有某个类(hasClass)
+	 var box=$('box');
+	 function hasClass(node,cla){
+		    将节点的类名通过空格转数组
+		    var arr=node.className.split(' ');
+		    遍历数组arr
+		    for(var i=0;i<arr.length;i++){
+			     if(arr[i]==cla){
+				       return true;
+				       }
+		 		}
+		    return false;
+	                 }
+	console.log(hasClass(box,'w'));*/
+
+     添加类方法的封装(addClass)
+	 var box=$('box');
+	 function addClass(node,cla){
+		     将要添加类的节点的类名通过空格转数组
+		     var arr=node.className.split(" "),
+	             flag=false;
+		     遍历数组arr
+		     for(var i=0; i<arr.length;i++){
+			      if(arr[i]==cla){
+				         flag=true;
+				      }
+			        }
+		     if(flag){
+			    alert("该类名已存在");
+		          }
+		     else{
+			node.className+=' '+cla;
+		     }	
+	      }
+	 addClass(box,'xyz');*/
+
+     删除类方法的封装(removeClass)
+         var box=$('box');
+         function removeClass(node,cla){
+	             通过空格转数组
+	             var arr=node.className.split(' ');
+	             为了不影响下标值的改变 所以倒序遍历arr
+	             for(var i=arr.length-1;i>=0;i--){
+		               if(arr[i]==cla){
+			                  arr.splice(i,1);
+			               }
+	                         }
+	             node.className=arr.join(" ");
+		          }
+         removeClass(box,'w');
+
+     通过类获取元素方法的封装(getElementsByClassName)
+         var node=document.body;
+	 function byClassName(node,cla){
+	 	     定义数组保存符合条件的元素(标签)
+	 	     var newArr=[];
+	 	     遍历所有的子元素
+	 	     for(var i=0;i<node.children.length;i++){
+	 		       定义数组将当前元素的类名通过空格转数组
+	 		       var arr=node.children[i].className.split(" ");
+	 		       循环arr数组 判断是否有cla 这个类
+	  		       for(var j=0;j<arr.length;j++){
+	 			         if(cla==arr[j]){
+	  				          将相应的元素添加到数组中
+	  				          newArr.push(node.children[i]);
+	 				          }	
+	 			 	 }
+	 		  	}
+	 	  return newArr;
+	 		}
+	 console.log(byClassName(node,'x'));*/
+
+     封装getElementsByTagName()方法
+	 获取某个范围内的某个标签(全部)
+	 var node=document.body;
+	 function byTagName(node,val){
+		     var arr=[];
+		     for(var i=0; i<node.children.length;i++){
+			       if(node.children[i].nodeName==val.toUpperCase()){
+				                             arr.push(node.children[i]);
+				                                      }
+				 			     }
+		return arr;
+						   }
+	console.log(byTagName(node,'div'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

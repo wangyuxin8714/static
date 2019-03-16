@@ -1,0 +1,185 @@
+目标：优秀标准网页代码：规范、高效、兼容
+
+编辑软件：DW、sublime、note++、记事本
+
+w3c标准：1、结构标准（html）
+	 2、表现/样式标准（css）
+	 3、行为标准（js、dom、bom、ECMAscript）
+w3c标准由万维网联盟发布的
+
+行业开发标准：习惯 行业经验
+
+商业网站开发流程 8步 我们在哪？立项-策划-ui-网页代码开发div+css-js开发-后台程序开发php-上线-推广
+
+站点搭建流程 3步
+	1创建站点文件夹-内部文件夹（分类管理）
+	2使用sublime软件打开站点文件夹
+	3创建网页index.html文件和style.css文件
+	准备4:index中创建h5结构、在style中复制进全局样式代码
+网页布局划分原则 4条
+网页排版开发流程 3步 思考：使用啥标签? 啥选择器 啥属性
+
+<!DOCTYPE html> 声明文档类型------h5声明
+--首行顶列
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">------h4声明
+严格Strict/过渡Transitional / 框架集Frameset
+
+<html>根元素、祖先元素-告知浏览器其自身是一个 HTML 文档
+
+<head>头部-关于文档的控制信息-浏览器不显示
+
+<meta />网页元信息 空
+<meta  charset=“utf-8" />声明语言编码  通用utf-8或gb2312 big5 gbk gb18030
+	css中声明语言编码用 @charset "utf-8";
+<meta  name="keywords" content="**,**,**">关键字
+	   =“description”描述信息
+@charset "utf-8";
+
+<title>无标题文档</title>网页标题
+
+<base target="_blank"> 元素可规定页面中所有链接的基准 URL。 target
+
+<link />rel type href media 链接外部资源文件 css文件  空
+</head>
+
+<body>主体 浏览器显示
+</body>
+
+</html>
+
+
+什么是html？描述型超文本标记语言 --结构    盒子= 标记=标签=元素=节点 <div></div>
+	四个要素
+	1/标签 形式（双=容器<div起始>dg</div结束>  /  单=空<br width=100 />）    创建盒子或定义功能
+	2/属性及值 定义元素的表现 属性名称1=“属性值”空格隔开多个属性 起始标签名称后用空格隔开属性
+	3/普通文本
+	4/脚本和注释
+
+语法：html标签语法：属性="属性值" 等号赋值 空格隔开
+      css语法：属性1：属性值1;属性2：属性值2;……冒号赋值 分号隔开
+	不区分大小写 推荐小写
+html注释<!-- yjtdygf  -->
+
+css注释 /*  eryrtyrtytr    */
+
+什么是css？
+样式表：用于控制网页外观的层叠样式表。---表现
+
+1、行内样式表：位置（标签上）<div style="width:100px; height:100px; background-color:#09C;"></div>  
+ 
+特点：局限性，不利于后期修改、维护,没有实现结构与样式的分离
+
+2、内部样式表/内嵌样式：位置（放在head里）
+<style>
+	.nav{ width:200px; height:200px; background-color:#f00;}
+</style>
+
+特点：没有实现结构与样式的分离
+
+3、外部导入样式表：位置（放在head里）
+<style>
+	@import"../css/zhou.css";
+</style>
+
+特点：先加载结构再加载样式，加载速度慢 不利动态更新
+
+4、外部链接样式表  位置（放在head里）-推荐
+<link rel="stylesheet" href="../css/web.css" />
+
+特点：优先级最低，结构与样式同时加载，加载速度快，实现结构与样式的分离，便于后期修改维护
+
+样式表的优先级：行内>内部>外部导入>外部链接   远近原则 （注意！important）
+
+
+5、多重定义外部样式
+	<link rel="stylesheet" href="../css/web.css" />低
+	<link rel="stylesheet" href="../css/style.css" />高
+
+颜色值：单词关键字red
+1、16进制rgb  【background-color:#ffffff;】 
+2、256进制rgb 【background-color:rgb(187,243,18);】
+3、透明色rgba  background-color:rgba(187,243,18,0.5);透明 
+4、透明色hsla  background-color:hsla(14,225,155); 色相饱和度 ie兼容
+hsl   
+
+
+
+网：FW、PS
+ 了解界面--辅助工具--简单修图--格式优化--输出保存
+了解界面:工具-属性-图层-优化-------窗口菜单打开
+辅助工具：缩放---标尺辅助线（视图菜单打开）
+简单修图：M+Q框选+缩放、框选+alt+方向键+shift 
+会丈量：色i+----尺寸M+属性面板/k+属性面板
+区域输出保存:C导出区域工具+优化预览面板、K切片+优化面板（切片配合shift键可导出多张图）
+格式优化：定义默认的输出格式和默认保存位置：先使用区域导出工具应用一次
+
+*图片命名规范：字母、数字、下划线,不以数字开头 不使用中文 千万别空格  最好有含义   banner1.jpg 
+
+图片格式：jpg=jpeg（支持成千上万颜色24位。照片，渐变色。品质70）
+gif（支持动画，最多支持256种颜色8位，支持单100%透明。手绘图、单色、动画图.减色）
+png（32/24/8位色，支持多级透明、保真度高；有ie6兼容问题。半透明图）、
+
+注意：优化，什么样的图样适应什么样的输出格式？
+
+如何插图？
+图片标签（单标签）：<img src="images/pic01.jpg" width="300" height="200" border="10" alt="路径错误" title="banner"/>
+
+src：链接属性  alt：当图片路径错误时，提示文字替代图片显示  title：图片标题
+
+站点的搭建
+文件夹的作用、命名原则 
+站点的文件夹分类管理方法：类型-内容频道-时间
+
+首页：index.html或者default.html 位置固定=根目录下  不要放在html文件夹中
+
+网页的分类：1、静态页：不能通过数据库实时更新数据的页面。    .html或.htm
+
+	    2、动态页：能通过数据库实时更新数据的页面。      .jsp  .asp .php .net
+
+路径：  绝对：本地盘符"D:\1007B\0308\images\banner.jpg "  网络http://<a href="http://www.baidu.com" title="">进入百度</a>
+	相对：当前文件 指向 目标文件
+    	 	/ 开头 根目录
+   	 	./ 开头 当前目录 直接用文件名同一目录<img src="./gq.jpg">=<img src="gq.jpg">
+   	 	../开头 上级目录 	
+
+<link href=""	;
+<img src=""	
+<a href=""
+css  background:url();
+
+
+多css样式的应用--后css覆盖前css
+样式文件的行业规范命名
+标签元素的命名规范
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

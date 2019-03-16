@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        div{
+            position: relative;
+            width:730px;
+        }
+        div img{
+            display: none;
+        }
+        ol{
+            position: absolute;
+            bottom: 20px;
+            left:0;
+            width:100%;
+            text-align: center;
+        }
+        li{
+            display: inline-block;
+            width:15px;
+            height:15px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 15px;
+            border:1px solid #fff;
+            margin:0 10px;
+            background: #ffffff;
+        }
+        .active{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="carousel">
+        <img src="images/img1.jpg" alt="" style="display: block">
+        <img src="images/img2.jpg" alt="">
+        <img src="images/img3.jpg" alt="">
+        <img src="images/img4.jpg" alt="">
+        <ol><li class="active"></li><li></li><li></li><li></li></ol>
+    </div>
+</body>
+<script>
+   /*1、面向过程转面向对象，把定义的变量放到构造函数里面，把定义的函数放到原型对象里面
+   2、构造函数里面的变量用this
+   3、修改原型对象里面的this指向*/
+    function Carousel(){
+        this.oDiv =  document.getElementById("carousel");//图片的容器
+        this.imgs = document.getElementsByTagName("img");//图片
+        this.lis = document.getElementsByTagName("li");//页码
+        this.index = 0;//当前播放的图片的下标
+        this.timer = null;
+        this.init();
+    }
+   Carousel.prototype = {
+       constructor: Carousel,
+       init:function(){
+           this.auto();
+           this.bindEvent();
+       },
+       bindEvent:function(){
+           var _this = this;//实例
+           this.oDiv.onmouseover = function(){
+               clearInterval(_this.timer);
+           }
+           this.oDiv.onmouseout = function(){
+               _this.auto();
+           }
+       },
+       auto:function(){
+           var _this = this;//实例
+           _this.timer=setInterval(function(){
+               //这里面的this指的是window
+               _this.next();
+           },1000);
+       },
+       next:function(){
+           //index  是不是之前播放的图片的小标
+           this.imgs[this.index].style.display = "none";//让上一次播放的图片隐藏
+           //console.log(index+"++++++");//上一张
+           this.lis[this.index].className = "";
+           this.index++;//1
+           //console.log(index+"=================");//下一张
+           if(this.index==this.imgs.length)this.index=0;
+           this.imgs[this.index].style.display = "block";
+           //设置选中的当前页
+           this.lis[this.index].className = "active";
+       }
+   }
+    new Carousel();
+</script>
+</html>

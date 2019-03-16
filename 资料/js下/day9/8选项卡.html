@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #contents div{
+            display: none;
+        }
+        .active{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="menu">
+            <span class="active" index="0">html</span>
+            <span index="1">css</span>
+            <span index="2">js</span>
+        </div>
+        <div id="contents">
+            <div style="display: block">就是一些标签</div>
+            <div>id选择器、类选择器等等</div>
+            <div>DOM、BOM、ES</div>
+        </div>
+    </div>
+</body>
+<script>
+    var oDiv = document.getElementById("menu");
+    var contents = document.getElementById("contents");
+    var current = 0;//当前选中的选项的索引
+    oDiv.onclick = function(e){
+        var ev = e || window.event;
+        var ele = ev.target || ev.srcElement;
+        if(ele.tagName=="SPAN"){
+            var index = ele.getAttribute("index");
+            contents.children[current].style.display = "none";
+            contents.children[index].style.display = "block";
+            oDiv.children[current].className = "";
+            ele.className = "active";
+            current = index;
+        }
+    }
+
+    var box=document,getElementsById('menu');
+    varv cont=document.getElementsById('contents');
+    var current=0;
+    box.onclick=function(e){
+        var ev =e||window.event;
+        var ele=ev.target||ev.srcElement;
+        if(ele.target=='SPAN'){
+            var index=ele.getAttribute('index');
+            cont.children[current].style.display='none';
+            cont.children[index].style.display='block';
+            box.children[current].className='';
+            ele.className='active';
+            current=index;
+        }
+    }
+
+
+
+</script>
+</html>

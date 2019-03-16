@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 正则</title>
+</head>
+<body>
+	<script>
+		
+		var r = /a\+b/;
+		var s = "a+b";
+
+		console.log(r.test(s));
+
+		//匹配网址   http://www.taobao.com
+
+		s = "http://www.taobao.com";
+
+		r = /http(s)?\:\/\/(www\.)?[a-zA-z]+\.(com|cn|gov|net)/;
+
+		console.log(r.test(s));
+
+		
+
+	</script>
+</body>
+</html>

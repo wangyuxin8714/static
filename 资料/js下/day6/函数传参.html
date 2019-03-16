@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var n = 2;
+    console.log(fn(n));
+    console.log(n);
+    //基本数据类型函数传参传递的是具体的值
+    function fn(num){
+        num++;
+        return num;
+    }
+    //
+    var array = [2,3,4];//是引用数据类型函数传参传递的地址值
+    //var array1 = new Array();
+    console.log(fn2(array));//2,3,4,5
+    console.log(array);//2,3,4,5
+    function fn2(arr){
+        arr.push(5);
+        return arr;
+    }
+</script>
+</html>

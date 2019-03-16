@@ -1,0 +1,4012 @@
+{
+    "code": 0,
+    "data": {
+        "list": [{
+            "id": 100051701,
+            "price": 1798.00,
+            "name": "坚果 Pro 2S（碳黑色（细红线版），4G + 64GB）",
+            "spu_id": 1000517,
+            "sale_status": 3,
+            "product_info": {
+                "goods_name": "坚果 Pro 2S（碳黑色（细红线版），4G + 64GB）",
+                "goods_code": "100051701",
+                "barcode": "6970643020182",
+                "sapcode": "FGOED00001100",
+                "package_type": "0",
+                "seller_goods_id": "",
+                "product_code": "1000517",
+                "product_name": "坚果 Pro 2S",
+                "is_mobile": 1,
+                "is_insurance": 0,
+                "goods_type": 1,
+                "has_sn": 1,
+                "category_id": "124",
+                "category_id_cn": "坚果 Pro 2S",
+                "is_package": false,
+                "package_goods": []
+            },
+            "shop_info": {
+                "title": "坚果 Pro 2S",
+                "sub_title": "双系统，无限屏",
+                "sku_mobile_title": "坚果 Pro 2S",
+                "sku_mobile_sub_title": "双系统，无限屏",
+                "promo_title": "",
+                "limit_num": "2",
+                "spec_v2": [{
+                    "spec_id": "1",
+                    "spec_name": "颜色",
+                    "visiable": "0",
+                    "show_type": "2",
+                    "spec_values": [{
+                        "id": "415",
+                        "spec_id": "1",
+                        "item_value": "碳黑色（细红线版）",
+                        "show_name": "碳黑色（细红线版）",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000517/4E69E03CE93DC22F42A905057FB7CB95/origin.png",
+                        "color_value": "#181818"
+                    }, {
+                        "id": "429",
+                        "spec_id": "1",
+                        "item_value": "炫光蓝",
+                        "show_name": "炫光蓝",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000517/099DCE469DCB49B6D2580989AA0B5851/origin.png",
+                        "color_value": "#1D2146"
+                    }, {
+                        "id": "430",
+                        "spec_id": "1",
+                        "item_value": "炫光红",
+                        "show_name": "炫光红",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000517/3C85C069DF7EDB21B2E5ECFA4C684803/origin.png",
+                        "color_value": "#A30C1E"
+                    }, {
+                        "id": "416",
+                        "spec_id": "1",
+                        "item_value": "纯白色",
+                        "show_name": "纯白色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000517/CA9FDE02CD273B061A4370946EF3B48C/origin.png",
+                        "color_value": "#F9F9F9"
+                    }]
+                }, {
+                    "spec_id": "2",
+                    "spec_name": "容量",
+                    "visiable": "0",
+                    "show_type": "1",
+                    "spec_values": [{
+                        "id": "260",
+                        "spec_id": "2",
+                        "item_value": "4G + 64GB",
+                        "show_name": "4G + 64GB"
+                    }, {
+                        "id": "261",
+                        "spec_id": "2",
+                        "item_value": "6G + 64GB",
+                        "show_name": "6G + 64GB"
+                    }, {
+                        "id": "262",
+                        "spec_id": "2",
+                        "item_value": "6G + 128GB",
+                        "show_name": "6G + 128GB"
+                    }],
+                    "image_pre": "",
+                    "image_name": ""
+                }],
+                "spec_json": [{
+                    "spec_id": "1",
+                    "spec_value_id": "415",
+                    "show_name": "碳黑色（细红线版）",
+                    "item_value": "碳黑色（细红线版）",
+                    "image": "https://resource.smartisan.com/resource/attr/v2/1000517/4E69E03CE93DC22F42A905057FB7CB95/origin.png",
+                    "show_short_name": null
+                }, {
+                    "spec_id": "2",
+                    "spec_value_id": "260",
+                    "show_name": "4G + 64GB",
+                    "item_value": "4G + 64GB",
+                    "image": null,
+                    "show_short_name": null
+                }],
+                "buy_notes": [],
+                "groups_huabei": [{
+                    "name": "3期",
+                    "value": "3",
+                    "id": 1
+                }, {
+                    "name": "6期",
+                    "value": "6",
+                    "id": 2
+                }, {
+                    "name": "12期",
+                    "value": "12",
+                    "id": 3
+                }],
+                "groups_zhaoshang": null,
+                "describe": null,
+                "images": null,
+                "image": null,
+                "ali_images": ["https://resource.smartisan.com/resource/b07b9765e272f866da6acda4ee107d88.png"],
+                "ali_image": "https://resource.smartisan.com/resource/b07b9765e272f866da6acda4ee107d88.png",
+                "image_default_name": "origin.jpg",
+                "is_custom": "0",
+                "is_mobile": "0",
+                "is_package": "0",
+                "tpl_id": "base",
+                "tpl_content": {
+                    "base": {
+                        "images": {
+                            "1x": [],
+                            "2x": [],
+                            "mobile": [],
+                            "image_pre": "",
+                            "image_name": "",
+                            "spec_params": {
+                                "url": ["https://resource.smartisan.com/resource/8fd8c9ace5b7a63930bbf04079b21a43.jpg"],
+                                "width": 2504,
+                                "height": 19641
+                            },
+                            "spec_params_mobile": {
+                                "url": ["https://resource.smartisan.com/resource/26944c8bda169bd2616f86b1a6cf8039.jpg"],
+                                "width": 1035,
+                                "height": 29999
+                            },
+                            "ali_mobile": {
+                                "url": ["https://resource.smartisan.com/resource/a115f37d26c5ce4a99c0b5569cb736ab.jpg"],
+                                "width": 1080,
+                                "height": 27384,
+                                "piece_height": 1440,
+                                "pieces_num": 20
+                            },
+                            "ali": {
+                                "piece_height": 1440,
+                                "pieces_num": 0
+                            }
+                        },
+                        "attributes": [{
+                            "title": "",
+                            "list": [{
+                                "name": "",
+                                "value": ""
+                            }]
+                        }],
+                        "aftersale": [{
+                            "title": "",
+                            "content": ""
+                        }],
+                        "extra": [{
+                            "title": "",
+                            "content": ""
+                        }]
+                    }
+                },
+                "doodle_stage": "99",
+                "is_freeship": 0,
+                "is_addcart": true,
+                "is_showsku": false,
+                "direct_to_cart": false
+            },
+            "attr_info": {
+                "1": {
+                    "spec_id": "1",
+                    "spec_name": "颜色",
+                    "value": "碳黑色（细红线版）",
+                    "spec_value_id": "415"
+                },
+                "2": {
+                    "spec_id": "2",
+                    "spec_name": "容量",
+                    "value": "4G + 64GB",
+                    "spec_value_id": "260"
+                }
+            },
+            "created_at": 1531968287000,
+            "updated_at": 1537576308000,
+            "spu": {
+                "id": 1000517,
+                "name": "坚果 Pro 2S",
+                "price": 1798.00,
+                "sale_status": 3,
+                "product_info": {
+                    "product_name": "坚果 Pro 2S",
+                    "product_code": "1000517",
+                    "category_id": 124,
+                    "product_type": 1,
+                    "is_package": 0,
+                    "is_mobile": 1,
+                    "is_insurance": 0,
+                    "has_sn": 1,
+                    "accessory_goods": {
+                        "100052601": {
+                            "goods_code": "100052601",
+                            "product_code": "1000526",
+                            "goods_name": "坚果 Pro 2S 延长保修服务（延保）",
+                            "is_insurance": "4",
+                            "is_mobile": 0,
+                            "price": 149,
+                            "shop_info": {
+                                "title": "坚果 Pro 2S 延长保修服务",
+                                "sub_title": "",
+                                "sku_mobile_title": "坚果 Pro 2S 延长保修服务",
+                                "sku_mobile_sub_title": "",
+                                "promo_title": "",
+                                "limit_num": "1",
+                                "spec_v2": [{
+                                    "spec_id": "3",
+                                    "spec_name": "险种",
+                                    "visiable": "0",
+                                    "show_type": "1",
+                                    "spec_values": [{
+                                        "id": "95",
+                                        "spec_id": "3",
+                                        "item_value": "延保",
+                                        "show_name": "延保"
+                                    }],
+                                    "image_pre": "",
+                                    "image_name": ""
+                                }],
+                                "spec_json": [{
+                                    "spec_id": "3",
+                                    "spec_value_id": "95",
+                                    "show_name": "延保",
+                                    "item_value": "延保",
+                                    "image": null,
+                                    "show_short_name": null
+                                }],
+                                "buy_notes": [],
+                                "groups_huabei": [{
+                                    "name": "3期",
+                                    "value": "3",
+                                    "id": 1
+                                }, {
+                                    "name": "6期",
+                                    "value": "6",
+                                    "id": 2
+                                }, {
+                                    "name": "12期",
+                                    "value": "12",
+                                    "id": 3
+                                }],
+                                "groups_zhaoshang": null,
+                                "describe": null,
+                                "images": null,
+                                "image": null,
+                                "ali_images": ["https://resource.smartisan.com/resource/d9fa82faf90d56b34bbbdedd74bd994c.jpg"],
+                                "ali_image": "https://resource.smartisan.com/resource/d9fa82faf90d56b34bbbdedd74bd994c.jpg",
+                                "image_default_name": "origin.jpg",
+                                "is_custom": "0",
+                                "is_mobile": "0",
+                                "is_package": "0",
+                                "tpl_id": "base",
+                                "tpl_content": {
+                                    "base": {
+                                        "images": {
+                                            "1x": [],
+                                            "2x": [],
+                                            "mobile": [],
+                                            "image_pre": "",
+                                            "image_name": "",
+                                            "ali": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            },
+                                            "ali_mobile": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            }
+                                        },
+                                        "attributes": [{
+                                            "title": "",
+                                            "list": [{
+                                                "name": "",
+                                                "value": ""
+                                            }]
+                                        }],
+                                        "aftersale": [{
+                                            "title": "",
+                                            "content": ""
+                                        }],
+                                        "extra": [{
+                                            "title": "",
+                                            "content": ""
+                                        }]
+                                    }
+                                },
+                                "doodle_stage": "99",
+                                "is_freeship": 0,
+                                "is_addcart": true,
+                                "is_showsku": false,
+                                "direct_to_cart": true
+                            }
+                        },
+                        "100052701": {
+                            "goods_code": "100052701",
+                            "product_code": "1000527",
+                            "goods_name": "坚果 Pro 2S 意外碎屏保修服务（碎屏险）",
+                            "is_insurance": "3",
+                            "is_mobile": 0,
+                            "price": 99,
+                            "shop_info": {
+                                "title": "坚果 Pro 2S 意外碎屏保修服务",
+                                "sub_title": "",
+                                "sku_mobile_title": "坚果 Pro 2S 意外碎屏保修服务",
+                                "sku_mobile_sub_title": "",
+                                "promo_title": "",
+                                "limit_num": "1",
+                                "spec_v2": [{
+                                    "spec_id": "3",
+                                    "spec_name": "险种",
+                                    "visiable": "0",
+                                    "show_type": "1",
+                                    "spec_values": [{
+                                        "id": "226",
+                                        "spec_id": "3",
+                                        "item_value": "碎屏险",
+                                        "show_name": "碎屏险"
+                                    }],
+                                    "image_pre": "",
+                                    "image_name": ""
+                                }],
+                                "spec_json": [{
+                                    "spec_id": "3",
+                                    "spec_value_id": "226",
+                                    "show_name": "碎屏险",
+                                    "item_value": "碎屏险",
+                                    "image": null,
+                                    "show_short_name": null
+                                }],
+                                "buy_notes": [],
+                                "groups_huabei": [{
+                                    "name": "3期",
+                                    "value": "3",
+                                    "id": 1
+                                }, {
+                                    "name": "6期",
+                                    "value": "6",
+                                    "id": 2
+                                }, {
+                                    "name": "12期",
+                                    "value": "12",
+                                    "id": 3
+                                }],
+                                "groups_zhaoshang": null,
+                                "describe": null,
+                                "images": null,
+                                "image": null,
+                                "ali_images": ["https://resource.smartisan.com/resource/2724e625ec36115565db001fdc5ae260.jpg"],
+                                "ali_image": "https://resource.smartisan.com/resource/2724e625ec36115565db001fdc5ae260.jpg",
+                                "image_default_name": "origin.jpg",
+                                "is_custom": "0",
+                                "is_mobile": "0",
+                                "is_package": "0",
+                                "tpl_id": "base",
+                                "tpl_content": {
+                                    "base": {
+                                        "images": {
+                                            "1x": [],
+                                            "2x": [],
+                                            "mobile": [],
+                                            "image_pre": "",
+                                            "image_name": "",
+                                            "ali": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            },
+                                            "ali_mobile": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            }
+                                        },
+                                        "attributes": [{
+                                            "title": "",
+                                            "list": [{
+                                                "name": "",
+                                                "value": ""
+                                            }]
+                                        }],
+                                        "aftersale": [{
+                                            "title": "",
+                                            "content": ""
+                                        }],
+                                        "extra": [{
+                                            "title": "",
+                                            "content": ""
+                                        }]
+                                    }
+                                },
+                                "doodle_stage": "99",
+                                "is_freeship": 0,
+                                "is_addcart": true,
+                                "is_showsku": false,
+                                "direct_to_cart": true
+                            }
+                        }
+                    }
+                },
+                "shop_info": {
+                    "spu_title": "坚果 Pro 2S",
+                    "spu_sub_title": "双系统，无限屏",
+                    "spu_mobile_title": "坚果 Pro 2S",
+                    "spu_mobile_sub_title": "双系统，无限屏",
+                    "spu_promo_title": "",
+                    "highlights": "双系统，无限屏，骁龙 ™ 710 处理器 · 前置 1600 万像素摄像头 · 6.01 英寸全高清全面屏 · AI 通话降噪 · 人脸解锁 + 指纹解锁 ",
+                    "sale_model": "1",
+                    "book_num": null,
+                    "spec_v2": [{
+                        "spec_id": "1",
+                        "spec_name": "颜色",
+                        "visiable": "0",
+                        "show_type": "2",
+                        "spec_values": [{
+                            "id": "415",
+                            "spec_id": "1",
+                            "item_value": "碳黑色（细红线版）",
+                            "show_name": "碳黑色（细红线版）",
+                            "image": "https://resource.smartisan.com/resource/attr/v2/1000517/4E69E03CE93DC22F42A905057FB7CB95/origin.png",
+                            "color_value": "#181818"
+                        }, {
+                            "id": "429",
+                            "spec_id": "1",
+                            "item_value": "炫光蓝",
+                            "show_name": "炫光蓝",
+                            "image": "https://resource.smartisan.com/resource/attr/v2/1000517/099DCE469DCB49B6D2580989AA0B5851/origin.png",
+                            "color_value": "#1D2146"
+                        }, {
+                            "id": "430",
+                            "spec_id": "1",
+                            "item_value": "炫光红",
+                            "show_name": "炫光红",
+                            "image": "https://resource.smartisan.com/resource/attr/v2/1000517/3C85C069DF7EDB21B2E5ECFA4C684803/origin.png",
+                            "color_value": "#A30C1E"
+                        }, {
+                            "id": "416",
+                            "spec_id": "1",
+                            "item_value": "纯白色",
+                            "show_name": "纯白色",
+                            "image": "https://resource.smartisan.com/resource/attr/v2/1000517/CA9FDE02CD273B061A4370946EF3B48C/origin.png",
+                            "color_value": "#F9F9F9"
+                        }]
+                    }, {
+                        "spec_id": "2",
+                        "spec_name": "容量",
+                        "visiable": "0",
+                        "show_type": "1",
+                        "spec_values": [{
+                            "id": "260",
+                            "spec_id": "2",
+                            "item_value": "4G + 64GB",
+                            "show_name": "4G + 64GB"
+                        }, {
+                            "id": "261",
+                            "spec_id": "2",
+                            "item_value": "6G + 64GB",
+                            "show_name": "6G + 64GB"
+                        }, {
+                            "id": "262",
+                            "spec_id": "2",
+                            "item_value": "6G + 128GB",
+                            "show_name": "6G + 128GB"
+                        }],
+                        "image_pre": "",
+                        "image_name": ""
+                    }],
+                    "tpl_id": "base",
+                    "tpl_content": {
+                        "base": {
+                            "images": {
+                                "1x": [],
+                                "2x": [],
+                                "mobile": [],
+                                "image_pre": "",
+                                "image_name": "",
+                                "spec_params": {
+                                    "url": ["https://resource.smartisan.com/resource/8fd8c9ace5b7a63930bbf04079b21a43.jpg"],
+                                    "width": 2504,
+                                    "height": 19641
+                                },
+                                "spec_params_mobile": {
+                                    "url": ["https://resource.smartisan.com/resource/26944c8bda169bd2616f86b1a6cf8039.jpg"],
+                                    "width": 1035,
+                                    "height": 29999
+                                },
+                                "ali_mobile": {
+                                    "url": ["https://resource.smartisan.com/resource/a115f37d26c5ce4a99c0b5569cb736ab.jpg"],
+                                    "width": 1080,
+                                    "height": 27384,
+                                    "piece_height": 1440,
+                                    "pieces_num": 20
+                                },
+                                "ali": {
+                                    "piece_height": 1440,
+                                    "pieces_num": 0
+                                }
+                            },
+                            "attributes": [{
+                                "title": "",
+                                "list": [{
+                                    "name": "",
+                                    "value": ""
+                                }]
+                            }],
+                            "aftersale": [{
+                                "title": "",
+                                "content": ""
+                            }],
+                            "extra": [{
+                                "title": "",
+                                "content": ""
+                            }]
+                        }
+                    },
+                    "buy_notes": [],
+                    "groups_huabei": [{
+                        "name": "3期",
+                        "value": "3",
+                        "id": 1
+                    }, {
+                        "name": "6期",
+                        "value": "6",
+                        "id": 2
+                    }, {
+                        "name": "12期",
+                        "value": "12",
+                        "id": 3
+                    }],
+                    "groups_zhaoshang": null,
+                    "describe": null,
+                    "recmd_skus": []
+                },
+                "sku_info": [{
+                    "sku_id": "100051701",
+                    "title": "坚果 Pro 2S",
+                    "sub_title": "双系统，无限屏",
+                    "promo_title": "",
+                    "color_id": "415",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/b07b9765e272f866da6acda4ee107d88.png",
+                    "direct_to_cart": false,
+                    "price": "1798.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "415",
+                        "show_name": "碳黑色（细红线版）",
+                        "item_value": "碳黑色（细红线版）",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000517/4E69E03CE93DC22F42A905057FB7CB95/origin.png",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "260",
+                        "show_name": "4G + 64GB",
+                        "item_value": "4G + 64GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100051702",
+                    "title": "坚果 Pro 2S",
+                    "sub_title": "双系统，无限屏",
+                    "promo_title": "",
+                    "color_id": "415",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/b07b9765e272f866da6acda4ee107d88.png",
+                    "direct_to_cart": false,
+                    "price": "1998.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "415",
+                        "show_name": "碳黑色（细红线版）",
+                        "item_value": "碳黑色（细红线版）",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000517/4E69E03CE93DC22F42A905057FB7CB95/origin.png",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "261",
+                        "show_name": "6G + 64GB",
+                        "item_value": "6G + 64GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100051703",
+                    "title": "坚果 Pro 2S",
+                    "sub_title": "双系统，无限屏",
+                    "promo_title": "",
+                    "color_id": "415",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/b07b9765e272f866da6acda4ee107d88.png",
+                    "direct_to_cart": false,
+                    "price": "2298.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "415",
+                        "show_name": "碳黑色（细红线版）",
+                        "item_value": "碳黑色（细红线版）",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000517/4E69E03CE93DC22F42A905057FB7CB95/origin.png",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "262",
+                        "show_name": "6G + 128GB",
+                        "item_value": "6G + 128GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100051704",
+                    "title": "坚果 Pro 2S",
+                    "sub_title": "双系统，无限屏",
+                    "promo_title": "",
+                    "color_id": "429",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/25cc6e783a664fbdf83c3c34774a9826.png",
+                    "direct_to_cart": false,
+                    "price": "1998.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "429",
+                        "show_name": "炫光蓝",
+                        "item_value": "炫光蓝",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000517/099DCE469DCB49B6D2580989AA0B5851/origin.png",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "261",
+                        "show_name": "6G + 64GB",
+                        "item_value": "6G + 64GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100051705",
+                    "title": "坚果 Pro 2S",
+                    "sub_title": "双系统，无限屏",
+                    "promo_title": "",
+                    "color_id": "429",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/25cc6e783a664fbdf83c3c34774a9826.png",
+                    "direct_to_cart": false,
+                    "price": "2298.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "429",
+                        "show_name": "炫光蓝",
+                        "item_value": "炫光蓝",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000517/099DCE469DCB49B6D2580989AA0B5851/origin.png",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "262",
+                        "show_name": "6G + 128GB",
+                        "item_value": "6G + 128GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100051706",
+                    "title": "坚果 Pro 2S",
+                    "sub_title": "双系统，无限屏",
+                    "promo_title": "",
+                    "color_id": "430",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/2f2afca6f88e3aef5b1f332ea0c1d65a.png",
+                    "direct_to_cart": false,
+                    "price": "1998.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "430",
+                        "show_name": "炫光红",
+                        "item_value": "炫光红",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000517/3C85C069DF7EDB21B2E5ECFA4C684803/origin.png",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "261",
+                        "show_name": "6G + 64GB",
+                        "item_value": "6G + 64GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100051707",
+                    "title": "坚果 Pro 2S",
+                    "sub_title": "双系统，无限屏",
+                    "promo_title": "",
+                    "color_id": "430",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/2f2afca6f88e3aef5b1f332ea0c1d65a.png",
+                    "direct_to_cart": false,
+                    "price": "2298.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "430",
+                        "show_name": "炫光红",
+                        "item_value": "炫光红",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000517/3C85C069DF7EDB21B2E5ECFA4C684803/origin.png",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "262",
+                        "show_name": "6G + 128GB",
+                        "item_value": "6G + 128GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100051708",
+                    "title": "坚果 Pro 2S",
+                    "sub_title": "双系统，无限屏",
+                    "promo_title": "",
+                    "color_id": "416",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/6668df0e297bf04702df6d166091ac51.png",
+                    "direct_to_cart": false,
+                    "price": "2298.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "416",
+                        "show_name": "纯白色",
+                        "item_value": "纯白色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000517/CA9FDE02CD273B061A4370946EF3B48C/origin.png",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "262",
+                        "show_name": "6G + 128GB",
+                        "item_value": "6G + 128GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }],
+                "acc_info": {
+                    "package_list": ""
+                },
+                "after_sell_info": {
+                    "is_back": "1",
+                    "back_deadline": "7",
+                    "is_exchange": "1",
+                    "exchange_deadline": "15",
+                    "is_repair": "1",
+                    "is_freeship": "1",
+                    "ship_price": "150",
+                    "is_deliver": "1",
+                    "hours": "72"
+                },
+                "created_at": 1531968287000,
+                "updated_at": 1537576308000
+            },
+            "in_stock": true
+        }, {
+            "id": 100046401,
+            "price": 3499.00,
+            "name": "坚果 R1（碳黑色（细红线版），6G + 64GB）",
+            "spu_id": 1000464,
+            "sale_status": 3,
+            "product_info": {
+                "goods_name": "坚果 R1（碳黑色（细红线版），6G + 64GB）",
+                "goods_code": "100046401",
+                "barcode": "6970643029970",
+                "sapcode": "FGDEC00001100",
+                "package_type": "0",
+                "seller_goods_id": "",
+                "product_code": "1000464",
+                "product_name": "坚果 R1",
+                "is_mobile": 1,
+                "is_insurance": 0,
+                "goods_type": 1,
+                "has_sn": 1,
+                "category_id": "104",
+                "category_id_cn": "坚果 R1",
+                "is_package": false,
+                "package_goods": []
+            },
+            "shop_info": {
+                "title": "坚果 R1",
+                "sub_title": "次世代旗舰手机，内藏来自未来的“电脑”",
+                "sku_mobile_title": "坚果 R1",
+                "sku_mobile_sub_title": "次世代旗舰手机",
+                "promo_title": "",
+                "limit_num": "3",
+                "spec_v2": [{
+                    "spec_id": "1",
+                    "spec_name": "颜色",
+                    "visiable": "0",
+                    "show_type": "1",
+                    "spec_values": [{
+                        "id": "415",
+                        "spec_id": "1",
+                        "item_value": "碳黑色（细红线版）",
+                        "show_name": "碳黑色（细红线版）",
+                        "image": "https://resource.smartisan.com/resource/3a2977aae968cc8fc651afddc606d545.jpg",
+                        "color_value": "#0B0B10"
+                    }, {
+                        "id": "416",
+                        "spec_id": "1",
+                        "item_value": "纯白色",
+                        "show_name": "纯白色",
+                        "image": "https://resource.smartisan.com/resource/17b760796d75b10a7a138a4e6afd1b6a.jpg",
+                        "color_value": "#EFEFEF"
+                    }],
+                    "image_pre": "",
+                    "image_name": ""
+                }, {
+                    "spec_id": "2",
+                    "spec_name": "容量",
+                    "visiable": "0",
+                    "show_type": "1",
+                    "spec_values": [{
+                        "id": "261",
+                        "spec_id": "2",
+                        "item_value": "6G + 64GB",
+                        "show_name": "6G + 64GB"
+                    }, {
+                        "id": "262",
+                        "spec_id": "2",
+                        "item_value": "6G + 128GB",
+                        "show_name": "6G + 128GB"
+                    }, {
+                        "id": "390",
+                        "spec_id": "2",
+                        "item_value": "8G + 128GB",
+                        "show_name": "8G + 128GB"
+                    }, {
+                        "id": "392",
+                        "spec_id": "2",
+                        "item_value": "8G + 1T",
+                        "show_name": "8G + 1T"
+                    }, {
+                        "id": "400",
+                        "spec_id": "2",
+                        "item_value": "8G + 512GB",
+                        "show_name": "8G + 512GB",
+                        "image": ""
+                    }],
+                    "image_pre": "",
+                    "image_name": ""
+                }],
+                "spec_json": [{
+                    "spec_id": "1",
+                    "spec_value_id": "415",
+                    "show_name": "碳黑色（细红线版）",
+                    "item_value": "碳黑色（细红线版）",
+                    "image": "https://resource.smartisan.com/resource/3a2977aae968cc8fc651afddc606d545.jpg",
+                    "show_short_name": null
+                }, {
+                    "spec_id": "2",
+                    "spec_value_id": "261",
+                    "show_name": "6G + 64GB",
+                    "item_value": "6G + 64GB",
+                    "image": null,
+                    "show_short_name": null
+                }],
+                "buy_notes": [],
+                "groups_huabei": [{
+                    "name": "3期",
+                    "value": "3",
+                    "id": 1
+                }, {
+                    "name": "6期",
+                    "value": "6",
+                    "id": 2
+                }, {
+                    "name": "12期",
+                    "value": "12",
+                    "id": 3
+                }],
+                "groups_zhaoshang": null,
+                "describe": null,
+                "images": null,
+                "image": null,
+                "ali_images": ["https://resource.smartisan.com/resource/06c2253354096f5e9ebf0616f1af2086.png"],
+                "ali_image": "https://resource.smartisan.com/resource/06c2253354096f5e9ebf0616f1af2086.png",
+                "image_default_name": "origin.jpg",
+                "is_custom": "0",
+                "is_mobile": "1",
+                "is_package": "0",
+                "tpl_id": "base",
+                "tpl_content": {
+                    "base": {
+                        "images": {
+                            "1x": [],
+                            "2x": [],
+                            "mobile": [],
+                            "image_pre": "",
+                            "image_name": "",
+                            "ali_mobile": {
+                                "url": ["https://resource.smartisan.com/resource/164cc4bee45e8cf71026eca829f45ad1.jpg"],
+                                "width": 1080,
+                                "height": 26674,
+                                "piece_height": 1440,
+                                "pieces_num": 19
+                            },
+                            "spec_params_mobile": {
+                                "url": ["https://resource.smartisan.com/resource/4b92584a223a4257281b2e6e38f8c94a.jpg"],
+                                "width": 1072,
+                                "height": 30000
+                            },
+                            "ali": {
+                                "piece_height": 1440,
+                                "pieces_num": 0
+                            }
+                        },
+                        "attributes": [{
+                            "title": "",
+                            "list": [{
+                                "name": "",
+                                "value": ""
+                            }]
+                        }],
+                        "aftersale": [{
+                            "title": "",
+                            "content": ""
+                        }],
+                        "extra": [{
+                            "title": "",
+                            "content": ""
+                        }]
+                    }
+                },
+                "doodle_stage": "99",
+                "is_freeship": 0,
+                "is_addcart": true,
+                "is_showsku": false,
+                "direct_to_cart": false
+            },
+            "attr_info": {
+                "1": {
+                    "spec_id": "1",
+                    "spec_name": "颜色",
+                    "value": "碳黑色（细红线版）",
+                    "spec_value_id": "415"
+                },
+                "2": {
+                    "spec_id": "2",
+                    "spec_name": "容量",
+                    "value": "6G + 64GB",
+                    "spec_value_id": "261"
+                }
+            },
+            "created_at": 1524907440000,
+            "updated_at": 1538125150000,
+            "spu": {
+                "id": 1000464,
+                "name": "坚果 R1",
+                "price": 3499.00,
+                "sale_status": 3,
+                "product_info": {
+                    "product_name": "坚果 R1",
+                    "product_code": "1000464",
+                    "category_id": 104,
+                    "product_type": 1,
+                    "is_package": 0,
+                    "is_mobile": 1,
+                    "is_insurance": 0,
+                    "has_sn": 1,
+                    "accessory_goods": {
+                        "100048401": {
+                            "goods_code": "100048401",
+                            "product_code": "1000484",
+                            "goods_name": "坚果 R1 意外碎屏保修服务（碎屏险）",
+                            "is_insurance": "3",
+                            "is_mobile": 0,
+                            "price": 149,
+                            "shop_info": {
+                                "title": "坚果 R1 意外碎屏保修服务",
+                                "sub_title": "",
+                                "sku_mobile_title": "坚果 R1 意外碎屏保修服务",
+                                "sku_mobile_sub_title": "",
+                                "promo_title": "",
+                                "limit_num": "1",
+                                "spec_v2": [{
+                                    "spec_id": "3",
+                                    "spec_name": "险种",
+                                    "visiable": "0",
+                                    "show_type": "1",
+                                    "spec_values": [{
+                                        "id": "226",
+                                        "spec_id": "3",
+                                        "item_value": "碎屏险",
+                                        "show_name": "碎屏险"
+                                    }],
+                                    "image_pre": "",
+                                    "image_name": ""
+                                }],
+                                "spec_json": [{
+                                    "spec_id": "3",
+                                    "spec_value_id": "226",
+                                    "show_name": "碎屏险",
+                                    "item_value": "碎屏险",
+                                    "image": null,
+                                    "show_short_name": null
+                                }],
+                                "buy_notes": [],
+                                "groups_huabei": [{
+                                    "name": "3期",
+                                    "value": "3",
+                                    "id": 1
+                                }, {
+                                    "name": "6期",
+                                    "value": "6",
+                                    "id": 2
+                                }, {
+                                    "name": "12期",
+                                    "value": "12",
+                                    "id": 3
+                                }],
+                                "groups_zhaoshang": null,
+                                "describe": null,
+                                "images": null,
+                                "image": null,
+                                "ali_images": ["https://resource.smartisan.com/resource/dbc577f11569177d8a8aacab3931e8d9.jpg"],
+                                "ali_image": "https://resource.smartisan.com/resource/dbc577f11569177d8a8aacab3931e8d9.jpg",
+                                "image_default_name": "origin.jpg",
+                                "is_custom": "0",
+                                "is_mobile": "0",
+                                "is_package": "0",
+                                "tpl_id": "base",
+                                "tpl_content": {
+                                    "base": {
+                                        "images": {
+                                            "1x": [],
+                                            "2x": [],
+                                            "mobile": [],
+                                            "image_pre": "",
+                                            "image_name": "",
+                                            "ali": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            },
+                                            "ali_mobile": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            }
+                                        },
+                                        "attributes": [{
+                                            "title": "",
+                                            "list": [{
+                                                "name": "",
+                                                "value": ""
+                                            }]
+                                        }],
+                                        "aftersale": [{
+                                            "title": "",
+                                            "content": ""
+                                        }],
+                                        "extra": [{
+                                            "title": "",
+                                            "content": ""
+                                        }]
+                                    }
+                                },
+                                "doodle_stage": "99",
+                                "is_freeship": 0,
+                                "is_addcart": true,
+                                "is_showsku": false,
+                                "direct_to_cart": false
+                            }
+                        },
+                        "100048501": {
+                            "goods_code": "100048501",
+                            "product_code": "1000485",
+                            "goods_name": "坚果 R1 延长保修服务（延保）",
+                            "is_insurance": "4",
+                            "is_mobile": 0,
+                            "price": 149,
+                            "shop_info": {
+                                "title": "坚果 R1 延长保修服务",
+                                "sub_title": "",
+                                "sku_mobile_title": "坚果 R1 延长保修服务",
+                                "sku_mobile_sub_title": "",
+                                "promo_title": "",
+                                "limit_num": "1",
+                                "spec_v2": [{
+                                    "spec_id": "3",
+                                    "spec_name": "险种",
+                                    "visiable": "0",
+                                    "show_type": "1",
+                                    "spec_values": [{
+                                        "id": "95",
+                                        "spec_id": "3",
+                                        "item_value": "延保",
+                                        "show_name": "延保"
+                                    }],
+                                    "image_pre": "",
+                                    "image_name": ""
+                                }],
+                                "spec_json": [{
+                                    "spec_id": "3",
+                                    "spec_value_id": "95",
+                                    "show_name": "延保",
+                                    "item_value": "延保",
+                                    "image": null,
+                                    "show_short_name": null
+                                }],
+                                "buy_notes": [],
+                                "groups_huabei": [{
+                                    "name": "3期",
+                                    "value": "3",
+                                    "id": 1
+                                }, {
+                                    "name": "6期",
+                                    "value": "6",
+                                    "id": 2
+                                }, {
+                                    "name": "12期",
+                                    "value": "12",
+                                    "id": 3
+                                }],
+                                "groups_zhaoshang": null,
+                                "describe": null,
+                                "images": null,
+                                "image": null,
+                                "ali_images": ["https://resource.smartisan.com/resource/fbfff6fa893b0f1af554ccedf7360d4e.jpg"],
+                                "ali_image": "https://resource.smartisan.com/resource/fbfff6fa893b0f1af554ccedf7360d4e.jpg",
+                                "image_default_name": "origin.jpg",
+                                "is_custom": "0",
+                                "is_mobile": "0",
+                                "is_package": "0",
+                                "tpl_id": "base",
+                                "tpl_content": {
+                                    "base": {
+                                        "images": {
+                                            "1x": [],
+                                            "2x": [],
+                                            "mobile": [],
+                                            "image_pre": "",
+                                            "image_name": "",
+                                            "ali": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            },
+                                            "ali_mobile": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            }
+                                        },
+                                        "attributes": [{
+                                            "title": "",
+                                            "list": [{
+                                                "name": "",
+                                                "value": ""
+                                            }]
+                                        }],
+                                        "aftersale": [{
+                                            "title": "",
+                                            "content": ""
+                                        }],
+                                        "extra": [{
+                                            "title": "",
+                                            "content": ""
+                                        }]
+                                    }
+                                },
+                                "doodle_stage": "99",
+                                "is_freeship": 0,
+                                "is_addcart": true,
+                                "is_showsku": false,
+                                "direct_to_cart": false
+                            }
+                        }
+                    }
+                },
+                "shop_info": {
+                    "spu_title": "坚果 R1",
+                    "spu_sub_title": "次世代旗舰手机，内藏来自未来的“电脑”",
+                    "spu_mobile_title": "坚果 R1",
+                    "spu_mobile_sub_title": "次世代旗舰手机，内藏来自未来的“电脑”",
+                    "spu_promo_title": "",
+                    "highlights": "骁龙 845 处理器 · 光学防抖双摄像头 · 6.17 英寸压力感应屏幕 · 10W快速无线充电功能",
+                    "sale_model": "1",
+                    "book_num": null,
+                    "spec_v2": [{
+                        "spec_id": "1",
+                        "spec_name": "颜色",
+                        "visiable": "0",
+                        "show_type": "1",
+                        "spec_values": [{
+                            "id": "415",
+                            "spec_id": "1",
+                            "item_value": "碳黑色（细红线版）",
+                            "show_name": "碳黑色（细红线版）",
+                            "image": "https://resource.smartisan.com/resource/3a2977aae968cc8fc651afddc606d545.jpg",
+                            "color_value": "#0B0B10"
+                        }, {
+                            "id": "416",
+                            "spec_id": "1",
+                            "item_value": "纯白色",
+                            "show_name": "纯白色",
+                            "image": "https://resource.smartisan.com/resource/17b760796d75b10a7a138a4e6afd1b6a.jpg",
+                            "color_value": "#EFEFEF"
+                        }],
+                        "image_pre": "",
+                        "image_name": ""
+                    }, {
+                        "spec_id": "2",
+                        "spec_name": "容量",
+                        "visiable": "0",
+                        "show_type": "1",
+                        "spec_values": [{
+                            "id": "261",
+                            "spec_id": "2",
+                            "item_value": "6G + 64GB",
+                            "show_name": "6G + 64GB"
+                        }, {
+                            "id": "262",
+                            "spec_id": "2",
+                            "item_value": "6G + 128GB",
+                            "show_name": "6G + 128GB"
+                        }, {
+                            "id": "390",
+                            "spec_id": "2",
+                            "item_value": "8G + 128GB",
+                            "show_name": "8G + 128GB"
+                        }, {
+                            "id": "392",
+                            "spec_id": "2",
+                            "item_value": "8G + 1T",
+                            "show_name": "8G + 1T"
+                        }, {
+                            "id": "400",
+                            "spec_id": "2",
+                            "item_value": "8G + 512GB",
+                            "show_name": "8G + 512GB",
+                            "image": ""
+                        }],
+                        "image_pre": "",
+                        "image_name": ""
+                    }],
+                    "tpl_id": "base",
+                    "tpl_content": {
+                        "base": {
+                            "images": {
+                                "1x": [],
+                                "2x": [],
+                                "mobile": [],
+                                "image_pre": "",
+                                "image_name": "",
+                                "ali_mobile": {
+                                    "url": ["https://resource.smartisan.com/resource/164cc4bee45e8cf71026eca829f45ad1.jpg"],
+                                    "width": 1080,
+                                    "height": 26674,
+                                    "piece_height": 1440,
+                                    "pieces_num": 19
+                                },
+                                "spec_params_mobile": {
+                                    "url": ["https://resource.smartisan.com/resource/4b92584a223a4257281b2e6e38f8c94a.jpg"],
+                                    "width": 1072,
+                                    "height": 30000
+                                },
+                                "ali": {
+                                    "piece_height": 1440,
+                                    "pieces_num": 0
+                                }
+                            },
+                            "attributes": [{
+                                "title": "",
+                                "list": [{
+                                    "name": "",
+                                    "value": ""
+                                }]
+                            }],
+                            "aftersale": [{
+                                "title": "",
+                                "content": ""
+                            }],
+                            "extra": [{
+                                "title": "",
+                                "content": ""
+                            }]
+                        }
+                    },
+                    "buy_notes": [],
+                    "groups_huabei": [{
+                        "name": "3期",
+                        "value": "3",
+                        "id": 1
+                    }, {
+                        "name": "6期",
+                        "value": "6",
+                        "id": 2
+                    }, {
+                        "name": "12期",
+                        "value": "12",
+                        "id": 3
+                    }],
+                    "groups_zhaoshang": null,
+                    "describe": null,
+                    "recmd_skus": ["100051704", "100047701", "100047401", "100049501", "100046702", "100047301", "100042201", "100040602", "100047901", "100035101"]
+                },
+                "sku_info": [{
+                    "sku_id": "100046401",
+                    "title": "坚果 R1",
+                    "sub_title": "次世代旗舰手机，内藏来自未来的“电脑”",
+                    "promo_title": "",
+                    "color_id": "415",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/06c2253354096f5e9ebf0616f1af2086.png",
+                    "direct_to_cart": false,
+                    "price": "3499.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "415",
+                        "show_name": "碳黑色（细红线版）",
+                        "item_value": "碳黑色（细红线版）",
+                        "image": "https://resource.smartisan.com/resource/3a2977aae968cc8fc651afddc606d545.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "261",
+                        "show_name": "6G + 64GB",
+                        "item_value": "6G + 64GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100046402",
+                    "title": "坚果 R1",
+                    "sub_title": "次世代旗舰手机，内藏来自未来的“电脑”",
+                    "promo_title": "",
+                    "color_id": "415",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/06c2253354096f5e9ebf0616f1af2086.png",
+                    "direct_to_cart": false,
+                    "price": "3999.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "415",
+                        "show_name": "碳黑色（细红线版）",
+                        "item_value": "碳黑色（细红线版）",
+                        "image": "https://resource.smartisan.com/resource/3a2977aae968cc8fc651afddc606d545.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "262",
+                        "show_name": "6G + 128GB",
+                        "item_value": "6G + 128GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100046403",
+                    "title": "坚果 R1",
+                    "sub_title": "次世代旗舰手机，内藏来自未来的“电脑”",
+                    "promo_title": "",
+                    "color_id": "415",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/06c2253354096f5e9ebf0616f1af2086.png",
+                    "direct_to_cart": false,
+                    "price": "4499.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "415",
+                        "show_name": "碳黑色（细红线版）",
+                        "item_value": "碳黑色（细红线版）",
+                        "image": "https://resource.smartisan.com/resource/3a2977aae968cc8fc651afddc606d545.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "390",
+                        "show_name": "8G + 128GB",
+                        "item_value": "8G + 128GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100046405",
+                    "title": "坚果 R1",
+                    "sub_title": "次世代旗舰手机，内藏来自未来的“电脑”",
+                    "promo_title": "",
+                    "color_id": "415",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/06c2253354096f5e9ebf0616f1af2086.png",
+                    "direct_to_cart": false,
+                    "price": "8848.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "415",
+                        "show_name": "碳黑色（细红线版）",
+                        "item_value": "碳黑色（细红线版）",
+                        "image": "https://resource.smartisan.com/resource/3a2977aae968cc8fc651afddc606d545.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "392",
+                        "show_name": "8G + 1T",
+                        "item_value": "8G + 1T",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100046406",
+                    "title": "坚果 R1",
+                    "sub_title": "次世代旗舰手机，内藏来自未来的“电脑”",
+                    "promo_title": "",
+                    "color_id": "416",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/2077bb9819a652c36da473f379fe510b.png",
+                    "direct_to_cart": false,
+                    "price": "3999.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "416",
+                        "show_name": "纯白色",
+                        "item_value": "纯白色",
+                        "image": "https://resource.smartisan.com/resource/17b760796d75b10a7a138a4e6afd1b6a.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "262",
+                        "show_name": "6G + 128GB",
+                        "item_value": "6G + 128GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100046407",
+                    "title": "坚果 R1",
+                    "sub_title": "次世代旗舰手机，内藏来自未来的“电脑”",
+                    "promo_title": "",
+                    "color_id": "416",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/2077bb9819a652c36da473f379fe510b.png",
+                    "direct_to_cart": false,
+                    "price": "4499.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "416",
+                        "show_name": "纯白色",
+                        "item_value": "纯白色",
+                        "image": "https://resource.smartisan.com/resource/17b760796d75b10a7a138a4e6afd1b6a.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "390",
+                        "show_name": "8G + 128GB",
+                        "item_value": "8G + 128GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100046408",
+                    "title": "坚果 R1",
+                    "sub_title": "次世代旗舰手机，内藏来自未来的“电脑”",
+                    "promo_title": "",
+                    "color_id": "415",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/06c2253354096f5e9ebf0616f1af2086.png",
+                    "direct_to_cart": false,
+                    "price": "4999.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "415",
+                        "show_name": "碳黑色（细红线版）",
+                        "item_value": "碳黑色（细红线版）",
+                        "image": "https://resource.smartisan.com/resource/3a2977aae968cc8fc651afddc606d545.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "400",
+                        "show_name": "8G + 512GB",
+                        "item_value": "8G + 512GB",
+                        "image": "",
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100046409",
+                    "title": "坚果 R1",
+                    "sub_title": "次世代旗舰手机，内藏来自未来的“电脑”",
+                    "promo_title": "",
+                    "color_id": "416",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/efb9aacaab54e8a7fe5bbfbe8979adcd.png",
+                    "direct_to_cart": false,
+                    "price": "4999.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "416",
+                        "show_name": "纯白色",
+                        "item_value": "纯白色",
+                        "image": "https://resource.smartisan.com/resource/17b760796d75b10a7a138a4e6afd1b6a.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "400",
+                        "show_name": "8G + 512GB",
+                        "item_value": "8G + 512GB",
+                        "image": "",
+                        "show_short_name": null
+                    }]
+                }],
+                "acc_info": {
+                    "package_list": ""
+                },
+                "after_sell_info": {
+                    "is_back": "1",
+                    "back_deadline": "7",
+                    "is_exchange": "1",
+                    "exchange_deadline": "15",
+                    "is_repair": "1",
+                    "is_freeship": "1",
+                    "ship_price": "150",
+                    "is_deliver": "1",
+                    "hours": "72"
+                },
+                "created_at": 1524907440000,
+                "updated_at": 1538125149000
+            },
+            "in_stock": true,
+            "stock": 1
+        }, {
+            "id": 100035101,
+            "price": 1799.00,
+            "name": "坚果 Pro 2（碳黑色，4G 内存 + 32G 闪存）",
+            "spu_id": 1000351,
+            "sale_status": 3,
+            "product_info": {
+                "goods_name": "坚果 Pro 2（碳黑色，4G 内存 + 32G 闪存）",
+                "goods_code": "100035101",
+                "barcode": "6970643027228",
+                "sapcode": "FGOSB00001400",
+                "package_type": "0",
+                "seller_goods_id": "",
+                "product_code": "1000351",
+                "product_name": "坚果 Pro 2",
+                "is_mobile": 1,
+                "is_insurance": 0,
+                "goods_type": 1,
+                "has_sn": 1,
+                "category_id": "85",
+                "category_id_cn": "坚果 Pro 2",
+                "is_package": false,
+                "package_goods": []
+            },
+            "shop_info": {
+                "title": "坚果 Pro 2",
+                "sub_title": "漂亮得不像实力派",
+                "sku_mobile_title": "坚果 Pro 2",
+                "sku_mobile_sub_title": "漂亮得不像实力派",
+                "promo_title": "",
+                "limit_num": "10",
+                "spec_v2": [{
+                    "spec_id": "1",
+                    "spec_name": "颜色",
+                    "visiable": "0",
+                    "show_type": "2",
+                    "spec_values": [{
+                        "id": "201",
+                        "spec_id": "1",
+                        "item_value": "酒红色",
+                        "show_name": "酒红色",
+                        "show_short_name": "",
+                        "color_value": "#111111",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000351/6CF45CDABAF3B549B82C10A50BDBEF39/origin.png"
+                    }, {
+                        "id": "207",
+                        "spec_id": "1",
+                        "item_value": "浅金色",
+                        "show_name": "浅金色",
+                        "show_short_name": "",
+                        "color_value": "#111111",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000351/97BBF007C06CF961411BC376A98C586D/origin.png"
+                    }, {
+                        "id": "237",
+                        "spec_id": "1",
+                        "item_value": "碳黑色",
+                        "show_name": "碳黑色（细红线版）",
+                        "show_short_name": "",
+                        "color_value": "#111111",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000351/6835AD084B4CE188877FFAFA10339944/origin.png"
+                    }, {
+                        "id": "37",
+                        "spec_id": "1",
+                        "item_value": "白色",
+                        "show_name": "纯白色（限量版）",
+                        "image": "https://resource.smartisan.com/resource/e647e77234f9ed0fde9dd4084d35ff57.jpg",
+                        "show_short_name": "",
+                        "color_value": "#111111"
+                    }],
+                    "image_pre": "http://img01.smartisanos.cn/",
+                    "image_name": "origin.jpg"
+                }, {
+                    "spec_id": "2",
+                    "spec_name": "容量",
+                    "visiable": "0",
+                    "show_type": "1",
+                    "spec_values": [{
+                        "id": "259",
+                        "spec_id": "2",
+                        "item_value": "4G + 32GB",
+                        "show_name": "4G + 32GB",
+                        "show_short_name": ""
+                    }, {
+                        "id": "260",
+                        "spec_id": "2",
+                        "item_value": "4G + 64GB",
+                        "show_name": "4G + 64GB",
+                        "show_short_name": ""
+                    }, {
+                        "id": "261",
+                        "spec_id": "2",
+                        "item_value": "6G + 64GB",
+                        "show_name": "6G + 64GB",
+                        "show_short_name": ""
+                    }, {
+                        "id": "262",
+                        "spec_id": "2",
+                        "item_value": "6G + 128GB",
+                        "show_name": "6G + 128GB",
+                        "show_short_name": ""
+                    }, {
+                        "id": "263",
+                        "spec_id": "2",
+                        "item_value": "6G + 256GB",
+                        "show_name": "6G + 256GB",
+                        "show_short_name": ""
+                    }],
+                    "image_pre": "",
+                    "image_name": ""
+                }],
+                "spec_json": [{
+                    "spec_id": "1",
+                    "spec_value_id": "237",
+                    "show_name": "碳黑色（细红线版）",
+                    "item_value": "碳黑色",
+                    "image": "https://resource.smartisan.com/resource/attr/v2/1000351/6835AD084B4CE188877FFAFA10339944/origin.png",
+                    "show_short_name": ""
+                }, {
+                    "spec_id": "2",
+                    "spec_value_id": "259",
+                    "show_name": "4G + 32GB",
+                    "item_value": "4G + 32GB",
+                    "image": null,
+                    "show_short_name": ""
+                }],
+                "buy_notes": [],
+                "groups_huabei": [{
+                    "name": "3期",
+                    "value": "3",
+                    "id": 1
+                }, {
+                    "name": "6期",
+                    "value": "6",
+                    "id": 2
+                }, {
+                    "name": "12期",
+                    "value": "12",
+                    "id": 3
+                }],
+                "groups_zhaoshang": null,
+                "describe": null,
+                "images": null,
+                "image": null,
+                "ali_images": ["https://resource.smartisan.com/resource/c71ce2297b362f415f1e74d56d867aed.png"],
+                "ali_image": "https://resource.smartisan.com/resource/c71ce2297b362f415f1e74d56d867aed.png",
+                "image_default_name": "origin.jpg",
+                "is_custom": "0",
+                "is_mobile": "1",
+                "is_package": "0",
+                "tpl_id": "base",
+                "tpl_content": {
+                    "base": {
+                        "images": {
+                            "1x": [],
+                            "2x": [],
+                            "mobile": [],
+                            "image_pre": "",
+                            "image_name": "",
+                            "ali_mobile": {
+                                "url": ["https://resource.smartisan.com/resource/a2d399395a3949334ea93da995309e76.png"],
+                                "width": 880,
+                                "height": 22819,
+                                "piece_height": 1440,
+                                "pieces_num": 16
+                            },
+                            "spec_params_mobile": {
+                                "url": ["https://resource.smartisan.com/resource/0a8d9829e3b6c6379e89d233336cd7ab.jpg"],
+                                "width": 1080,
+                                "height": 28456
+                            },
+                            "ali": {
+                                "piece_height": 1440,
+                                "pieces_num": 0
+                            }
+                        },
+                        "attributes": [{
+                            "title": "",
+                            "list": [{
+                                "name": "",
+                                "value": ""
+                            }]
+                        }],
+                        "aftersale": [{
+                            "title": "",
+                            "content": ""
+                        }],
+                        "extra": [{
+                            "title": "",
+                            "content": ""
+                        }]
+                    }
+                },
+                "doodle_stage": "99",
+                "is_freeship": 0,
+                "is_addcart": true,
+                "is_showsku": false,
+                "direct_to_cart": false
+            },
+            "attr_info": {
+                "1": {
+                    "spec_id": "1",
+                    "spec_name": "颜色",
+                    "value": "碳黑色",
+                    "spec_value_id": "237"
+                },
+                "2": {
+                    "spec_id": "2",
+                    "spec_name": "容量",
+                    "value": "4G + 32GB",
+                    "spec_value_id": "259"
+                }
+            },
+            "created_at": 1508914720000,
+            "updated_at": 1538568388000,
+            "spu": {
+                "id": 1000351,
+                "name": "坚果 Pro 2",
+                "price": 1799.00,
+                "sale_status": 3,
+                "product_info": {
+                    "product_name": "坚果 Pro 2",
+                    "product_code": "1000351",
+                    "category_id": 85,
+                    "product_type": 1,
+                    "is_package": 0,
+                    "is_mobile": 1,
+                    "is_insurance": 0,
+                    "has_sn": 1,
+                    "accessory_goods": {
+                        "100036101": {
+                            "goods_code": "100036101",
+                            "product_code": "1000361",
+                            "goods_name": "坚果 Pro 2 意外碎屏保修服务",
+                            "is_insurance": "3",
+                            "is_mobile": 0,
+                            "price": 99,
+                            "shop_info": {
+                                "title": "坚果 Pro 2 意外碎屏保修服务",
+                                "sub_title": "",
+                                "sku_mobile_title": "坚果 Pro 2 意外碎屏保修服务",
+                                "sku_mobile_sub_title": "",
+                                "promo_title": "",
+                                "limit_num": "1",
+                                "spec_v2": [{
+                                    "spec_id": "3",
+                                    "spec_name": "险种",
+                                    "visiable": "0",
+                                    "show_type": "1",
+                                    "spec_values": [{
+                                        "id": "226",
+                                        "spec_id": "3",
+                                        "item_value": "碎屏险"
+                                    }],
+                                    "image_pre": "",
+                                    "image_name": ""
+                                }],
+                                "spec_json": [{
+                                    "spec_id": "3",
+                                    "spec_value_id": "226",
+                                    "show_name": null,
+                                    "item_value": "碎屏险",
+                                    "image": null,
+                                    "show_short_name": null
+                                }],
+                                "buy_notes": [],
+                                "groups_huabei": [{
+                                    "name": "3期",
+                                    "value": "3",
+                                    "id": 1
+                                }, {
+                                    "name": "6期",
+                                    "value": "6",
+                                    "id": 2
+                                }, {
+                                    "name": "12期",
+                                    "value": "12",
+                                    "id": 3
+                                }],
+                                "groups_zhaoshang": null,
+                                "describe": [],
+                                "images": null,
+                                "image": null,
+                                "ali_images": ["https://resource.smartisan.com/resource/dbc577f11569177d8a8aacab3931e8d9.jpg"],
+                                "ali_image": "https://resource.smartisan.com/resource/dbc577f11569177d8a8aacab3931e8d9.jpg",
+                                "image_default_name": "origin.jpg",
+                                "is_custom": "0",
+                                "is_mobile": "0",
+                                "is_package": "0",
+                                "tpl_id": "base",
+                                "tpl_content": {
+                                    "base": {
+                                        "images": {
+                                            "1x": [],
+                                            "2x": [],
+                                            "mobile": [],
+                                            "image_pre": "",
+                                            "image_name": "",
+                                            "ali": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            },
+                                            "ali_mobile": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            }
+                                        },
+                                        "attributes": [{
+                                            "title": "",
+                                            "list": [{
+                                                "name": "",
+                                                "value": ""
+                                            }]
+                                        }],
+                                        "aftersale": [{
+                                            "title": "",
+                                            "content": ""
+                                        }],
+                                        "extra": [{
+                                            "title": "",
+                                            "content": ""
+                                        }]
+                                    }
+                                },
+                                "doodle_stage": "99",
+                                "is_freeship": 0,
+                                "is_addcart": true,
+                                "is_showsku": false,
+                                "direct_to_cart": false
+                            }
+                        },
+                        "100036201": {
+                            "goods_code": "100036201",
+                            "product_code": "1000362",
+                            "goods_name": "坚果 Pro 2 延长保修服务（延保）",
+                            "is_insurance": "4",
+                            "is_mobile": 0,
+                            "price": 149,
+                            "shop_info": {
+                                "title": "坚果 Pro 2 延长保修服务",
+                                "sub_title": "",
+                                "sku_mobile_title": "坚果 Pro 2 延长保修服务",
+                                "sku_mobile_sub_title": "",
+                                "promo_title": "",
+                                "limit_num": "1",
+                                "spec_v2": [{
+                                    "spec_id": "3",
+                                    "spec_name": "险种",
+                                    "visiable": "0",
+                                    "show_type": "1",
+                                    "spec_values": [{
+                                        "id": "95",
+                                        "spec_id": "3",
+                                        "item_value": "延保"
+                                    }],
+                                    "image_pre": "",
+                                    "image_name": ""
+                                }],
+                                "spec_json": [{
+                                    "spec_id": "3",
+                                    "spec_value_id": "95",
+                                    "show_name": null,
+                                    "item_value": "延保",
+                                    "image": null,
+                                    "show_short_name": null
+                                }],
+                                "buy_notes": [],
+                                "groups_huabei": [{
+                                    "name": "3期",
+                                    "value": "3",
+                                    "id": 1
+                                }, {
+                                    "name": "6期",
+                                    "value": "6",
+                                    "id": 2
+                                }, {
+                                    "name": "12期",
+                                    "value": "12",
+                                    "id": 3
+                                }],
+                                "groups_zhaoshang": null,
+                                "describe": [],
+                                "images": null,
+                                "image": null,
+                                "ali_images": ["https://resource.smartisan.com/resource/fbfff6fa893b0f1af554ccedf7360d4e.jpg"],
+                                "ali_image": "https://resource.smartisan.com/resource/fbfff6fa893b0f1af554ccedf7360d4e.jpg",
+                                "image_default_name": "origin.jpg",
+                                "is_custom": "0",
+                                "is_mobile": "0",
+                                "is_package": "0",
+                                "tpl_id": "base",
+                                "tpl_content": {
+                                    "base": {
+                                        "images": {
+                                            "1x": [],
+                                            "2x": [],
+                                            "mobile": [],
+                                            "image_pre": "",
+                                            "image_name": "",
+                                            "ali": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            },
+                                            "ali_mobile": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            }
+                                        },
+                                        "attributes": [{
+                                            "title": "",
+                                            "list": [{
+                                                "name": "",
+                                                "value": ""
+                                            }]
+                                        }],
+                                        "aftersale": [{
+                                            "title": "",
+                                            "content": ""
+                                        }],
+                                        "extra": [{
+                                            "title": "",
+                                            "content": ""
+                                        }]
+                                    }
+                                },
+                                "doodle_stage": "99",
+                                "is_freeship": 0,
+                                "is_addcart": true,
+                                "is_showsku": false,
+                                "direct_to_cart": false
+                            }
+                        }
+                    }
+                },
+                "shop_info": {
+                    "spu_title": "坚果 Pro 2",
+                    "spu_sub_title": "漂亮得不像实力派",
+                    "spu_mobile_title": "坚果 Pro 2",
+                    "spu_mobile_sub_title": "漂亮得不像实力派",
+                    "spu_promo_title": "",
+                    "highlights": "骁龙 ™ 660 处理器 · 1200 万 + 500 万像素双摄像头 · 3500mAh 大电池 · 18W 快速充电 · 人脸解锁 + 指纹解锁",
+                    "sale_model": "1",
+                    "book_num": null,
+                    "spec_v2": [{
+                        "spec_id": "1",
+                        "spec_name": "颜色",
+                        "visiable": "0",
+                        "show_type": "2",
+                        "spec_values": [{
+                            "id": "201",
+                            "spec_id": "1",
+                            "item_value": "酒红色",
+                            "show_name": "酒红色",
+                            "show_short_name": "",
+                            "color_value": "#111111",
+                            "image": "https://resource.smartisan.com/resource/attr/v2/1000351/6CF45CDABAF3B549B82C10A50BDBEF39/origin.png"
+                        }, {
+                            "id": "207",
+                            "spec_id": "1",
+                            "item_value": "浅金色",
+                            "show_name": "浅金色",
+                            "show_short_name": "",
+                            "color_value": "#111111",
+                            "image": "https://resource.smartisan.com/resource/attr/v2/1000351/97BBF007C06CF961411BC376A98C586D/origin.png"
+                        }, {
+                            "id": "237",
+                            "spec_id": "1",
+                            "item_value": "碳黑色",
+                            "show_name": "碳黑色（细红线版）",
+                            "show_short_name": "",
+                            "color_value": "#111111",
+                            "image": "https://resource.smartisan.com/resource/attr/v2/1000351/6835AD084B4CE188877FFAFA10339944/origin.png"
+                        }, {
+                            "id": "37",
+                            "spec_id": "1",
+                            "item_value": "白色",
+                            "show_name": "纯白色（限量版）",
+                            "image": "https://resource.smartisan.com/resource/e647e77234f9ed0fde9dd4084d35ff57.jpg",
+                            "show_short_name": "",
+                            "color_value": "#111111"
+                        }],
+                        "image_pre": "http://img01.smartisanos.cn/",
+                        "image_name": "origin.jpg"
+                    }, {
+                        "spec_id": "2",
+                        "spec_name": "容量",
+                        "visiable": "0",
+                        "show_type": "1",
+                        "spec_values": [{
+                            "id": "259",
+                            "spec_id": "2",
+                            "item_value": "4G + 32GB",
+                            "show_name": "4G + 32GB",
+                            "show_short_name": ""
+                        }, {
+                            "id": "260",
+                            "spec_id": "2",
+                            "item_value": "4G + 64GB",
+                            "show_name": "4G + 64GB",
+                            "show_short_name": ""
+                        }, {
+                            "id": "261",
+                            "spec_id": "2",
+                            "item_value": "6G + 64GB",
+                            "show_name": "6G + 64GB",
+                            "show_short_name": ""
+                        }, {
+                            "id": "262",
+                            "spec_id": "2",
+                            "item_value": "6G + 128GB",
+                            "show_name": "6G + 128GB",
+                            "show_short_name": ""
+                        }, {
+                            "id": "263",
+                            "spec_id": "2",
+                            "item_value": "6G + 256GB",
+                            "show_name": "6G + 256GB",
+                            "show_short_name": ""
+                        }],
+                        "image_pre": "",
+                        "image_name": ""
+                    }],
+                    "tpl_id": "base",
+                    "tpl_content": {
+                        "base": {
+                            "images": {
+                                "1x": [],
+                                "2x": [],
+                                "mobile": [],
+                                "image_pre": "",
+                                "image_name": "",
+                                "ali_mobile": {
+                                    "url": ["https://resource.smartisan.com/resource/a2d399395a3949334ea93da995309e76.png"],
+                                    "width": 880,
+                                    "height": 22819,
+                                    "piece_height": 1440,
+                                    "pieces_num": 16
+                                },
+                                "spec_params_mobile": {
+                                    "url": ["https://resource.smartisan.com/resource/0a8d9829e3b6c6379e89d233336cd7ab.jpg"],
+                                    "width": 1080,
+                                    "height": 28456
+                                },
+                                "ali": {
+                                    "piece_height": 1440,
+                                    "pieces_num": 0
+                                }
+                            },
+                            "attributes": [{
+                                "title": "",
+                                "list": [{
+                                    "name": "",
+                                    "value": ""
+                                }]
+                            }],
+                            "aftersale": [{
+                                "title": "",
+                                "content": ""
+                            }],
+                            "extra": [{
+                                "title": "",
+                                "content": ""
+                            }]
+                        }
+                    },
+                    "buy_notes": [],
+                    "groups_huabei": [{
+                        "name": "3期",
+                        "value": "3",
+                        "id": 1
+                    }, {
+                        "name": "6期",
+                        "value": "6",
+                        "id": 2
+                    }, {
+                        "name": "12期",
+                        "value": "12",
+                        "id": 3
+                    }],
+                    "groups_zhaoshang": null,
+                    "describe": null,
+                    "recmd_skus": ["100051704", "100036003", "100035202", "100035803", "100027004", "100029901", "100026701", "100026601", "100037801", "100038001"]
+                },
+                "sku_info": [{
+                    "sku_id": "100035101",
+                    "title": "坚果 Pro 2",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "237",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/c71ce2297b362f415f1e74d56d867aed.png",
+                    "direct_to_cart": false,
+                    "price": "1799.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "237",
+                        "show_name": "碳黑色（细红线版）",
+                        "item_value": "碳黑色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000351/6835AD084B4CE188877FFAFA10339944/origin.png",
+                        "show_short_name": ""
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "259",
+                        "show_name": "4G + 32GB",
+                        "item_value": "4G + 32GB",
+                        "image": null,
+                        "show_short_name": ""
+                    }]
+                }, {
+                    "sku_id": "100035102",
+                    "title": "坚果 Pro 2",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "237",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/c71ce2297b362f415f1e74d56d867aed.png",
+                    "direct_to_cart": false,
+                    "price": "1999.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "237",
+                        "show_name": "碳黑色（细红线版）",
+                        "item_value": "碳黑色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000351/6835AD084B4CE188877FFAFA10339944/origin.png",
+                        "show_short_name": ""
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "260",
+                        "show_name": "4G + 64GB",
+                        "item_value": "4G + 64GB",
+                        "image": null,
+                        "show_short_name": ""
+                    }]
+                }, {
+                    "sku_id": "100035103",
+                    "title": "坚果 Pro 2",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "237",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/c71ce2297b362f415f1e74d56d867aed.png",
+                    "direct_to_cart": false,
+                    "price": "2299.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "237",
+                        "show_name": "碳黑色（细红线版）",
+                        "item_value": "碳黑色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000351/6835AD084B4CE188877FFAFA10339944/origin.png",
+                        "show_short_name": ""
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "261",
+                        "show_name": "6G + 64GB",
+                        "item_value": "6G + 64GB",
+                        "image": null,
+                        "show_short_name": ""
+                    }]
+                }, {
+                    "sku_id": "100035104",
+                    "title": "坚果 Pro 2",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "237",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/c71ce2297b362f415f1e74d56d867aed.png",
+                    "direct_to_cart": false,
+                    "price": "2699.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "237",
+                        "show_name": "碳黑色（细红线版）",
+                        "item_value": "碳黑色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000351/6835AD084B4CE188877FFAFA10339944/origin.png",
+                        "show_short_name": ""
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "262",
+                        "show_name": "6G + 128GB",
+                        "item_value": "6G + 128GB",
+                        "image": null,
+                        "show_short_name": ""
+                    }]
+                }, {
+                    "sku_id": "100035105",
+                    "title": "坚果 Pro 2",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "237",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/c71ce2297b362f415f1e74d56d867aed.png",
+                    "direct_to_cart": false,
+                    "price": "3299.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "237",
+                        "show_name": "碳黑色（细红线版）",
+                        "item_value": "碳黑色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000351/6835AD084B4CE188877FFAFA10339944/origin.png",
+                        "show_short_name": ""
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "263",
+                        "show_name": "6G + 256GB",
+                        "item_value": "6G + 256GB",
+                        "image": null,
+                        "show_short_name": ""
+                    }]
+                }, {
+                    "sku_id": "100035106",
+                    "title": "坚果 Pro 2",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "201",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/4eb9976b5c45263c33cf6d4e04291785.png",
+                    "direct_to_cart": false,
+                    "price": "1999.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "201",
+                        "show_name": "酒红色",
+                        "item_value": "酒红色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000351/6CF45CDABAF3B549B82C10A50BDBEF39/origin.png",
+                        "show_short_name": ""
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "260",
+                        "show_name": "4G + 64GB",
+                        "item_value": "4G + 64GB",
+                        "image": null,
+                        "show_short_name": ""
+                    }]
+                }, {
+                    "sku_id": "100035107",
+                    "title": "坚果 Pro 2",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "201",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/4eb9976b5c45263c33cf6d4e04291785.png",
+                    "direct_to_cart": false,
+                    "price": "2299.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "201",
+                        "show_name": "酒红色",
+                        "item_value": "酒红色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000351/6CF45CDABAF3B549B82C10A50BDBEF39/origin.png",
+                        "show_short_name": ""
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "261",
+                        "show_name": "6G + 64GB",
+                        "item_value": "6G + 64GB",
+                        "image": null,
+                        "show_short_name": ""
+                    }]
+                }, {
+                    "sku_id": "100035108",
+                    "title": "坚果 Pro 2",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "201",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/4eb9976b5c45263c33cf6d4e04291785.png",
+                    "direct_to_cart": false,
+                    "price": "2699.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "201",
+                        "show_name": "酒红色",
+                        "item_value": "酒红色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000351/6CF45CDABAF3B549B82C10A50BDBEF39/origin.png",
+                        "show_short_name": ""
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "262",
+                        "show_name": "6G + 128GB",
+                        "item_value": "6G + 128GB",
+                        "image": null,
+                        "show_short_name": ""
+                    }]
+                }, {
+                    "sku_id": "100035109",
+                    "title": "坚果 Pro 2",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "201",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/4eb9976b5c45263c33cf6d4e04291785.png",
+                    "direct_to_cart": false,
+                    "price": "3299.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "201",
+                        "show_name": "酒红色",
+                        "item_value": "酒红色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000351/6CF45CDABAF3B549B82C10A50BDBEF39/origin.png",
+                        "show_short_name": ""
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "263",
+                        "show_name": "6G + 256GB",
+                        "item_value": "6G + 256GB",
+                        "image": null,
+                        "show_short_name": ""
+                    }]
+                }, {
+                    "sku_id": "100035110",
+                    "title": "坚果 Pro 2",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "207",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/15a5a9b011dd91c5015ded69e9e54e26.png",
+                    "direct_to_cart": false,
+                    "price": "1999.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "207",
+                        "show_name": "浅金色",
+                        "item_value": "浅金色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000351/97BBF007C06CF961411BC376A98C586D/origin.png",
+                        "show_short_name": ""
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "260",
+                        "show_name": "4G + 64GB",
+                        "item_value": "4G + 64GB",
+                        "image": null,
+                        "show_short_name": ""
+                    }]
+                }, {
+                    "sku_id": "100035111",
+                    "title": "坚果 Pro 2",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "207",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/15a5a9b011dd91c5015ded69e9e54e26.png",
+                    "direct_to_cart": false,
+                    "price": "2299.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "207",
+                        "show_name": "浅金色",
+                        "item_value": "浅金色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000351/97BBF007C06CF961411BC376A98C586D/origin.png",
+                        "show_short_name": ""
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "261",
+                        "show_name": "6G + 64GB",
+                        "item_value": "6G + 64GB",
+                        "image": null,
+                        "show_short_name": ""
+                    }]
+                }, {
+                    "sku_id": "100035113",
+                    "title": "坚果 Pro 2",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "37",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/43c0cc402eb1ed5933e4adfae3aadaf5.png",
+                    "direct_to_cart": false,
+                    "price": "2699.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "37",
+                        "show_name": "纯白色（限量版）",
+                        "item_value": "白色",
+                        "image": "https://resource.smartisan.com/resource/e647e77234f9ed0fde9dd4084d35ff57.jpg",
+                        "show_short_name": ""
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "262",
+                        "show_name": "6G + 128GB",
+                        "item_value": "6G + 128GB",
+                        "image": null,
+                        "show_short_name": ""
+                    }]
+                }],
+                "acc_info": {
+                    "package_list": ""
+                },
+                "after_sell_info": {
+                    "is_back": "1",
+                    "back_deadline": "7",
+                    "is_exchange": "1",
+                    "exchange_deadline": "15",
+                    "is_repair": "1",
+                    "is_freeship": "1",
+                    "ship_price": "150",
+                    "is_deliver": "1",
+                    "hours": "72"
+                },
+                "created_at": 1508914720000,
+                "updated_at": 1539487410000
+            },
+            "in_stock": true,
+            "stock": 4
+        }, {
+            "id": 100047901,
+            "price": 1899.00,
+            "name": "坚果 Pro 2 特别版（碳黑色，6G 内存 + 64GB 闪存）",
+            "spu_id": 1000479,
+            "sale_status": 3,
+            "product_info": {
+                "goods_name": "坚果 Pro 2 特别版（碳黑色，6G 内存 + 64GB 闪存）",
+                "goods_code": "100047901",
+                "barcode": "6970643029994",
+                "sapcode": "FGOSB00016800",
+                "package_type": "0",
+                "seller_goods_id": "",
+                "product_code": "1000479",
+                "product_name": "坚果 Pro 2 特别版",
+                "is_mobile": 1,
+                "is_insurance": 0,
+                "goods_type": 1,
+                "has_sn": 1,
+                "category_id": "85",
+                "category_id_cn": "坚果 Pro 2",
+                "is_package": false,
+                "package_goods": []
+            },
+            "shop_info": {
+                "title": "坚果 Pro 2 特别版",
+                "sub_title": "漂亮得不像实力派",
+                "sku_mobile_title": "坚果 Pro 2 特别版",
+                "sku_mobile_sub_title": "漂亮得不像实力派",
+                "promo_title": "",
+                "limit_num": "3",
+                "spec_v2": [{
+                    "spec_id": "1",
+                    "spec_name": "颜色",
+                    "visiable": "0",
+                    "show_type": "1",
+                    "spec_values": [{
+                        "id": "237",
+                        "spec_id": "1",
+                        "item_value": "碳黑色",
+                        "show_name": "碳黑色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000479/6835AD084B4CE188877FFAFA10339944/origin.png"
+                    }, {
+                        "id": "201",
+                        "spec_id": "1",
+                        "item_value": "酒红色",
+                        "show_name": "酒红色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000479/6CF45CDABAF3B549B82C10A50BDBEF39/origin.png"
+                    }, {
+                        "id": "207",
+                        "spec_id": "1",
+                        "item_value": "浅金色",
+                        "show_name": "浅金色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000479/97BBF007C06CF961411BC376A98C586D/origin.png"
+                    }]
+                }, {
+                    "spec_id": "2",
+                    "spec_name": "容量",
+                    "visiable": "0",
+                    "show_type": "1",
+                    "spec_values": [{
+                        "id": "261",
+                        "spec_id": "2",
+                        "item_value": "6G + 64GB",
+                        "show_name": "6G + 64GB"
+                    }],
+                    "image_pre": "",
+                    "image_name": ""
+                }],
+                "spec_json": [{
+                    "spec_id": "1",
+                    "spec_value_id": "237",
+                    "show_name": "碳黑色",
+                    "item_value": "碳黑色",
+                    "image": "https://resource.smartisan.com/resource/attr/v2/1000479/6835AD084B4CE188877FFAFA10339944/origin.png",
+                    "show_short_name": null
+                }, {
+                    "spec_id": "2",
+                    "spec_value_id": "261",
+                    "show_name": "6G + 64GB",
+                    "item_value": "6G + 64GB",
+                    "image": null,
+                    "show_short_name": null
+                }],
+                "buy_notes": [],
+                "groups_huabei": [{
+                    "name": "3期",
+                    "value": "3",
+                    "id": 1
+                }, {
+                    "name": "6期",
+                    "value": "6",
+                    "id": 2
+                }, {
+                    "name": "12期",
+                    "value": "12",
+                    "id": 3
+                }],
+                "groups_zhaoshang": null,
+                "describe": null,
+                "images": null,
+                "image": null,
+                "ali_images": ["https://resource.smartisan.com/resource/84366aa98fd0659d7809e1b9eed62cb4.png"],
+                "ali_image": "https://resource.smartisan.com/resource/84366aa98fd0659d7809e1b9eed62cb4.png",
+                "image_default_name": "origin.jpg",
+                "is_custom": "0",
+                "is_mobile": "1",
+                "is_package": "0",
+                "tpl_id": "base",
+                "tpl_content": {
+                    "base": {
+                        "images": {
+                            "1x": [],
+                            "2x": [],
+                            "mobile": [],
+                            "image_pre": "",
+                            "image_name": "",
+                            "ali_mobile": {
+                                "url": ["https://resource.smartisan.com/resource/641788662760832baae75900e9e3f88c.jpg"],
+                                "width": 1080,
+                                "height": 24357,
+                                "piece_height": 1440,
+                                "pieces_num": 17
+                            },
+                            "spec_params_mobile": {
+                                "url": ["https://resource.smartisan.com/resource/953385adf7dcce840b90d0e5bd7316e2.jpg"],
+                                "width": 1080,
+                                "height": 26560
+                            },
+                            "ali": {
+                                "piece_height": 1440,
+                                "pieces_num": 0
+                            }
+                        },
+                        "attributes": [{
+                            "title": "",
+                            "list": [{
+                                "name": "",
+                                "value": ""
+                            }]
+                        }],
+                        "aftersale": [{
+                            "title": "",
+                            "content": ""
+                        }],
+                        "extra": [{
+                            "title": "",
+                            "content": ""
+                        }]
+                    }
+                },
+                "doodle_stage": "99",
+                "is_freeship": 0,
+                "is_addcart": true,
+                "is_showsku": false,
+                "direct_to_cart": false
+            },
+            "attr_info": {
+                "1": {
+                    "spec_id": "1",
+                    "spec_name": "颜色",
+                    "value": "碳黑色",
+                    "spec_value_id": "237"
+                },
+                "2": {
+                    "spec_id": "2",
+                    "spec_name": "容量",
+                    "value": "6G + 64GB",
+                    "spec_value_id": "261"
+                }
+            },
+            "created_at": 1525700857000,
+            "updated_at": 1538125150000,
+            "spu": {
+                "id": 1000479,
+                "name": "坚果 Pro 2 特别版",
+                "price": 1899.00,
+                "sale_status": 3,
+                "product_info": {
+                    "product_name": "坚果 Pro 2 特别版",
+                    "product_code": "1000479",
+                    "category_id": "85",
+                    "product_type": "1",
+                    "is_package": "0",
+                    "is_mobile": 1,
+                    "is_insurance": 0,
+                    "has_sn": 1,
+                    "accessory_goods": {
+                        "100036101": {
+                            "goods_code": "100036101",
+                            "product_code": "1000361",
+                            "goods_name": "坚果 Pro 2 意外碎屏保修服务",
+                            "is_insurance": "3",
+                            "is_mobile": 0,
+                            "price": 99,
+                            "shop_info": {
+                                "title": "坚果 Pro 2 意外碎屏保修服务",
+                                "sub_title": "",
+                                "sku_mobile_title": "坚果 Pro 2 意外碎屏保修服务",
+                                "sku_mobile_sub_title": "",
+                                "promo_title": "",
+                                "limit_num": "1",
+                                "spec_v2": [{
+                                    "spec_id": "3",
+                                    "spec_name": "险种",
+                                    "visiable": "0",
+                                    "show_type": "1",
+                                    "spec_values": [{
+                                        "id": "226",
+                                        "spec_id": "3",
+                                        "item_value": "碎屏险"
+                                    }],
+                                    "image_pre": "",
+                                    "image_name": ""
+                                }],
+                                "spec_json": [{
+                                    "spec_id": "3",
+                                    "spec_value_id": "226",
+                                    "show_name": null,
+                                    "item_value": "碎屏险",
+                                    "image": null,
+                                    "show_short_name": null
+                                }],
+                                "buy_notes": [],
+                                "groups_huabei": [{
+                                    "name": "3期",
+                                    "value": "3",
+                                    "id": 1
+                                }, {
+                                    "name": "6期",
+                                    "value": "6",
+                                    "id": 2
+                                }, {
+                                    "name": "12期",
+                                    "value": "12",
+                                    "id": 3
+                                }],
+                                "groups_zhaoshang": null,
+                                "describe": [],
+                                "images": null,
+                                "image": null,
+                                "ali_images": ["https://resource.smartisan.com/resource/dbc577f11569177d8a8aacab3931e8d9.jpg"],
+                                "ali_image": "https://resource.smartisan.com/resource/dbc577f11569177d8a8aacab3931e8d9.jpg",
+                                "image_default_name": "origin.jpg",
+                                "is_custom": "0",
+                                "is_mobile": "0",
+                                "is_package": "0",
+                                "tpl_id": "base",
+                                "tpl_content": {
+                                    "base": {
+                                        "images": {
+                                            "1x": [],
+                                            "2x": [],
+                                            "mobile": [],
+                                            "image_pre": "",
+                                            "image_name": "",
+                                            "ali": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            },
+                                            "ali_mobile": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            }
+                                        },
+                                        "attributes": [{
+                                            "title": "",
+                                            "list": [{
+                                                "name": "",
+                                                "value": ""
+                                            }]
+                                        }],
+                                        "aftersale": [{
+                                            "title": "",
+                                            "content": ""
+                                        }],
+                                        "extra": [{
+                                            "title": "",
+                                            "content": ""
+                                        }]
+                                    }
+                                },
+                                "doodle_stage": "99",
+                                "is_freeship": 0,
+                                "is_addcart": true,
+                                "is_showsku": false,
+                                "direct_to_cart": false
+                            }
+                        },
+                        "100036201": {
+                            "goods_code": "100036201",
+                            "product_code": "1000362",
+                            "goods_name": "坚果 Pro 2 延长保修服务（延保）",
+                            "is_insurance": "4",
+                            "is_mobile": 0,
+                            "price": 149,
+                            "shop_info": {
+                                "title": "坚果 Pro 2 延长保修服务",
+                                "sub_title": "",
+                                "sku_mobile_title": "坚果 Pro 2 延长保修服务",
+                                "sku_mobile_sub_title": "",
+                                "promo_title": "",
+                                "limit_num": "1",
+                                "spec_v2": [{
+                                    "spec_id": "3",
+                                    "spec_name": "险种",
+                                    "visiable": "0",
+                                    "show_type": "1",
+                                    "spec_values": [{
+                                        "id": "95",
+                                        "spec_id": "3",
+                                        "item_value": "延保"
+                                    }],
+                                    "image_pre": "",
+                                    "image_name": ""
+                                }],
+                                "spec_json": [{
+                                    "spec_id": "3",
+                                    "spec_value_id": "95",
+                                    "show_name": null,
+                                    "item_value": "延保",
+                                    "image": null,
+                                    "show_short_name": null
+                                }],
+                                "buy_notes": [],
+                                "groups_huabei": [{
+                                    "name": "3期",
+                                    "value": "3",
+                                    "id": 1
+                                }, {
+                                    "name": "6期",
+                                    "value": "6",
+                                    "id": 2
+                                }, {
+                                    "name": "12期",
+                                    "value": "12",
+                                    "id": 3
+                                }],
+                                "groups_zhaoshang": null,
+                                "describe": [],
+                                "images": null,
+                                "image": null,
+                                "ali_images": ["https://resource.smartisan.com/resource/fbfff6fa893b0f1af554ccedf7360d4e.jpg"],
+                                "ali_image": "https://resource.smartisan.com/resource/fbfff6fa893b0f1af554ccedf7360d4e.jpg",
+                                "image_default_name": "origin.jpg",
+                                "is_custom": "0",
+                                "is_mobile": "0",
+                                "is_package": "0",
+                                "tpl_id": "base",
+                                "tpl_content": {
+                                    "base": {
+                                        "images": {
+                                            "1x": [],
+                                            "2x": [],
+                                            "mobile": [],
+                                            "image_pre": "",
+                                            "image_name": "",
+                                            "ali": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            },
+                                            "ali_mobile": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            }
+                                        },
+                                        "attributes": [{
+                                            "title": "",
+                                            "list": [{
+                                                "name": "",
+                                                "value": ""
+                                            }]
+                                        }],
+                                        "aftersale": [{
+                                            "title": "",
+                                            "content": ""
+                                        }],
+                                        "extra": [{
+                                            "title": "",
+                                            "content": ""
+                                        }]
+                                    }
+                                },
+                                "doodle_stage": "99",
+                                "is_freeship": 0,
+                                "is_addcart": true,
+                                "is_showsku": false,
+                                "direct_to_cart": false
+                            }
+                        }
+                    }
+                },
+                "shop_info": {
+                    "spu_title": "坚果 Pro 2 特别版",
+                    "spu_sub_title": "漂亮得不像实力派",
+                    "spu_mobile_title": "坚果 Pro 2 特别版",
+                    "spu_mobile_sub_title": "漂亮得不像实力派",
+                    "spu_promo_title": "",
+                    "highlights": "Qualcomm 骁龙 636 八核处理器 · 1200 万 + 500 万像素双摄像头 · 3500mAh 大电池 · 18W 快速充电 · 人脸解锁 + 指纹解锁",
+                    "sale_model": "1",
+                    "book_num": null,
+                    "spec_v2": [{
+                        "spec_id": "1",
+                        "spec_name": "颜色",
+                        "visiable": "0",
+                        "show_type": "1",
+                        "spec_values": [{
+                            "id": "237",
+                            "spec_id": "1",
+                            "item_value": "碳黑色",
+                            "show_name": "碳黑色",
+                            "image": "https://resource.smartisan.com/resource/attr/v2/1000479/6835AD084B4CE188877FFAFA10339944/origin.png"
+                        }, {
+                            "id": "201",
+                            "spec_id": "1",
+                            "item_value": "酒红色",
+                            "show_name": "酒红色",
+                            "image": "https://resource.smartisan.com/resource/attr/v2/1000479/6CF45CDABAF3B549B82C10A50BDBEF39/origin.png"
+                        }, {
+                            "id": "207",
+                            "spec_id": "1",
+                            "item_value": "浅金色",
+                            "show_name": "浅金色",
+                            "image": "https://resource.smartisan.com/resource/attr/v2/1000479/97BBF007C06CF961411BC376A98C586D/origin.png"
+                        }]
+                    }, {
+                        "spec_id": "2",
+                        "spec_name": "容量",
+                        "visiable": "0",
+                        "show_type": "1",
+                        "spec_values": [{
+                            "id": "261",
+                            "spec_id": "2",
+                            "item_value": "6G + 64GB",
+                            "show_name": "6G + 64GB"
+                        }],
+                        "image_pre": "",
+                        "image_name": ""
+                    }],
+                    "tpl_id": "base",
+                    "tpl_content": {
+                        "base": {
+                            "images": {
+                                "1x": [],
+                                "2x": [],
+                                "mobile": [],
+                                "image_pre": "",
+                                "image_name": "",
+                                "ali_mobile": {
+                                    "url": ["https://resource.smartisan.com/resource/641788662760832baae75900e9e3f88c.jpg"],
+                                    "width": 1080,
+                                    "height": 24357,
+                                    "piece_height": 1440,
+                                    "pieces_num": 17
+                                },
+                                "spec_params_mobile": {
+                                    "url": ["https://resource.smartisan.com/resource/953385adf7dcce840b90d0e5bd7316e2.jpg"],
+                                    "width": 1080,
+                                    "height": 26560
+                                },
+                                "ali": {
+                                    "piece_height": 1440,
+                                    "pieces_num": 0
+                                }
+                            },
+                            "attributes": [{
+                                "title": "",
+                                "list": [{
+                                    "name": "",
+                                    "value": ""
+                                }]
+                            }],
+                            "aftersale": [{
+                                "title": "",
+                                "content": ""
+                            }],
+                            "extra": [{
+                                "title": "",
+                                "content": ""
+                            }]
+                        }
+                    },
+                    "buy_notes": [],
+                    "groups_huabei": [{
+                        "name": "3期",
+                        "value": "3",
+                        "id": 1
+                    }, {
+                        "name": "6期",
+                        "value": "6",
+                        "id": 2
+                    }, {
+                        "name": "12期",
+                        "value": "12",
+                        "id": 3
+                    }],
+                    "groups_zhaoshang": null,
+                    "describe": null,
+                    "recmd_skus": ["100046401", "100051704", "100036002", "100035201", "100042201", "100040601", "100040604", "100035106", "100035111", "100035108"]
+                },
+                "sku_info": [{
+                    "sku_id": "100047901",
+                    "title": "坚果 Pro 2 特别版",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "237",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/84366aa98fd0659d7809e1b9eed62cb4.png",
+                    "direct_to_cart": false,
+                    "price": "1899.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "237",
+                        "show_name": "碳黑色",
+                        "item_value": "碳黑色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000479/6835AD084B4CE188877FFAFA10339944/origin.png",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "261",
+                        "show_name": "6G + 64GB",
+                        "item_value": "6G + 64GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100047902",
+                    "title": "坚果 Pro 2 特别版",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "201",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/574abf59d5cfd440d8370eb99118c44a.png",
+                    "direct_to_cart": false,
+                    "price": "1899.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "201",
+                        "show_name": "酒红色",
+                        "item_value": "酒红色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000479/6CF45CDABAF3B549B82C10A50BDBEF39/origin.png",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "261",
+                        "show_name": "6G + 64GB",
+                        "item_value": "6G + 64GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100047903",
+                    "title": "坚果 Pro 2 特别版",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "207",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/cb762c4e848239e3173f2d1eb94c9628.png",
+                    "direct_to_cart": false,
+                    "price": "1899.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "207",
+                        "show_name": "浅金色",
+                        "item_value": "浅金色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000479/97BBF007C06CF961411BC376A98C586D/origin.png",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "261",
+                        "show_name": "6G + 64GB",
+                        "item_value": "6G + 64GB",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }],
+                "acc_info": {
+                    "package_list": ""
+                },
+                "after_sell_info": {
+                    "is_back": "1",
+                    "back_deadline": "7",
+                    "is_exchange": "1",
+                    "exchange_deadline": "15",
+                    "is_repair": "1",
+                    "is_freeship": "1",
+                    "ship_price": "150",
+                    "is_deliver": "1",
+                    "hours": "72"
+                },
+                "created_at": 1525700857000,
+                "updated_at": 1538125149000
+            },
+            "in_stock": false,
+            "stock": 0
+        }, {
+            "id": 100040601,
+            "price": 1299.00,
+            "name": "坚果 3（碳黑色，4G + 32GB，全网通）",
+            "spu_id": 1000406,
+            "sale_status": 3,
+            "product_info": {
+                "goods_name": "坚果 3（碳黑色，4G + 32GB，全网通）",
+                "goods_code": "100040601",
+                "barcode": "6970643028942",
+                "sapcode": "H1.31.OSCAR001",
+                "package_type": "0",
+                "seller_goods_id": "",
+                "product_code": "1000406",
+                "product_name": "坚果 3",
+                "is_mobile": 1,
+                "is_insurance": 0,
+                "goods_type": 1,
+                "has_sn": 1,
+                "is_package": false,
+                "package_goods": []
+            },
+            "shop_info": {
+                "title": "坚果 3",
+                "sub_title": "漂亮得不像实力派",
+                "sku_mobile_title": "坚果 3",
+                "sku_mobile_sub_title": "漂亮得不像实力派",
+                "promo_title": "",
+                "limit_num": "3",
+                "spec_v2": [{
+                    "spec_id": "1",
+                    "spec_name": "颜色",
+                    "visiable": "0",
+                    "show_type": "1",
+                    "spec_values": [{
+                        "id": "201",
+                        "spec_id": "1",
+                        "item_value": "酒红色",
+                        "show_name": "酒红色",
+                        "image": "https://resource.smartisan.com/resource/5caf3839a12977a793f942c3643002b7.jpg",
+                        "color_value": "#111111"
+                    }, {
+                        "id": "207",
+                        "spec_id": "1",
+                        "item_value": "浅金色",
+                        "show_name": "浅金色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000406/43746150B54679088441A2F16E865312/origin.jpg",
+                        "color_value": "#111111"
+                    }, {
+                        "id": "237",
+                        "spec_id": "1",
+                        "item_value": "碳黑色",
+                        "show_name": "碳黑色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000406/464C39B2C7BF66E6EDA4B6283D7100ED/origin.jpg",
+                        "color_value": "#111111"
+                    }, {
+                        "id": "328",
+                        "spec_id": "1",
+                        "item_value": "炫黑色（特别版）",
+                        "show_name": "炫黑色（特别版）",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000406/C2E5A448047319E687FC72D7BADE2555/origin.jpg",
+                        "color_value": "#111111"
+                    }, {
+                        "id": "329",
+                        "spec_id": "1",
+                        "item_value": "炫红色（特别版）",
+                        "show_name": "炫红色（特别版）",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000406/50815AFA956E08CF8DC6683DF06FFDDE/origin.jpg",
+                        "color_value": "#111111"
+                    }],
+                    "image_pre": "",
+                    "image_name": ""
+                }, {
+                    "spec_id": "2",
+                    "spec_name": "容量",
+                    "visiable": "0",
+                    "show_type": "1",
+                    "spec_values": [{
+                        "id": "259",
+                        "spec_id": "2",
+                        "item_value": "4G + 32GB",
+                        "show_name": "4G + 32GB"
+                    }, {
+                        "id": "260",
+                        "spec_id": "2",
+                        "item_value": "4G + 64GB",
+                        "show_name": "4G + 64GB"
+                    }, {
+                        "id": "330",
+                        "spec_id": "2",
+                        "item_value": "4G + 128GB",
+                        "show_name": "4G + 128GB"
+                    }],
+                    "image_pre": "",
+                    "image_name": ""
+                }, {
+                    "spec_id": "4",
+                    "spec_name": "网络",
+                    "visiable": "0",
+                    "show_type": "1",
+                    "spec_values": [{
+                        "id": "344",
+                        "spec_id": "4",
+                        "item_value": "全网通",
+                        "show_name": "全网通"
+                    }],
+                    "image_pre": "",
+                    "image_name": ""
+                }],
+                "spec_json": [{
+                    "spec_id": "1",
+                    "spec_value_id": "237",
+                    "show_name": "碳黑色",
+                    "item_value": "碳黑色",
+                    "image": "https://resource.smartisan.com/resource/attr/v2/1000406/464C39B2C7BF66E6EDA4B6283D7100ED/origin.jpg",
+                    "show_short_name": null
+                }, {
+                    "spec_id": "2",
+                    "spec_value_id": "259",
+                    "show_name": "4G + 32GB",
+                    "item_value": "4G + 32GB",
+                    "image": null,
+                    "show_short_name": null
+                }, {
+                    "spec_id": "4",
+                    "spec_value_id": "344",
+                    "show_name": "全网通",
+                    "item_value": "全网通",
+                    "image": null,
+                    "show_short_name": null
+                }],
+                "buy_notes": [],
+                "groups_huabei": [{
+                    "name": "3期",
+                    "value": "3",
+                    "id": 1
+                }, {
+                    "name": "6期",
+                    "value": "6",
+                    "id": 2
+                }, {
+                    "name": "12期",
+                    "value": "12",
+                    "id": 3
+                }],
+                "groups_zhaoshang": null,
+                "describe": null,
+                "images": null,
+                "image": null,
+                "ali_images": ["https://resource.smartisan.com/resource/13e91511f6ba3227ca5378fd2e93c54b.png"],
+                "ali_image": "https://resource.smartisan.com/resource/13e91511f6ba3227ca5378fd2e93c54b.png",
+                "image_default_name": "origin.jpg",
+                "is_custom": "0",
+                "is_mobile": "1",
+                "is_package": "0",
+                "tpl_id": "base",
+                "tpl_content": {
+                    "base": {
+                        "images": {
+                            "1x": [],
+                            "2x": [],
+                            "mobile": [],
+                            "image_pre": "",
+                            "image_name": "",
+                            "ali_mobile": {
+                                "url": ["https://resource.smartisan.com/resource/d5a1453ad115e15bd79579e8bdb20ba0.jpg"],
+                                "width": 1080,
+                                "height": 18021,
+                                "piece_height": 1440,
+                                "pieces_num": 13
+                            },
+                            "spec_params_mobile": {
+                                "url": ["https://resource.smartisan.com/resource/9865013ce3e8f97cb919c55d78178e1b.jpg"],
+                                "width": 1080,
+                                "height": 27722
+                            },
+                            "ali": {
+                                "piece_height": 1440,
+                                "pieces_num": 0
+                            }
+                        },
+                        "attributes": [{
+                            "title": "",
+                            "list": [{
+                                "name": "",
+                                "value": ""
+                            }]
+                        }],
+                        "aftersale": [{
+                            "title": "",
+                            "content": ""
+                        }],
+                        "extra": [{
+                            "title": "",
+                            "content": ""
+                        }]
+                    }
+                },
+                "doodle_stage": "99",
+                "is_freeship": 0,
+                "is_addcart": true,
+                "is_showsku": false,
+                "direct_to_cart": false
+            },
+            "attr_info": {
+                "1": {
+                    "spec_id": "1",
+                    "spec_name": "颜色",
+                    "value": "碳黑色",
+                    "spec_value_id": "237"
+                },
+                "2": {
+                    "spec_id": "2",
+                    "spec_name": "容量",
+                    "value": "4G + 32GB",
+                    "spec_value_id": "259"
+                },
+                "4": {
+                    "spec_id": "4",
+                    "spec_name": "网络",
+                    "value": "全网通",
+                    "spec_value_id": "344"
+                }
+            },
+            "created_at": 1519716325000,
+            "updated_at": 1539756047000,
+            "spu": {
+                "id": 1000406,
+                "name": "坚果 3",
+                "price": 1299.00,
+                "sale_status": 3,
+                "product_info": {
+                    "product_name": "坚果 3",
+                    "product_code": "1000406",
+                    "category_id": 90,
+                    "product_type": 1,
+                    "is_package": 0,
+                    "is_mobile": 1,
+                    "is_insurance": 0,
+                    "has_sn": 1,
+                    "accessory_goods": {
+                        "100043001": {
+                            "goods_code": "100043001",
+                            "product_code": "1000430",
+                            "goods_name": "坚果 3 意外碎屏保修服务（碎屏险）",
+                            "is_insurance": "3",
+                            "is_mobile": 0,
+                            "price": 99,
+                            "shop_info": {
+                                "title": "坚果 3 意外碎屏保修服务",
+                                "sub_title": "",
+                                "sku_mobile_title": "坚果 3 意外碎屏保修服务",
+                                "sku_mobile_sub_title": "",
+                                "promo_title": "",
+                                "limit_num": "1",
+                                "spec_v2": [{
+                                    "spec_id": "3",
+                                    "spec_name": "险种",
+                                    "visiable": "0",
+                                    "show_type": "1",
+                                    "spec_values": [{
+                                        "id": "226",
+                                        "spec_id": "3",
+                                        "item_value": "碎屏险",
+                                        "show_name": "碎屏险"
+                                    }],
+                                    "image_pre": "",
+                                    "image_name": ""
+                                }],
+                                "spec_json": [{
+                                    "spec_id": "3",
+                                    "spec_value_id": "226",
+                                    "show_name": "碎屏险",
+                                    "item_value": "碎屏险",
+                                    "image": null,
+                                    "show_short_name": null
+                                }],
+                                "buy_notes": [],
+                                "groups_huabei": [{
+                                    "name": "3期",
+                                    "value": "3",
+                                    "id": 1
+                                }, {
+                                    "name": "6期",
+                                    "value": "6",
+                                    "id": 2
+                                }, {
+                                    "name": "12期",
+                                    "value": "12",
+                                    "id": 3
+                                }],
+                                "groups_zhaoshang": null,
+                                "describe": null,
+                                "images": null,
+                                "image": null,
+                                "ali_images": ["http://image.smartisanos.cn/resource/dbc577f11569177d8a8aacab3931e8d9.jpg"],
+                                "ali_image": "http://image.smartisanos.cn/resource/dbc577f11569177d8a8aacab3931e8d9.jpg",
+                                "image_default_name": "origin.jpg",
+                                "is_custom": "0",
+                                "is_mobile": "0",
+                                "is_package": "0",
+                                "tpl_id": "base",
+                                "tpl_content": {
+                                    "base": {
+                                        "images": {
+                                            "1x": [],
+                                            "2x": [],
+                                            "mobile": [],
+                                            "image_pre": "",
+                                            "image_name": "",
+                                            "ali": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            },
+                                            "ali_mobile": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            }
+                                        },
+                                        "attributes": [{
+                                            "title": "",
+                                            "list": [{
+                                                "name": "",
+                                                "value": ""
+                                            }]
+                                        }],
+                                        "aftersale": [{
+                                            "title": "",
+                                            "content": ""
+                                        }],
+                                        "extra": [{
+                                            "title": "",
+                                            "content": ""
+                                        }]
+                                    }
+                                },
+                                "doodle_stage": "99",
+                                "is_freeship": 0,
+                                "is_addcart": true,
+                                "is_showsku": false,
+                                "direct_to_cart": false
+                            }
+                        },
+                        "100043101": {
+                            "goods_code": "100043101",
+                            "product_code": "1000431",
+                            "goods_name": "坚果 3 延长保修服务（延保）",
+                            "is_insurance": "4",
+                            "is_mobile": 0,
+                            "price": 149,
+                            "shop_info": {
+                                "title": "坚果 3 延长保修服务",
+                                "sub_title": "",
+                                "sku_mobile_title": "坚果 3 延长保修服务",
+                                "sku_mobile_sub_title": "",
+                                "promo_title": "",
+                                "limit_num": "1",
+                                "spec_v2": [{
+                                    "spec_id": "3",
+                                    "spec_name": "险种",
+                                    "visiable": "0",
+                                    "show_type": "1",
+                                    "spec_values": [{
+                                        "id": "95",
+                                        "spec_id": "3",
+                                        "item_value": "延保",
+                                        "show_name": "延保"
+                                    }],
+                                    "image_pre": "",
+                                    "image_name": ""
+                                }],
+                                "spec_json": [{
+                                    "spec_id": "3",
+                                    "spec_value_id": "95",
+                                    "show_name": "延保",
+                                    "item_value": "延保",
+                                    "image": null,
+                                    "show_short_name": null
+                                }],
+                                "buy_notes": [],
+                                "groups_huabei": [{
+                                    "name": "3期",
+                                    "value": "3",
+                                    "id": 1
+                                }, {
+                                    "name": "6期",
+                                    "value": "6",
+                                    "id": 2
+                                }, {
+                                    "name": "12期",
+                                    "value": "12",
+                                    "id": 3
+                                }],
+                                "groups_zhaoshang": null,
+                                "describe": null,
+                                "images": null,
+                                "image": null,
+                                "ali_images": ["http://image.smartisanos.cn/resource/fbfff6fa893b0f1af554ccedf7360d4e.jpg"],
+                                "ali_image": "http://image.smartisanos.cn/resource/fbfff6fa893b0f1af554ccedf7360d4e.jpg",
+                                "image_default_name": "origin.jpg",
+                                "is_custom": "0",
+                                "is_mobile": "0",
+                                "is_package": "0",
+                                "tpl_id": "base",
+                                "tpl_content": {
+                                    "base": {
+                                        "images": {
+                                            "1x": [],
+                                            "2x": [],
+                                            "mobile": [],
+                                            "image_pre": "",
+                                            "image_name": "",
+                                            "ali": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            },
+                                            "ali_mobile": {
+                                                "piece_height": 1440,
+                                                "pieces_num": 0
+                                            }
+                                        },
+                                        "attributes": [{
+                                            "title": "",
+                                            "list": [{
+                                                "name": "",
+                                                "value": ""
+                                            }]
+                                        }],
+                                        "aftersale": [{
+                                            "title": "",
+                                            "content": ""
+                                        }],
+                                        "extra": [{
+                                            "title": "",
+                                            "content": ""
+                                        }]
+                                    }
+                                },
+                                "doodle_stage": "99",
+                                "is_freeship": 0,
+                                "is_addcart": true,
+                                "is_showsku": false,
+                                "direct_to_cart": false
+                            }
+                        }
+                    }
+                },
+                "shop_info": {
+                    "spu_title": "坚果 3",
+                    "spu_sub_title": "漂亮得不像实力派",
+                    "spu_mobile_title": "坚果 3",
+                    "spu_mobile_sub_title": "漂亮得不像实力派",
+                    "spu_promo_title": "",
+                    "highlights": "三面无边框 Almost，4000mAh 超巨型电池，双 1300 万诚实双摄，双面玻璃 + 金属中框，人脸解锁 + 指纹支付",
+                    "sale_model": "1",
+                    "book_num": null,
+                    "spec_v2": [{
+                        "spec_id": "1",
+                        "spec_name": "颜色",
+                        "visiable": "0",
+                        "show_type": "1",
+                        "spec_values": [{
+                            "id": "201",
+                            "spec_id": "1",
+                            "item_value": "酒红色",
+                            "show_name": "酒红色",
+                            "image": "https://resource.smartisan.com/resource/5caf3839a12977a793f942c3643002b7.jpg",
+                            "color_value": "#111111"
+                        }, {
+                            "id": "207",
+                            "spec_id": "1",
+                            "item_value": "浅金色",
+                            "show_name": "浅金色",
+                            "image": "https://resource.smartisan.com/resource/attr/v2/1000406/43746150B54679088441A2F16E865312/origin.jpg",
+                            "color_value": "#111111"
+                        }, {
+                            "id": "237",
+                            "spec_id": "1",
+                            "item_value": "碳黑色",
+                            "show_name": "碳黑色",
+                            "image": "https://resource.smartisan.com/resource/attr/v2/1000406/464C39B2C7BF66E6EDA4B6283D7100ED/origin.jpg",
+                            "color_value": "#111111"
+                        }, {
+                            "id": "328",
+                            "spec_id": "1",
+                            "item_value": "炫黑色（特别版）",
+                            "show_name": "炫黑色（特别版）",
+                            "image": "https://resource.smartisan.com/resource/attr/v2/1000406/C2E5A448047319E687FC72D7BADE2555/origin.jpg",
+                            "color_value": "#111111"
+                        }, {
+                            "id": "329",
+                            "spec_id": "1",
+                            "item_value": "炫红色（特别版）",
+                            "show_name": "炫红色（特别版）",
+                            "image": "https://resource.smartisan.com/resource/attr/v2/1000406/50815AFA956E08CF8DC6683DF06FFDDE/origin.jpg",
+                            "color_value": "#111111"
+                        }],
+                        "image_pre": "",
+                        "image_name": ""
+                    }, {
+                        "spec_id": "2",
+                        "spec_name": "容量",
+                        "visiable": "0",
+                        "show_type": "1",
+                        "spec_values": [{
+                            "id": "259",
+                            "spec_id": "2",
+                            "item_value": "4G + 32GB",
+                            "show_name": "4G + 32GB"
+                        }, {
+                            "id": "260",
+                            "spec_id": "2",
+                            "item_value": "4G + 64GB",
+                            "show_name": "4G + 64GB"
+                        }, {
+                            "id": "330",
+                            "spec_id": "2",
+                            "item_value": "4G + 128GB",
+                            "show_name": "4G + 128GB"
+                        }],
+                        "image_pre": "",
+                        "image_name": ""
+                    }, {
+                        "spec_id": "4",
+                        "spec_name": "网络",
+                        "visiable": "0",
+                        "show_type": "1",
+                        "spec_values": [{
+                            "id": "344",
+                            "spec_id": "4",
+                            "item_value": "全网通",
+                            "show_name": "全网通"
+                        }],
+                        "image_pre": "",
+                        "image_name": ""
+                    }],
+                    "tpl_id": "base",
+                    "tpl_content": {
+                        "base": {
+                            "images": {
+                                "1x": [],
+                                "2x": [],
+                                "mobile": [],
+                                "image_pre": "",
+                                "image_name": "",
+                                "ali_mobile": {
+                                    "url": ["https://resource.smartisan.com/resource/d5a1453ad115e15bd79579e8bdb20ba0.jpg"],
+                                    "width": 1080,
+                                    "height": 18021,
+                                    "piece_height": 1440,
+                                    "pieces_num": 13
+                                },
+                                "spec_params_mobile": {
+                                    "url": ["https://resource.smartisan.com/resource/9865013ce3e8f97cb919c55d78178e1b.jpg"],
+                                    "width": 1080,
+                                    "height": 27722
+                                },
+                                "ali": {
+                                    "piece_height": 1440,
+                                    "pieces_num": 0
+                                }
+                            },
+                            "attributes": [{
+                                "title": "",
+                                "list": [{
+                                    "name": "",
+                                    "value": ""
+                                }]
+                            }],
+                            "aftersale": [{
+                                "title": "",
+                                "content": ""
+                            }],
+                            "extra": [{
+                                "title": "",
+                                "content": ""
+                            }]
+                        }
+                    },
+                    "buy_notes": [],
+                    "groups_huabei": [{
+                        "name": "3期",
+                        "value": "3",
+                        "id": 1
+                    }, {
+                        "name": "6期",
+                        "value": "6",
+                        "id": 2
+                    }, {
+                        "name": "12期",
+                        "value": "12",
+                        "id": 3
+                    }],
+                    "groups_zhaoshang": null,
+                    "describe": null,
+                    "recmd_skus": ["100041701", "100042101", "100044901", "100051704", "100035101", "100035106", "100035111", "100036002", "100042801", "100046409"]
+                },
+                "sku_info": [{
+                    "sku_id": "100040601",
+                    "title": "坚果 3",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "237",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/13e91511f6ba3227ca5378fd2e93c54b.png",
+                    "direct_to_cart": false,
+                    "price": "1299.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "237",
+                        "show_name": "碳黑色",
+                        "item_value": "碳黑色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000406/464C39B2C7BF66E6EDA4B6283D7100ED/origin.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "259",
+                        "show_name": "4G + 32GB",
+                        "item_value": "4G + 32GB",
+                        "image": null,
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "4",
+                        "spec_value_id": "344",
+                        "show_name": "全网通",
+                        "item_value": "全网通",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100040602",
+                    "title": "坚果 3",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "237",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/13e91511f6ba3227ca5378fd2e93c54b.png",
+                    "direct_to_cart": false,
+                    "price": "1599.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "237",
+                        "show_name": "碳黑色",
+                        "item_value": "碳黑色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000406/464C39B2C7BF66E6EDA4B6283D7100ED/origin.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "260",
+                        "show_name": "4G + 64GB",
+                        "item_value": "4G + 64GB",
+                        "image": null,
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "4",
+                        "spec_value_id": "344",
+                        "show_name": "全网通",
+                        "item_value": "全网通",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100040603",
+                    "title": "坚果 3",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "201",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/fac4130efc39ed4db697cc8d137890e9.png",
+                    "direct_to_cart": false,
+                    "price": "1299.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "201",
+                        "show_name": "酒红色",
+                        "item_value": "酒红色",
+                        "image": "https://resource.smartisan.com/resource/5caf3839a12977a793f942c3643002b7.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "259",
+                        "show_name": "4G + 32GB",
+                        "item_value": "4G + 32GB",
+                        "image": null,
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "4",
+                        "spec_value_id": "344",
+                        "show_name": "全网通",
+                        "item_value": "全网通",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100040604",
+                    "title": "坚果 3",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "201",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/fac4130efc39ed4db697cc8d137890e9.png",
+                    "direct_to_cart": false,
+                    "price": "1599.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "201",
+                        "show_name": "酒红色",
+                        "item_value": "酒红色",
+                        "image": "https://resource.smartisan.com/resource/5caf3839a12977a793f942c3643002b7.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "260",
+                        "show_name": "4G + 64GB",
+                        "item_value": "4G + 64GB",
+                        "image": null,
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "4",
+                        "spec_value_id": "344",
+                        "show_name": "全网通",
+                        "item_value": "全网通",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100040605",
+                    "title": "坚果 3",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "207",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/91dc3f577960e30ca11b632e7b6ebd0f.png",
+                    "direct_to_cart": false,
+                    "price": "1299.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "207",
+                        "show_name": "浅金色",
+                        "item_value": "浅金色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000406/43746150B54679088441A2F16E865312/origin.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "259",
+                        "show_name": "4G + 32GB",
+                        "item_value": "4G + 32GB",
+                        "image": null,
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "4",
+                        "spec_value_id": "344",
+                        "show_name": "全网通",
+                        "item_value": "全网通",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100040606",
+                    "title": "坚果 3",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "207",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/91dc3f577960e30ca11b632e7b6ebd0f.png",
+                    "direct_to_cart": false,
+                    "price": "1599.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "207",
+                        "show_name": "浅金色",
+                        "item_value": "浅金色",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000406/43746150B54679088441A2F16E865312/origin.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "260",
+                        "show_name": "4G + 64GB",
+                        "item_value": "4G + 64GB",
+                        "image": null,
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "4",
+                        "spec_value_id": "344",
+                        "show_name": "全网通",
+                        "item_value": "全网通",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100040607",
+                    "title": "坚果 3",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "328",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/718bcecced0df1cd23bbdb9cc1f70b7d.png",
+                    "direct_to_cart": false,
+                    "price": "1499.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "328",
+                        "show_name": "炫黑色（特别版）",
+                        "item_value": "炫黑色（特别版）",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000406/C2E5A448047319E687FC72D7BADE2555/origin.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "259",
+                        "show_name": "4G + 32GB",
+                        "item_value": "4G + 32GB",
+                        "image": null,
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "4",
+                        "spec_value_id": "344",
+                        "show_name": "全网通",
+                        "item_value": "全网通",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100040608",
+                    "title": "坚果 3",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "328",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/718bcecced0df1cd23bbdb9cc1f70b7d.png",
+                    "direct_to_cart": false,
+                    "price": "1799.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "328",
+                        "show_name": "炫黑色（特别版）",
+                        "item_value": "炫黑色（特别版）",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000406/C2E5A448047319E687FC72D7BADE2555/origin.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "260",
+                        "show_name": "4G + 64GB",
+                        "item_value": "4G + 64GB",
+                        "image": null,
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "4",
+                        "spec_value_id": "344",
+                        "show_name": "全网通",
+                        "item_value": "全网通",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100040609",
+                    "title": "坚果 3",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "328",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/718bcecced0df1cd23bbdb9cc1f70b7d.png",
+                    "direct_to_cart": false,
+                    "price": "1999.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "328",
+                        "show_name": "炫黑色（特别版）",
+                        "item_value": "炫黑色（特别版）",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000406/C2E5A448047319E687FC72D7BADE2555/origin.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "330",
+                        "show_name": "4G + 128GB",
+                        "item_value": "4G + 128GB",
+                        "image": null,
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "4",
+                        "spec_value_id": "344",
+                        "show_name": "全网通",
+                        "item_value": "全网通",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }, {
+                    "sku_id": "100040612",
+                    "title": "坚果 3",
+                    "sub_title": "漂亮得不像实力派",
+                    "promo_title": "",
+                    "color_id": "329",
+                    "appearance_color_id": "",
+                    "image": null,
+                    "ali_image": "https://resource.smartisan.com/resource/61586b59793ac16bd973010aecad2ca9.png",
+                    "direct_to_cart": false,
+                    "price": "1999.00",
+                    "spec_json": [{
+                        "spec_id": "1",
+                        "spec_value_id": "329",
+                        "show_name": "炫红色（特别版）",
+                        "item_value": "炫红色（特别版）",
+                        "image": "https://resource.smartisan.com/resource/attr/v2/1000406/50815AFA956E08CF8DC6683DF06FFDDE/origin.jpg",
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "2",
+                        "spec_value_id": "330",
+                        "show_name": "4G + 128GB",
+                        "item_value": "4G + 128GB",
+                        "image": null,
+                        "show_short_name": null
+                    }, {
+                        "spec_id": "4",
+                        "spec_value_id": "344",
+                        "show_name": "全网通",
+                        "item_value": "全网通",
+                        "image": null,
+                        "show_short_name": null
+                    }]
+                }],
+                "acc_info": {
+                    "package_list": ""
+                },
+                "after_sell_info": {
+                    "is_back": "1",
+                    "back_deadline": "7",
+                    "is_exchange": "1",
+                    "exchange_deadline": "15",
+                    "is_repair": "1",
+                    "is_freeship": "1",
+                    "ship_price": "150",
+                    "is_deliver": "1",
+                    "hours": "72"
+                },
+                "created_at": 1519716325000,
+                "updated_at": 1539756102000
+            },
+            "in_stock": false,
+            "stock": 0
+        }]
+    }
+}

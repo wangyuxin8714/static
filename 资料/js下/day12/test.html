@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Person () {}
+    /*Person={
+        prototype:{
+            constructor:Person
+        }
+    }*/
+    console.log(Person.prototype);//constructor  原型对象上的
+    Person.prototype = {
+        say: function() {
+            console.log('Hello,' + this.name);
+        }
+    };//
+    var person = new Person();
+    person.constructor//Person
+    var o1 = {};//o1 是Object的实例
+    var o2 = new Object();//
+    //Object.prototype.constructor == Object
+    //o2.constructor ===Object
+    //Person.prototype.constructor == Object
+
+    //instanceof   语法：实例 instanceof 构造函数
+    // 原理：检测 构造函数对应的原型对象在不在实例的原型链上
+    // person instanceof Person==true
+    // person instanceof Object==true
+
+</script>
+</html>

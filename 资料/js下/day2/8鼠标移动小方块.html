@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background: green;
+            position: absolute;
+            left:20px;
+            top:20px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+<script>
+    var oDiv = document.getElementsByTagName("div")[0];
+    oDiv.onmousedown = function(e){
+        var ev = e || event;
+        // var x = ev.offsetX;//鼠标到小块的距离
+        // var y = ev.offsetY;
+        //pos就是鼠标按下时候鼠标相对于小块的距离
+        var pos = {
+            x:ev.offsetX,
+            y:ev.offsetY
+        }
+        document.onmousemove = function(e){
+            var ev = e || event;
+            oDiv.style.left = ev.clientX - pos.x+"px";
+            oDiv.style.top = ev.clientY - pos.y+"px";
+        }
+        oDiv.onmouseup = function(){
+            document.onmousemove = null;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+          
+    </body>
+    <script>
+
+          var xhr = null;
+          if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+          }else{
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          xhr.open("GET","data.json",false);//同步
+          xhr.onreadystatechange = function(){
+            if(xhr.readyState==4&&xhr.status == 200){
+                var data = eval("("+xhr.responseText+")");
+                var html = "";
+                data.forEach( function(element, index) {
+                   html+="<h2>"+element.title+"</h2><div>"+element.desc+"</div>";
+                });
+                oDiv.innerHTML = html;
+            }
+          }
+          xhr.send(null);
+          console.log(xhr.readyState);
+          
+    
+
+
+      
+    </script>
+</html>

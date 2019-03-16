@@ -1,0 +1,97 @@
+ 数组排序
+    10到100的十位随机数并升序排序(不允许重复)
+	function fn(){
+		//定义新数组
+		var arr=[];
+		while(arr.length<10){
+			//随机获取10-100之间的随机数
+			var val=Math.floor(Math.random()*91+10);
+			//判断获取的随机数 是否出现在新数组中
+			if(arr.indexOf(val)==-1){ 
+				//将不重复的值添加到新数组中
+				arr.push(val); 
+				}
+			   				}
+		//返回升序排序的数组
+		return arr.sort(function(x,y){return x-y})
+		
+				 }
+
+	console.log(fn());
+    封装冒泡排序(封装sort方法)
+	//循环嵌套  
+	/*var arr=[23,3,21,1,2,4,3,435,37];
+		//外循环控制比较的轮数   轮数=元素个数-1
+		//内循环控制每轮比较的次数 次数等于元素个数-1  (元素个数-当前轮数)
+		function fn(arr){
+		var temp;
+		//外循环控制轮数
+		for(var i=1; i<arr.length; i++){
+			//内循环控制每轮比较的次数 
+			for(var j=0; j<arr.length-i;j++){
+				// 判断相邻两个数的大小关系 
+				if(arr[j]>arr[j+1]){
+					temp=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;
+					}
+
+				 }
+			}
+		return arr;
+			}
+		console.log(fn(arr));*/
+ 
+ 数组翻转
+     封装字符串翻转方法
+	/*var str='hello world';
+	function fn(str){
+		//return str.split('').reverse().join("");
+		var newStr='';
+		for(var i=str.length-1;i>=0;i--){
+			newStr+=str[i];
+			 							}
+	return newStr;
+				 }
+	console.log(fn(str));*/
+
+ 数组查找
+     定义一个新数组用来保存这三个不同的数
+			/*var newArr=[];
+			while(newArr.length<3){
+				//随即获取数组中的值
+				var val=arr[Math.floor(Math.random()*arr.length)];
+				//判断随机获取的值是否出现在新数组中
+				if(newArr.indexOf(val)==-1){
+					newArr.push(val);
+										   }
+				   				}*/
+		/*return newArr;
+					 }
+		console.log(fn(arr));
+     随机从数组中取出三个不同的值。
+		var arr = [1,2,3,4,5,6,7,8,9];
+		function fn(arr){
+			//定义新数组保存三个数 定义下标保存随机获取到的值的下标
+			var newArr=[],index;
+			for(var i=1; i<=3; i++){
+				//随机获取数组中 数值的下标
+				index=Math.floor(Math.random()*arr.length);
+				//通过随机获取到的下标 将该值添加到数组中
+				newArr.push(arr[index]);
+				//通过下标 将该值 从原数组中删除
+				arr.splice(index,1);
+									 }
+                  console.log(fn(arr));
+
+
+
+  (forEach\map\filter\some\every)数组的五大迭代方法 只有forEach没有返回值 其它都有
+  .forEach():数组遍历
+  .every():检测数组项中是否 满足条件 全部满足返回true 否则返回false
+  .some():检测数组项中是否 满足条件 只有有一个满足条件则返回true  全部不满足则返回false
+  .map():返回 条件和数组中的每一项比较的结果 组成的数组
+  .filter():返回数组项中 满足条件的数组项组成的数组
+
+
+

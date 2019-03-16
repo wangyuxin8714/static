@@ -1,0 +1,20 @@
+ HTML级事件模型 (内联模型) 
+	<button id="box"onclick="alert(1)">点我</button> 
+
+ DOM 0级事件 让你的html具有某些效果 触发效果后 做一些操作
+ 节点.on+'事件名'=function(){
+
+			}
+ 节点.on+"事件名"=function(){
+		执行函数;
+		fn(1,2);
+	}
+	function fn(a,b){}
+
+ 节点.on+"事件名" = fn;
+	function fn(){}
+
+ 鼠标事件: click单击 dblclick双击 mousedown按下 mouseup抬起 mouseout移出 mouseover移入 mousemove移动
+ 焦点事件: blur失去焦点 focus获得焦点
+ 键盘事件 keydown按下 keyup抬起 keypress 
+ UI事件:change失去焦点并改变内容

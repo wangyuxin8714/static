@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //检测是否为数组
+    var obj=[1,2,3];
+    console.log(obj instanceof Array);
+    //第二种
+    console.log(Object.prototype.toString.call(obj)=="[object Array]");
+    var o1 = {a:1};
+    console.log(Object.prototype.toString.call(o1));//[object Object]
+    var o2 = new Date();
+    console.log(Object.prototype.toString.call(o2));//[object Date];
+    //第三种
+    console.log(obj.constructor==Array);
+
+
+    function Person(){
+    }
+    Person.prototype = {
+        constructor:Person
+    }
+    var p1 = new Person();
+    console.log(p1.constructor);//Object
+
+</script>
+</html>

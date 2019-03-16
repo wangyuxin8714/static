@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var o1 = new Object();
+    o1.class="1611A";
+    o1.student = ["aa","dd","drr","qa","fr"];
+    o1.action = function(){
+        this.student.forEach(function(item){
+            console.log("姓名:"+item);
+        })
+    }
+    o1.action();
+    var o2 = {
+        class:"1611A",
+        student:["aa","dd","drr","qa","fr"],
+        action:function(){
+            this.student.forEach(function(item){
+                console.log("姓名:"+item);
+            })
+        }
+    }
+    console.log("==========================");
+    o2.action();
+    console.log("===========================");
+    function Person(){
+        this.classes = "1611A";
+        this.student = ["aa","dd","drr","qa","fr"];
+        this.action = function(){
+            this.student.forEach(function(item){
+                console.log("姓名:"+item);
+            })
+        }
+    }
+    var person = new Person();
+    person.action();
+</script>
+</html>

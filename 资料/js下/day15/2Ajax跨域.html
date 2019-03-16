@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="获取数据">
+    <input type="button" value="获取数据2">
+</body>
+<script>
+    /*var xhr = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+    //63342
+    xhr.open("get","http://localhost:8080/s.txt",true);
+    xhr.send(null);
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState==4){
+            if(xhr.status==200){
+                console.log(xhr.responseText);
+            }
+        }
+    }*/
+    //使用jsonp的方式
+    var oInput = document.getElementsByTagName("input");
+    oInput[0].onclick = function(){
+        jsonp("http://localhost:8080/index.js?callback=ww")
+    }
+    oInput[1].onclick = function(){
+        jsonp("http://localhost:7777/index.js?callback=qq")
+    }
+    function jsonp(url){
+        var script = document.createElement("script");
+        script.src = url;
+        document.head.appendChild(script);
+    }
+    function ww(data){
+        console.log(data);
+    }
+    function qq(data){
+
+    }
+</script>
+</html>

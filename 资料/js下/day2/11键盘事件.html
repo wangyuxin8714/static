@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //按键抬起
+    document.onkeyup = function(){
+
+    }
+    //按下 字符键 按下会触发 按住不动会连续触发
+    document.onkeypress = function(){
+
+    }
+    //按下 任意键都会触发 按住不动会连续触发
+    document.onkeydown = function(e){
+        var ev = e || window.event;
+        console.log(ev.keyCode);
+        //enter 13 空格键 32  左上右下37/38/39/40
+        //0-9 48
+        //a-z 65
+    }
+</script>
+</html>

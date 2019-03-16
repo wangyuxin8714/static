@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Person(name,age,sex){
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.city = "bj";
+    }
+    console.log(Person.prototype);
+    //原型对象本身就有一个属性叫constructor,这个属性对应的值就是Person
+    console.log(Person.prototype.constructor===Person);//true
+    var p1 = new Person("aa",22,"nan");
+    console.log(p1.constructor===Person);//true
+    var arr = [34,56];//new Array();
+    console.log(arr instanceof Array);//true
+    console.log(Array.prototype.constructor === Array);
+    console.log(arr.constructor===Array);//判断是否是数组
+</script>
+</html>

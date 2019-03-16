@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>title</title>
+		<style type="text/css" media="screen">
+			.div1{
+				width:200px;
+				height:40px;
+				border:1px solid #000;
+			}
+			.div2{
+				width:200px;
+				height:40px;
+			}
+			#ul1{
+				padding:0px;
+				margin:0px;
+				width:200px;
+				border:1px solid #000;
+				list-style:none;
+				display:none;
+			}
+			#ul1.active{
+				display:block;
+			}
+			#ul1>li{
+				height:34px;
+			}
+			#ul1>li:hover{
+				background-color:#aaa;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1"  class="div1">
+			<div id="div2"  class="div2"></div>
+			<ul id="ul1">
+				<li>11111111</li>
+				<li>22222222</li>
+				<li>33333333</li>
+			</ul>
+		</div>
+		<script type="text/javascript" charset="utf-8">
+			var oDiv1 = document.getElementById("div1");
+			var oDiv2 = document.getElementById("div2");
+			var oUl1 = document.getElementById("ul1");
+			oDiv1.onclick = function(event){
+				var Event = event || window.event;
+				var target = Event.target || Event.srcElement;
+				if(target.id == "div2"){
+					oUl1.className = "active"
+				}
+				if(target.tagName == "LI"){
+					oDiv2.innerHTML = target.innerHTML;
+					oUl1.className = ""
+				}
+			}
+		</script>
+	</body>
+</html>

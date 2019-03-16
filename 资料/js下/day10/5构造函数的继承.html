@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Father(name,age,famliy){
+        this.name = name;
+        this.age = age;
+        this.famliy = famliy;
+        this.friends = ["zhangsan","lisi","wangwu"];
+        this.say = function(){
+            console.log("能说话qqqq");
+        }
+    }
+    Father.prototype.say = function(){
+        console.log("能说话");
+    }
+    function Son(name,age,famliy){
+       //Father.call(this,name,age,famliy);
+        //Father.apply(this,[name,age,famliy]);
+        Father.apply(this,arguments);
+    }
+    var s1 = new Son("aa",21,"张");
+    console.log(s1.name);
+    s1.friends.push("liuliu");
+    console.log(s1.friends);
+    var s2 = new Son("ss",22,"李");
+    console.log(s2.friends);//["zhangsan","lisi","wangwu"]
+     s1.say();
+    // s2.say();
+    //构造函数继承的缺点：就是构造函数的缺点
+</script>
+</html>

@@ -1,0 +1,158 @@
+
+```
+1. C3新增的选择器
+    结构选择器
+    1.1  :nth-child(N)   *****
+         匹配父元素下的第N个子元素
+            注意:与类型无关
+          odd  奇数   ====  2n+1
+          even 偶数   ====  2n
+          3n  3的倍数
+          
+          :last-child    ******
+          匹配父元素下的最后一个子元素
+           
+          :first-child   ******
+          匹配父元素下的第一个子元素
+          
+          :not()    ***
+          匹配父元素下除了某一个元素之外的所有元素
+          注意:   括号里写的是    选择器
+          
+          :nth-last-child(N)   *****
+          匹配父元素下倒数第N个子元素
+          
+          :nth-of-type()   *****
+          匹配父元素下 同类型 同兄弟的元素
+          
+          :only-child  (了解)
+          匹配父元素下只有一个子元素的元素
+          
+          :empty  (了解)
+          匹配用户界面内容为空的元素
+          
+          :after   *****
+          给元素后面插入一个内容
+          
+          :before     ******
+          给一个元素前面插入一个内容
+          
+          注意:   :after 与 :before 必须配合 content 属性使用，即使内容为空
+                  通过 :after 与 :before 插入的内容是行内元素
+                  
+                  补充：
+                    content 属性可以插入哪些内容
+                        string  字符串
+                        url 图片
+                        attr 自定义属性
+                        counter 计数器
+                  
+          :target 目标选择器
+                    匹配相关URL指向的E元素。 
+                    解释：URL后面跟锚点#，指向文档内某个具体的元素。这个被链接的元素就是目标元素(target element)，:target选择器用于选取当前活动的目标元素。
+                  
+          
+          
+          
+    状态选择器
+        
+          :disabled
+          匹配用户界面处于禁用状态的元素
+          
+          :enabled
+          匹配用户界面处于可用状态的元素
+          
+          :checked    *****
+          匹配用户界面处于选中状态的元素
+          
+          ::selection  (了解)
+          设置对象被选择时(选中)的样式
+          
+          :focus  
+          匹配用户界面处于获取焦点时候的元素(表示激活状态)
+          
+          ::placeholder   
+          语法:    ::-webkit-input-placeholder
+          改变input元素中placeholder的默认样式
+          
+    浏览器的内核
+        -webkit 谷歌  360  苹果
+        -moz   FF
+        -ms   IE
+        -o    opera欧朋
+          
+          
+    1.2  关系选择器  
+         +  相邻选择器   *****
+         (向下查找最近的元素)
+            
+         ~  兄弟选择器   ***
+         (向下查找全部兄弟元素)
+         
+         > 子类选择器   *******
+         
+    1.3  属性选择器
+         E[attr]  (C2)
+         匹配E元素含有attr属性的所有元素
+          
+         E[attr="val"]  (C2)    *****
+         匹配E元素含有attr属性且attr属性等于val的所有元素
+         
+          E[attr*="val"]  (C2)
+         匹配E元素含有attr属性且attr属性值含有val的所有元素
+         
+         E[attr^="val"]  (C3)    考核
+         匹配E元素含有attr属性且attr属性值以val开始的所有元素
+         
+         E[attr$="val"]  (C3)   考核
+         匹配E元素含有attr属性且attr属性值以val结束的所有元素
+         
+         
+          
+         通过属性选择器找到img图片含有id属性且图片格式为png的所有元素？   *****
+         img[id][src$="png"]   
+         
+         
+         
+        补充:  图像边框
+                    border-image-source  图像边框的路径
+                    border-image-slice   图像边框的切片大小   注意:切片大小是纯数字number
+                    border-image-width   图像边框的宽度
+                    border-image-repeat  图像边框的平铺方式
+                        stretch 默认值   拉伸
+                        repeat 平铺
+                        round  围绕/环绕
+                        
+                border-image 是复合属性
+                必须配合border使用
+                图像边框一定是镂空的九宫格
+                
+        
+        补充:
+            container  容器
+            wrapper  /  wrap 包裹
+            box  盒子
+            btn  按钮
+            banner 焦点图/轮播图
+            logo  标志
+            header  /  head  头部
+            main  主体/重要的
+            section  主体内容
+            content 内容
+            list 列表
+            menu  菜单
+            address 地址
+            time 时间
+            footer  /  foot 尾部
+            product  产品
+            page  /  panel   面板
+            progress  进度条
+            nav 导航
+            subnav  副导航
+            navigation 副导航
+            prev  上一张/上一步
+            next  下一张/下一步
+            
+         
+         
+```

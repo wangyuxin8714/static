@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 事件委托</title>
+</head>
+<body>
+
+	<div id = "div">
+		<span>李白</span>
+		<span>杜甫</span>
+		<span>白居易</span>
+		<span>辛弃疾</span>
+		<span>苏轼</span>
+
+
+		<span>李白</span>
+		<span>杜甫</span>
+		<span>白居易</span>
+		<span>辛弃疾</span>
+		<span>苏轼</span>
+		<span>李白</span>
+		<span>杜甫</span>
+		<span>白居易</span>
+		<span>辛弃疾</span>
+		<span>苏轼</span>
+
+		<p>德玛西亚</p>
+		<p>德邦</p>
+		<p>剑圣</p>
+		<p>欧巴</p>
+		<p>盖伦</p>
+	</div>
+	
+	<script>
+			
+		// 当元素需要添加事件时,入股元素过多,就需要给多个元素添加事件.  这么做不好. 添加多个事件会卡顿
+		// 我们要把事件添加在元素的父元素上,点击元素是,通过 event.target 来找到当前点击的元素
+
+
+		//需求 , 给 span 添加点击事件.
+
+		//给父元素添加事件,把事件添加在父元素上
+
+		var div = document.getElementById("div");
+
+
+		div.addEventListener("click", function(){
+			console.log(event.target);
+			//event.target 触发事件的元素
+			if(event.target.tagName == "SPAN"){
+				alert(event.target.innerHTML);
+			}
+		}, false);
+
+	</script>
+</body>
+</html>

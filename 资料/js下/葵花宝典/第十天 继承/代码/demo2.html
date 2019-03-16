@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 构造函数继承 </title>
+</head>
+<body>
+	<script>
+		
+		//对象 A 要继承对象 B
+
+		function A(name,age){
+
+			//B.call(this,name,age);
+			B.apply(this, arguments);
+
+		}
+
+		var a = new A("lisi",10);
+
+		function B(name,age){
+
+			this.name = name;
+			this.age = age;
+		}
+
+		B.prototype.eat = function(){
+			console.log("吃吃吃");
+		}
+
+		console.log(a.age);
+		a.eat();
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+        
+        #box {
+            width: 1000px;
+            height: 409px;
+            margin: 20px auto;
+            position: relative;
+           overflow:hidden;
+        }
+        
+        #box ul {
+            width: 4000px;
+            transition: 1s;
+        }
+        
+        #box ul li {
+            float: left;
+        }
+        
+        #box ol {
+            position: absolute;
+            left: 400px;
+            bottom: 10px;
+        }
+        
+        #box ol li {
+            width: 50px;
+            height: 50px;
+            float: left;
+            margin-right: 10px;
+            background: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 16px;
+        }
+        
+        #box ol li.bg {
+            background: pink;
+        }
+        
+        #box span {
+            position: absolute;
+            top: 40%;
+            background: rgba(0, 0, 0, 0.5);
+            width: 30px;
+            height: 100px;
+            font-size: 50px;
+            color: white;
+            line-height: 100px;
+            text-align: center;
+        }
+        
+        #left {
+            left: 10px;
+        }
+        
+        #right {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul id="ul">
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/4.jpg" alt=""></li>
+            <li><img src="img/5.jpg" alt=""></li>
+            <li><img src="img/6.jpg" alt=""></li>
+        </ul>
+        <ol>
+            <li class="bg">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ol>
+        <span id="left"><</span>
+        <span id="right">></span>
+    </div>
+    <script>
+        var box = document.getElementById('box'),
+            uls = document.getElementsByTagName('ul'),
+            pics = uls[0].getElementsByTagName('li'),
+            ols = document.getElementsByTagName('ol'),
+            nums = ols[0].getElementsByTagName('li');
+        var timer = null;
+        var count = 0;
+        //单击播放
+        for (let i = 0; i < nums.length; i++) {
+            
+            nums[i].onclick = function() {
+                changebj(i);
+                count = i;
+            }
+        }
+        //自动播放
+        lbt();
+
+        function lbt() {
+            timer = setInterval(function() {
+                count++;
+                if (count > pics.length - 1) count = 0;
+                changebj(count);
+            }, 1000)
+        }
+        box.onmouseover = function() {
+            clearInterval(timer);
+        }
+        box.onmouseout = function() {
+                lbt();
+            }
+            //点击左
+        left.onclick = function() {
+                count--;
+                if (count < 0) count = pics.length - 1;
+                changebj(count)
+            }
+            //点击右
+        right.onclick = function() {
+            count++;
+            if (count > pics.length - 1) count = 0;
+            changebj(count);
+        }
+
+        function changebj(n) {
+            uls[0].style.marginLeft = -n * 1000 + 'px';
+            for (var j = 0; j < nums.length; j++) {
+                nums[j].className = '';
+            }
+            nums[n].className = 'bg';
+        }
+    </script>
+</body>
+
+</html>

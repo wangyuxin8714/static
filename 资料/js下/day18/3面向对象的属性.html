@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Person(){
+
+    }
+    Person.prototype = {
+    }//new Object()
+    var p1 = new Person();
+    //constructor  是原型对象的属性
+    console.log(p1.constructor===Person);//
+    console.log(Object.prototype.constructor===Object);
+    console.log(Person.prototype.constructor===Object);
+    console.log("====================");
+    console.log(Function.prototype.constructor===Function);
+    console.log(Person.constructor===Function);// Person 是Function 的实例
+    console.log(Object.constructor === Function);
+    //constructor 只有两种对象有，一种：原型对象，一种就是实例
+    console.log(Array.constructor===Function);
+    console.log(Date.prototype.constructor===Date);
+    console.log("=============================");
+    console.log(p1.__proto__===Person.prototype);
+    //__proto__是实例的属性  他的值就是实例对应的原型
+    console.log(Person.prototype.__proto__===Object.prototype);
+    var o1 = {
+        a:1
+    }
+    console.log(o1.__proto__===Object.prototype);
+    console.log(Object.prototype.__proto__);//null
+    //所有的对象都继承Object  js自带的继承都是通过原型链继承实现的
+    //Array.prototype = new Object()
+    console.log(Array.prototype.__proto__===Object.prototype);
+    console.log(Function.prototype.__proto__===Object.prototype);
+    console.log(Person.__proto__===Function.prototype);//_proto_是实例的属性
+
+
+</script>
+</html>

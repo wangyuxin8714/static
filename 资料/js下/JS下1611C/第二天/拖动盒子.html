@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>title</title>
+		<style type="text/css" media="screen">
+			.div1{
+				width:200px;
+				height:200px;
+				background-color:red;
+				position:absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1"  class="div1"></div>
+		<script type="text/javascript" charset="utf-8">
+			var oDiv1 = document.getElementById("div1");
+			/*oDiv1.onmousedown = function(event){
+				var Event = event || window.event;
+				var x = Event.offsetX
+				var y = Event.offsetY
+				document.onmousemove = function(event){
+					var Event = event || window.event;
+					var offX = Event.clientX - x;
+					var offY = Event.clientY - y;
+					oDiv1.style.top = offY + "px"
+					oDiv1.style.left = offX + "px"
+				}
+				document.onmouseup = function(){
+					document.onmousemove  = null;
+					document.onmouseup = null;
+				}
+				//return false;
+			}
+*/
+		oDiv1.onmousedown=function(event){
+			var Event=event || window.event;
+			var x=Event.offsetX;
+			var y=Event.offsetY;
+			document.onmousemove=function(event){
+				var Event=event || window.event;
+				var offX=Event.clientX-x;
+				var offY=Event.clientY-y;
+				oDiv1.style.top=offY+'px';
+				oDiv1.style.left=offX+'px';
+				document.onmouseup=function(){
+						document.onmousemove=null;
+						document.onmouseup=null;
+				}
+
+
+
+			}
+		}
+
+
+
+
+
+
+
+		</script>
+	</body>
+</html>

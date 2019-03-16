@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>字符串方法</title>
+</head>
+<body>
+	<script>
+
+
+		/***************切割字符串****************/		
+		//通过字母 b 来切割字符串
+		console.log("abcabcabc".split("b"));
+
+		//使用正则切割
+		console.log("abcabcabc".split(/b/));
+
+
+		var s = "abCabAdgAcbAbBdggag";
+		console.log(s.split(/[A-Z]/g));
+
+
+
+		/***************替换字符串****************/	
+
+		s = "淘宝买买买,八维学学淘宝学";
+		
+		s = s.replace(/淘宝/g,"某宝").replace(/八维/g,"八维研修学院");
+		console.log(s);
+
+
+		/*************** 匹配字符串 ********************/
+
+		var r = /\d/;
+		s = "12345";
+		console.log(s.match(r));
+		console.log(r.exec(s));
+
+		/*************** 搜索字符串 ********************/
+
+		s = "hello world";
+
+		console.log(s.search(/o/g));		//4
+		console.log(s.indexOf("o"));		//4
+
+
+
+		/*************** 懒惰模式**************/
+
+
+
+		// * 贪婪模式,能匹配多少就匹配多少.
+		r = /\d+/;
+		console.log(r.exec("1234567"));
+
+		//*? 懒惰模式 匹配最少的
+		r = /\d+?/;
+		console.log(r.exec("1234567"));
+
+
+		//转义字符
+		// a/b
+		r = /a\/b/;
+		console.log(r.test("a/b"));
+
+		//匹配一个网站
+
+		s = "https://www.baidu.com"
+
+		r = /http(s)?\:\/\/w{3}\.[a-zA-Z]+\.[com|cn|gov|net]/;
+
+		console.log(r.test(s));
+
+
+		//正则对象 的修饰符写在第二个参数里面.
+
+		r = new RegExp("a", "gi");
+
+		console.log("abcAbcAbcabc".replace(r,""));
+
+		r =  new RegExp("a", "gi");
+
+		console.log("abcAbcAbcabc".split(r));
+
+
+	</script>
+</body>
+</html>

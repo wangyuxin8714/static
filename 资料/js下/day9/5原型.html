@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Person(name,age,sex){
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.city = "bj";
+    }
+    //每个函数都有一个属性prototype,这个属性对应的值是一个对象，我们叫做原型对象，
+    //原型对象上面的所有的属性和方法被所有的实例共享
+    console.log(Person.prototype);
+    Person.prototype.city = "shanghai";
+    Person.prototype.say = function(){
+        console.log("会说话");
+    }
+    var p1 = new Person("aa",20,"nan");
+    var p2= new Person("aa22",20,"nan");
+    console.log(p1.city);//bj
+    console.log(p2.city);//bj
+    p1.say();
+    p2.say();
+    console.log(p1.say===p2.say);//true
+</script>
+</html>

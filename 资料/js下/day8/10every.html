@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var arr = [3,5,4,6];
+    //every 返回boolean类型 判断数组是不是每个元素都符合某个条件 如果符合就返回true
+    var arr1=arr.every(function(item,index,array){
+        return item>5;
+    });
+    console.log(arr1);
+    function myEvery(callback,array){
+        var flag = true;//
+        for(var i=0;i<array.length;i++){
+            var tem=callback(array[i],i,array);
+            if(!tem){
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    var re=myEvery(function(a,b,c){
+        return a>0;
+    },[5,4,3,2]);
+    console.log(re);
+</script>
+</html>

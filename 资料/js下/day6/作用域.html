@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a = 123;
+    var b = "456";
+    //两种作用域：1、全局作用域 2、函数作用域(局部作用域)
+    //每个执行环境都有一个变量对象，这个变量对象存放的一些变量和函数，那么最外边的执行环境的变量对象就是window
+
+    function fn(){
+        //var b = 234;
+        function fn2(){
+            var c = 123;
+            //var b = "sd";
+            //作用域：1、它自身 2、fn 3、全局
+            //作用域链: 查找变量或者函数的时候，首先去查找作用域链的最前端，如果最前端没有，就会往外找，一直找到window
+            //查找变量 就近原则；
+            console.log("==================");
+            console.log(c);
+            console.log(b);
+            console.log(a);
+            console.log("==================");
+        }
+        fn2();
+    }
+    console.log(window.a);
+    window.fn();
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    Array.prototype.inArray = function(str){
+        var index = -1;
+        for(var i=0;i<this.length;i++){
+            if(this[i]==str){
+                index=i;
+                break;
+            }
+        }
+        return index;
+    }
+    Array.prototype.isInArray = function(str){
+        var flag = false;
+        if(this.indexOf(str)!=-1){
+            flag = true;
+        }
+        return flag;
+    }
+    var a1 = ["aa","qq","aa"];
+    console.log(a1.inArray("aa"));
+    console.log([2,3,4,5].isInArray(4));
+</script>
+</html>

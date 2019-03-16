@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var arr = [4,3,6,7];
+    //map 首先会去遍历数组，在遍历数组的时候会执行函数，这个函数会有返回值，把返回值重新组合成一个新的数组
+    var Rarr=arr.map(function(item,index,array){
+        return item+item;
+    });
+    console.log(Rarr);
+   // ["a","b","c","d"] ["a1","b2","c3","d4"];
+    /**
+     * 封装map
+     * @param callback
+     * @param array
+     * @returns {Array}
+     */
+    function myMap(callback,array){
+        var newArr = [];
+        for(var i=0;i<array.length;i++){
+            newArr.push(callback(array[i],i,array));
+        }
+        return newArr;
+    }
+    var mArr=myMap(function(a,b,c){
+        return a+(b+1);
+    },["a","b","c","d"]);
+    console.log(mArr);
+</script>
+</html>

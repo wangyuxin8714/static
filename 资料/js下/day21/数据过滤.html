@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin:0
+        }
+        #box{
+            width:1000px;
+            height: 600px;
+            border:1px solid #cccccc;
+            margin:20px auto 0px;
+        }
+        p{
+            height: 50px;
+            line-height: 50px;
+            padding-left:50px;
+            border-bottom:1px solid #ccc;
+        }
+        p span{
+            display: inline-block;
+            margin-left:50px;
+            cursor: pointer;
+        }
+        ul{
+            list-style: none;
+            padding-left:50px;
+        }
+        li{
+            height:50px;
+            line-height: 50px;
+            border-bottom:1px solid #ccc;
+        }
+        li span{
+            margin-left:50px;
+        }
+        .active{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p>
+            <label>班级</label>
+            <span class="active">全部</span>
+            <span>一班</span>
+            <span>二班</span>
+            <span>三班</span>
+            <span>四班</span>
+            <span>五班</span>
+        </p>
+        <p>
+            <label>年龄</label>
+            <span class="active">全部</span>
+            <span>0-6</span>
+            <span>6-12</span>
+            <span>12-18</span>
+            <span>18-1000</span>
+        </p>
+        <p>
+            <label>性别</label>
+            <span class="active">全部</span>
+            <span>男</span>
+            <span>女</span>
+        </p>
+        <ul id="list">
+            <!--<li>
+                <span>孙悟空</span>
+                <span>男</span>
+                <span>5</span>
+                <span>一班</span>
+            </li>-->
+        </ul>
+    </div>
+</body>
+<script>
+    function DataFilter(){
+        this.list = document.getElementById("list");
+        this.p = document.getElementsByTagName("p");
+        this.classTypes = this.p[0].getElementsByTagName("span");
+        this.ageTypes = this.p[1].getElementsByTagName("span");
+        this.sexTypes = this.p[2].getElementsByTagName("span");
+        this.classIndex = 0;//班级的下标
+        this.ageIndex = 0;//年龄的下标
+        this.sexIndex = 0;//性别的下标
+        this.data = null;//数据
+        this.init();
+    }
+    DataFilter.prototype = {
+        constructor:DataFilter,
+        init:function(){
+            var that = this;
+            ajax({
+                url:"json/data.json",
+                success:function(data){
+                    console.log(data);
+                    that.data = data;
+                    that.updateList(data);
+                    that.bindEvent();
+                }
+            })
+        },
+        updateList:function(data){
+            var that = this;
+            that.list.innerHTML = "";
+            data.forEach(function(item){
+                var li = document.createElement("li");
+                li.innerHTML=`<span>${item.name}</span><span>${item.sex}</span>
+                    <span>${item.age}</span><span>${item.className}</span>`;
+                that.list.appendChild(li);
+            })
+        },
+        bindEvent:function(){
+            var that = this;
+            //班级
+            for(let i=0;i<that.classTypes.length;i++){
+                that.classTypes[i].onclick = function(){
+                    that.classTypes[that.classIndex].className="";
+                    that.classIndex = i;
+                    this.className = "active";
+                    that.filter();
+                }
+            }
+            //年龄
+            for(let i=0;i<that.ageTypes.length;i++){
+                that.ageTypes[i].onclick = function(){
+                    that.ageTypes[that.ageIndex].className="";
+                    that.ageIndex = i;
+                    this.className = "active";
+                    that.filter();
+                }
+            }
+            //性别
+            for(let i=0;i<that.sexTypes.length;i++){
+                that.sexTypes[i].onclick = function(){
+                    that.sexTypes[that.sexIndex].className="";
+                    that.sexIndex = i;
+                    this.className = "active";
+                    that.filter();
+                }
+            }
+        },
+        filter:function(){
+            //console.log(this.data);
+            var that = this;
+            var className = that.classTypes[that.classIndex].innerHTML;
+            var ageName = that.ageTypes[that.ageIndex].innerHTML;
+            var sexName = that.sexTypes[that.sexIndex].innerHTML;
+            //console.log(className+","+ageName+","+sexName);
+            var arr = [];//用来存放过滤的数据
+            that.data.forEach(function(item){
+                if((className==item.className || className=="全部")&&(sexName==item.sex||sexName=="全部")){
+                        //判断年龄
+                        if(ageName=="全部"){
+                            arr.push(item);
+                        }else{
+                            var array = ageName.split("-");//0-6
+                            if(item.age>=array[0]&&item.age<=array[1]){
+                                arr.push(item);
+                            }
+                        }
+                }
+            });
+        that.updateList(arr);
+
+        }
+    }
+
+    new DataFilter();
+    function ajax(obj){
+        var xhr = null;
+        if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        }else{
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.open("get",obj.url,true);
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4){
+                if(xhr.status==200){
+                    obj.success(eval("("+xhr.responseText+")"));
+                }else{
+                    obj.error(xhr.status);
+                }
+            }
+        }
+        xhr.send(null);
+    }
+</script>
+</html>

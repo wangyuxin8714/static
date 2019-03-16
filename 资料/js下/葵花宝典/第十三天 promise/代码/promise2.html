@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> promise 异步编程 </title>
+</head>
+<body>
+	<script>
+		//promise 可以理解成一个 工具箱, 把复杂的,耗时的事件,放在这个工具箱内,这个事件就变成了异步的.
+		//变成异步的,不会阻塞主线程和 io 操作. promise 相当于其他语言的多线程.
+
+		// promise 有三种状态.
+		// 开始时 准备状态 
+		// 准备状态 - > 成功
+		// 准备状态 - > 失败
+
+		var p = new Promise(function(resolve,reject){
+			setTimeout(function(){
+				//一秒后执行 resolve 函数. 这个方法表示的是成功
+				resolve();
+			},1000);
+
+			//当处理复杂业务时,
+			// 处理完后,告诉程序,你处理完成了.
+			// 怎么告诉程序处理完毕啊?
+			// 就是调用 resolve方法
+
+		});
+
+		p.then(function(){
+			console.log("成功执行");
+		});
+
+	</script>
+</body>
+</html>

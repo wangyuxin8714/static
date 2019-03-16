@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    //onload 当页面所有的都加载完再执行函数里面的东西 通常情况下：window、body、img
+    //页面中只能有一个window.onload
+    window.onload = function(){
+        var div = document.getElementsByTagName("div")[0];
+        console.log(div);
+    }
+    window.onload = function(){
+        console.log(2222);
+    }
+</script>
+<body>
+    <div>rfrr</div>
+</body>
+<script>
+    //UI事件  与用户操作没关系
+
+</script>
+</html>

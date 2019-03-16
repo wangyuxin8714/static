@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var reg = /\d{4}-(\d{2})-(\d{2})/g;
+    var str = "2018-12-10dewrw2017-11-21wew";
+    var arr = reg.exec(str);
+    //正则的方法，找到符号匹配模式的匹配项，每次只会取当前位置处的第一个匹配项
+    ///没有\g  返回的数组[第一个匹配项，当前匹配项对象的索引，检查的字符串，分组]
+    arr = reg.exec(str);
+    for(var i in arr){
+        console.log(arr[i]);
+    }
+    console.log("================");
+    var date = '2019-01-01';
+    var re = /\d-?/g;
+    console.log(date.match(re));
+    console.log("++++++++++++++++++++++++++++");
+    var date = '2019-01-01';
+    var re = /(\d+)-+/;//9- 9
+    console.log(date.match(re));
+    console.log('12abc34def56'.match(/\d+/g));
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            border:1px solid;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+<script>
+    var div = document.getElementsByTagName("div")[0];
+    //clientWidth 元素的width+padding  offsetWidth 元素的width+padding+border
+    console.log(div.clientWidth+","+div.offsetWidth);
+    window.onresize = function(){
+        //console.log(document.documentElement.clientWidth);
+        var width = document.documentElement.clientWidth || document.body.clientWidth;
+        console.log(width);
+        //console.log(234);
+    }
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // task1：实现一个通用的事件处理程序
+        var EventUtil = {
+            addHandler: function (element, type, handler) {
+                // your code here
+
+
+            },
+            getEvent: function (event) {
+                // your code here
+                return event || window.event;
+            },
+            getTarget: function (event) {
+                // your code here
+                var ev = event || window.event;
+                return ev.target || ev.srcElement;
+            },
+            preventDefault: function (event) {
+                // your code here
+                var ev = event || window.event;
+                if(ev.preventDefault){
+                    ev.preventDefault();
+                }else{
+                    ev.returnValue = false;
+                }
+            },
+            removeHandler: function (element, type, handler) {
+                // your code here
+
+            },
+            stopPropagation: function (event) {
+                // your code here
+                var ev = event || window.event;
+                if(ev.stopPropagation){
+                    ev.stopPropagation();
+                }else{
+                    ev.cancelBubble = true;
+                }
+            }
+        };
+
+        // task2：利用上一个task实现的工具 和 事件委托技术实现一个导航列表。ul的每个子节点是li。点击第某个li则将其背景色设为红色。
+        function aa(){
+
+        }
+        //aa();
+        //window.aa();
+        //window.alert(2334);
+    </script>
+</body>
+
+</html>

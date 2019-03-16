@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th,td{
+            border:1px solid;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="selectAll">全选</th>
+                <th>商品</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>小计</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <!--<tr>
+                <td><input type="checkbox"></td>
+                <td>
+                    <img src="images/1.jpg" alt="">
+                    <span>dwewe</span>
+                </td>
+                <td>2334</td>
+                <td>1</td>
+                <td></td>
+                <td>删除</td>
+            </tr>-->
+        </tbody>
+    </table>
+</body>
+<script>
+    function ajax(obj){
+        var xhr = null;
+        if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        }else{
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.open("get",obj.url,true);
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4){
+                if(xhr.status==200){
+                    obj.success(eval("("+xhr.responseText+")"));
+                }else{
+                    obj.error(xhr.status);
+                }
+            }
+        }
+        xhr.send(null);
+    }
+
+    function Shopping(){
+        this.tbody = document.getElementById("tbody");
+        this.all = document.getElementById("selectAll");
+        this.init();
+    }
+    Shopping.prototype = {
+        constructor:Shopping,
+        init:function(){
+            var _this = this;
+            ajax({
+                url:"product.json",
+                success:function(data){
+                    _this.renderHtml(data);
+                    _this.checkAll();
+                    _this.bindEvent();
+                }
+            })
+        },
+        renderHtml:function(data){
+            var _this = this;
+            data.forEach(function(item){
+                var tr = document.createElement("tr");
+                tr.innerHTML = '<td><input type="checkbox" class="select"></td> <td> <img src="images/'+item.img+'" alt="">' +
+                    '<span>'+item.name+'</span> </td> <td>'+item.price+'</td>' +
+                    ' <td class="updateQty"><span>-</span><span>'+item.num+'</span><span>+</span></td> ' +
+                    '<td>'+item.price*item.num+'</td> <td>删除</td>';
+                _this.tbody.appendChild(tr);
+            })
+        },
+        checkAll:function(){
+            var _this = this;
+            _this.all.onclick = function(){
+                var checked = this.checked;//全选的值
+                var checkBox = Array.from(document.querySelectorAll(".select"));
+                checkBox.forEach(function(item){
+                    item.checked = checked;
+                })
+            }
+        },
+        bindEvent:function(){
+            var tds = Array.from(document.querySelectorAll(".updateQty"));//所有的数量对应的td
+            tds.forEach(function(item){
+                var add = item.children[2];
+                var minus = item.children[0];
+                add.onclick = function(){
+                    item.children[1].innerHTML++;
+                    item.children[0].style.display = "inline-block";
+                }
+                minus.onclick=function(){
+                    item.children[1].innerHTML--;
+                    if(item.children[1].innerHTML=="0"){
+                        this.style.display = "none";
+                    }
+                }
+            })
+        }
+    }
+
+    new Shopping();
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body>
+    <div class="tit">
+        <a href="login.html">登录</a>
+        <a href="register.html">注册</a>
+    </div>
+    <div class="list">hello world</div>
+    <script src="common/axios.js"></script>
+    <script>
+        const list = document.querySelector('.list')
+        axios.get('/api/getList').then(data => {
+            list.innerHTML = data.data.map(val => `<p>${val.title}</p>`).join('')
+        })
+    </script>
+</body>
+
+</html>

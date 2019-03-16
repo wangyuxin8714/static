@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p></p>
+    <script>
+    	var arr=["1","2","3","4","q","w","d"];
+    	var str=[];
+    	var p=document.getElementsByTagName("p")[0];
+    	for(i=0;i<arr.length;i++){
+         var ind=Math.floor(Math.random()*arr.length);
+         str[i]=arr[ind];
+         p.innerHTML+="<span>"+str[i]+"</span>";
+    	}
+    	var count=0;
+    	var span=document.getElementsByTagName("span");
+    	document.addEventListener("keyup",function(){
+           var e=event||window.event;
+           if(e.key==str[count]){
+           	span[count].style.color ="red";
+               count++;
+           }
+           
+
+    	},false)
+
+
+    </script>
+</body>
+</html>

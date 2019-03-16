@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //replace 字符串的方法
+    var str = " der efr ";
+    console.log(str);
+    console.log(str.trim());
+    function myTrim(str){
+        var reg = /^\s+|\s+$/g;
+        return  str.replace(reg,"");
+    }
+    console.log(myTrim("       erdddgt rrrf     "));
+</script>
+</html>

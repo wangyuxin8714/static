@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div><span>-</span><span>0</span><span>+</span></div>
+    <div><span>-</span><span>0</span><span>+</span></div>
+    <div><span>-</span><span>0</span><span>+</span></div>
+</body>
+<script>
+    var oDivs = document.getElementsByTagName("div");
+    for(var i=0;i<oDivs.length;i++){
+        var spans = oDivs[i].children;
+        //减少
+        addEvent(spans[0],"click",function(){
+            var ele = this.nextElementSibling;
+            if(ele.innerHTML==0){
+                this.disabled=true;
+            }else{
+                ele.innerHTML--;
+            }
+        });
+        //增加
+        addEvent(spans[2],"click",function(){
+            this.previousElementSibling.innerHTML++;
+        });
+    }
+    /**
+     * 事件绑定
+     * @param ele
+     * @param type
+     * @param fn
+     */
+    function addEvent(ele,type,fn){
+        if(ele.addEventListener){
+            ele.addEventListener(type,fn);
+        }else if(ele.attachEvent){
+            ele.attachEvent("on"+type,fn);
+        }else{
+            ele["on"+type] = fn;
+        }
+    }
+</script>
+</html>

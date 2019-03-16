@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="http://www.baidu.com" onclick="fn(event)">点击</a>
+</body>
+<script>
+    function fn(e){
+        //e.preventDefault();//支持标准浏览器
+        if(e.preventDefault){
+            e.preventDefault();
+        }else{
+            e.returnValue = false;//兼容低版本的ie
+        }
+        alert(123);
+    }
+</script>
+</html>

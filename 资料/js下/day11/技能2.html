@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="box1">deee</div>
+    <div id="box2">222deee</div>
+    <div id="box3">222deee</div>
+</body>
+<script>
+    function CreateObject(id,color){
+        this.el = document.getElementById(id);
+        this.color = color;
+        this.setColor();
+    }
+    CreateObject.prototype.setColor = function(){
+        this.el.style.background = this.color;
+    }
+    new CreateObject("box1","red");
+    //o1.setColor();
+    new CreateObject("box2","green");
+    //o2.setColor();
+    new CreateObject("box3","blue");
+   // o)3.setColor(;
+</script>
+</html>

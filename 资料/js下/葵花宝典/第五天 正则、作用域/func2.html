@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数作用域</title>
+</head>
+<body>
+	<script>
+		
+		function fn(){
+			var a = 10;
+
+			var f = function (){
+				console.log(a);
+			}
+			return f ;
+		}
+
+		var a = fn();
+
+		fn()();
+
+
+
+		f(1)(2)(3)	// 返回的结果是 6
+
+
+		function f(n1){
+			return function (n2){
+				return function (n3){
+					return n1 + n2 + n3;
+				}
+			}
+		}
+
+
+		// var f2 = f(1);
+		// var f3 = f(1)(2);
+
+		var n = f(1)(2)(3);
+
+		alert(n);
+
+
+	</script>
+</body>
+</html>

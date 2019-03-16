@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        body{
+            overflow: hidden;
+        }
+        #left{
+            float: left;
+            width:70%;
+            height:620px;
+            overflow: hidden;
+        }
+        #right{
+            float: right;
+            width: 30%;
+            height:620px;
+            background: #cccccc;
+        }
+        #right h2{
+            text-align: center;
+        }
+        table{
+            width: 100%;
+            background: #fff;
+        }
+        #right p{
+            text-align: right;
+        }
+        dl{
+            float: left;
+        }
+        dd p{
+            text-align: center;
+        }
+        td{text-align: center}
+    </style>
+</head>
+<body>
+    <div id="left">
+        <!--<dl>
+            <dt>
+                <img src="img/shirt1.gif" alt="">
+            </dt>
+            <dd>
+                <p>阿迪</p>
+                <p>价格</p>
+            </dd>
+        </dl>-->
+    </div>
+    <div id="right">
+        <h2>购物车</h2>
+        <table>
+            <thead>
+                <tr><th>名称</th><th>数量</th><th>单价</th></tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+        <p>合计:<span id="sum">0</span></p>
+    </div>
+</body>
+<script>
+    function ajax(url){
+        /*var p1 = new Promise(function(resolve,reject){
+            var xhr = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+            xhr.open("get",url,true);
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4){
+                    if(xhr.status==200){
+                        resolve(eval(xhr.responseText));
+                    }else{
+                        reject(xhr.status);
+                    }
+                }
+            }
+            xhr.send(null);
+        });*/
+        return new Promise(function(resolve,reject){
+            var xhr = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+            xhr.open("get",url,true);
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4){
+                    if(xhr.status==200){
+                        resolve(eval(xhr.responseText));
+                    }else{
+                        reject(xhr.status);
+                    }
+                }
+            }
+            xhr.send(null);
+        });
+    }
+
+    //定义构造函数
+    function Shopping(){
+        this.leftBox = document.getElementById("left");//左边放商品的容器
+        this.rightBox = document.getElementById("right");//右边的容器
+        this.tbody = document.getElementById("tbody");
+        this.products = [];//用来存放已经放进去的商品名称
+        this.init();
+    }
+    Shopping.prototype = {
+        constructor:Shopping,
+        init:function(){
+            var _this = this;
+            ajax("data.json").then(function(data){
+                _this.drawProducts(data);
+            })
+        },
+        /**
+         * 渲染页面
+         * @param data
+         */
+        drawProducts:function(data){
+            var _this = this;
+            data.forEach(function(item){
+                var dl = document.createElement("dl");
+                var dt = document.createElement("dt");
+                dt.innerHTML = "<img src=img/"+item.src+">";
+                dl.appendChild(dt);
+                var dd = document.createElement("dd");
+                dd.innerHTML = "<p>"+item.name+"</p><p>价格:<span>"+item.price+"</span></p>";
+                dl.appendChild(dd);
+                _this.leftBox.appendChild(dl);
+                _this.drag(dl);
+            })
+        },
+        /**
+         *
+         * @param product 当前拖拽的商品
+         */
+        drag:function(product){
+            var _this = this;
+            product.onmousedown = function(e){
+                var ev = e || window.event;
+                //取消图片的默认事件
+                if(ev.preventDefault){
+                    ev.preventDefault();
+                }else{
+                    ev.returnValue = false;
+                }
+                var clonePro = this.cloneNode(true);//克隆的拖拽的商品的副本
+                clonePro.style.position = "absolute";
+                clonePro.style.left = this.offsetLeft+"px";
+                clonePro.style.top = this.offsetTop+"px";
+                 _this.leftBox.appendChild(clonePro);
+                 //鼠标相对于元素的位置
+                var pos = {
+                    x:ev.offsetX,
+                    y:ev.offsetY
+                }
+                document.onmousemove = function(e){
+                    var ev = e || window.event;
+                    clonePro.style.left = ev.clientX-pos.x+"px";
+                    clonePro.style.top = ev.clientY-pos.y+"px";
+                }
+                document.onmouseup = function(){
+                    if(clonePro.offsetLeft>_this.rightBox.offsetLeft){
+                        _this.addProduct(clonePro);
+                    }
+
+                    _this.leftBox.removeChild(clonePro);
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+                }
+            }
+        },
+        /**
+         * 添加商品，更新合计
+         * @param p  要添加的商品
+         */
+        addProduct:function(p){
+            var _this = this;
+            var dd = p.children[1];//取当前商品的详细信息
+            var pName = dd.children[0].innerHTML;//商品的名称
+            var index = _this.products.indexOf(pName);//商品在数组中的位置，其实也是在table的第几行
+            if(index==-1){
+                var tr = document.createElement("tr");
+                tr.innerHTML="<td>"+pName+"</td><td>1</td><td>"+dd.children[1].children[0].innerHTML+"</td>";
+                _this.tbody.appendChild(tr);
+                _this.products.push(pName);
+            }else{
+                _this.tbody.children[index].children[1].innerHTML++;
+            }
+            var sum = document.getElementById("sum");
+            sum.innerHTML = sum.innerHTML*1+dd.children[1].children[0].innerHTML*1;
+        }
+    }
+
+    new Shopping();
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件对象属性</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#div{
+			width: 300px;
+			height: 300px;
+			margin: 100px;
+			background-color: #f00;
+		}
+
+	</style>
+</head>
+<body>
+	<div id = "div"></div>
+	<script>
+			
+		//获取 div
+		var div = document.getElementById("div");
+
+		div.onclick = function(){
+
+			console.log("event.offsetX = " +  event.offsetX + "\t" + "event.offsetY = " + event.offsetY);
+
+			console.log("event.clientX = " + event.clientX + "\t" + "event.clientY = "  + event.clientY);
+
+			console.log("event.pageX = " + event.pageX +"\t" + "event.pageY  = " + event.pageY )
+
+			console.log("event.x = " + event.x + "\t" + "event.y = " + event.y)
+
+			console.log("event.screenX =" + event.screenX + "\t" + "event.screenX  =" + event.screenY);
+
+			console.dir(event);
+		}
+
+
+	</script>
+</body>
+</html>

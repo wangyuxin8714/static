@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id="box">
+		<span>删除</span>
+	</div>
+	<div id="botBox">
+		<label for="">人民广场地区</label><input type="checkbox">
+		<label for="">江湾、五角</label><input type="checkbox">
+		<label for="">虹桥地区</label><input type="checkbox">
+		<label for="">大宁国际</label><input type="checkbox">
+		<label for="">浦东陆家嘴</label><input type="checkbox">
+		<label for="">虹口足球场</label><input type="checkbox">
+	</div>
+	<script>
+	var box=document.getElementById('box'),
+		ipts=document.querySelectorAll('input'),
+		labs=document.querySelectorAll('label');
+
+		//循环给所有的input绑定事件
+		for(let i=0;i<ipts.length;i++){
+			ipts[i].onclick=function(){
+				//判断复选框是否为选中状态
+				if(ipts[i].checked==true){
+				//创建元素span
+				var span=document.createElement('span');
+				//往span中拼接内容
+				span.innerHTML=`<span>${labs[i].innerHTML}</span><span>X</span> `;
+				//追加在大盒子中
+				box.insertBefore(span,box.lastElementChild);
+				fn();
+
+										 }
+				else{
+					//遍历box里的内容
+					for(var j=0;j<box.children.length-1;j++){
+						//判断
+						if(labs[i].innerHTML==box.children[j].firstElementChild.innerHTML){
+							//删除该元素的父元素
+								box.removeChild(box.children[j]);
+							}
+
+						 							 	  }
+					}
+									  }
+			 						  }
+			 		function fn(){
+	for(var i=0;i<box.children.length-1;i++){
+		box.children[i].lastElementChild.onclick=function(){
+			box.removeChild(this.parentNode);
+			for(var j=0;j<labs.length;j++){
+				if(this.previousElementSibling.innerHTML==labs[j].innerHTML){
+					ipts[j].checked=false;
+
+					}
+				 									 }
+		}
+		 								 }
+			 }
+			 //给大盒子中的子元素的最后一个子元素(X)绑定事件
+
+			/* function fn(){
+			 for(let x=0;x<box.children.length-1;x++){
+			 	box.children[x].lastElementChild.onclick=function(){
+			 		box.removeChild(box.children[x]);
+			 		for(var n=0;n<labs.length;n++){
+			 			if(this.previousElementSibling.innerHTML==labs[n].innerHTML){
+			 					ipts[n].checked=false;
+			 				}
+			 			 }
+			 				}
+			 									  }
+			 }*/
+
+
+
+
+
+
+
+
+	/*	//给所有复选框绑定事件
+		for(let i=0;i<ipts.length;i++){
+			ipts[i].onclick=function(){
+				//判断选中状态
+				if(ipts[i].checked==true){
+					//创建节点
+				var span=document.createElement('span');
+				span.innerHTML=`<span>${labs[i].innerHTML}</span><span>X<span> `;
+
+				//插入到第一个盒子中
+				box.insertBefore(span,box.lastElementChild);
+				fn();
+										 }
+				else{
+					//循环和box中的值做对比
+					for(var j=0;j<box.children.length;j++){
+						if(labs[i].innerHTML==box.children[j].firstElementChild.innerHTML){
+							box.removeChild(box.children[j]);
+						 	}
+						}
+					}
+							 		  }
+			}
+
+function fn(){
+	for(var i=0;i<box.children.length-1;i++){
+		box.children[i].lastElementChild.onclick=function(){
+			box.removeChild(this.parentNode);
+			for(var j=0;j<labs.length;j++){
+				if(this.previousElementSibling.innerHTML==labs[j].innerHTML){
+					ipts[j].checked=false;
+
+					}
+				 									 }
+		}
+		 								 }
+			 }
+
+*/
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var obj = {
+        name:"sww"
+    }
+    var arr = [2,3,4];
+    var Date = new Date();
+    console.log(Object.prototype.toString(obj));//[object Object]
+    console.log(Object.prototype.toString(arr));//[object Object]
+    console.log(Object.prototype.toString.call(arr));//[object Array]
+    console.log(Object.prototype.toString.call(Date));//[object Date]
+    //判断是否是数组
+    console.log(obj instanceof Array);//false
+    console.log(obj.constructor == Array);//false
+    console.log(Object.prototype.toString.call(obj)==[object Array]);//false
+</script>
+</html>

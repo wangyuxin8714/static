@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+var data = null;
+xhr.open("get","demo.json",false);
+xhr.onreadystatechange=function(){
+  if(xhr.readyState==4 && xhr.status==200){
+     data = xhr.responseText;  // 假设responseText返回的数据是{"isok":"yes"}
+  }
+}
+xhr.send();
+console.log(data);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

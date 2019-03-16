@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        div{
+            position: relative;
+            width:730px;
+        }
+        div img{
+            display: none;
+        }
+        ol{
+            position: absolute;
+            bottom: 20px;
+            left:0;
+            width:100%;
+            text-align: center;
+        }
+        li{
+            display: inline-block;
+            width:15px;
+            height:15px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 15px;
+            border:1px solid #fff;
+            margin:0 10px;
+            background: #ffffff;
+        }
+        .active{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="carousel">
+        <img src="images/img1.jpg" alt="" style="display: block">
+        <img src="images/img2.jpg" alt="">
+        <img src="images/img3.jpg" alt="">
+        <img src="images/img4.jpg" alt="">
+        <ol><li class="active"></li><li></li><li></li><li></li></ol>
+    </div>
+    <div id="carouse2">
+        <img src="images/img1.jpg" alt="" style="display: block">
+        <img src="images/img2.jpg" alt="">
+        <img src="images/img3.jpg" alt="">
+        <img src="images/img4.jpg" alt="">
+        <ol><li class="active"></li><li></li><li></li><li></li></ol>
+    </div>
+</body>
+<script>
+
+    function Carousel(id,interval){
+        this.oDiv =  document.getElementById(id);
+        this.imgs =  this.oDiv.getElementsByTagName("img");
+        this.lis =  this.oDiv.getElementsByTagName("li");
+        this.index = 0;
+        this.timer = null;
+        this.interval = interval;
+        this.init();
+    }
+   Carousel.prototype = {
+       constructor: Carousel,
+       init:function(){
+           this.auto();
+           this.bindEvent();
+       },
+       bindEvent:function(){
+           var _this = this;
+           this.oDiv.onmouseover = function(){
+               clearInterval(_this.timer);
+           }
+           this.oDiv.onmouseout = function(){
+               _this.auto();
+           }
+       },
+       auto:function(){
+           var _this = this;
+           _this.timer=setInterval(function(){
+               _this.next();
+           },_this.interval);
+       },
+       next:function(){
+           this.imgs[this.index].style.display = "none";
+           this.lis[this.index].className = "";
+           this.index++;
+           if(this.index==this.imgs.length)this.index=0;
+           this.imgs[this.index].style.display = "block";
+           this.lis[this.index].className = "active";
+       }
+   }
+    new Carousel("carousel",1000);
+    new Carousel("carouse2",2000);
+</script>
+</html>

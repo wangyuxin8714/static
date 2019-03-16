@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>  给元素添加事件 </title>
+</head>
+<body>
+	<div id="div">
+		<button>按钮1</button>
+		<button>按钮2</button>
+	</div>
+	<script>
+	
+		//把 类数组  collection 转换成数组
+		// Array.from();
+		// Array.prototype.slice.call(类数组);
+
+		//获取页面中的所有按钮
+		var btns = Array.from(document.getElementsByTagName("button"));
+
+		var arr = new Array();
+
+
+		//事件代理
+		div.onclick = function(){
+			if(event.target.tagName == "BUTTON"){
+
+				var b = document.createElement("button");
+				
+				b.innerHTML = "按钮3";
+
+				div.appendChild(b);
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /**
+     *
+     * @param obj
+     */
+    function ajax(obj){
+        var xhr = null;
+        if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        }else{
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.open(obj.method,obj.url,obj.isAsync);
+        if(obj.method.toUpperCase()=="POST"){
+            xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+        }
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4){
+                if(xhr.status==200){
+                    obj.success(eval("("+xhr.responseText+")"));
+                }else{
+                    obj.error(xhr.status);
+                }
+            }
+        }
+        xhr.send(null);
+    }
+    ajax({
+        method:"get",
+        url:"datas.json",
+        isAsync:true,
+        success:function(data){
+            alert(JSON.stringify(data));
+        },
+        error:function(){
+
+        }
+    })
+</script>
+</html>

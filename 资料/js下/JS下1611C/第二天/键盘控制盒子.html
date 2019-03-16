@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>title</title>
+		<style>
+			#div1{
+				width:200px;
+				height:200px;
+				background-color:red;
+				position:absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<script type="text/javascript" charset="utf-8">
+			var oDiv1 = document.getElementById("div1");
+			document.onkeydown = function(event){
+				var Event = event || window.event;
+				
+				switch(Event.keyCode){
+					case 37:
+						oDiv1.style.left = oDiv1.offsetLeft - 5 + "px"
+						break;
+					case 38:
+						oDiv1.style.top = oDiv1.offsetTop - 5 + "px"
+						break;
+					case 39:
+						oDiv1.style.left = oDiv1.offsetLeft + 5 + "px"
+						break;
+					case 40:
+						oDiv1.style.top = oDiv1.offsetTop + 5 + "px"
+						break;
+				}
+				
+			}
+		</script>
+	</body>
+</html>

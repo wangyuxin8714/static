@@ -1,0 +1,134 @@
+	单选
+
+1.	以下哪些标签内的文本在浏览器中是可见的页面内容：           C
+
+	A：html
+	B:head
+	C:body
+	D:以上都不对
+
+2:	（ ）标签用于存放浏览器不可见的信息，以下正确的是（）        B
+
+	A:html
+	B:head
+	C:body
+	D:以上都不对
+
+3.	H20水的化学方式用HTML代码实现，正确的写法是？               B
+
+	A:<sup>H20</sup>
+	B:<p>H<sub>2</sub>0</p>
+	C:<sub>H20</sub>
+	D:<p>H<sup>2</sup>0</p>
+
+4.	网站）在浏览器中输出“这是图片标记<img>”正确的写法是?                C
+
+	A: <div>这是图片标记&gtimg&lt</div> 
+	B: <div>这是图片标记<img></div> 
+	C: <div>这是图片标记&lt;img&gt;</div> 
+	D: <div>这是图片标记&gt;img&lt;</div> 
+
+5.	p.text{background:#f00}
+	#title{background:#0f0}
+	&lt;p class=&quot;text&quot; id=&quot;title&quot; style=&quot;background:#00f&quot;&gt;hello world&lt;/p&gt;hello world显示在浏览器的颜色是（  ）：         A
+
+	A: #00f 
+	B: 不显示背景色 
+	C: #0f0 
+	D: #f00
+
+6.	以下哪个选择器的优先级最高（  ）：        C
+
+	A: id 
+	B: * 
+	C: 行内 
+	D: class 
+
+7.	<style>
+   		 .list li{background:#f00;}
+    		.js{background:#0f0;}
+   		 .html{background:#00f;}
+	</style>;
+
+	<ul class="ist">;
+  		<li>CSS</li>;
+  		<li class="js">JAVASCRIPT</li>;
+  		<li class="html">HTML</li>;
+	</ul>;
+	JAVASCRIPT的背景色是（   ） ：              D
+
+	A: #00f 
+	B: 无背景色 
+	C: #f00 
+	D: #0f0 
+
+8.	div{color:#0f0}
+	.news{color:#00f}
+	.title{color:#f00}
+<div class="title news">娱乐新闻</div>娱乐新闻显示在浏览器的颜色是（  ）：            D
+
+	A: 不显示背景色 
+	B: #f00 
+	C: #0f0 
+	D: #00f 
+
+9.	关于HTML语法说法正确的是？                  ABCD
+
+	A: 标签需要闭合 
+	B: 标签名与属性之间要用空格隔开 
+	C: 属性值要放到双引号中 
+	D: 属性名与属性值之间用等号相连 
+
+
+			多选题
+
+10.	表单的提交方式有哪两种?           AB
+
+	A: get 
+	B: post 
+	C: default 
+	D: request
+
+11.	 以下哪个选择器的优先级最低?            B
+
+	A: id 
+	B: * 
+	C: 行内 
+	D: !important 
+
+12.	群组选择器写法正确的是？             CD
+
+	A: div a{} 
+	B: .header span{} 
+	C: .news,.footer{} 
+	D: div,a{} 
+
+13.	以下选择器的写法错误的有（   ）            ABCD
+
+	A: a:link:visited{} 
+	B: h3,title{} 
+	C: div,p#text,#title{} 
+	D: ul li.news{} 
+
+
+			判断题
+
+14.	head标签和body标签是兄弟关系，不是父子关系。  √
+
+15.	   能在同一行内显示的元素被称作是行内元素          ×
+
+16.	a标签的target属性设为_blank时，表示链接到的页面将在一个新窗口中打开。        √
+
+17.	在CSS中，选择器是一种模式，用于选择需要添加样式的元素。：          
+
+
+
+			填空题
+
+18.	在CSS中，选择器是一种模式，用于选择需要添加样式的元素。：       hover   	
+
+19.	与<em>标签有相同作用的标签是（  i ）：     
+
+20.	.box{width:20px;height:20px;padding:5px;border-top:3px solid #f00;}所有class为box的元素最终的高度是（    33px）
+     答案：
+

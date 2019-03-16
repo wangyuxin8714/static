@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function ajax(url){
+        /*var p1 = new Promise(function(resolve,reject){
+            var xhr = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+            xhr.open("get",url,true);
+            xhr.send(null);
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4){
+                    if(xhr.status==200){
+                        resolve(eval("("+xhr.responseText+")"));
+                    }else{
+                        reject(xhr.status);
+                    }
+                }
+            }
+        });
+        return p1;*/
+        return new Promise(function(resolve,reject){
+            var xhr = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+            xhr.open("get",url,true);
+            xhr.send(null);
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4){
+                    if(xhr.status==200){
+                        resolve(eval("("+xhr.responseText+")"));
+                    }else{
+                        reject(xhr.status);
+                    }
+                }
+            }
+        });
+
+    }
+    ajax("d.txt").then((data)=>{
+
+    }).catch((error)=>{
+
+    })
+</script>
+</html>

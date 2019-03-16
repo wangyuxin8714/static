@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var p1 = new Promise(function(resolve,reject){
+        //var img = document.createElement("img");
+        var img = new Image();
+        img.src="images/img1.jpg";
+        //图片加载成功
+        img.onload = function(){
+            resolve(img);
+        }
+        //图片加载失败
+        img.onerror = function(){
+            reject(img.src);
+        }
+    });
+    p1.then(function(data){
+        document.body.appendChild(data);
+    }).catch(function(error){
+        console.log("图片加载失败"+error);
+    })
+</script>
+</html>

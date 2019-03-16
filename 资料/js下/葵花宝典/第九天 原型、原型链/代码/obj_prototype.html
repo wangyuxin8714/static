@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型对象</title>
+</head>
+<body>
+	<script>
+		function P(){
+
+		}
+
+		var p1 = new P();
+
+		console.log(P.prototype);
+
+		console.log(p1.__proto__ == P.prototype);	//true
+		console.log(P == P.prototype.constructor);	//true
+
+
+	</script>
+</body>
+</html>

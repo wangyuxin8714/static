@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            div{
+                margin:10px auto;
+            }
+            #div1{
+                width:500px;
+                height:500px;
+                background:red;
+                padding:20px;
+            }
+            #div2{
+                height:400px;
+                background:green;
+                padding:20px;
+            }
+            #div3{
+                height:300px;
+                background:blue;
+            }
+        </style>
+    </head>
+    <body>
+         <div id="div1">
+            <div id="div2">
+                <div id="div3"></div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+    //捕获  addEventListener第三个参数是是否在捕获阶段执行函数
+    //低版本的ie不支持捕获，ie提出的是冒泡流，网景提出的是捕获流
+    //attachEvent()没有捕获
+    var oDiv = document.getElementsByTagName("div");
+    oDiv[0].addEventListener("click",function(){
+        console.log("最外层的div");
+    },true);
+    oDiv[1].addEventListener("click",function(){
+        console.log("第二的div");
+    },true);
+    oDiv[2].addEventListener("click",function(){
+        console.log("最里层的div");
+    },true);
+
+    /*if(oDiv[0].addEventListener){
+        oDiv[0].addEventListener("click",fn,true);
+    }else if(oDiv.attachEvent){
+        oDiv.attachEvent
+    }*/
+
+    </script>
+</html>

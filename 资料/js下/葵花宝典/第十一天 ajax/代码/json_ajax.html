@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 请求 json 数据 </title>
+</head>
+<body>
+	<script>
+		//创建一个请求对象
+
+		var xhr =  new XMLHttpRequest();
+
+		xhr.open("get", "data.json",true);
+		xhr.send(null);
+
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4 && xhr.status == 200){
+				console.log(typeof xhr.responseText);
+
+				//json 数据从服务器返回,是字符串格式的.要转化成 js 对象格式.才能使用
+
+				//把 json 数据转换成 js 对象的格式的数据
+				var data = eval( "("+ xhr.responseText +")");
+				console.log(data);
+				console.log(data.family[1]);
+			}
+		}
+	</script>
+</body>
+</html>

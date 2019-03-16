@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 普通对象和函数对象 </title>
+</head>
+<body>
+	<script>
+		//创建普通对象
+
+		var o1 = {};
+		var o2 = new Object();
+
+		console.log(o1.__proto__);
+		console.log(o2.__proto__);
+
+		//创建函数对象
+
+		var f1 = function(){}
+		var f2 = new Function();
+
+		console.log(f1.__proto__);
+		console.log(f2.__proto__);
+
+		console.log(f1.__proto__.__proto__ == o1.__proto__);
+
+		
+	</script>
+</body>
+</html>

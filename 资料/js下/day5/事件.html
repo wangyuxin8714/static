@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text">
+    <span>140</span>
+</body>
+<script>
+    var oInput = document.getElementsByTagName("input")[0];
+    var oSpan = document.getElementsByTagName("span")[0];
+    oInput.oninput = function(){
+        console.log(2333);
+        var len = this.value.length;
+        oSpan.innerHTML = 140-len;
+
+    }
+</script>
+</html>

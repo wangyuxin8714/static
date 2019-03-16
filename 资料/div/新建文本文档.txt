@@ -1,0 +1,15 @@
+状态选择器
+：disabled    匹配禁用状态的元素
+：enabled     匹配可用状态的元素
+：focus       匹配输入框的焦点（获取焦点）
+：checked     匹配单选框、复选框选中状态的元素
+：read-only/write     匹配只读/可读写状态的元素
+：checked     匹配单选框、复选框默认选中状态的元素
+：：selection   改变选中文本的样式（只可以应用于少数的css属性：color，background，cursor（pointer）和outline（none））
+：：placeholder    匹配input元素中提示文本的样式   语法：   ：：-webkit-input-placeholder
+		-webkit-    谷歌   苹果
+		-moz-       FF火狐浏览器
+		-o-         height：100px；height：200px；  欧朋
+		-ms-        IE
+结构
+：nth-of-type（n）匹配父元素下第n个  单一类型子元素（匹配父元素下）

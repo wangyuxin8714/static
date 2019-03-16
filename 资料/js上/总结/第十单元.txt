@@ -1,0 +1,61 @@
+ DOM是什么?  JS的组成部分: DOM文档对象模型 BOM浏览器对象模型 ECMAscript JS核心
+    DOM文档对象模型 document object model
+
+ html结构  css样式  js 行为
+ 节点是什么?  浏览器将html源文件中的 所有内容都视为节点
+     <div></div> 标签(元素)节点
+     //哈哈哈    注释节点
+     <p style="width:200px;"></p> 属性节点
+     整个document 被称为 文档节点
+     <div>我是div</div> //文本节点
+ document.getElementById('id名') 效率最高 性能最优 通过id名获取元素
+ document.getElementsByTagName('标签名'); 通过标签名 获取元素的集合==>伪数组的形式
+ document.getElmentsByClassName('class名');通过class名 获取元素的集合==>伪数组的形式
+ document.getElementsByName('name名');通过name名 获取元素的集合==>伪数组的形式
+ document.querySelector(); ==> 通过标签名、类名、id名 属性获取首个节点
+ document.querySelectorAll();通过标签名、类名、id名 属性获取全部节点 
+
+ 节点的属性 nodeName nodeValue nodeType
+                     nodeName        nodeValue         nodeType
+   元素节点        大写的标签名         null               1
+   属性节点           属性名           属性值              2
+   文本节点           #text           文本内容             3
+   注释节点          #comment         注释内容             8
+   文档节点          #document          null               9
+
+ dom元素.innerHTML 设置或获取节点中的文本内容或标签
+ innerText 设置或获取节点中的文本内容
+ 指定目录.removeChild(删除的元素);
+ 节点.style.样式名='样式值';
+
+ firstChild  获取第一个子节点   dom元素.firstChild
+ lastChild   获取最后一个子节点   dom元素.lastChild
+ nextSibling 获取下一个兄弟节点    dom元素.nextsbiling
+ PreviousSibling 获取上一个兄弟节点   dom元素.previousSibling
+        element 在该方法中添加element 解决兼容问题
+  
+ childNodes  children  节点的默认属性  默认保存着节点的子节点(伪数组)
+     childNodes 保存着节点的所有子节点
+     children 保存着节点的所有子元素节点
+ parentNode dom元素.parentNode 查找dom元素的父节点
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

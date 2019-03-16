@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 模拟金山打字</title>
+	<style>
+		
+		.span{
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			font-size: 30px;
+			font-weight: 500;
+			color: #0f0;
+		}
+		
+		/*  错的 */
+		.r{
+			color: red;
+		}
+		/* 对的 */
+		.e{
+			color: #ccc;
+		}
+
+	</style>
+</head>
+<body>
+	
+	
+	<div id = "div">
+		<span class = "span">a</span>
+		<span class = "span">b</span>
+		<span class = "span">c</span>
+	</div>
+	
+	<script>
+		
+		//需求分析
+
+		//应该监听键盘按下,把方法添加在 document 上
+		//页面刷新完毕,就应该显示字母了
+
+		//字母都是随机的
+
+		//有这么一个方法,可以把数字转换成字母
+		//随机97- 122之间的数
+
+
+		var div = document.getElementById("div");
+		
+		function random(n){
+			var arr = [];
+			for(var i = 0;i < n; i++){
+				var x =  Math.floor(Math.random()*(122-97 + 1) + 97); 
+				//把数字转化成相对于的字母
+				arr[i] = String.fromCharCode(x);
+			}
+
+			return arr;
+		}
+
+		function init(arr){
+			//循环数组,创建 span 标签
+
+			var str = "";
+			for(var i = 0; i < arr.length ;i++ ){
+				str += `<span class="span">${arr[i]}</span>`
+			}	
+			//把字符串赋值给 div
+			div.innerHTML = str;
+		}
+
+		var arr = random(20);
+		init(arr);
+
+
+		//获取下所有的 span
+
+		var spans = document.querySelectorAll("span");
+
+
+		var flag = true;
+
+		var index = 0
+		var start = null;
+		document.onkeydown = function(){
+			
+			if(flag){
+				start = new Date().getSeconds();
+				flag = false;
+			}
+
+			if(index == arr.length -1){
+				var end = new Date().getSeconds();
+				//算出事件
+				console.log(end - start);
+			}
+
+
+			if(index < 0){
+					index = 0;
+				}
+			if(index >= arr.length -1){
+				index = arr.length-1;
+			}
+
+			if(event.key == "Backspace"){
+				index--;
+				
+				spans[index].classList.remove("e");
+				spans[index].classList.remove("r");
+				return ;
+			}
+
+
+			if(event.key == arr[index]){
+
+				//classList 如果给元素添加多个 class 属性, 使用 classlist 的add 方法, 删除用 remove 方法.
+				
+				spans[index].classList.add("e");
+				
+			}else{
+
+				spans[index].classList.add("r");
+			}
+			index ++;
+		}
+
+	</script>
+
+</body>
+</html>

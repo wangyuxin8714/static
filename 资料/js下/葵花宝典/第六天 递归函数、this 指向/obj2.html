@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>复制对象</title>
+</head>
+<body>
+		
+
+	<script>
+		var a = 1;
+		var b = a;
+
+		b = 2;
+		console.log(a);
+
+
+		var c = {
+			name : "libai",
+			age : 1,
+		}
+
+		//因为对象是引用数据类型.
+		
+		var d = c;
+		//修改了 d 对象,那么 c 对象也会修改. 因为 c,d都是同一个对象.
+		d.name = "zhongkui",
+
+		console.log(c.name);
+
+
+		//创建一个对象 f,和 c 对象属性相同,但是不是一个对象.
+		//修改了f,  c不会变?
+
+		//实现一个函数, 拷贝一个对象. 拷贝后的对象和 之前的对象没有关系.
+
+
+
+
+	</script>
+
+
+</body>
+</html>

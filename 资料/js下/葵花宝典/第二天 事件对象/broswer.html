@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>跨浏览器事件对象</title>
+</head>
+<body>	
+
+	<button id="btn">按钮</button>
+	<p id="p"> ppp</p>
+
+	<script>
+		var btn = document.getElementById("btn");
+		var p = document.getElementById("p");
+
+		function addEvent(element,type,fn){
+			if(element.addEventListener){
+				element.addEventListener(type, fn, false);	
+			}
+			if(element.attachEvent){
+				element.attachEvent("on" + type, fn);
+			}
+		}
+
+		function stopEvent(event){
+			if(event.cancelBubble){
+				event.cancelBubble = true;
+			}
+			if(event.stopPropagation){
+				event.stopPropagation();
+			}
+		}
+
+		addEvent(btn,"click",function(){
+			console.log(1);
+			//阻止事件流
+
+			stopEvent(event);
+
+		});
+
+		addEvent(p,"dblclick",function(){
+			alert(1);
+			stopEvent(event);
+		});
+
+
+		var eventUtil = {
+			addEvent : function (element,type,fn){
+				if(element.addEventListener){
+					element.addEventListener(type, fn, false);	
+				}
+				if(element.attachEvent){
+					element.attachEvent("on" + type, fn);
+				}
+			},
+
+			removeEvent : function(element,type,fn){
+				if(element.removeEventListener){
+					element.removeEventListener(type, fn, false);	
+				}
+				if(element.detachEvent){
+					element.detachEvent("on" + type, fn);
+				}
+			},
+
+			stopEvent : function(event){
+				if(event.cancelBubble){
+					event.cancelBubble = true;
+				}
+				if(event.stopPropagation){
+					event.stopPropagation();
+				}
+			},
+			//阻止默认事件
+			preventDefalut : function(event){
+				if(event.returnValue){
+					event.returnValue = false;
+				}
+				if(event.preventDefault){
+					event.preventDefault();
+				}
+			}
+		}
+
+		eventUtil.addEvent(btn,"click",function(){
+
+			//事件处理函数中,有事件对象 event
+
+			var e = event || window.event;
+
+			eventUtil.stopEvent(e);
+
+		});
+
+	</script>
+</body>
+</html>

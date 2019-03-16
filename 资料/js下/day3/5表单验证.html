@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     用户名:<input type="text"> <br><!--必须是汉字,至少2个-->
+     密码:<input type="text"> <br><!--6-9 字母数字 下划线-->
+     确认密码:<input type="text"><br>
+     <input type="button" value="验证">
+</body>
+<script>
+    console.log(/^acd$/);
+    var oInput = document.getElementsByTagName("input");
+    oInput[4].onclick = function(){
+        var reg = /^[\u4e00-\u9fa5]{2,}$/;
+        var isName = reg.test(oInput[0].value);
+        var reg1 = /^\w{6,9}$/;
+        var isPwd = reg1.test(oInput[1].value);//判断第一次输入的密码
+        var reg2 = new RegExp("^"+oInput[1].value+"$");//验证确认密码
+        var confimPwd = reg2.test(oInput[2].value);
+        if(isName&&isPwd&&confimPwd){
+            alert("成功了");
+        }else{
+            alert("失败了");
+        }
+
+    }
+    //
+    /\d/.test("123");
+    new RegExp("/\d").test("ws22");//使用用对象的方式创建 需要\\
+</script>
+</html>

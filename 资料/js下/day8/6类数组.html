@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>ww</div>
+    <div>ee</div>
+    <div>qq</div>
+</body>
+<script>
+    //类数组：就是对象，属性名称是对应的下标，也有length属性
+    var oDivs = document.getElementsByTagName("div");
+    console.log(oDivs instanceof Array);//false
+    //如何把类数组转换成数组
+    var arr=Array.prototype.slice.apply(oDivs);
+    arr.forEach(function(item,index,array){
+        console.log(item);
+    })
+    //es6 [...]
+    var arr1 = [...oDivs];//
+    var arr2 = Array.from(oDiv);//
+
+
+</script>
+</html>

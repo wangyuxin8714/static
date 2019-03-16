@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>面向对象编程</title>
+</head>
+<body>
+	<script>
+		//小车以80迈的速度在 马路上跑,马路长10000米, 问 小汽车多长时间能跑完
+
+		//以面向对象的编程思想 ,应该创建车对象,在创建一个 路对象
+
+		//用构造函数去创建对象.
+
+		function Car(name,speed,oil){
+			this.name = name;
+			this.speed = speed;
+			this.oil = oil;
+
+			this.time = 0;
+
+			this.a = function(){
+
+				this;
+			}
+
+			this.run = function(){
+				//创建一个定时器
+
+				//保存一下 this 指向
+				var _this = this;
+
+				var timeId = null;
+				timeId = setInterval(function(){
+
+					if(_this.oil == 0){
+						//清除定时器
+						clearInterval(timeId);
+						return;
+					}
+					//消耗油
+					_this.oil -= 2;
+					//时间累加
+					_this.time += 1;
+
+					console.log("已经跑了" + (_this.time * _this.speed) + "米,还剩" + _this.oil + "油");
+				}, 100);
+			}
+		}
+		
+		var b7 = new Car("BMW",10,200);
+		b7.a();
+		b7.run();
+
+	</script>
+</body>
+</html>

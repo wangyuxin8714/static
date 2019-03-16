@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <script src="common/axios.js"></script>
+    <script>
+        const inp = document.querySelector('input')
+            // 节流
+        let timer = null;
+        inp.oninput = () => {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                axios.get('/lookFor?val=' + inp.value)
+            }, 500)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background: orange;
+            color:white;
+            margin-left:10px;
+            cursor: pointer;
+        }
+        div{
+            height:300px;
+            border:1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <span>切换背景</span><span>改变字体颜色</span>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam aut autem consectetur deleniti distinctio dolore earum ex illum incidunt iure iusto libero, magnam magni nulla odio optio pariatur possimus quam quas quibusdam quod quos repellendus sapiente tempore ullam, voluptate? Adipisci consequuntur delectus illo minus, natus officia officiis omnis porro quas, quo quod quos reprehenderit sit sunt voluptate! Alias, aliquid cum distinctio dolor iste quae quos sint totam veritatis voluptatibus. Autem consequuntur doloribus eveniet exercitationem harum illo illum in ipsa minima molestiae molestias mollitia nisi nobis numquam pariatur praesentium quae quasi qui, repellendus reprehenderit sapiente similique sit, soluta ullam voluptas!</div>
+</body>
+<script>
+    var spans = document.getElementsByTagName("span");
+    var oDiv = document.getElementsByTagName("div")[0];
+    addEvent(spans[0],"click",function(){
+        oDiv.style.background = "rgb("+random(255)+","+random(255)+","+random(255)+")";
+    });
+    addEvent(spans[1],"click",function(){
+        oDiv.style.color = "rgb("+random(255)+","+random(255)+","+random(255)+")";
+    });
+    /**
+     * 获取介于n的随机数
+     * @param n
+     * @returns {number}
+     */
+    function random(n){
+        return Math.floor(Math.random()*n);
+    }
+
+    /**
+     * dom2级绑定事件
+     * @param ele
+     * @param type
+     * @param fn
+     */
+    function addEvent(ele,type,fn){
+        if(ele.addEventListener){
+            ele.addEventListener(type,fn);
+        }else if(ele.attachEvent){
+            //兼容低版本的ie
+            ele.attachEvent("on"+type,fn);
+        }else{
+            ele["on"+type] = fn;
+        }
+    }
+</script>
+</html>

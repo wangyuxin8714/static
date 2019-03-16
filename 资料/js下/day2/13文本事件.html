@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text">
+</body>
+<script>
+    var oInput = document.getElementsByTagName("input")[0];
+    //当value发生变化的时候会触发，通过脚本改变值不会触发 不支持低版本的ie
+    oInput.oninput = function(){
+        console.log(1234);
+    }
+    //ie特有的 属性改变就会触发
+    oInput.onpropertychange = function(){
+        console.log(3455);
+    }
+    //当value发生改变 并且失去焦点 才会去触发
+    oInput.onchange = function(){
+        console.log("change触发了");
+    }
+</script>
+</html>
